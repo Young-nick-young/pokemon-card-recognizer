@@ -15,7 +15,7 @@ from collections import defaultdict
 
 app = FastAPI(
     title="Pokemon Card Recognizer",
-    version="6.0"
+    version="6.1"
 )
 
 app.add_middleware(
@@ -46,9 +46,12 @@ IMAGE_URL = (
     + "/{}.png"
 )
 
-GEOMETRY_CANDIDATES = 10
-MAX_SIFT_FEATURES = 900
+GEOMETRY_CANDIDATES = 8
+
+MAX_SIFT_FEATURES = 500
+
 LOWE_RATIO = 0.78
+
 MIN_GOOD_MATCHES = 8
 
 
@@ -57,10 +60,15 @@ MIN_GOOD_MATCHES = 8
 # =========================================================
 
 REFERENCE_CARDS = {}
+
 GLOBAL_DESCRIPTORS = None
+
 GLOBAL_CARD_NUMBERS = None
 
+global_matcher = None
+
 library_ready = False
+
 library_error = None
 
 
@@ -82,16 +90,16 @@ sift = cv2.SIFT_create(
 
 FLANN_INDEX_KDTREE = 1
 
+# Reduced from 4 trees to 1.
+# Major RAM saving on Render free tier.
 index_params = dict(
     algorithm=FLANN_INDEX_KDTREE,
-    trees=4
+    trees=1
 )
 
 search_params = dict(
-    checks=32
+    checks=24
 )
-
-global_matcher = None
 
 
 # =========================================================
@@ -105,12 +113,13 @@ def normalize_card_image(image):
 
     height, width = image.shape[:2]
 
-    max_dimension = 800
+    max_dimension = 700
 
     if max(height, width) > max_dimension:
 
         scale = (
-            max_dimension /
+            max_dimension
+            /
             max(height, width)
         )
 
@@ -164,16 +173,17 @@ def load_library():
 
     try:
 
-        print("Loading prebuilt card library...")
+        print(
+            "Loading memory-optimized "
+            "card library..."
+        )
 
         if not os.path.exists(
             LIBRARY_FILE
         ):
 
             raise RuntimeError(
-                "card_library.pkl was not found. "
-                "The Render build step must run "
-                "build_library.py first."
+                "card_library.pkl not found."
             )
 
         with open(
@@ -188,13 +198,29 @@ def load_library():
         )
 
         GLOBAL_DESCRIPTORS = (
-            data["global_descriptors"]
-            .astype(np.float32)
+            data[
+                "global_descriptors"
+            ]
         )
 
+        # Avoid making another unnecessary
+        # float descriptor copy.
+        if (
+            GLOBAL_DESCRIPTORS.dtype
+            != np.float32
+        ):
+
+            GLOBAL_DESCRIPTORS = (
+                GLOBAL_DESCRIPTORS.astype(
+                    np.float32,
+                    copy=False
+                )
+            )
+
         GLOBAL_CARD_NUMBERS = (
-            data["global_card_numbers"]
-            .astype(np.int32)
+            data[
+                "global_card_numbers"
+            ]
         )
 
         if (
@@ -204,8 +230,37 @@ def load_library():
 
             raise RuntimeError(
                 f"Expected {CARD_COUNT} cards, "
-                f"found {len(REFERENCE_CARDS)}."
+                f"found "
+                f"{len(REFERENCE_CARDS)}."
             )
+
+        descriptor_mb = (
+            GLOBAL_DESCRIPTORS.nbytes
+            /
+            1024
+            /
+            1024
+        )
+
+        print(
+            "Loaded",
+            len(GLOBAL_DESCRIPTORS),
+            "features"
+        )
+
+        print(
+            "Descriptor memory:",
+            round(
+                descriptor_mb,
+                1
+            ),
+            "MB"
+        )
+
+        print(
+            "Building lightweight "
+            "FLANN index..."
+        )
 
         global_matcher = (
             cv2.FlannBasedMatcher(
@@ -221,19 +276,19 @@ def load_library():
         global_matcher.train()
 
         library_ready = True
+
         library_error = None
 
         print(
             "Library ready:",
             len(REFERENCE_CARDS),
-            "cards /",
-            len(GLOBAL_DESCRIPTORS),
-            "features"
+            "cards"
         )
 
     except Exception as error:
 
         library_ready = False
+
         library_error = str(error)
 
         print(
@@ -249,7 +304,7 @@ def startup_event():
 
 
 # =========================================================
-# GLOBAL SEARCH
+# GLOBAL CARD RANKING
 # =========================================================
 
 def rank_cards_global(
@@ -272,6 +327,7 @@ def rank_cards_global(
     )
 
     votes = defaultdict(int)
+
     distances = defaultdict(float)
 
     for pair in matches:
@@ -284,9 +340,11 @@ def rank_cards_global(
         if (
             first.distance
             >=
-            LOWE_RATIO *
+            LOWE_RATIO
+            *
             second.distance
         ):
+
             continue
 
         train_index = (
@@ -296,9 +354,11 @@ def rank_cards_global(
         if (
             train_index < 0
             or
-            train_index >=
+            train_index
+            >=
             len(GLOBAL_CARD_NUMBERS)
         ):
+
             continue
 
         number = int(
@@ -315,9 +375,10 @@ def rank_cards_global(
 
     results = []
 
-    for number, vote_count in (
-        votes.items()
-    ):
+    for (
+        number,
+        vote_count
+    ) in votes.items():
 
         average_distance = (
             distances[number]
@@ -348,7 +409,34 @@ def rank_cards_global(
 
 
 # =========================================================
-# PER-CARD MATCHING
+# GET REFERENCE DESCRIPTORS
+# =========================================================
+
+def get_reference_descriptors(
+    reference
+):
+
+    start = (
+        reference[
+            "descriptor_start"
+        ]
+    )
+
+    end = (
+        reference[
+            "descriptor_end"
+        ]
+    )
+
+    # This is a view into the global array,
+    # not another full copy.
+    return GLOBAL_DESCRIPTORS[
+        start:end
+    ]
+
+
+# =========================================================
+# PER-CARD FEATURE MATCHING
 # =========================================================
 
 def get_card_matches(
@@ -391,7 +479,8 @@ def get_card_matches(
         if (
             first.distance
             <
-            LOWE_RATIO *
+            LOWE_RATIO
+            *
             second.distance
         ):
 
@@ -406,7 +495,7 @@ def get_card_matches(
 
 def geometric_verification(
     query_keypoints,
-    reference_keypoints_data,
+    reference_keypoints,
     good_matches
 ):
 
@@ -435,7 +524,7 @@ def geometric_verification(
     )
 
     destination_points = np.float32([
-        reference_keypoints_data[
+        reference_keypoints[
             match.trainIdx
         ]
 
@@ -474,7 +563,8 @@ def geometric_verification(
         )
 
         ratio = (
-            inliers /
+            inliers
+            /
             len(good_matches)
         )
 
@@ -507,10 +597,10 @@ def recognize_image(image):
     )
 
     # -----------------------------------------------------
-    # QUERY SIFT
+    # QUERY FEATURES
     # -----------------------------------------------------
 
-    sift_started = time.time()
+    query_started = time.time()
 
     (
         query_keypoints,
@@ -519,10 +609,10 @@ def recognize_image(image):
         image
     )
 
-    query_sift_time = (
+    query_time = (
         time.time()
         -
-        sift_started
+        query_started
     )
 
     if (
@@ -539,27 +629,11 @@ def recognize_image(image):
                 "Not enough image features",
 
             "top_matches":
-                [],
-
-            "timing": {
-                "query_sift":
-                    round(
-                        query_sift_time,
-                        3
-                    ),
-
-                "total":
-                    round(
-                        time.time()
-                        -
-                        started,
-                        3
-                    )
-            }
+                []
         }
 
     # -----------------------------------------------------
-    # GLOBAL SIFT SEARCH
+    # GLOBAL SEARCH
     # -----------------------------------------------------
 
     search_started = time.time()
@@ -568,7 +642,7 @@ def recognize_image(image):
         query_descriptors
     )
 
-    search_time = (
+    global_search_time = (
         time.time()
         -
         search_started
@@ -584,33 +658,11 @@ def recognize_image(image):
                 "No feature matches",
 
             "top_matches":
-                [],
-
-            "timing": {
-                "query_sift":
-                    round(
-                        query_sift_time,
-                        3
-                    ),
-
-                "global_search":
-                    round(
-                        search_time,
-                        3
-                    ),
-
-                "total":
-                    round(
-                        time.time()
-                        -
-                        started,
-                        3
-                    )
-            }
+                []
         }
 
     # -----------------------------------------------------
-    # GEOMETRIC VERIFICATION
+    # VERIFY ONLY TOP CARDS
     # -----------------------------------------------------
 
     geometry_started = time.time()
@@ -621,9 +673,9 @@ def recognize_image(image):
         :GEOMETRY_CANDIDATES
     ]:
 
-        number = candidate[
-            "number"
-        ]
+        number = (
+            candidate["number"]
+        )
 
         reference = (
             REFERENCE_CARDS[
@@ -631,12 +683,16 @@ def recognize_image(image):
             ]
         )
 
+        reference_descriptors = (
+            get_reference_descriptors(
+                reference
+            )
+        )
+
         good_matches = (
             get_card_matches(
                 query_descriptors,
-                reference[
-                    "descriptors"
-                ]
+                reference_descriptors
             )
         )
 
@@ -737,16 +793,14 @@ def recognize_image(image):
                 []
         }
 
-    # -----------------------------------------------------
-    # BEST RESULT
-    # -----------------------------------------------------
-
     best = final_results[0]
 
     second = (
         final_results[1]
-        if len(final_results) > 1
-        else None
+        if
+        len(final_results) > 1
+        else
+        None
     )
 
     score_gap = (
@@ -757,10 +811,6 @@ def recognize_image(image):
         else
         best["score"]
     )
-
-    # -----------------------------------------------------
-    # CONFIDENCE
-    # -----------------------------------------------------
 
     confident = False
 
@@ -811,15 +861,16 @@ def recognize_image(image):
             final_results[:5],
 
         "timing": {
+
             "query_sift":
                 round(
-                    query_sift_time,
+                    query_time,
                     3
                 ),
 
             "global_search":
                 round(
-                    search_time,
+                    global_search_time,
                     3
                 ),
 
@@ -853,7 +904,7 @@ def home():
             "Pokemon Card Recognizer",
 
         "version":
-            "6.0",
+            "6.1",
 
         "set":
             SET_NAME,
@@ -908,18 +959,6 @@ def health():
 
         "cards_expected":
             CARD_COUNT,
-
-        "global_features":
-            (
-                len(
-                    GLOBAL_DESCRIPTORS
-                )
-                if
-                GLOBAL_DESCRIPTORS
-                is not None
-                else
-                0
-            ),
 
         "error":
             library_error
