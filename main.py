@@ -1,17 +1,23 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+
 import cv2
 import numpy as np
 import urllib.request
 import threading
 import time
+import math
+
+
+# =========================================================
+# APP
+# =========================================================
 
 app = FastAPI(
     title="Pokemon Card Recognizer",
-    version="2.0"
+    version="3.0"
 )
 
-# Allow the GitHub scanner app to use this API
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -22,48 +28,83 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ---------------------------------------------------------
+
+# =========================================================
 # DESTINED RIVALS
-# ---------------------------------------------------------
+# =========================================================
 
 SET_CODE = "sv10"
 SET_NAME = "Destined Rivals"
 CARD_COUNT = 244
+DENOMINATOR = 182
+
+IMAGE_URL = (
+    "https://images.pokemontcg.io/"
+    + SET_CODE
+    + "/{}.png"
+)
+
+
+# =========================================================
+# RECOGNITION SETTINGS
+# =========================================================
+
+# First we cheaply narrow 244 cards down to 24.
+SHORTLIST_SIZE = 24
+
+# Then we perform geometric verification only on
+# the strongest 8 candidates.
+HOMOGRAPHY_CANDIDATES = 8
+
+LOWE_RATIO = 0.73
+MIN_GOOD_MATCHES = 8
+
+THUMB_WIDTH = 72
+THUMB_HEIGHT = 101
+
+
+# =========================================================
+# GLOBAL STATE
+# =========================================================
 
 REFERENCE_CARDS = {}
+
 library_ready = False
 library_loading = False
 library_error = None
 library_started_at = None
 library_finished_at = None
 
-# SIFT works much better for matching card artwork than
-# the simple browser colour/edge matcher we tested earlier.
 sift = cv2.SIFT_create(
-    nfeatures=1800,
-    contrastThreshold=0.025,
-    edgeThreshold=12,
+    nfeatures=1200,
+    contrastThreshold=0.03,
+    edgeThreshold=10,
     sigma=1.6
 )
 
-matcher = cv2.BFMatcher(cv2.NORM_L2)
+matcher = cv2.BFMatcher(
+    cv2.NORM_L2,
+    crossCheck=False
+)
 
 
-def prepare_image(image):
-    """
-    Prepare an image for feature detection.
-    """
+# =========================================================
+# IMAGE PREPARATION
+# =========================================================
+
+def normalize_card_image(image):
+
     if image is None:
         return None
 
     height, width = image.shape[:2]
 
-    # Keep enough detail for card text/artwork while avoiding
-    # unnecessarily huge images.
-    max_height = 800
+    max_dimension = 900
 
-    if height > max_height:
-        scale = max_height / height
+    if max(height, width) > max_dimension:
+
+        scale = max_dimension / max(height, width)
+
         image = cv2.resize(
             image,
             (
@@ -73,24 +114,68 @@ def prepare_image(image):
             interpolation=cv2.INTER_AREA
         )
 
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    return image
 
-    # Slight contrast enhancement helps with phone-camera images.
-    clahe = cv2.createCLAHE(
-        clipLimit=2.0,
-        tileGridSize=(8, 8)
+
+def grayscale_thumbnail(image):
+
+    gray = cv2.cvtColor(
+        image,
+        cv2.COLOR_BGR2GRAY
     )
 
-    gray = clahe.apply(gray)
+    gray = cv2.resize(
+        gray,
+        (
+            THUMB_WIDTH,
+            THUMB_HEIGHT
+        ),
+        interpolation=cv2.INTER_AREA
+    )
 
-    return gray
+    gray = cv2.equalizeHist(gray)
+
+    return gray.astype(np.float32) / 255.0
 
 
-def calculate_features(image):
-    gray = prepare_image(image)
+def color_histogram(image):
 
-    if gray is None:
-        return [], None
+    small = cv2.resize(
+        image,
+        (96, 134),
+        interpolation=cv2.INTER_AREA
+    )
+
+    hsv = cv2.cvtColor(
+        small,
+        cv2.COLOR_BGR2HSV
+    )
+
+    hist = cv2.calcHist(
+        [hsv],
+        [0, 1],
+        None,
+        [18, 16],
+        [0, 180, 0, 256]
+    )
+
+    cv2.normalize(
+        hist,
+        hist,
+        alpha=0,
+        beta=1,
+        norm_type=cv2.NORM_MINMAX
+    )
+
+    return hist
+
+
+def calculate_sift(image):
+
+    gray = cv2.cvtColor(
+        image,
+        cv2.COLOR_BGR2GRAY
+    )
 
     keypoints, descriptors = sift.detectAndCompute(
         gray,
@@ -100,16 +185,18 @@ def calculate_features(image):
     return keypoints, descriptors
 
 
+# =========================================================
+# REFERENCE LIBRARY
+# =========================================================
+
 def download_card_image(number):
-    url = (
-        f"https://images.pokemontcg.io/"
-        f"{SET_CODE}/{number}.png"
-    )
+
+    url = IMAGE_URL.format(number)
 
     request = urllib.request.Request(
         url,
         headers={
-            "User-Agent": "PokemonCardRecognizer/2.0"
+            "User-Agent": "Mozilla/5.0"
         }
     )
 
@@ -117,11 +204,12 @@ def download_card_image(number):
         request,
         timeout=20
     ) as response:
+
         data = response.read()
 
     array = np.frombuffer(
         data,
-        dtype=np.uint8
+        np.uint8
     )
 
     image = cv2.imdecode(
@@ -129,75 +217,102 @@ def download_card_image(number):
         cv2.IMREAD_COLOR
     )
 
+    if image is None:
+        raise RuntimeError(
+            f"Could not decode card #{number}"
+        )
+
     return image
 
 
+def prepare_reference_card(number):
+
+    image = download_card_image(number)
+
+    image = normalize_card_image(image)
+
+    thumbnail = grayscale_thumbnail(image)
+
+    histogram = color_histogram(image)
+
+    keypoints, descriptors = calculate_sift(image)
+
+    if descriptors is None:
+
+        descriptors = np.empty(
+            (0, 128),
+            dtype=np.float32
+        )
+
+    return {
+        "number": number,
+        "image_url": IMAGE_URL.format(number),
+        "thumbnail": thumbnail,
+        "histogram": histogram,
+        "keypoints": keypoints,
+        "descriptors": descriptors
+    }
+
+
 def build_reference_library():
+
     global library_ready
     global library_loading
     global library_error
     global library_started_at
     global library_finished_at
 
-    if library_loading or library_ready:
+    if library_loading:
         return
 
     library_loading = True
+    library_ready = False
     library_error = None
     library_started_at = time.time()
 
     try:
 
-        for number in range(1, CARD_COUNT + 1):
+        print(
+            "Building Destined Rivals reference library..."
+        )
+
+        REFERENCE_CARDS.clear()
+
+        for number in range(
+            1,
+            CARD_COUNT + 1
+        ):
 
             try:
-                image = download_card_image(number)
 
-                if image is None:
-                    print(
-                        f"Could not decode card #{number}"
-                    )
-                    continue
-
-                keypoints, descriptors = calculate_features(
-                    image
+                REFERENCE_CARDS[number] = (
+                    prepare_reference_card(number)
                 )
-
-                if descriptors is None:
-                    print(
-                        f"No features found for card #{number}"
-                    )
-                    continue
-
-                points = np.float32(
-                    [kp.pt for kp in keypoints]
-                )
-
-                REFERENCE_CARDS[number] = {
-                    "descriptors": descriptors,
-                    "points": points
-                }
 
                 print(
                     f"Prepared {number}/{CARD_COUNT}"
                 )
 
             except Exception as error:
+
                 print(
-                    f"Card #{number} failed: {error}"
+                    f"Failed card #{number}: {error}"
                 )
 
-        if len(REFERENCE_CARDS) == 0:
+        if len(REFERENCE_CARDS) != CARD_COUNT:
+
             raise RuntimeError(
-                "No reference cards could be prepared."
+                "Reference library incomplete: "
+                f"{len(REFERENCE_CARDS)}/{CARD_COUNT}"
             )
 
-        library_ready = True
         library_finished_at = time.time()
+        library_ready = True
 
         print(
-            f"Reference library ready: "
-            f"{len(REFERENCE_CARDS)} cards"
+            "Reference library ready:",
+            len(REFERENCE_CARDS),
+            "cards"
         )
 
     except Exception as error:
@@ -205,15 +320,17 @@ def build_reference_library():
         library_error = str(error)
 
         print(
-            "Reference library failed:",
+            "Library build failed:",
             error
         )
 
     finally:
+
         library_loading = False
 
 
 def start_library_build():
+
     thread = threading.Thread(
         target=build_reference_library,
         daemon=True
@@ -224,179 +341,519 @@ def start_library_build():
 
 @app.on_event("startup")
 def startup_event():
-    # Build once when the Render service starts.
-    # It does NOT rebuild for every scan.
+
     start_library_build()
 
 
+# =========================================================
+# FAST SHORTLIST
+# =========================================================
+
+def thumbnail_similarity(
+    query_thumb,
+    reference_thumb
+):
+
+    difference = np.mean(
+        np.abs(
+            query_thumb -
+            reference_thumb
+        )
+    )
+
+    return 1.0 - float(difference)
+
+
+def histogram_similarity(
+    query_hist,
+    reference_hist
+):
+
+    score = cv2.compareHist(
+        query_hist,
+        reference_hist,
+        cv2.HISTCMP_CORREL
+    )
+
+    if math.isnan(score):
+        return 0.0
+
+    return float(score)
+
+
+def build_shortlist(image):
+
+    query_thumb = grayscale_thumbnail(image)
+    query_hist = color_histogram(image)
+
+    scores = []
+
+    for number, card in REFERENCE_CARDS.items():
+
+        gray_score = thumbnail_similarity(
+            query_thumb,
+            card["thumbnail"]
+        )
+
+        color_score = histogram_similarity(
+            query_hist,
+            card["histogram"]
+        )
+
+        coarse_score = (
+            gray_score * 0.40
+            +
+            color_score * 0.60
+        )
+
+        scores.append({
+            "number": number,
+            "coarse_score": coarse_score
+        })
+
+    scores.sort(
+        key=lambda item: item["coarse_score"],
+        reverse=True
+    )
+
+    return scores[:SHORTLIST_SIZE]
+
+
+# =========================================================
+# SIFT MATCHING
+# =========================================================
+
+def sift_match_score(
+    query_descriptors,
+    reference_descriptors
+):
+
+    if (
+        query_descriptors is None
+        or reference_descriptors is None
+        or len(query_descriptors) < 2
+        or len(reference_descriptors) < 2
+    ):
+        return []
+
+    matches = matcher.knnMatch(
+        query_descriptors,
+        reference_descriptors,
+        k=2
+    )
+
+    good = []
+
+    for pair in matches:
+
+        if len(pair) != 2:
+            continue
+
+        first, second = pair
+
+        if (
+            first.distance
+            <
+            LOWE_RATIO * second.distance
+        ):
+            good.append(first)
+
+    return good
+
+
+def geometric_verification(
+    query_keypoints,
+    reference_keypoints,
+    good_matches
+):
+
+    if len(good_matches) < MIN_GOOD_MATCHES:
+
+        return {
+            "inliers": 0,
+            "inlier_ratio": 0.0
+        }
+
+    source_points = np.float32([
+        query_keypoints[
+            match.queryIdx
+        ].pt
+        for match in good_matches
+    ]).reshape(
+        -1,
+        1,
+        2
+    )
+
+    destination_points = np.float32([
+        reference_keypoints[
+            match.trainIdx
+        ].pt
+        for match in good_matches
+    ]).reshape(
+        -1,
+        1,
+        2
+    )
+
+    try:
+
+        matrix, mask = cv2.findHomography(
+            source_points,
+            destination_points,
+            cv2.RANSAC,
+            5.0
+        )
+
+        if matrix is None or mask is None:
+
+            return {
+                "inliers": 0,
+                "inlier_ratio": 0.0
+            }
+
+        inliers = int(
+            mask.ravel().sum()
+        )
+
+        ratio = (
+            inliers /
+            len(good_matches)
+        )
+
+        return {
+            "inliers": inliers,
+            "inlier_ratio": float(ratio)
+        }
+
+    except cv2.error:
+
+        return {
+            "inliers": 0,
+            "inlier_ratio": 0.0
+        }
+
+
+# =========================================================
+# RECOGNITION
+# =========================================================
+
+def recognize_image(image):
+
+    started = time.time()
+
+    image = normalize_card_image(image)
+
+    # -----------------------------------------------------
+    # STAGE 1
+    # Fast comparison against all 244 cards.
+    # -----------------------------------------------------
+
+    shortlist_started = time.time()
+
+    shortlist = build_shortlist(image)
+
+    shortlist_time = (
+        time.time() - shortlist_started
+    )
+
+    # -----------------------------------------------------
+    # Calculate SIFT for the scanned card only once.
+    # -----------------------------------------------------
+
+    sift_started = time.time()
+
+    query_keypoints, query_descriptors = (
+        calculate_sift(image)
+    )
+
+    sift_extraction_time = (
+        time.time() - sift_started
+    )
+
+    if (
+        query_descriptors is None
+        or len(query_descriptors) < 8
+    ):
+
+        return {
+            "status": "no_match",
+            "reason": "Not enough image features",
+            "top_matches": [],
+            "processing_seconds": round(
+                time.time() - started,
+                3
+            )
+        }
+
+    # -----------------------------------------------------
+    # STAGE 2
+    # SIFT only against the shortlist.
+    # -----------------------------------------------------
+
+    sift_results = []
+
+    match_started = time.time()
+
+    for candidate in shortlist:
+
+        number = candidate["number"]
+
+        reference = REFERENCE_CARDS[number]
+
+        good_matches = sift_match_score(
+            query_descriptors,
+            reference["descriptors"]
+        )
+
+        sift_results.append({
+            "number": number,
+            "coarse_score": candidate["coarse_score"],
+            "good_matches_list": good_matches,
+            "good_matches": len(good_matches),
+            "reference": reference
+        })
+
+    sift_results.sort(
+        key=lambda item: item["good_matches"],
+        reverse=True
+    )
+
+    sift_match_time = (
+        time.time() - match_started
+    )
+
+    # -----------------------------------------------------
+    # STAGE 3
+    # Homography only against the strongest 8 candidates.
+    # -----------------------------------------------------
+
+    geometry_started = time.time()
+
+    final_results = []
+
+    for result in sift_results[
+        :HOMOGRAPHY_CANDIDATES
+    ]:
+
+        geometry = geometric_verification(
+            query_keypoints,
+            result["reference"]["keypoints"],
+            result["good_matches_list"]
+        )
+
+        good_matches = result["good_matches"]
+        inliers = geometry["inliers"]
+        inlier_ratio = geometry["inlier_ratio"]
+
+        # Inliers matter most.
+        # Ratio rewards geometrically consistent matches.
+        # Good matches provide a smaller contribution.
+
+        score = (
+            inliers * 5.0
+            +
+            inlier_ratio * 200.0
+            +
+            good_matches * 0.30
+        )
+
+        final_results.append({
+            "number": result["number"],
+
+            "display_number":
+                f'{result["number"]}/{DENOMINATOR}',
+
+            "image":
+                IMAGE_URL.format(
+                    result["number"]
+                ),
+
+            "coarse_score":
+                round(
+                    result["coarse_score"],
+                    4
+                ),
+
+            "good_matches":
+                good_matches,
+
+            "inliers":
+                inliers,
+
+            "inlier_ratio":
+                round(
+                    inlier_ratio,
+                    4
+                ),
+
+            "score":
+                round(
+                    score,
+                    3
+                )
+        })
+
+    geometry_time = (
+        time.time() - geometry_started
+    )
+
+    final_results.sort(
+        key=lambda item: item["score"],
+        reverse=True
+    )
+
+    if not final_results:
+
+        return {
+            "status": "no_match",
+            "top_matches": [],
+            "processing_seconds": round(
+                time.time() - started,
+                3
+            )
+        }
+
+    best = final_results[0]
+
+    second = (
+        final_results[1]
+        if len(final_results) > 1
+        else None
+    )
+
+    score_gap = (
+        best["score"] - second["score"]
+        if second
+        else best["score"]
+    )
+
+    # -----------------------------------------------------
+    # CONFIDENCE
+    # -----------------------------------------------------
+
+    confident = False
+
+    if (
+        best["inliers"] >= 18
+        and best["inlier_ratio"] >= 0.45
+        and score_gap >= 20
+    ):
+        confident = True
+
+    if (
+        best["inliers"] >= 30
+        and best["inlier_ratio"] >= 0.55
+    ):
+        confident = True
+
+    total_time = (
+        time.time() - started
+    )
+
+    return {
+        "status": "matched",
+
+        "set": SET_NAME,
+
+        "best_match": best,
+
+        "confident": confident,
+
+        "score_gap": round(
+            score_gap,
+            3
+        ),
+
+        "top_matches":
+            final_results[:5],
+
+        "timing": {
+            "shortlist": round(
+                shortlist_time,
+                3
+            ),
+
+            "query_sift": round(
+                sift_extraction_time,
+                3
+            ),
+
+            "sift_matching": round(
+                sift_match_time,
+                3
+            ),
+
+            "geometry": round(
+                geometry_time,
+                3
+            ),
+
+            "total": round(
+                total_time,
+                3
+            )
+        }
+    }
+
+
+# =========================================================
+# ROUTES
+# =========================================================
+
 @app.get("/")
 def home():
+
     return {
         "status": "online",
         "service": "Pokemon Card Recognizer",
-        "version": "2.0",
+        "version": "3.0",
         "set": SET_NAME,
         "library_ready": library_ready,
-        "cards_prepared": len(REFERENCE_CARDS),
-        "cards_expected": CARD_COUNT
+        "library_loading": library_loading,
+        "cards_prepared": len(
+            REFERENCE_CARDS
+        ),
+        "cards_expected": CARD_COUNT,
+        "library_error": library_error
     }
 
 
 @app.get("/health")
 def health():
+
     return {
-        "status": "healthy",
-        "opencv": cv2.__version__,
-        "sift": True,
+        "status":
+            "ok"
+            if library_ready
+            else "loading",
+
         "library_ready": library_ready,
-        "library_loading": library_loading,
-        "cards_prepared": len(REFERENCE_CARDS),
+
+        "cards_prepared": len(
+            REFERENCE_CARDS
+        ),
+
         "cards_expected": CARD_COUNT,
+
         "error": library_error
     }
 
 
 @app.get("/library")
-def library_status():
-
-    elapsed = None
-
-    if library_started_at is not None:
-
-        end_time = (
-            library_finished_at
-            if library_finished_at is not None
-            else time.time()
-        )
-
-        elapsed = round(
-            end_time - library_started_at,
-            1
-        )
+def library():
 
     return {
+        "set": SET_NAME,
         "ready": library_ready,
         "loading": library_loading,
-        "cards_prepared": len(REFERENCE_CARDS),
-        "cards_expected": CARD_COUNT,
-        "elapsed_seconds": elapsed,
-        "error": library_error
-    }
-
-
-def compare_card(
-    query_keypoints,
-    query_descriptors,
-    reference
-):
-    reference_descriptors = reference[
-        "descriptors"
-    ]
-
-    reference_points = reference[
-        "points"
-    ]
-
-    if (
-        query_descriptors is None
-        or reference_descriptors is None
-    ):
-        return None
-
-    try:
-
-        matches = matcher.knnMatch(
-            query_descriptors,
-            reference_descriptors,
-            k=2
-        )
-
-    except cv2.error:
-        return None
-
-    good_matches = []
-
-    for pair in matches:
-
-        if len(pair) < 2:
-            continue
-
-        first, second = pair
-
-        if first.distance < 0.72 * second.distance:
-            good_matches.append(first)
-
-    good_count = len(good_matches)
-
-    if good_count < 6:
-        return {
-            "good_matches": good_count,
-            "inliers": 0,
-            "inlier_ratio": 0.0,
-            "score": float(good_count)
-        }
-
-    query_points = np.float32([
-        query_keypoints[
-            match.queryIdx
-        ].pt
-        for match in good_matches
-    ]).reshape(-1, 1, 2)
-
-    matched_reference_points = np.float32([
-        reference_points[
-            match.trainIdx
-        ]
-        for match in good_matches
-    ]).reshape(-1, 1, 2)
-
-    inliers = 0
-    inlier_ratio = 0.0
-
-    if good_count >= 8:
-
-        try:
-
-            _, mask = cv2.findHomography(
-                query_points,
-                matched_reference_points,
-                cv2.RANSAC,
-                5.0
-            )
-
-            if mask is not None:
-
-                inliers = int(
-                    mask.ravel().sum()
-                )
-
-                inlier_ratio = (
-                    inliers / good_count
-                )
-
-        except cv2.error:
-            pass
-
-    # Homography inliers are much more valuable than
-    # raw feature matches because they confirm that the
-    # matching features form the same physical card.
-    score = (
-        good_count
-        + (inliers * 4.0)
-        + (inlier_ratio * 20.0)
-    )
-
-    return {
-        "good_matches": good_count,
-        "inliers": inliers,
-        "inlier_ratio": round(
-            inlier_ratio,
-            4
+        "cards": len(
+            REFERENCE_CARDS
         ),
-        "score": round(
-            float(score),
-            3
-        )
+        "expected": CARD_COUNT,
+        "started_at": library_started_at,
+        "finished_at": library_finished_at,
+        "error": library_error
     }
 
 
@@ -409,27 +866,23 @@ async def recognize(
 
         raise HTTPException(
             status_code=503,
-            detail={
-                "message":
-                    "Card library is still preparing.",
-                "cards_prepared":
-                    len(REFERENCE_CARDS),
-                "cards_expected":
-                    CARD_COUNT
-            }
+            detail=(
+                "Reference card library "
+                "is still loading."
+            )
         )
 
     try:
 
         contents = await file.read()
 
-        image_array = np.frombuffer(
+        array = np.frombuffer(
             contents,
-            dtype=np.uint8
+            np.uint8
         )
 
         image = cv2.imdecode(
-            image_array,
+            array,
             cv2.IMREAD_COLOR
         )
 
@@ -437,105 +890,27 @@ async def recognize(
 
             raise HTTPException(
                 status_code=400,
-                detail="Could not read image."
-            )
-
-        query_keypoints, query_descriptors = (
-            calculate_features(image)
-        )
-
-        if (
-            query_descriptors is None
-            or len(query_keypoints) < 8
-        ):
-
-            raise HTTPException(
-                status_code=422,
                 detail=(
-                    "Not enough visual detail "
-                    "was detected in the card."
+                    "Uploaded file is not "
+                    "a valid image."
                 )
             )
 
-        results = []
-
-        for number, reference in (
-            REFERENCE_CARDS.items()
-        ):
-
-            comparison = compare_card(
-                query_keypoints,
-                query_descriptors,
-                reference
-            )
-
-            if comparison is None:
-                continue
-
-            results.append({
-                "number": number,
-                "display_number":
-                    f"{number}/182",
-                "image":
-                    (
-                        "https://images."
-                        "pokemontcg.io/"
-                        f"{SET_CODE}/"
-                        f"{number}.png"
-                    ),
-                **comparison
-            })
-
-        results.sort(
-            key=lambda item: item["score"],
-            reverse=True
+        result = recognize_image(
+            image
         )
 
-        top_matches = results[:5]
-
-        if len(top_matches) == 0:
-
-            raise HTTPException(
-                status_code=404,
-                detail="No card match found."
-            )
-
-        best = top_matches[0]
-
-        second_score = (
-            top_matches[1]["score"]
-            if len(top_matches) > 1
-            else 0
-        )
-
-        score_gap = (
-            best["score"] - second_score
-        )
-
-        # Confidence here is deliberately based on
-        # match quality AND separation from #2.
-        confident = (
-            best["inliers"] >= 10
-            and best["good_matches"] >= 14
-            and score_gap >= 8
-        )
-
-        return {
-            "status": "matched",
-            "set": SET_NAME,
-            "best_match": best,
-            "confident": confident,
-            "score_gap": round(
-                score_gap,
-                3
-            ),
-            "top_matches": top_matches
-        }
+        return result
 
     except HTTPException:
         raise
 
     except Exception as error:
+
+        print(
+            "Recognition error:",
+            error
+        )
 
         raise HTTPException(
             status_code=500,
