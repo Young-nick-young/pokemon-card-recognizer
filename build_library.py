@@ -16,7 +16,9 @@ IMAGE_URL = (
 
 OUTPUT_FILE = "card_library.pkl"
 
-MAX_SIFT_FEATURES = 900
+# Reduced from 900.
+# Still plenty for card recognition but much lighter in RAM.
+MAX_SIFT_FEATURES = 500
 
 
 sift = cv2.SIFT_create(
@@ -34,8 +36,7 @@ def download_card(number):
     request = urllib.request.Request(
         url,
         headers={
-            "User-Agent":
-                "Mozilla/5.0"
+            "User-Agent": "Mozilla/5.0"
         }
     )
 
@@ -59,8 +60,7 @@ def download_card(number):
     if image is None:
 
         raise RuntimeError(
-            f"Could not decode "
-            f"card #{number}"
+            f"Could not decode card #{number}"
         )
 
     return image
@@ -68,15 +68,11 @@ def download_card(number):
 
 def normalize(image):
 
-    height, width = (
-        image.shape[:2]
-    )
+    height, width = image.shape[:2]
 
-    max_dimension = 800
+    max_dimension = 700
 
-    if max(height, width) > (
-        max_dimension
-    ):
+    if max(height, width) > max_dimension:
 
         scale = (
             max_dimension /
@@ -98,17 +94,12 @@ def normalize(image):
 def prepare_card(number):
 
     print(
-        f"Preparing card "
-        f"{number}/{CARD_COUNT}..."
+        f"Preparing card {number}/{CARD_COUNT}..."
     )
 
-    image = download_card(
-        number
-    )
+    image = download_card(number)
 
-    image = normalize(
-        image
-    )
+    image = normalize(image)
 
     gray = cv2.cvtColor(
         image,
@@ -131,30 +122,19 @@ def prepare_card(number):
 
     else:
 
-        descriptors = (
-            descriptors.astype(
-                np.float32
-            )
+        descriptors = descriptors.astype(
+            np.float32
         )
 
-    keypoint_coordinates = (
-        np.float32([
-            kp.pt
-            for kp
-            in keypoints
-        ])
+    keypoint_coordinates = np.float32([
+        kp.pt
+        for kp in keypoints
+    ])
+
+    return (
+        keypoint_coordinates,
+        descriptors
     )
-
-    return {
-        "number":
-            number,
-
-        "keypoints":
-            keypoint_coordinates,
-
-        "descriptors":
-            descriptors
-    }
 
 
 def main():
@@ -166,8 +146,8 @@ def main():
     )
 
     print(
-        "Building Destined Rivals "
-        "SIFT library"
+        "Building memory-optimized "
+        "Destined Rivals SIFT library"
     )
 
     print(
@@ -177,22 +157,43 @@ def main():
     cards = {}
 
     descriptor_blocks = []
+
     card_number_blocks = []
+
+    current_index = 0
 
     for number in range(
         1,
         CARD_COUNT + 1
     ):
 
-        card = prepare_card(
-            number
+        (
+            keypoints,
+            descriptors
+        ) = prepare_card(number)
+
+        start_index = current_index
+
+        end_index = (
+            start_index
+            +
+            len(descriptors)
         )
 
-        cards[number] = card
-
-        descriptors = (
-            card["descriptors"]
-        )
+        # IMPORTANT:
+        # We do NOT save another copy of the card's
+        # descriptors here.
+        #
+        # We only save where this card's descriptors
+        # live inside the global array.
+        cards[number] = {
+            "number": number,
+            "keypoints": keypoints,
+            "descriptor_start":
+                start_index,
+            "descriptor_end":
+                end_index
+        }
 
         if len(descriptors) > 0:
 
@@ -201,23 +202,24 @@ def main():
             )
 
             card_number_blocks.extend(
-                [number] *
+                [number]
+                *
                 len(descriptors)
             )
 
-    global_descriptors = (
-        np.vstack(
-            descriptor_blocks
-        ).astype(
-            np.float32
-        )
+        current_index = end_index
+
+    global_descriptors = np.vstack(
+        descriptor_blocks
+    ).astype(
+        np.float32
     )
 
-    global_card_numbers = (
-        np.asarray(
-            card_number_blocks,
-            dtype=np.int32
-        )
+    # uint16 is plenty because our card numbers
+    # only run from 1 to 244.
+    global_card_numbers = np.asarray(
+        card_number_blocks,
+        dtype=np.uint16
     )
 
     library = {
@@ -231,9 +233,7 @@ def main():
             global_card_numbers
     }
 
-    print(
-        "Saving library..."
-    )
+    print("Saving optimized library...")
 
     with open(
         OUTPUT_FILE,
@@ -252,13 +252,19 @@ def main():
         started
     )
 
+    size_mb = (
+        global_descriptors.nbytes
+        /
+        1024
+        /
+        1024
+    )
+
     print(
         "================================"
     )
 
-    print(
-        "BUILD COMPLETE"
-    )
+    print("BUILD COMPLETE")
 
     print(
         "Cards:",
@@ -268,6 +274,12 @@ def main():
     print(
         "SIFT features:",
         len(global_descriptors)
+    )
+
+    print(
+        "Descriptor memory:",
+        round(size_mb, 1),
+        "MB"
     )
 
     print(
