@@ -6,6 +6,7 @@ import numpy as np
 import urllib.request
 import threading
 import time
+from collections import defaultdict
 
 
 # =========================================================
@@ -14,7 +15,7 @@ import time
 
 app = FastAPI(
     title="Pokemon Card Recognizer",
-    version="4.0"
+    version="5.0"
 )
 
 app.add_middleware(
@@ -48,14 +49,13 @@ IMAGE_URL = (
 # RECOGNITION SETTINGS
 # =========================================================
 
-# Number of cards that receive full geometric verification.
 GEOMETRY_CANDIDATES = 10
 
-LOWE_RATIO = 0.74
-MIN_GOOD_MATCHES = 8
+MAX_SIFT_FEATURES = 900
 
-# Limit features enough to remain usable on Render free CPU.
-MAX_SIFT_FEATURES = 1000
+LOWE_RATIO = 0.78
+
+MIN_GOOD_MATCHES = 8
 
 
 # =========================================================
@@ -64,11 +64,19 @@ MAX_SIFT_FEATURES = 1000
 
 REFERENCE_CARDS = {}
 
+GLOBAL_DESCRIPTORS = None
+GLOBAL_CARD_NUMBERS = None
+
 library_ready = False
 library_loading = False
 library_error = None
 library_started_at = None
 library_finished_at = None
+
+
+# =========================================================
+# SIFT
+# =========================================================
 
 sift = cv2.SIFT_create(
     nfeatures=MAX_SIFT_FEATURES,
@@ -77,9 +85,25 @@ sift = cv2.SIFT_create(
     sigma=1.6
 )
 
-matcher = cv2.BFMatcher(
-    cv2.NORM_L2,
-    crossCheck=False
+
+# =========================================================
+# FLANN
+# =========================================================
+
+FLANN_INDEX_KDTREE = 1
+
+index_params = dict(
+    algorithm=FLANN_INDEX_KDTREE,
+    trees=4
+)
+
+search_params = dict(
+    checks=32
+)
+
+global_matcher = cv2.FlannBasedMatcher(
+    index_params,
+    search_params
 )
 
 
@@ -94,11 +118,14 @@ def normalize_card_image(image):
 
     height, width = image.shape[:2]
 
-    max_dimension = 900
+    max_dimension = 800
 
     if max(height, width) > max_dimension:
 
-        scale = max_dimension / max(height, width)
+        scale = (
+            max_dimension /
+            max(height, width)
+        )
 
         image = cv2.resize(
             image,
@@ -119,16 +146,24 @@ def calculate_sift(image):
         cv2.COLOR_BGR2GRAY
     )
 
-    keypoints, descriptors = sift.detectAndCompute(
-        gray,
-        None
+    keypoints, descriptors = (
+        sift.detectAndCompute(
+            gray,
+            None
+        )
     )
+
+    if descriptors is not None:
+
+        descriptors = descriptors.astype(
+            np.float32
+        )
 
     return keypoints, descriptors
 
 
 # =========================================================
-# REFERENCE LIBRARY
+# DOWNLOAD REFERENCES
 # =========================================================
 
 def download_card_image(number):
@@ -151,7 +186,7 @@ def download_card_image(number):
 
     array = np.frombuffer(
         data,
-        np.uint8
+        dtype=np.uint8
     )
 
     image = cv2.imdecode(
@@ -160,6 +195,7 @@ def download_card_image(number):
     )
 
     if image is None:
+
         raise RuntimeError(
             f"Could not decode card #{number}"
         )
@@ -167,14 +203,24 @@ def download_card_image(number):
     return image
 
 
+# =========================================================
+# PREPARE REFERENCE CARD
+# =========================================================
+
 def prepare_reference_card(number):
 
-    image = download_card_image(number)
+    image = download_card_image(
+        number
+    )
 
-    image = normalize_card_image(image)
-
-    keypoints, descriptors = calculate_sift(
+    image = normalize_card_image(
         image
+    )
+
+    keypoints, descriptors = (
+        calculate_sift(
+            image
+        )
     )
 
     if descriptors is None:
@@ -186,11 +232,99 @@ def prepare_reference_card(number):
 
     return {
         "number": number,
-        "image_url": IMAGE_URL.format(number),
+        "image_url":
+            IMAGE_URL.format(number),
         "keypoints": keypoints,
         "descriptors": descriptors
     }
 
+
+# =========================================================
+# BUILD GLOBAL INDEX
+# =========================================================
+
+def build_global_descriptor_index():
+
+    global GLOBAL_DESCRIPTORS
+    global GLOBAL_CARD_NUMBERS
+    global global_matcher
+
+    descriptor_blocks = []
+    card_numbers = []
+
+    for number in range(
+        1,
+        CARD_COUNT + 1
+    ):
+
+        card = REFERENCE_CARDS[
+            number
+        ]
+
+        descriptors = card[
+            "descriptors"
+        ]
+
+        if descriptors is None:
+            continue
+
+        if len(descriptors) == 0:
+            continue
+
+        descriptor_blocks.append(
+            descriptors
+        )
+
+        card_numbers.extend(
+            [number] *
+            len(descriptors)
+        )
+
+    if not descriptor_blocks:
+
+        raise RuntimeError(
+            "No descriptors available "
+            "for global index."
+        )
+
+    GLOBAL_DESCRIPTORS = (
+        np.vstack(
+            descriptor_blocks
+        ).astype(
+            np.float32
+        )
+    )
+
+    GLOBAL_CARD_NUMBERS = (
+        np.asarray(
+            card_numbers,
+            dtype=np.int32
+        )
+    )
+
+    global_matcher = (
+        cv2.FlannBasedMatcher(
+            index_params,
+            search_params
+        )
+    )
+
+    global_matcher.add(
+        [GLOBAL_DESCRIPTORS]
+    )
+
+    global_matcher.train()
+
+    print(
+        "Global descriptor index:",
+        len(GLOBAL_DESCRIPTORS),
+        "features"
+    )
+
+
+# =========================================================
+# BUILD LIBRARY
+# =========================================================
 
 def build_reference_library():
 
@@ -206,12 +340,16 @@ def build_reference_library():
     library_loading = True
     library_ready = False
     library_error = None
-    library_started_at = time.time()
+
+    library_started_at = (
+        time.time()
+    )
 
     try:
 
         print(
-            "Building Destined Rivals SIFT reference library..."
+            "Building Destined Rivals "
+            "reference library..."
         )
 
         REFERENCE_CARDS.clear()
@@ -221,37 +359,43 @@ def build_reference_library():
             CARD_COUNT + 1
         ):
 
-            try:
-
-                REFERENCE_CARDS[number] = (
-                    prepare_reference_card(
-                        number
-                    )
-                )
-
-                print(
-                    f"Prepared {number}/{CARD_COUNT}"
-                )
-
-            except Exception as error:
-
-                print(
-                    f"Failed card #{number}: {error}"
-                )
-
-        if len(REFERENCE_CARDS) != CARD_COUNT:
-
-            raise RuntimeError(
-                "Reference library incomplete: "
-                f"{len(REFERENCE_CARDS)}/{CARD_COUNT}"
+            REFERENCE_CARDS[
+                number
+            ] = prepare_reference_card(
+                number
             )
 
-        library_finished_at = time.time()
+            print(
+                f"Prepared "
+                f"{number}/{CARD_COUNT}"
+            )
+
+        if (
+            len(REFERENCE_CARDS)
+            != CARD_COUNT
+        ):
+
+            raise RuntimeError(
+                "Reference library "
+                "incomplete."
+            )
+
+        print(
+            "Building global "
+            "SIFT search index..."
+        )
+
+        build_global_descriptor_index()
+
+        library_finished_at = (
+            time.time()
+        )
+
         library_ready = True
 
         print(
-            "Reference library ready:",
-            len(REFERENCE_CARDS),
+            "Library ready:",
+            CARD_COUNT,
             "cards"
         )
 
@@ -286,28 +430,145 @@ def startup_event():
 
 
 # =========================================================
-# FAST SIFT RANKING
+# GLOBAL FEATURE VOTING
 # =========================================================
 
-def fast_sift_rank(
+def rank_cards_global(
+    query_descriptors
+):
+
+    if (
+        query_descriptors is None
+        or
+        len(query_descriptors) < 2
+    ):
+
+        return []
+
+    matches = (
+        global_matcher.knnMatch(
+            query_descriptors,
+            k=2
+        )
+    )
+
+    votes = defaultdict(int)
+
+    distance_scores = (
+        defaultdict(float)
+    )
+
+    matched_query_indices = (
+        defaultdict(list)
+    )
+
+    for pair in matches:
+
+        if len(pair) < 2:
+            continue
+
+        first, second = pair
+
+        if (
+            first.distance
+            >=
+            LOWE_RATIO *
+            second.distance
+        ):
+            continue
+
+        train_index = (
+            first.trainIdx
+        )
+
+        if (
+            train_index < 0
+            or
+            train_index
+            >= len(
+                GLOBAL_CARD_NUMBERS
+            )
+        ):
+            continue
+
+        card_number = int(
+            GLOBAL_CARD_NUMBERS[
+                train_index
+            ]
+        )
+
+        votes[
+            card_number
+        ] += 1
+
+        distance_scores[
+            card_number
+        ] += first.distance
+
+        matched_query_indices[
+            card_number
+        ].append(
+            first.queryIdx
+        )
+
+    results = []
+
+    for (
+        number,
+        vote_count
+    ) in votes.items():
+
+        avg_distance = (
+            distance_scores[number]
+            /
+            vote_count
+        )
+
+        results.append({
+            "number": number,
+            "votes": vote_count,
+            "avg_distance":
+                avg_distance
+        })
+
+    results.sort(
+        key=lambda item: (
+            item["votes"],
+            -item["avg_distance"]
+        ),
+        reverse=True
+    )
+
+    return results
+
+
+# =========================================================
+# PER-CARD MATCHING FOR GEOMETRY
+# =========================================================
+
+def get_card_matches(
     query_descriptors,
     reference_descriptors
 ):
 
     if (
         query_descriptors is None
-        or reference_descriptors is None
-        or len(query_descriptors) < 2
-        or len(reference_descriptors) < 2
+        or
+        reference_descriptors is None
+        or
+        len(query_descriptors) < 2
+        or
+        len(reference_descriptors) < 2
     ):
 
-        return {
-            "good_matches": [],
-            "count": 0,
-            "quality": 0.0
-        }
+        return []
 
-    matches = matcher.knnMatch(
+    matcher = cv2.BFMatcher(
+        cv2.NORM_L2,
+        crossCheck=False
+    )
+
+    pairs = matcher.knnMatch(
         query_descriptors,
         reference_descriptors,
         k=2
@@ -315,11 +576,9 @@ def fast_sift_rank(
 
     good = []
 
-    distance_total = 0.0
+    for pair in pairs:
 
-    for pair in matches:
-
-        if len(pair) != 2:
+        if len(pair) < 2:
             continue
 
         first, second = pair
@@ -327,43 +586,13 @@ def fast_sift_rank(
         if (
             first.distance
             <
-            LOWE_RATIO * second.distance
+            LOWE_RATIO *
+            second.distance
         ):
 
             good.append(first)
-            distance_total += first.distance
 
-    count = len(good)
-
-    if count == 0:
-
-        return {
-            "good_matches": [],
-            "count": 0,
-            "quality": 0.0
-        }
-
-    average_distance = (
-        distance_total / count
-    )
-
-    # Higher is better.
-    # Strong match count dominates, while lower descriptor
-    # distance gives a supporting bonus.
-    quality = (
-        count * 10.0
-        +
-        max(
-            0.0,
-            300.0 - average_distance
-        )
-    )
-
-    return {
-        "good_matches": good,
-        "count": count,
-        "quality": quality
-    }
+    return good
 
 
 # =========================================================
@@ -376,7 +605,11 @@ def geometric_verification(
     good_matches
 ):
 
-    if len(good_matches) < MIN_GOOD_MATCHES:
+    if (
+        len(good_matches)
+        <
+        MIN_GOOD_MATCHES
+    ):
 
         return {
             "inliers": 0,
@@ -387,34 +620,47 @@ def geometric_verification(
         query_keypoints[
             match.queryIdx
         ].pt
-        for match in good_matches
+
+        for match
+        in good_matches
     ]).reshape(
         -1,
         1,
         2
     )
 
-    destination_points = np.float32([
-        reference_keypoints[
-            match.trainIdx
-        ].pt
-        for match in good_matches
-    ]).reshape(
-        -1,
-        1,
-        2
+    destination_points = (
+        np.float32([
+            reference_keypoints[
+                match.trainIdx
+            ].pt
+
+            for match
+            in good_matches
+        ])
+        .reshape(
+            -1,
+            1,
+            2
+        )
     )
 
     try:
 
-        matrix, mask = cv2.findHomography(
-            source_points,
-            destination_points,
-            cv2.RANSAC,
-            5.0
+        matrix, mask = (
+            cv2.findHomography(
+                source_points,
+                destination_points,
+                cv2.RANSAC,
+                5.0
+            )
         )
 
-        if matrix is None or mask is None:
+        if (
+            matrix is None
+            or
+            mask is None
+        ):
 
             return {
                 "inliers": 0,
@@ -432,7 +678,8 @@ def geometric_verification(
 
         return {
             "inliers": inliers,
-            "inlier_ratio": float(ratio)
+            "inlier_ratio":
+                float(ratio)
         }
 
     except cv2.error:
@@ -456,120 +703,169 @@ def recognize_image(image):
     )
 
     # -----------------------------------------------------
-    # QUERY SIFT
+    # Query SIFT once
     # -----------------------------------------------------
 
-    query_started = time.time()
-
-    query_keypoints, query_descriptors = (
-        calculate_sift(image)
+    query_started = (
+        time.time()
     )
 
-    query_sift_time = (
-        time.time() - query_started
+    (
+        query_keypoints,
+        query_descriptors
+    ) = calculate_sift(
+        image
+    )
+
+    query_time = (
+        time.time()
+        -
+        query_started
     )
 
     if (
         query_descriptors is None
-        or len(query_descriptors) < 8
+        or
+        len(query_descriptors) < 8
     ):
 
         return {
             "status": "no_match",
-            "reason": "Not enough image features",
+            "reason":
+                "Not enough image features",
             "top_matches": [],
-            "processing_seconds": round(
-                time.time() - started,
-                3
-            )
+            "processing_seconds":
+                round(
+                    time.time()
+                    -
+                    started,
+                    3
+                )
         }
 
     # -----------------------------------------------------
-    # STAGE 1
-    # SIFT ranking across ALL 244 cards.
-    # No colour shortlist anymore.
+    # Global SIFT index search
     # -----------------------------------------------------
 
-    ranking_started = time.time()
-
-    ranked = []
-
-    for number, reference in REFERENCE_CARDS.items():
-
-        match_result = fast_sift_rank(
-            query_descriptors,
-            reference["descriptors"]
-        )
-
-        ranked.append({
-            "number": number,
-            "good_matches":
-                match_result["count"],
-            "quality":
-                match_result["quality"],
-            "good_matches_list":
-                match_result["good_matches"],
-            "reference":
-                reference
-        })
-
-    ranked.sort(
-        key=lambda item: (
-            item["good_matches"],
-            item["quality"]
-        ),
-        reverse=True
+    search_started = (
+        time.time()
     )
 
-    ranking_time = (
-        time.time() - ranking_started
+    ranked = rank_cards_global(
+        query_descriptors
     )
 
+    global_search_time = (
+        time.time()
+        -
+        search_started
+    )
+
+    if not ranked:
+
+        return {
+            "status": "no_match",
+            "reason":
+                "No feature matches",
+            "top_matches": [],
+            "processing_seconds":
+                round(
+                    time.time()
+                    -
+                    started,
+                    3
+                )
+        }
+
     # -----------------------------------------------------
-    # STAGE 2
-    # Full geometry only on strongest candidates.
+    # Geometric verification only on strongest cards
     # -----------------------------------------------------
 
-    geometry_started = time.time()
+    geometry_started = (
+        time.time()
+    )
 
     final_results = []
 
-    for result in ranked[
+    for candidate in ranked[
         :GEOMETRY_CANDIDATES
     ]:
 
-        geometry = geometric_verification(
-            query_keypoints,
-            result["reference"]["keypoints"],
-            result["good_matches_list"]
+        number = candidate[
+            "number"
+        ]
+
+        reference = (
+            REFERENCE_CARDS[
+                number
+            ]
         )
 
-        good_matches = result["good_matches"]
-        inliers = geometry["inliers"]
-        inlier_ratio = geometry["inlier_ratio"]
+        good_matches = (
+            get_card_matches(
+                query_descriptors,
+                reference[
+                    "descriptors"
+                ]
+            )
+        )
+
+        geometry = (
+            geometric_verification(
+                query_keypoints,
+                reference[
+                    "keypoints"
+                ],
+                good_matches
+            )
+        )
+
+        inliers = (
+            geometry[
+                "inliers"
+            ]
+        )
+
+        inlier_ratio = (
+            geometry[
+                "inlier_ratio"
+            ]
+        )
+
+        good_count = len(
+            good_matches
+        )
 
         score = (
             inliers * 6.0
             +
             inlier_ratio * 220.0
             +
-            good_matches * 0.25
+            good_count * 0.25
+            +
+            candidate["votes"] * 0.5
         )
 
         final_results.append({
             "number":
-                result["number"],
+                number,
 
             "display_number":
-                f'{result["number"]}/{DENOMINATOR}',
+                f"{number}/"
+                f"{DENOMINATOR}",
 
             "image":
                 IMAGE_URL.format(
-                    result["number"]
+                    number
                 ),
 
+            "global_votes":
+                candidate[
+                    "votes"
+                ],
+
             "good_matches":
-                good_matches,
+                good_count,
 
             "inliers":
                 inliers,
@@ -588,7 +884,9 @@ def recognize_image(image):
         })
 
     geometry_time = (
-        time.time() - geometry_started
+        time.time()
+        -
+        geometry_started
     )
 
     final_results.sort(
@@ -601,29 +899,32 @@ def recognize_image(image):
 
         return {
             "status": "no_match",
-            "top_matches": [],
-            "processing_seconds": round(
-                time.time() - started,
-                3
-            )
+            "top_matches": []
         }
 
-    best = final_results[0]
+    best = (
+        final_results[0]
+    )
 
     second = (
         final_results[1]
-        if len(final_results) > 1
-        else None
+        if
+        len(final_results) > 1
+        else
+        None
     )
 
     score_gap = (
-        best["score"] - second["score"]
+        best["score"]
+        -
+        second["score"]
         if second
-        else best["score"]
+        else
+        best["score"]
     )
 
     # -----------------------------------------------------
-    # CONFIDENCE
+    # Confidence
     # -----------------------------------------------------
 
     confident = False
@@ -635,6 +936,7 @@ def recognize_image(image):
         and
         score_gap >= 18
     ):
+
         confident = True
 
     if (
@@ -642,10 +944,13 @@ def recognize_image(image):
         and
         best["inlier_ratio"] >= 0.50
     ):
+
         confident = True
 
     total_time = (
-        time.time() - started
+        time.time()
+        -
+        started
     )
 
     return {
@@ -653,9 +958,11 @@ def recognize_image(image):
 
         "set": SET_NAME,
 
-        "best_match": best,
+        "best_match":
+            best,
 
-        "confident": confident,
+        "confident":
+            confident,
 
         "score_gap":
             round(
@@ -667,15 +974,16 @@ def recognize_image(image):
             final_results[:5],
 
         "timing": {
+
             "query_sift":
                 round(
-                    query_sift_time,
+                    query_time,
                     3
                 ),
 
-            "all_card_sift_ranking":
+            "global_search":
                 round(
-                    ranking_time,
+                    global_search_time,
                     3
                 ),
 
@@ -702,21 +1010,44 @@ def recognize_image(image):
 def home():
 
     return {
-        "status": "online",
+        "status":
+            "online",
+
         "service":
             "Pokemon Card Recognizer",
-        "version": "4.0",
-        "set": SET_NAME,
+
+        "version":
+            "5.0",
+
+        "set":
+            SET_NAME,
+
         "library_ready":
             library_ready,
+
         "library_loading":
             library_loading,
+
         "cards_prepared":
             len(
                 REFERENCE_CARDS
             ),
+
         "cards_expected":
             CARD_COUNT,
+
+        "global_features":
+            (
+                len(
+                    GLOBAL_DESCRIPTORS
+                )
+                if
+                GLOBAL_DESCRIPTORS
+                is not None
+                else
+                0
+            ),
+
         "library_error":
             library_error
     }
@@ -727,9 +1058,12 @@ def health():
 
     return {
         "status":
-            "ok"
-            if library_ready
-            else "loading",
+            (
+                "ok"
+                if library_ready
+                else
+                "loading"
+            ),
 
         "library_ready":
             library_ready,
@@ -751,16 +1085,43 @@ def health():
 def library():
 
     return {
-        "set": SET_NAME,
-        "ready": library_ready,
-        "loading": library_loading,
-        "cards": len(
-            REFERENCE_CARDS
-        ),
-        "expected": CARD_COUNT,
-        "started_at": library_started_at,
-        "finished_at": library_finished_at,
-        "error": library_error
+        "set":
+            SET_NAME,
+
+        "ready":
+            library_ready,
+
+        "loading":
+            library_loading,
+
+        "cards":
+            len(
+                REFERENCE_CARDS
+            ),
+
+        "expected":
+            CARD_COUNT,
+
+        "global_features":
+            (
+                len(
+                    GLOBAL_DESCRIPTORS
+                )
+                if
+                GLOBAL_DESCRIPTORS
+                is not None
+                else
+                0
+            ),
+
+        "started_at":
+            library_started_at,
+
+        "finished_at":
+            library_finished_at,
+
+        "error":
+            library_error
     }
 
 
@@ -781,11 +1142,13 @@ async def recognize(
 
     try:
 
-        contents = await file.read()
+        contents = (
+            await file.read()
+        )
 
         array = np.frombuffer(
             contents,
-            np.uint8
+            dtype=np.uint8
         )
 
         image = cv2.imdecode(
@@ -798,8 +1161,8 @@ async def recognize(
             raise HTTPException(
                 status_code=400,
                 detail=(
-                    "Uploaded file is not "
-                    "a valid image."
+                    "Uploaded file is "
+                    "not a valid image."
                 )
             )
 
