@@ -49,8 +49,8 @@ IMAGE_URL = (
 # RECOGNITION SETTINGS
 # =========================================================
 
-# First we cheaply narrow 244 cards down to 24.
-SHORTLIST_SIZE = 24
+# First we cheaply narrow 244 cards down to 60.
+SHORTLIST_SIZE = 60
 
 # Then we perform geometric verification only on
 # the strongest 8 candidates.
