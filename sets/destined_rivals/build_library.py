@@ -3,6 +3,7 @@ import numpy as np
 import urllib.request
 import pickle
 import time
+import os
 
 
 SET_CODE = "sv10"
@@ -14,7 +15,10 @@ IMAGE_URL = (
     + "/{}.png"
 )
 
-OUTPUT_FILE = "card_library.pkl"
+OUTPUT_FILE = os.path.join(
+    os.path.dirname(__file__),
+    "card_library.pkl"
+)
 
 # Reduced from 900.
 # Still plenty for card recognition but much lighter in RAM.
@@ -40,33 +44,41 @@ def download_card(number):
         }
     )
 
-    with urllib.request.urlopen(
-        request,
-        timeout=30
-    ) as response:
+    try:
 
-        data = response.read()
+        with urllib.request.urlopen(
+            request,
+            timeout=30
+        ) as response:
 
-    array = np.frombuffer(
-        data,
-        dtype=np.uint8
-    )
+            data = response.read()
 
-    image = cv2.imdecode(
-        array,
-        cv2.IMREAD_COLOR
-    )
-
-    if image is None:
-
-        raise RuntimeError(
-            f"Could not decode card #{number}"
+        image_array = np.asarray(
+            bytearray(data),
+            dtype=np.uint8
         )
 
-    return image
+        image = cv2.imdecode(
+            image_array,
+            cv2.IMREAD_COLOR
+        )
+
+        return image
+
+    except Exception as error:
+
+        print(
+            f"Failed to download card {number}:",
+            error
+        )
+
+        return None
 
 
-def normalize(image):
+def prepare_image(image):
+
+    if image is None:
+        return None
 
     height, width = image.shape[:2]
 
@@ -75,7 +87,8 @@ def normalize(image):
     if max(height, width) > max_dimension:
 
         scale = (
-            max_dimension /
+            max_dimension
+            /
             max(height, width)
         )
 
@@ -91,15 +104,7 @@ def normalize(image):
     return image
 
 
-def prepare_card(number):
-
-    print(
-        f"Preparing card {number}/{CARD_COUNT}..."
-    )
-
-    image = download_card(number)
-
-    image = normalize(image)
+def extract_features(image):
 
     gray = cv2.cvtColor(
         image,
@@ -114,22 +119,19 @@ def prepare_card(number):
     )
 
     if descriptors is None:
+        return [], None
 
-        descriptors = np.empty(
-            (0, 128),
-            dtype=np.float32
-        )
+    descriptors = descriptors.astype(
+        np.float32
+    )
 
-    else:
-
-        descriptors = descriptors.astype(
-            np.float32
-        )
-
-    keypoint_coordinates = np.float32([
-        kp.pt
-        for kp in keypoints
-    ])
+    keypoint_coordinates = np.array(
+        [
+            keypoint.pt
+            for keypoint in keypoints
+        ],
+        dtype=np.float32
+    )
 
     return (
         keypoint_coordinates,
@@ -137,21 +139,15 @@ def prepare_card(number):
     )
 
 
-def main():
-
-    started = time.time()
+def build_library():
 
     print(
-        "================================"
+        "Building Destined Rivals card library..."
     )
 
     print(
-        "Building memory-optimized "
-        "Destined Rivals SIFT library"
-    )
-
-    print(
-        "================================"
+        "Cards expected:",
+        CARD_COUNT
     )
 
     cards = {}
@@ -160,69 +156,143 @@ def main():
 
     card_number_blocks = []
 
-    current_index = 0
+    descriptor_offset = 0
+
+    started = time.time()
+
+    successful_cards = 0
+
+    total_features = 0
 
     for number in range(
         1,
         CARD_COUNT + 1
     ):
 
+        print(
+            f"[{number}/{CARD_COUNT}] "
+            f"Downloading card {number}..."
+        )
+
+        image = download_card(
+            number
+        )
+
+        if image is None:
+
+            print(
+                f"Skipping card {number}: "
+                f"download failed."
+            )
+
+            continue
+
+        image = prepare_image(
+            image
+        )
+
         (
             keypoints,
             descriptors
-        ) = prepare_card(number)
-
-        start_index = current_index
-
-        end_index = (
-            start_index
-            +
-            len(descriptors)
+        ) = extract_features(
+            image
         )
 
-        # IMPORTANT:
-        # We do NOT save another copy of the card's
-        # descriptors here.
-        #
-        # We only save where this card's descriptors
-        # live inside the global array.
+        if (
+            descriptors is None
+            or
+            len(descriptors) == 0
+        ):
+
+            print(
+                f"Skipping card {number}: "
+                f"no SIFT features."
+            )
+
+            continue
+
+        descriptor_count = len(
+            descriptors
+        )
+
+        descriptor_start = (
+            descriptor_offset
+        )
+
+        descriptor_end = (
+            descriptor_start
+            +
+            descriptor_count
+        )
+
         cards[number] = {
-            "number": number,
-            "keypoints": keypoints,
+            "number":
+                number,
+
+            "keypoints":
+                keypoints,
+
             "descriptor_start":
-                start_index,
+                descriptor_start,
+
             "descriptor_end":
-                end_index
+                descriptor_end
         }
 
-        if len(descriptors) > 0:
+        descriptor_blocks.append(
+            descriptors
+        )
 
-            descriptor_blocks.append(
-                descriptors
+        card_number_blocks.append(
+            np.full(
+                descriptor_count,
+                number,
+                dtype=np.uint16
             )
+        )
 
-            card_number_blocks.extend(
-                [number]
-                *
-                len(descriptors)
-            )
+        descriptor_offset = (
+            descriptor_end
+        )
 
-        current_index = end_index
+        successful_cards += 1
+
+        total_features += (
+            descriptor_count
+        )
+
+        print(
+            f"Card {number}: "
+            f"{descriptor_count} features"
+        )
+
+    if not descriptor_blocks:
+
+        raise RuntimeError(
+            "No card descriptors were created."
+        )
 
     global_descriptors = np.vstack(
         descriptor_blocks
     ).astype(
-        np.float32
+        np.float32,
+        copy=False
     )
 
-    # uint16 is plenty because our card numbers
-    # only run from 1 to 244.
-    global_card_numbers = np.asarray(
-        card_number_blocks,
-        dtype=np.uint16
+    global_card_numbers = np.concatenate(
+        card_number_blocks
+    ).astype(
+        np.uint16,
+        copy=False
     )
 
     library = {
+        "set_code":
+            SET_CODE,
+
+        "card_count":
+            CARD_COUNT,
+
         "cards":
             cards,
 
@@ -232,8 +302,6 @@ def main():
         "global_card_numbers":
             global_card_numbers
     }
-
-    print("Saving optimized library...")
 
     with open(
         OUTPUT_FILE,
@@ -252,7 +320,7 @@ def main():
         started
     )
 
-    size_mb = (
+    descriptor_mb = (
         global_descriptors.nbytes
         /
         1024
@@ -260,44 +328,74 @@ def main():
         1024
     )
 
-    print(
-        "================================"
+    mapping_mb = (
+        global_card_numbers.nbytes
+        /
+        1024
+        /
+        1024
     )
 
-    print("BUILD COMPLETE")
-
+    print()
     print(
-        "Cards:",
-        len(cards)
+        "========================================"
     )
-
     print(
-        "SIFT features:",
-        len(global_descriptors)
+        "DESTINED RIVALS BUILD COMPLETE"
     )
-
+    print(
+        "========================================"
+    )
+    print(
+        "Cards prepared:",
+        successful_cards,
+        "/",
+        CARD_COUNT
+    )
+    print(
+        "Total SIFT features:",
+        total_features
+    )
     print(
         "Descriptor memory:",
-        round(size_mb, 1),
+        round(
+            descriptor_mb,
+            1
+        ),
         "MB"
     )
-
     print(
-        "File:",
+        "Card mapping memory:",
+        round(
+            mapping_mb,
+            2
+        ),
+        "MB"
+    )
+    print(
+        "Output:",
         OUTPUT_FILE
     )
-
     print(
-        "Time:",
-        round(elapsed, 1),
+        "Build time:",
+        round(
+            elapsed,
+            1
+        ),
         "seconds"
     )
-
     print(
-        "================================"
+        "========================================"
     )
+
+    if successful_cards != CARD_COUNT:
+
+        raise RuntimeError(
+            f"Library incomplete: "
+            f"expected {CARD_COUNT} cards, "
+            f"prepared {successful_cards}."
+        )
 
 
 if __name__ == "__main__":
-
-    main()
+    build_library()
