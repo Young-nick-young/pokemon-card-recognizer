@@ -1,0 +1,5130 @@
+{
+  "schemaVersion": "1.0",
+  "setId": "destined-rivals",
+  "cards": [
+    {
+      "cardId": "dri-001",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "001/182",
+        "sortKey": 1
+      },
+      "name": "Ethan's Pinsir",
+      "referenceImage": "https://images.pokemontcg.io/sv10/1.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-1",
+        "legacyInventoryCardId": "DRI-001"
+      }
+    },
+    {
+      "cardId": "dri-002",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "002/182",
+        "sortKey": 2
+      },
+      "name": "Yanma",
+      "referenceImage": "https://images.pokemontcg.io/sv10/2.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-2",
+        "legacyInventoryCardId": "DRI-002"
+      }
+    },
+    {
+      "cardId": "dri-003",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "003/182",
+        "sortKey": 3
+      },
+      "name": "Yanmega ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/3.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-3",
+        "legacyInventoryCardId": "DRI-003"
+      }
+    },
+    {
+      "cardId": "dri-004",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "004/182",
+        "sortKey": 4
+      },
+      "name": "Pineco",
+      "referenceImage": "https://images.pokemontcg.io/sv10/4.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-4",
+        "legacyInventoryCardId": "DRI-004"
+      }
+    },
+    {
+      "cardId": "dri-005",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "005/182",
+        "sortKey": 5
+      },
+      "name": "Shroomish",
+      "referenceImage": "https://images.pokemontcg.io/sv10/5.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-5",
+        "legacyInventoryCardId": "DRI-005"
+      }
+    },
+    {
+      "cardId": "dri-006",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "006/182",
+        "sortKey": 6
+      },
+      "name": "Breloom",
+      "referenceImage": "https://images.pokemontcg.io/sv10/6.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-6",
+        "legacyInventoryCardId": "DRI-006"
+      }
+    },
+    {
+      "cardId": "dri-007",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "007/182",
+        "sortKey": 7
+      },
+      "name": "Cynthia's Roselia",
+      "referenceImage": "https://images.pokemontcg.io/sv10/7.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-7",
+        "legacyInventoryCardId": "DRI-007"
+      }
+    },
+    {
+      "cardId": "dri-008",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "008/182",
+        "sortKey": 8
+      },
+      "name": "Cynthia's Roserade",
+      "referenceImage": "https://images.pokemontcg.io/sv10/8.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-8",
+        "legacyInventoryCardId": "DRI-008"
+      }
+    },
+    {
+      "cardId": "dri-009",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "009/182",
+        "sortKey": 9
+      },
+      "name": "Mow Rotom",
+      "referenceImage": "https://images.pokemontcg.io/sv10/9.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-9",
+        "legacyInventoryCardId": "DRI-009"
+      }
+    },
+    {
+      "cardId": "dri-010",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "010/182",
+        "sortKey": 10
+      },
+      "name": "Shaymin",
+      "referenceImage": "https://images.pokemontcg.io/sv10/10.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-10",
+        "legacyInventoryCardId": "DRI-010"
+      }
+    },
+    {
+      "cardId": "dri-011",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "011/182",
+        "sortKey": 11
+      },
+      "name": "Dwebble",
+      "referenceImage": "https://images.pokemontcg.io/sv10/11.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-11",
+        "legacyInventoryCardId": "DRI-011"
+      }
+    },
+    {
+      "cardId": "dri-012",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "012/182",
+        "sortKey": 12
+      },
+      "name": "Crustle",
+      "referenceImage": "https://images.pokemontcg.io/sv10/12.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-12",
+        "legacyInventoryCardId": "DRI-012"
+      }
+    },
+    {
+      "cardId": "dri-013",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "013/182",
+        "sortKey": 13
+      },
+      "name": "Fomantis",
+      "referenceImage": "https://images.pokemontcg.io/sv10/13.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-13",
+        "legacyInventoryCardId": "DRI-013"
+      }
+    },
+    {
+      "cardId": "dri-014",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "014/182",
+        "sortKey": 14
+      },
+      "name": "Lurantis",
+      "referenceImage": "https://images.pokemontcg.io/sv10/14.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-14",
+        "legacyInventoryCardId": "DRI-014"
+      }
+    },
+    {
+      "cardId": "dri-015",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "015/182",
+        "sortKey": 15
+      },
+      "name": "Team Rocket's Blipbug",
+      "referenceImage": "https://images.pokemontcg.io/sv10/15.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-15",
+        "legacyInventoryCardId": "DRI-015"
+      }
+    },
+    {
+      "cardId": "dri-016",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "016/182",
+        "sortKey": 16
+      },
+      "name": "Applin",
+      "referenceImage": "https://images.pokemontcg.io/sv10/16.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-16",
+        "legacyInventoryCardId": "DRI-016"
+      }
+    },
+    {
+      "cardId": "dri-017",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "017/182",
+        "sortKey": 17
+      },
+      "name": "Dipplin",
+      "referenceImage": "https://images.pokemontcg.io/sv10/17.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-17",
+        "legacyInventoryCardId": "DRI-017"
+      }
+    },
+    {
+      "cardId": "dri-018",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "018/182",
+        "sortKey": 18
+      },
+      "name": "Hydrapple",
+      "referenceImage": "https://images.pokemontcg.io/sv10/18.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-18",
+        "legacyInventoryCardId": "DRI-018"
+      }
+    },
+    {
+      "cardId": "dri-019",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "019/182",
+        "sortKey": 19
+      },
+      "name": "Team Rocket's Tarountula",
+      "referenceImage": "https://images.pokemontcg.io/sv10/19.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-19",
+        "legacyInventoryCardId": "DRI-019"
+      }
+    },
+    {
+      "cardId": "dri-020",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "020/182",
+        "sortKey": 20
+      },
+      "name": "Team Rocket's Spidops",
+      "referenceImage": "https://images.pokemontcg.io/sv10/20.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-20",
+        "legacyInventoryCardId": "DRI-020"
+      }
+    },
+    {
+      "cardId": "dri-021",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "021/182",
+        "sortKey": 21
+      },
+      "name": "Smoliv",
+      "referenceImage": "https://images.pokemontcg.io/sv10/21.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-21",
+        "legacyInventoryCardId": "DRI-021"
+      }
+    },
+    {
+      "cardId": "dri-022",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "022/182",
+        "sortKey": 22
+      },
+      "name": "Dolliv",
+      "referenceImage": "https://images.pokemontcg.io/sv10/22.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-22",
+        "legacyInventoryCardId": "DRI-022"
+      }
+    },
+    {
+      "cardId": "dri-023",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "023/182",
+        "sortKey": 23
+      },
+      "name": "Arboliva ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/23.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-23",
+        "legacyInventoryCardId": "DRI-023"
+      }
+    },
+    {
+      "cardId": "dri-024",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "024/182",
+        "sortKey": 24
+      },
+      "name": "Rellor",
+      "referenceImage": "https://images.pokemontcg.io/sv10/24.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-24",
+        "legacyInventoryCardId": "DRI-024"
+      }
+    },
+    {
+      "cardId": "dri-025",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "025/182",
+        "sortKey": 25
+      },
+      "name": "Rabsca ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/25.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-25",
+        "legacyInventoryCardId": "DRI-025"
+      }
+    },
+    {
+      "cardId": "dri-026",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "026/182",
+        "sortKey": 26
+      },
+      "name": "Teal Mask Ogerpon",
+      "referenceImage": "https://images.pokemontcg.io/sv10/26.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-26",
+        "legacyInventoryCardId": "DRI-026"
+      }
+    },
+    {
+      "cardId": "dri-027",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "027/182",
+        "sortKey": 27
+      },
+      "name": "Growlithe",
+      "referenceImage": "https://images.pokemontcg.io/sv10/27.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-27",
+        "legacyInventoryCardId": "DRI-027"
+      }
+    },
+    {
+      "cardId": "dri-028",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "028/182",
+        "sortKey": 28
+      },
+      "name": "Arcanine",
+      "referenceImage": "https://images.pokemontcg.io/sv10/28.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-28",
+        "legacyInventoryCardId": "DRI-028"
+      }
+    },
+    {
+      "cardId": "dri-029",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "029/182",
+        "sortKey": 29
+      },
+      "name": "Ponyta",
+      "referenceImage": "https://images.pokemontcg.io/sv10/29.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-29",
+        "legacyInventoryCardId": "DRI-029"
+      }
+    },
+    {
+      "cardId": "dri-030",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "030/182",
+        "sortKey": 30
+      },
+      "name": "Rapidash",
+      "referenceImage": "https://images.pokemontcg.io/sv10/30.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-30",
+        "legacyInventoryCardId": "DRI-030"
+      }
+    },
+    {
+      "cardId": "dri-031",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "031/182",
+        "sortKey": 31
+      },
+      "name": "Team Rocket's Moltres ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/31.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-31",
+        "legacyInventoryCardId": "DRI-031"
+      }
+    },
+    {
+      "cardId": "dri-032",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "032/182",
+        "sortKey": 32
+      },
+      "name": "Ethan's Cyndaquil",
+      "referenceImage": "https://images.pokemontcg.io/sv10/32.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-32",
+        "legacyInventoryCardId": "DRI-032"
+      }
+    },
+    {
+      "cardId": "dri-033",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "033/182",
+        "sortKey": 33
+      },
+      "name": "Ethan's Quilava",
+      "referenceImage": "https://images.pokemontcg.io/sv10/33.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-33",
+        "legacyInventoryCardId": "DRI-033"
+      }
+    },
+    {
+      "cardId": "dri-034",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "034/182",
+        "sortKey": 34
+      },
+      "name": "Ethan's Typhlosion",
+      "referenceImage": "https://images.pokemontcg.io/sv10/34.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-34",
+        "legacyInventoryCardId": "DRI-034"
+      }
+    },
+    {
+      "cardId": "dri-035",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "035/182",
+        "sortKey": 35
+      },
+      "name": "Ethan's Slugma",
+      "referenceImage": "https://images.pokemontcg.io/sv10/35.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-35",
+        "legacyInventoryCardId": "DRI-035"
+      }
+    },
+    {
+      "cardId": "dri-036",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "036/182",
+        "sortKey": 36
+      },
+      "name": "Ethan's Magcargo",
+      "referenceImage": "https://images.pokemontcg.io/sv10/36.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-36",
+        "legacyInventoryCardId": "DRI-036"
+      }
+    },
+    {
+      "cardId": "dri-037",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "037/182",
+        "sortKey": 37
+      },
+      "name": "Team Rocket's Houndour",
+      "referenceImage": "https://images.pokemontcg.io/sv10/37.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-37",
+        "legacyInventoryCardId": "DRI-037"
+      }
+    },
+    {
+      "cardId": "dri-038",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "038/182",
+        "sortKey": 38
+      },
+      "name": "Team Rocket's Houndoom",
+      "referenceImage": "https://images.pokemontcg.io/sv10/38.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-38",
+        "legacyInventoryCardId": "DRI-038"
+      }
+    },
+    {
+      "cardId": "dri-039",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "039/182",
+        "sortKey": 39
+      },
+      "name": "Ethan's Ho-Oh ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/39.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-39",
+        "legacyInventoryCardId": "DRI-039"
+      }
+    },
+    {
+      "cardId": "dri-040",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "040/182",
+        "sortKey": 40
+      },
+      "name": "Torchic",
+      "referenceImage": "https://images.pokemontcg.io/sv10/40.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-40",
+        "legacyInventoryCardId": "DRI-040"
+      }
+    },
+    {
+      "cardId": "dri-041",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "041/182",
+        "sortKey": 41
+      },
+      "name": "Combusken",
+      "referenceImage": "https://images.pokemontcg.io/sv10/41.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-41",
+        "legacyInventoryCardId": "DRI-041"
+      }
+    },
+    {
+      "cardId": "dri-042",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "042/182",
+        "sortKey": 42
+      },
+      "name": "Blaziken",
+      "referenceImage": "https://images.pokemontcg.io/sv10/42.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-42",
+        "legacyInventoryCardId": "DRI-042"
+      }
+    },
+    {
+      "cardId": "dri-043",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "043/182",
+        "sortKey": 43
+      },
+      "name": "Heat Rotom",
+      "referenceImage": "https://images.pokemontcg.io/sv10/43.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-43",
+        "legacyInventoryCardId": "DRI-043"
+      }
+    },
+    {
+      "cardId": "dri-044",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "044/182",
+        "sortKey": 44
+      },
+      "name": "Hearthflame Mask Ogerpon",
+      "referenceImage": "https://images.pokemontcg.io/sv10/44.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-44",
+        "legacyInventoryCardId": "DRI-044"
+      }
+    },
+    {
+      "cardId": "dri-045",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "045/182",
+        "sortKey": 45
+      },
+      "name": "Misty's Psyduck",
+      "referenceImage": "https://images.pokemontcg.io/sv10/45.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-45",
+        "legacyInventoryCardId": "DRI-045"
+      }
+    },
+    {
+      "cardId": "dri-046",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "046/182",
+        "sortKey": 46
+      },
+      "name": "Misty's Staryu",
+      "referenceImage": "https://images.pokemontcg.io/sv10/46.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-46",
+        "legacyInventoryCardId": "DRI-046"
+      }
+    },
+    {
+      "cardId": "dri-047",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "047/182",
+        "sortKey": 47
+      },
+      "name": "Misty's Starmie",
+      "referenceImage": "https://images.pokemontcg.io/sv10/47.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-47",
+        "legacyInventoryCardId": "DRI-047"
+      }
+    },
+    {
+      "cardId": "dri-048",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "048/182",
+        "sortKey": 48
+      },
+      "name": "Misty's Magikarp",
+      "referenceImage": "https://images.pokemontcg.io/sv10/48.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-48",
+        "legacyInventoryCardId": "DRI-048"
+      }
+    },
+    {
+      "cardId": "dri-049",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "049/182",
+        "sortKey": 49
+      },
+      "name": "Misty's Gyarados",
+      "referenceImage": "https://images.pokemontcg.io/sv10/49.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-49",
+        "legacyInventoryCardId": "DRI-049"
+      }
+    },
+    {
+      "cardId": "dri-050",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "050/182",
+        "sortKey": 50
+      },
+      "name": "Misty's Lapras",
+      "referenceImage": "https://images.pokemontcg.io/sv10/50.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-50",
+        "legacyInventoryCardId": "DRI-050"
+      }
+    },
+    {
+      "cardId": "dri-051",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "051/182",
+        "sortKey": 51
+      },
+      "name": "Team Rocket's Articuno",
+      "referenceImage": "https://images.pokemontcg.io/sv10/51.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-51",
+        "legacyInventoryCardId": "DRI-051"
+      }
+    },
+    {
+      "cardId": "dri-052",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "052/182",
+        "sortKey": 52
+      },
+      "name": "Cynthia's Feebas",
+      "referenceImage": "https://images.pokemontcg.io/sv10/52.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-52",
+        "legacyInventoryCardId": "DRI-052"
+      }
+    },
+    {
+      "cardId": "dri-053",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "053/182",
+        "sortKey": 53
+      },
+      "name": "Cynthia's Milotic",
+      "referenceImage": "https://images.pokemontcg.io/sv10/53.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-53",
+        "legacyInventoryCardId": "DRI-053"
+      }
+    },
+    {
+      "cardId": "dri-054",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "054/182",
+        "sortKey": 54
+      },
+      "name": "Clamperl",
+      "referenceImage": "https://images.pokemontcg.io/sv10/54.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-54",
+        "legacyInventoryCardId": "DRI-054"
+      }
+    },
+    {
+      "cardId": "dri-055",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "055/182",
+        "sortKey": 55
+      },
+      "name": "Huntail",
+      "referenceImage": "https://images.pokemontcg.io/sv10/55.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-55",
+        "legacyInventoryCardId": "DRI-055"
+      }
+    },
+    {
+      "cardId": "dri-056",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "056/182",
+        "sortKey": 56
+      },
+      "name": "Gorebyss",
+      "referenceImage": "https://images.pokemontcg.io/sv10/56.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-56",
+        "legacyInventoryCardId": "DRI-056"
+      }
+    },
+    {
+      "cardId": "dri-057",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "057/182",
+        "sortKey": 57
+      },
+      "name": "Buizel",
+      "referenceImage": "https://images.pokemontcg.io/sv10/57.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-57",
+        "legacyInventoryCardId": "DRI-057"
+      }
+    },
+    {
+      "cardId": "dri-058",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "058/182",
+        "sortKey": 58
+      },
+      "name": "Floatzel",
+      "referenceImage": "https://images.pokemontcg.io/sv10/58.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-58",
+        "legacyInventoryCardId": "DRI-058"
+      }
+    },
+    {
+      "cardId": "dri-059",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "059/182",
+        "sortKey": 59
+      },
+      "name": "Snover",
+      "referenceImage": "https://images.pokemontcg.io/sv10/59.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-59",
+        "legacyInventoryCardId": "DRI-059"
+      }
+    },
+    {
+      "cardId": "dri-060",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "060/182",
+        "sortKey": 60
+      },
+      "name": "Abomasnow",
+      "referenceImage": "https://images.pokemontcg.io/sv10/60.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-60",
+        "legacyInventoryCardId": "DRI-060"
+      }
+    },
+    {
+      "cardId": "dri-061",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "061/182",
+        "sortKey": 61
+      },
+      "name": "Wash Rotom",
+      "referenceImage": "https://images.pokemontcg.io/sv10/61.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-61",
+        "legacyInventoryCardId": "DRI-061"
+      }
+    },
+    {
+      "cardId": "dri-062",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "062/182",
+        "sortKey": 62
+      },
+      "name": "Arrokuda",
+      "referenceImage": "https://images.pokemontcg.io/sv10/62.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-62",
+        "legacyInventoryCardId": "DRI-062"
+      }
+    },
+    {
+      "cardId": "dri-063",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "063/182",
+        "sortKey": 63
+      },
+      "name": "Barraskewda",
+      "referenceImage": "https://images.pokemontcg.io/sv10/63.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-63",
+        "legacyInventoryCardId": "DRI-063"
+      }
+    },
+    {
+      "cardId": "dri-064",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "064/182",
+        "sortKey": 64
+      },
+      "name": "Cetoddle",
+      "referenceImage": "https://images.pokemontcg.io/sv10/64.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-64",
+        "legacyInventoryCardId": "DRI-064"
+      }
+    },
+    {
+      "cardId": "dri-065",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "065/182",
+        "sortKey": 65
+      },
+      "name": "Cetitan ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/65.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-65",
+        "legacyInventoryCardId": "DRI-065"
+      }
+    },
+    {
+      "cardId": "dri-066",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "066/182",
+        "sortKey": 66
+      },
+      "name": "Dondozo ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/66.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-66",
+        "legacyInventoryCardId": "DRI-066"
+      }
+    },
+    {
+      "cardId": "dri-067",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "067/182",
+        "sortKey": 67
+      },
+      "name": "Wellspring Mask Ogerpon",
+      "referenceImage": "https://images.pokemontcg.io/sv10/67.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-67",
+        "legacyInventoryCardId": "DRI-067"
+      }
+    },
+    {
+      "cardId": "dri-068",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "068/182",
+        "sortKey": 68
+      },
+      "name": "Electabuzz",
+      "referenceImage": "https://images.pokemontcg.io/sv10/68.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-68",
+        "legacyInventoryCardId": "DRI-068"
+      }
+    },
+    {
+      "cardId": "dri-069",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "069/182",
+        "sortKey": 69
+      },
+      "name": "Electivire ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/69.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-69",
+        "legacyInventoryCardId": "DRI-069"
+      }
+    },
+    {
+      "cardId": "dri-070",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "070/182",
+        "sortKey": 70
+      },
+      "name": "Team Rocket's Zapdos",
+      "referenceImage": "https://images.pokemontcg.io/sv10/70.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-70",
+        "legacyInventoryCardId": "DRI-070"
+      }
+    },
+    {
+      "cardId": "dri-071",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "071/182",
+        "sortKey": 71
+      },
+      "name": "Ethan's Pichu",
+      "referenceImage": "https://images.pokemontcg.io/sv10/71.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-71",
+        "legacyInventoryCardId": "DRI-071"
+      }
+    },
+    {
+      "cardId": "dri-072",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "072/182",
+        "sortKey": 72
+      },
+      "name": "Team Rocket's Mareep",
+      "referenceImage": "https://images.pokemontcg.io/sv10/72.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-72",
+        "legacyInventoryCardId": "DRI-072"
+      }
+    },
+    {
+      "cardId": "dri-073",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "073/182",
+        "sortKey": 73
+      },
+      "name": "Team Rocket's Flaaffy",
+      "referenceImage": "https://images.pokemontcg.io/sv10/73.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-73",
+        "legacyInventoryCardId": "DRI-073"
+      }
+    },
+    {
+      "cardId": "dri-074",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "074/182",
+        "sortKey": 74
+      },
+      "name": "Team Rocket's Ampharos",
+      "referenceImage": "https://images.pokemontcg.io/sv10/74.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-74",
+        "legacyInventoryCardId": "DRI-074"
+      }
+    },
+    {
+      "cardId": "dri-075",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "075/182",
+        "sortKey": 75
+      },
+      "name": "Electrike",
+      "referenceImage": "https://images.pokemontcg.io/sv10/75.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-75",
+        "legacyInventoryCardId": "DRI-075"
+      }
+    },
+    {
+      "cardId": "dri-076",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "076/182",
+        "sortKey": 76
+      },
+      "name": "Manectric",
+      "referenceImage": "https://images.pokemontcg.io/sv10/76.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-76",
+        "legacyInventoryCardId": "DRI-076"
+      }
+    },
+    {
+      "cardId": "dri-077",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "077/182",
+        "sortKey": 77
+      },
+      "name": "Rotom",
+      "referenceImage": "https://images.pokemontcg.io/sv10/77.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-77",
+        "legacyInventoryCardId": "DRI-077"
+      }
+    },
+    {
+      "cardId": "dri-078",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "078/182",
+        "sortKey": 78
+      },
+      "name": "Zeraora",
+      "referenceImage": "https://images.pokemontcg.io/sv10/78.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-78",
+        "legacyInventoryCardId": "DRI-078"
+      }
+    },
+    {
+      "cardId": "dri-079",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "079/182",
+        "sortKey": 79
+      },
+      "name": "Team Rocket's Drowzee",
+      "referenceImage": "https://images.pokemontcg.io/sv10/79.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-79",
+        "legacyInventoryCardId": "DRI-079"
+      }
+    },
+    {
+      "cardId": "dri-080",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "080/182",
+        "sortKey": 80
+      },
+      "name": "Team Rocket's Hypno",
+      "referenceImage": "https://images.pokemontcg.io/sv10/80.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-80",
+        "legacyInventoryCardId": "DRI-080"
+      }
+    },
+    {
+      "cardId": "dri-081",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "081/182",
+        "sortKey": 81
+      },
+      "name": "Team Rocket's Mewtwo ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/81.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-81",
+        "legacyInventoryCardId": "DRI-081"
+      }
+    },
+    {
+      "cardId": "dri-082",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "082/182",
+        "sortKey": 82
+      },
+      "name": "Team Rocket's Wobbuffet",
+      "referenceImage": "https://images.pokemontcg.io/sv10/82.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-82",
+        "legacyInventoryCardId": "DRI-082"
+      }
+    },
+    {
+      "cardId": "dri-083",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "083/182",
+        "sortKey": 83
+      },
+      "name": "Steven's Baltoy",
+      "referenceImage": "https://images.pokemontcg.io/sv10/83.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-83",
+        "legacyInventoryCardId": "DRI-083"
+      }
+    },
+    {
+      "cardId": "dri-084",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "084/182",
+        "sortKey": 84
+      },
+      "name": "Steven's Claydol",
+      "referenceImage": "https://images.pokemontcg.io/sv10/84.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-84",
+        "legacyInventoryCardId": "DRI-084"
+      }
+    },
+    {
+      "cardId": "dri-085",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "085/182",
+        "sortKey": 85
+      },
+      "name": "Team Rocket's Chingling",
+      "referenceImage": "https://images.pokemontcg.io/sv10/85.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-85",
+        "legacyInventoryCardId": "DRI-085"
+      }
+    },
+    {
+      "cardId": "dri-086",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "086/182",
+        "sortKey": 86
+      },
+      "name": "Steven's Carbink",
+      "referenceImage": "https://images.pokemontcg.io/sv10/86.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-86",
+        "legacyInventoryCardId": "DRI-086"
+      }
+    },
+    {
+      "cardId": "dri-087",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "087/182",
+        "sortKey": 87
+      },
+      "name": "Team Rocket's Mimikyu",
+      "referenceImage": "https://images.pokemontcg.io/sv10/87.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-87",
+        "legacyInventoryCardId": "DRI-087"
+      }
+    },
+    {
+      "cardId": "dri-088",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "088/182",
+        "sortKey": 88
+      },
+      "name": "Team Rocket's Dottler",
+      "referenceImage": "https://images.pokemontcg.io/sv10/88.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-88",
+        "legacyInventoryCardId": "DRI-088"
+      }
+    },
+    {
+      "cardId": "dri-089",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "089/182",
+        "sortKey": 89
+      },
+      "name": "Team Rocket's Orbeetle",
+      "referenceImage": "https://images.pokemontcg.io/sv10/89.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-89",
+        "legacyInventoryCardId": "DRI-089"
+      }
+    },
+    {
+      "cardId": "dri-090",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "090/182",
+        "sortKey": 90
+      },
+      "name": "Mankey",
+      "referenceImage": "https://images.pokemontcg.io/sv10/90.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-90",
+        "legacyInventoryCardId": "DRI-090"
+      }
+    },
+    {
+      "cardId": "dri-091",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "091/182",
+        "sortKey": 91
+      },
+      "name": "Primeape",
+      "referenceImage": "https://images.pokemontcg.io/sv10/91.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-91",
+        "legacyInventoryCardId": "DRI-091"
+      }
+    },
+    {
+      "cardId": "dri-092",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "092/182",
+        "sortKey": 92
+      },
+      "name": "Annihilape",
+      "referenceImage": "https://images.pokemontcg.io/sv10/92.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-92",
+        "legacyInventoryCardId": "DRI-092"
+      }
+    },
+    {
+      "cardId": "dri-093",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "093/182",
+        "sortKey": 93
+      },
+      "name": "Ethan's Sudowoodo",
+      "referenceImage": "https://images.pokemontcg.io/sv10/93.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-93",
+        "legacyInventoryCardId": "DRI-093"
+      }
+    },
+    {
+      "cardId": "dri-094",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "094/182",
+        "sortKey": 94
+      },
+      "name": "Team Rocket's Larvitar",
+      "referenceImage": "https://images.pokemontcg.io/sv10/94.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-94",
+        "legacyInventoryCardId": "DRI-094"
+      }
+    },
+    {
+      "cardId": "dri-095",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "095/182",
+        "sortKey": 95
+      },
+      "name": "Team Rocket's Pupitar",
+      "referenceImage": "https://images.pokemontcg.io/sv10/95.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-95",
+        "legacyInventoryCardId": "DRI-095"
+      }
+    },
+    {
+      "cardId": "dri-096",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "096/182",
+        "sortKey": 96
+      },
+      "name": "Team Rocket's Tyranitar",
+      "referenceImage": "https://images.pokemontcg.io/sv10/96.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-96",
+        "legacyInventoryCardId": "DRI-096"
+      }
+    },
+    {
+      "cardId": "dri-097",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "097/182",
+        "sortKey": 97
+      },
+      "name": "Nosepass",
+      "referenceImage": "https://images.pokemontcg.io/sv10/97.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-97",
+        "legacyInventoryCardId": "DRI-097"
+      }
+    },
+    {
+      "cardId": "dri-098",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "098/182",
+        "sortKey": 98
+      },
+      "name": "Probopass",
+      "referenceImage": "https://images.pokemontcg.io/sv10/98.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-98",
+        "legacyInventoryCardId": "DRI-098"
+      }
+    },
+    {
+      "cardId": "dri-099",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "099/182",
+        "sortKey": 99
+      },
+      "name": "Meditite",
+      "referenceImage": "https://images.pokemontcg.io/sv10/99.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-99",
+        "legacyInventoryCardId": "DRI-099"
+      }
+    },
+    {
+      "cardId": "dri-100",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "100/182",
+        "sortKey": 100
+      },
+      "name": "Medicham",
+      "referenceImage": "https://images.pokemontcg.io/sv10/100.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-100",
+        "legacyInventoryCardId": "DRI-100"
+      }
+    },
+    {
+      "cardId": "dri-101",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "101/182",
+        "sortKey": 101
+      },
+      "name": "Regirock ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/101.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-101",
+        "legacyInventoryCardId": "DRI-101"
+      }
+    },
+    {
+      "cardId": "dri-102",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "102/182",
+        "sortKey": 102
+      },
+      "name": "Cynthia's Gible",
+      "referenceImage": "https://images.pokemontcg.io/sv10/102.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-102",
+        "legacyInventoryCardId": "DRI-102"
+      }
+    },
+    {
+      "cardId": "dri-103",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "103/182",
+        "sortKey": 103
+      },
+      "name": "Cynthia's Gabite",
+      "referenceImage": "https://images.pokemontcg.io/sv10/103.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-103",
+        "legacyInventoryCardId": "DRI-103"
+      }
+    },
+    {
+      "cardId": "dri-104",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "104/182",
+        "sortKey": 104
+      },
+      "name": "Cynthia's Garchomp ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/104.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-104",
+        "legacyInventoryCardId": "DRI-104"
+      }
+    },
+    {
+      "cardId": "dri-105",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "105/182",
+        "sortKey": 105
+      },
+      "name": "Hippopotas",
+      "referenceImage": "https://images.pokemontcg.io/sv10/105.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-105",
+        "legacyInventoryCardId": "DRI-105"
+      }
+    },
+    {
+      "cardId": "dri-106",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "106/182",
+        "sortKey": 106
+      },
+      "name": "Hippowdon",
+      "referenceImage": "https://images.pokemontcg.io/sv10/106.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-106",
+        "legacyInventoryCardId": "DRI-106"
+      }
+    },
+    {
+      "cardId": "dri-107",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "107/182",
+        "sortKey": 107
+      },
+      "name": "Mudbray",
+      "referenceImage": "https://images.pokemontcg.io/sv10/107.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-107",
+        "legacyInventoryCardId": "DRI-107"
+      }
+    },
+    {
+      "cardId": "dri-108",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "108/182",
+        "sortKey": 108
+      },
+      "name": "Mudsdale",
+      "referenceImage": "https://images.pokemontcg.io/sv10/108.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-108",
+        "legacyInventoryCardId": "DRI-108"
+      }
+    },
+    {
+      "cardId": "dri-109",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "109/182",
+        "sortKey": 109
+      },
+      "name": "Arven's Toedscool",
+      "referenceImage": "https://images.pokemontcg.io/sv10/109.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-109",
+        "legacyInventoryCardId": "DRI-109"
+      }
+    },
+    {
+      "cardId": "dri-110",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "110/182",
+        "sortKey": 110
+      },
+      "name": "Arven's Toedscruel",
+      "referenceImage": "https://images.pokemontcg.io/sv10/110.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-110",
+        "legacyInventoryCardId": "DRI-110"
+      }
+    },
+    {
+      "cardId": "dri-111",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "111/182",
+        "sortKey": 111
+      },
+      "name": "Cornerstone Mask Ogerpon",
+      "referenceImage": "https://images.pokemontcg.io/sv10/111.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-111",
+        "legacyInventoryCardId": "DRI-111"
+      }
+    },
+    {
+      "cardId": "dri-112",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "112/182",
+        "sortKey": 112
+      },
+      "name": "Team Rocket's Ekans",
+      "referenceImage": "https://images.pokemontcg.io/sv10/112.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-112",
+        "legacyInventoryCardId": "DRI-112"
+      }
+    },
+    {
+      "cardId": "dri-113",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "113/182",
+        "sortKey": 113
+      },
+      "name": "Team Rocket's Arbok",
+      "referenceImage": "https://images.pokemontcg.io/sv10/113.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-113",
+        "legacyInventoryCardId": "DRI-113"
+      }
+    },
+    {
+      "cardId": "dri-114",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "114/182",
+        "sortKey": 114
+      },
+      "name": "Team Rocket's Nidoran F",
+      "referenceImage": "https://images.pokemontcg.io/sv10/114.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-114",
+        "legacyInventoryCardId": "DRI-114"
+      }
+    },
+    {
+      "cardId": "dri-115",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "115/182",
+        "sortKey": 115
+      },
+      "name": "Team Rocket's Nidorina",
+      "referenceImage": "https://images.pokemontcg.io/sv10/115.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-115",
+        "legacyInventoryCardId": "DRI-115"
+      }
+    },
+    {
+      "cardId": "dri-116",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "116/182",
+        "sortKey": 116
+      },
+      "name": "Team Rocket's Nidoqueen",
+      "referenceImage": "https://images.pokemontcg.io/sv10/116.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-116",
+        "legacyInventoryCardId": "DRI-116"
+      }
+    },
+    {
+      "cardId": "dri-117",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "117/182",
+        "sortKey": 117
+      },
+      "name": "Team Rocket's Nidoran M",
+      "referenceImage": "https://images.pokemontcg.io/sv10/117.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-117",
+        "legacyInventoryCardId": "DRI-117"
+      }
+    },
+    {
+      "cardId": "dri-118",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "118/182",
+        "sortKey": 118
+      },
+      "name": "Team Rocket's Nidorino",
+      "referenceImage": "https://images.pokemontcg.io/sv10/118.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-118",
+        "legacyInventoryCardId": "DRI-118"
+      }
+    },
+    {
+      "cardId": "dri-119",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "119/182",
+        "sortKey": 119
+      },
+      "name": "Team Rocket's Nidoking ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/119.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-119",
+        "legacyInventoryCardId": "DRI-119"
+      }
+    },
+    {
+      "cardId": "dri-120",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "120/182",
+        "sortKey": 120
+      },
+      "name": "Team Rocket's Zubat",
+      "referenceImage": "https://images.pokemontcg.io/sv10/120.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-120",
+        "legacyInventoryCardId": "DRI-120"
+      }
+    },
+    {
+      "cardId": "dri-121",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "121/182",
+        "sortKey": 121
+      },
+      "name": "Team Rocket's Golbat",
+      "referenceImage": "https://images.pokemontcg.io/sv10/121.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-121",
+        "legacyInventoryCardId": "DRI-121"
+      }
+    },
+    {
+      "cardId": "dri-122",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "122/182",
+        "sortKey": 122
+      },
+      "name": "Team Rocket's Crobat ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/122.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-122",
+        "legacyInventoryCardId": "DRI-122"
+      }
+    },
+    {
+      "cardId": "dri-123",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "123/182",
+        "sortKey": 123
+      },
+      "name": "Team Rocket's Grimer",
+      "referenceImage": "https://images.pokemontcg.io/sv10/123.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-123",
+        "legacyInventoryCardId": "DRI-123"
+      }
+    },
+    {
+      "cardId": "dri-124",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "124/182",
+        "sortKey": 124
+      },
+      "name": "Team Rocket's Muk",
+      "referenceImage": "https://images.pokemontcg.io/sv10/124.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-124",
+        "legacyInventoryCardId": "DRI-124"
+      }
+    },
+    {
+      "cardId": "dri-125",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "125/182",
+        "sortKey": 125
+      },
+      "name": "Team Rocket's Koffing",
+      "referenceImage": "https://images.pokemontcg.io/sv10/125.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-125",
+        "legacyInventoryCardId": "DRI-125"
+      }
+    },
+    {
+      "cardId": "dri-126",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "126/182",
+        "sortKey": 126
+      },
+      "name": "Team Rocket's Weezing",
+      "referenceImage": "https://images.pokemontcg.io/sv10/126.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-126",
+        "legacyInventoryCardId": "DRI-126"
+      }
+    },
+    {
+      "cardId": "dri-127",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "127/182",
+        "sortKey": 127
+      },
+      "name": "Team Rocket's Murkrow",
+      "referenceImage": "https://images.pokemontcg.io/sv10/127.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-127",
+        "legacyInventoryCardId": "DRI-127"
+      }
+    },
+    {
+      "cardId": "dri-128",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "128/182",
+        "sortKey": 128
+      },
+      "name": "Team Rocket's Sneasel",
+      "referenceImage": "https://images.pokemontcg.io/sv10/128.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-128",
+        "legacyInventoryCardId": "DRI-128"
+      }
+    },
+    {
+      "cardId": "dri-129",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "129/182",
+        "sortKey": 129
+      },
+      "name": "Cynthia's Spiritomb",
+      "referenceImage": "https://images.pokemontcg.io/sv10/129.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-129",
+        "legacyInventoryCardId": "DRI-129"
+      }
+    },
+    {
+      "cardId": "dri-130",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "130/182",
+        "sortKey": 130
+      },
+      "name": "Marnie's Purrloin",
+      "referenceImage": "https://images.pokemontcg.io/sv10/130.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-130",
+        "legacyInventoryCardId": "DRI-130"
+      }
+    },
+    {
+      "cardId": "dri-131",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "131/182",
+        "sortKey": 131
+      },
+      "name": "Marnie's Liepard",
+      "referenceImage": "https://images.pokemontcg.io/sv10/131.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-131",
+        "legacyInventoryCardId": "DRI-131"
+      }
+    },
+    {
+      "cardId": "dri-132",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "132/182",
+        "sortKey": 132
+      },
+      "name": "Marnie's Scraggy",
+      "referenceImage": "https://images.pokemontcg.io/sv10/132.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-132",
+        "legacyInventoryCardId": "DRI-132"
+      }
+    },
+    {
+      "cardId": "dri-133",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "133/182",
+        "sortKey": 133
+      },
+      "name": "Marnie's Scrafty",
+      "referenceImage": "https://images.pokemontcg.io/sv10/133.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-133",
+        "legacyInventoryCardId": "DRI-133"
+      }
+    },
+    {
+      "cardId": "dri-134",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "134/182",
+        "sortKey": 134
+      },
+      "name": "Marnie's Impidimp",
+      "referenceImage": "https://images.pokemontcg.io/sv10/134.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-134",
+        "legacyInventoryCardId": "DRI-134"
+      }
+    },
+    {
+      "cardId": "dri-135",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "135/182",
+        "sortKey": 135
+      },
+      "name": "Marnie's Morgrem",
+      "referenceImage": "https://images.pokemontcg.io/sv10/135.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-135",
+        "legacyInventoryCardId": "DRI-135"
+      }
+    },
+    {
+      "cardId": "dri-136",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "136/182",
+        "sortKey": 136
+      },
+      "name": "Marnie's Grimmsnarl ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/136.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-136",
+        "legacyInventoryCardId": "DRI-136"
+      }
+    },
+    {
+      "cardId": "dri-137",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "137/182",
+        "sortKey": 137
+      },
+      "name": "Marnie's Morpeko",
+      "referenceImage": "https://images.pokemontcg.io/sv10/137.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-137",
+        "legacyInventoryCardId": "DRI-137"
+      }
+    },
+    {
+      "cardId": "dri-138",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "138/182",
+        "sortKey": 138
+      },
+      "name": "Arven's Maschiff",
+      "referenceImage": "https://images.pokemontcg.io/sv10/138.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-138",
+        "legacyInventoryCardId": "DRI-138"
+      }
+    },
+    {
+      "cardId": "dri-139",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "139/182",
+        "sortKey": 139
+      },
+      "name": "Arven's Mabosstiff ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/139.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-139",
+        "legacyInventoryCardId": "DRI-139"
+      }
+    },
+    {
+      "cardId": "dri-140",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "140/182",
+        "sortKey": 140
+      },
+      "name": "Forretress",
+      "referenceImage": "https://images.pokemontcg.io/sv10/140.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-140",
+        "legacyInventoryCardId": "DRI-140"
+      }
+    },
+    {
+      "cardId": "dri-141",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "141/182",
+        "sortKey": 141
+      },
+      "name": "Skarmory",
+      "referenceImage": "https://images.pokemontcg.io/sv10/141.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-141",
+        "legacyInventoryCardId": "DRI-141"
+      }
+    },
+    {
+      "cardId": "dri-142",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "142/182",
+        "sortKey": 142
+      },
+      "name": "Steven's Skarmory",
+      "referenceImage": "https://images.pokemontcg.io/sv10/142.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-142",
+        "legacyInventoryCardId": "DRI-142"
+      }
+    },
+    {
+      "cardId": "dri-143",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "143/182",
+        "sortKey": 143
+      },
+      "name": "Steven's Beldum",
+      "referenceImage": "https://images.pokemontcg.io/sv10/143.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-143",
+        "legacyInventoryCardId": "DRI-143"
+      }
+    },
+    {
+      "cardId": "dri-144",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "144/182",
+        "sortKey": 144
+      },
+      "name": "Steven's Metang",
+      "referenceImage": "https://images.pokemontcg.io/sv10/144.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-144",
+        "legacyInventoryCardId": "DRI-144"
+      }
+    },
+    {
+      "cardId": "dri-145",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "145/182",
+        "sortKey": 145
+      },
+      "name": "Steven's Metagross ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/145.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-145",
+        "legacyInventoryCardId": "DRI-145"
+      }
+    },
+    {
+      "cardId": "dri-146",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "146/182",
+        "sortKey": 146
+      },
+      "name": "Zamazenta",
+      "referenceImage": "https://images.pokemontcg.io/sv10/146.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-146",
+        "legacyInventoryCardId": "DRI-146"
+      }
+    },
+    {
+      "cardId": "dri-147",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "147/182",
+        "sortKey": 147
+      },
+      "name": "Team Rocket's Rattata",
+      "referenceImage": "https://images.pokemontcg.io/sv10/147.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-147",
+        "legacyInventoryCardId": "DRI-147"
+      }
+    },
+    {
+      "cardId": "dri-148",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "148/182",
+        "sortKey": 148
+      },
+      "name": "Team Rocket's Raticate",
+      "referenceImage": "https://images.pokemontcg.io/sv10/148.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-148",
+        "legacyInventoryCardId": "DRI-148"
+      }
+    },
+    {
+      "cardId": "dri-149",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "149/182",
+        "sortKey": 149
+      },
+      "name": "Team Rocket's Meowth",
+      "referenceImage": "https://images.pokemontcg.io/sv10/149.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-149",
+        "legacyInventoryCardId": "DRI-149"
+      }
+    },
+    {
+      "cardId": "dri-150",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "150/182",
+        "sortKey": 150
+      },
+      "name": "Team Rocket's Persian ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/150.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-150",
+        "legacyInventoryCardId": "DRI-150"
+      }
+    },
+    {
+      "cardId": "dri-151",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "151/182",
+        "sortKey": 151
+      },
+      "name": "Kangaskhan",
+      "referenceImage": "https://images.pokemontcg.io/sv10/151.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-151",
+        "legacyInventoryCardId": "DRI-151"
+      }
+    },
+    {
+      "cardId": "dri-152",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "152/182",
+        "sortKey": 152
+      },
+      "name": "Tauros",
+      "referenceImage": "https://images.pokemontcg.io/sv10/152.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-152",
+        "legacyInventoryCardId": "DRI-152"
+      }
+    },
+    {
+      "cardId": "dri-153",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "153/182",
+        "sortKey": 153
+      },
+      "name": "Team Rocket's Porygon",
+      "referenceImage": "https://images.pokemontcg.io/sv10/153.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-153",
+        "legacyInventoryCardId": "DRI-153"
+      }
+    },
+    {
+      "cardId": "dri-154",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "154/182",
+        "sortKey": 154
+      },
+      "name": "Team Rocket's Porygon2",
+      "referenceImage": "https://images.pokemontcg.io/sv10/154.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-154",
+        "legacyInventoryCardId": "DRI-154"
+      }
+    },
+    {
+      "cardId": "dri-155",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "155/182",
+        "sortKey": 155
+      },
+      "name": "Team Rocket's Porygon-Z",
+      "referenceImage": "https://images.pokemontcg.io/sv10/155.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-155",
+        "legacyInventoryCardId": "DRI-155"
+      }
+    },
+    {
+      "cardId": "dri-156",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "156/182",
+        "sortKey": 156
+      },
+      "name": "Taillow",
+      "referenceImage": "https://images.pokemontcg.io/sv10/156.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-156",
+        "legacyInventoryCardId": "DRI-156"
+      }
+    },
+    {
+      "cardId": "dri-157",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "157/182",
+        "sortKey": 157
+      },
+      "name": "Swellow",
+      "referenceImage": "https://images.pokemontcg.io/sv10/157.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-157",
+        "legacyInventoryCardId": "DRI-157"
+      }
+    },
+    {
+      "cardId": "dri-158",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "158/182",
+        "sortKey": 158
+      },
+      "name": "Arven's Skwovet",
+      "referenceImage": "https://images.pokemontcg.io/sv10/158.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-158",
+        "legacyInventoryCardId": "DRI-158"
+      }
+    },
+    {
+      "cardId": "dri-159",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "159/182",
+        "sortKey": 159
+      },
+      "name": "Arven's Greedent",
+      "referenceImage": "https://images.pokemontcg.io/sv10/159.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-159",
+        "legacyInventoryCardId": "DRI-159"
+      }
+    },
+    {
+      "cardId": "dri-160",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "160/182",
+        "sortKey": 160
+      },
+      "name": "Squawkabilly",
+      "referenceImage": "https://images.pokemontcg.io/sv10/160.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-160",
+        "legacyInventoryCardId": "DRI-160"
+      }
+    },
+    {
+      "cardId": "dri-161",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "161/182",
+        "sortKey": 161
+      },
+      "name": "Arven's Sandwich",
+      "referenceImage": "https://images.pokemontcg.io/sv10/161.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-161",
+        "legacyInventoryCardId": "DRI-161"
+      }
+    },
+    {
+      "cardId": "dri-162",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "162/182",
+        "sortKey": 162
+      },
+      "name": "Cynthia's Power Weight",
+      "referenceImage": "https://images.pokemontcg.io/sv10/162.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-162",
+        "legacyInventoryCardId": "DRI-162"
+      }
+    },
+    {
+      "cardId": "dri-163",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "163/182",
+        "sortKey": 163
+      },
+      "name": "Emcee's Hype",
+      "referenceImage": "https://images.pokemontcg.io/sv10/163.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-163",
+        "legacyInventoryCardId": "DRI-163"
+      }
+    },
+    {
+      "cardId": "dri-164",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "164/182",
+        "sortKey": 164
+      },
+      "name": "Energy Recycler",
+      "referenceImage": "https://images.pokemontcg.io/sv10/164.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-164",
+        "legacyInventoryCardId": "DRI-164"
+      }
+    },
+    {
+      "cardId": "dri-165",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "165/182",
+        "sortKey": 165
+      },
+      "name": "Ethan's Adventure",
+      "referenceImage": "https://images.pokemontcg.io/sv10/165.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-165",
+        "legacyInventoryCardId": "DRI-165"
+      }
+    },
+    {
+      "cardId": "dri-166",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "166/182",
+        "sortKey": 166
+      },
+      "name": "Granite Cave",
+      "referenceImage": "https://images.pokemontcg.io/sv10/166.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-166",
+        "legacyInventoryCardId": "DRI-166"
+      }
+    },
+    {
+      "cardId": "dri-167",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "167/182",
+        "sortKey": 167
+      },
+      "name": "Judge",
+      "referenceImage": "https://images.pokemontcg.io/sv10/167.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-167",
+        "legacyInventoryCardId": "DRI-167"
+      }
+    },
+    {
+      "cardId": "dri-168",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "168/182",
+        "sortKey": 168
+      },
+      "name": "Sacred Ash",
+      "referenceImage": "https://images.pokemontcg.io/sv10/168.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-168",
+        "legacyInventoryCardId": "DRI-168"
+      }
+    },
+    {
+      "cardId": "dri-169",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "169/182",
+        "sortKey": 169
+      },
+      "name": "Spikemuth Gym",
+      "referenceImage": "https://images.pokemontcg.io/sv10/169.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-169",
+        "legacyInventoryCardId": "DRI-169"
+      }
+    },
+    {
+      "cardId": "dri-170",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "170/182",
+        "sortKey": 170
+      },
+      "name": "Team Rocket's Archer",
+      "referenceImage": "https://images.pokemontcg.io/sv10/170.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-170",
+        "legacyInventoryCardId": "DRI-170"
+      }
+    },
+    {
+      "cardId": "dri-171",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "171/182",
+        "sortKey": 171
+      },
+      "name": "Team Rocket's Ariana",
+      "referenceImage": "https://images.pokemontcg.io/sv10/171.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-171",
+        "legacyInventoryCardId": "DRI-171"
+      }
+    },
+    {
+      "cardId": "dri-172",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "172/182",
+        "sortKey": 172
+      },
+      "name": "Team Rocket's Bother-Bot",
+      "referenceImage": "https://images.pokemontcg.io/sv10/172.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-172",
+        "legacyInventoryCardId": "DRI-172"
+      }
+    },
+    {
+      "cardId": "dri-173",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "173/182",
+        "sortKey": 173
+      },
+      "name": "Team Rocket's Factory",
+      "referenceImage": "https://images.pokemontcg.io/sv10/173.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-173",
+        "legacyInventoryCardId": "DRI-173"
+      }
+    },
+    {
+      "cardId": "dri-174",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "174/182",
+        "sortKey": 174
+      },
+      "name": "Team Rocket's Giovanni",
+      "referenceImage": "https://images.pokemontcg.io/sv10/174.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-174",
+        "legacyInventoryCardId": "DRI-174"
+      }
+    },
+    {
+      "cardId": "dri-175",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "175/182",
+        "sortKey": 175
+      },
+      "name": "Team Rocket's Great Ball",
+      "referenceImage": "https://images.pokemontcg.io/sv10/175.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-175",
+        "legacyInventoryCardId": "DRI-175"
+      }
+    },
+    {
+      "cardId": "dri-176",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "176/182",
+        "sortKey": 176
+      },
+      "name": "Team Rocket's Petrel",
+      "referenceImage": "https://images.pokemontcg.io/sv10/176.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-176",
+        "legacyInventoryCardId": "DRI-176"
+      }
+    },
+    {
+      "cardId": "dri-177",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "177/182",
+        "sortKey": 177
+      },
+      "name": "Team Rocket's Proton",
+      "referenceImage": "https://images.pokemontcg.io/sv10/177.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-177",
+        "legacyInventoryCardId": "DRI-177"
+      }
+    },
+    {
+      "cardId": "dri-178",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "178/182",
+        "sortKey": 178
+      },
+      "name": "Team Rocket's Transceiver",
+      "referenceImage": "https://images.pokemontcg.io/sv10/178.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-178",
+        "legacyInventoryCardId": "DRI-178"
+      }
+    },
+    {
+      "cardId": "dri-179",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "179/182",
+        "sortKey": 179
+      },
+      "name": "Team Rocket's Venture Bomb",
+      "referenceImage": "https://images.pokemontcg.io/sv10/179.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-179",
+        "legacyInventoryCardId": "DRI-179"
+      }
+    },
+    {
+      "cardId": "dri-180",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "180/182",
+        "sortKey": 180
+      },
+      "name": "Team Rocket's Watchtower",
+      "referenceImage": "https://images.pokemontcg.io/sv10/180.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-180",
+        "legacyInventoryCardId": "DRI-180"
+      }
+    },
+    {
+      "cardId": "dri-181",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "181/182",
+        "sortKey": 181
+      },
+      "name": "TM Machine",
+      "referenceImage": "https://images.pokemontcg.io/sv10/181.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-181",
+        "legacyInventoryCardId": "DRI-181"
+      }
+    },
+    {
+      "cardId": "dri-182",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "182/182",
+        "sortKey": 182
+      },
+      "name": "Team Rocket's Energy",
+      "referenceImage": "https://images.pokemontcg.io/sv10/182.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-182",
+        "legacyInventoryCardId": "DRI-182"
+      }
+    },
+    {
+      "cardId": "dri-183",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "183/182",
+        "sortKey": 183
+      },
+      "name": "Yanma",
+      "referenceImage": "https://images.pokemontcg.io/sv10/183.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-183",
+        "legacyInventoryCardId": "DRI-183"
+      }
+    },
+    {
+      "cardId": "dri-184",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "184/182",
+        "sortKey": 184
+      },
+      "name": "Cynthia's Roserade",
+      "referenceImage": "https://images.pokemontcg.io/sv10/184.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-184",
+        "legacyInventoryCardId": "DRI-184"
+      }
+    },
+    {
+      "cardId": "dri-185",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "185/182",
+        "sortKey": 185
+      },
+      "name": "Shaymin",
+      "referenceImage": "https://images.pokemontcg.io/sv10/185.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-185",
+        "legacyInventoryCardId": "DRI-185"
+      }
+    },
+    {
+      "cardId": "dri-186",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "186/182",
+        "sortKey": 186
+      },
+      "name": "Crustle",
+      "referenceImage": "https://images.pokemontcg.io/sv10/186.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-186",
+        "legacyInventoryCardId": "DRI-186"
+      }
+    },
+    {
+      "cardId": "dri-187",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "187/182",
+        "sortKey": 187
+      },
+      "name": "Team Rocket's Spidops",
+      "referenceImage": "https://images.pokemontcg.io/sv10/187.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-187",
+        "legacyInventoryCardId": "DRI-187"
+      }
+    },
+    {
+      "cardId": "dri-188",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "188/182",
+        "sortKey": 188
+      },
+      "name": "Hydrapple",
+      "referenceImage": "https://images.pokemontcg.io/sv10/188.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-188",
+        "legacyInventoryCardId": "DRI-188"
+      }
+    },
+    {
+      "cardId": "dri-189",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "189/182",
+        "sortKey": 189
+      },
+      "name": "Rapidash",
+      "referenceImage": "https://images.pokemontcg.io/sv10/189.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-189",
+        "legacyInventoryCardId": "DRI-189"
+      }
+    },
+    {
+      "cardId": "dri-190",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "190/182",
+        "sortKey": 190
+      },
+      "name": "Ethan's Typhlosion",
+      "referenceImage": "https://images.pokemontcg.io/sv10/190.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-190",
+        "legacyInventoryCardId": "DRI-190"
+      }
+    },
+    {
+      "cardId": "dri-191",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "191/182",
+        "sortKey": 191
+      },
+      "name": "Team Rocket's Houndoom",
+      "referenceImage": "https://images.pokemontcg.io/sv10/191.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-191",
+        "legacyInventoryCardId": "DRI-191"
+      }
+    },
+    {
+      "cardId": "dri-192",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "192/182",
+        "sortKey": 192
+      },
+      "name": "Blaziken",
+      "referenceImage": "https://images.pokemontcg.io/sv10/192.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-192",
+        "legacyInventoryCardId": "DRI-192"
+      }
+    },
+    {
+      "cardId": "dri-193",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "193/182",
+        "sortKey": 193
+      },
+      "name": "Misty's Psyduck",
+      "referenceImage": "https://images.pokemontcg.io/sv10/193.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-193",
+        "legacyInventoryCardId": "DRI-193"
+      }
+    },
+    {
+      "cardId": "dri-194",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "194/182",
+        "sortKey": 194
+      },
+      "name": "Misty's Lapras",
+      "referenceImage": "https://images.pokemontcg.io/sv10/194.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-194",
+        "legacyInventoryCardId": "DRI-194"
+      }
+    },
+    {
+      "cardId": "dri-195",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "195/182",
+        "sortKey": 195
+      },
+      "name": "Clamperl",
+      "referenceImage": "https://images.pokemontcg.io/sv10/195.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-195",
+        "legacyInventoryCardId": "DRI-195"
+      }
+    },
+    {
+      "cardId": "dri-196",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "196/182",
+        "sortKey": 196
+      },
+      "name": "Electrike",
+      "referenceImage": "https://images.pokemontcg.io/sv10/196.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-196",
+        "legacyInventoryCardId": "DRI-196"
+      }
+    },
+    {
+      "cardId": "dri-197",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "197/182",
+        "sortKey": 197
+      },
+      "name": "Rotom",
+      "referenceImage": "https://images.pokemontcg.io/sv10/197.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-197",
+        "legacyInventoryCardId": "DRI-197"
+      }
+    },
+    {
+      "cardId": "dri-198",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "198/182",
+        "sortKey": 198
+      },
+      "name": "Team Rocket's Orbeetle",
+      "referenceImage": "https://images.pokemontcg.io/sv10/198.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-198",
+        "legacyInventoryCardId": "DRI-198"
+      }
+    },
+    {
+      "cardId": "dri-199",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "199/182",
+        "sortKey": 199
+      },
+      "name": "Team Rocket's Weezing",
+      "referenceImage": "https://images.pokemontcg.io/sv10/199.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-199",
+        "legacyInventoryCardId": "DRI-199"
+      }
+    },
+    {
+      "cardId": "dri-200",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "200/182",
+        "sortKey": 200
+      },
+      "name": "Team Rocket's Murkrow",
+      "referenceImage": "https://images.pokemontcg.io/sv10/200.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-200",
+        "legacyInventoryCardId": "DRI-200"
+      }
+    },
+    {
+      "cardId": "dri-201",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "201/182",
+        "sortKey": 201
+      },
+      "name": "Zamazenta",
+      "referenceImage": "https://images.pokemontcg.io/sv10/201.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-201",
+        "legacyInventoryCardId": "DRI-201"
+      }
+    },
+    {
+      "cardId": "dri-202",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "202/182",
+        "sortKey": 202
+      },
+      "name": "Team Rocket's Raticate",
+      "referenceImage": "https://images.pokemontcg.io/sv10/202.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-202",
+        "legacyInventoryCardId": "DRI-202"
+      }
+    },
+    {
+      "cardId": "dri-203",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "203/182",
+        "sortKey": 203
+      },
+      "name": "Team Rocket's Meowth",
+      "referenceImage": "https://images.pokemontcg.io/sv10/203.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-203",
+        "legacyInventoryCardId": "DRI-203"
+      }
+    },
+    {
+      "cardId": "dri-204",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "204/182",
+        "sortKey": 204
+      },
+      "name": "Kangaskhan",
+      "referenceImage": "https://images.pokemontcg.io/sv10/204.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-204",
+        "legacyInventoryCardId": "DRI-204"
+      }
+    },
+    {
+      "cardId": "dri-205",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "205/182",
+        "sortKey": 205
+      },
+      "name": "Arven's Greedent",
+      "referenceImage": "https://images.pokemontcg.io/sv10/205.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-205",
+        "legacyInventoryCardId": "DRI-205"
+      }
+    },
+    {
+      "cardId": "dri-206",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "206/182",
+        "sortKey": 206
+      },
+      "name": "Yanmega ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/206.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-206",
+        "legacyInventoryCardId": "DRI-206"
+      }
+    },
+    {
+      "cardId": "dri-207",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "207/182",
+        "sortKey": 207
+      },
+      "name": "Arboliva ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/207.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-207",
+        "legacyInventoryCardId": "DRI-207"
+      }
+    },
+    {
+      "cardId": "dri-208",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "208/182",
+        "sortKey": 208
+      },
+      "name": "Team Rocket's Moltres ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/208.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-208",
+        "legacyInventoryCardId": "DRI-208"
+      }
+    },
+    {
+      "cardId": "dri-209",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "209/182",
+        "sortKey": 209
+      },
+      "name": "Ethan's Ho-Oh ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/209.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-209",
+        "legacyInventoryCardId": "DRI-209"
+      }
+    },
+    {
+      "cardId": "dri-210",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "210/182",
+        "sortKey": 210
+      },
+      "name": "Cetitan ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/210.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-210",
+        "legacyInventoryCardId": "DRI-210"
+      }
+    },
+    {
+      "cardId": "dri-211",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "211/182",
+        "sortKey": 211
+      },
+      "name": "Dondozo ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/211.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-211",
+        "legacyInventoryCardId": "DRI-211"
+      }
+    },
+    {
+      "cardId": "dri-212",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "212/182",
+        "sortKey": 212
+      },
+      "name": "Electivire ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/212.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-212",
+        "legacyInventoryCardId": "DRI-212"
+      }
+    },
+    {
+      "cardId": "dri-213",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "213/182",
+        "sortKey": 213
+      },
+      "name": "Team Rocket's Mewtwo ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/213.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-213",
+        "legacyInventoryCardId": "DRI-213"
+      }
+    },
+    {
+      "cardId": "dri-214",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "214/182",
+        "sortKey": 214
+      },
+      "name": "Regirock ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/214.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-214",
+        "legacyInventoryCardId": "DRI-214"
+      }
+    },
+    {
+      "cardId": "dri-215",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "215/182",
+        "sortKey": 215
+      },
+      "name": "Cynthia's Garchomp ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/215.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-215",
+        "legacyInventoryCardId": "DRI-215"
+      }
+    },
+    {
+      "cardId": "dri-216",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "216/182",
+        "sortKey": 216
+      },
+      "name": "Team Rocket's Nidoking ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/216.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-216",
+        "legacyInventoryCardId": "DRI-216"
+      }
+    },
+    {
+      "cardId": "dri-217",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "217/182",
+        "sortKey": 217
+      },
+      "name": "Team Rocket's Crobat ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/217.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-217",
+        "legacyInventoryCardId": "DRI-217"
+      }
+    },
+    {
+      "cardId": "dri-218",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "218/182",
+        "sortKey": 218
+      },
+      "name": "Arven's Mabosstiff ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/218.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-218",
+        "legacyInventoryCardId": "DRI-218"
+      }
+    },
+    {
+      "cardId": "dri-219",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "219/182",
+        "sortKey": 219
+      },
+      "name": "Team Rocket's Persian ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/219.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-219",
+        "legacyInventoryCardId": "DRI-219"
+      }
+    },
+    {
+      "cardId": "dri-220",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "220/182",
+        "sortKey": 220
+      },
+      "name": "Emcee's Hype",
+      "referenceImage": "https://images.pokemontcg.io/sv10/220.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-220",
+        "legacyInventoryCardId": "DRI-220"
+      }
+    },
+    {
+      "cardId": "dri-221",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "221/182",
+        "sortKey": 221
+      },
+      "name": "Ethan's Adventure",
+      "referenceImage": "https://images.pokemontcg.io/sv10/221.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-221",
+        "legacyInventoryCardId": "DRI-221"
+      }
+    },
+    {
+      "cardId": "dri-222",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "222/182",
+        "sortKey": 222
+      },
+      "name": "Judge",
+      "referenceImage": "https://images.pokemontcg.io/sv10/222.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-222",
+        "legacyInventoryCardId": "DRI-222"
+      }
+    },
+    {
+      "cardId": "dri-223",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "223/182",
+        "sortKey": 223
+      },
+      "name": "Team Rocket's Archer",
+      "referenceImage": "https://images.pokemontcg.io/sv10/223.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-223",
+        "legacyInventoryCardId": "DRI-223"
+      }
+    },
+    {
+      "cardId": "dri-224",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "224/182",
+        "sortKey": 224
+      },
+      "name": "Team Rocket's Ariana",
+      "referenceImage": "https://images.pokemontcg.io/sv10/224.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-224",
+        "legacyInventoryCardId": "DRI-224"
+      }
+    },
+    {
+      "cardId": "dri-225",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "225/182",
+        "sortKey": 225
+      },
+      "name": "Team Rocket's Giovanni",
+      "referenceImage": "https://images.pokemontcg.io/sv10/225.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-225",
+        "legacyInventoryCardId": "DRI-225"
+      }
+    },
+    {
+      "cardId": "dri-226",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "226/182",
+        "sortKey": 226
+      },
+      "name": "Team Rocket's Petrel",
+      "referenceImage": "https://images.pokemontcg.io/sv10/226.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-226",
+        "legacyInventoryCardId": "DRI-226"
+      }
+    },
+    {
+      "cardId": "dri-227",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "227/182",
+        "sortKey": 227
+      },
+      "name": "Team Rocket's Proton",
+      "referenceImage": "https://images.pokemontcg.io/sv10/227.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-227",
+        "legacyInventoryCardId": "DRI-227"
+      }
+    },
+    {
+      "cardId": "dri-228",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "228/182",
+        "sortKey": 228
+      },
+      "name": "Yanmega ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/228.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-228",
+        "legacyInventoryCardId": "DRI-228"
+      }
+    },
+    {
+      "cardId": "dri-229",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "229/182",
+        "sortKey": 229
+      },
+      "name": "Team Rocket's Moltres ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/229.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-229",
+        "legacyInventoryCardId": "DRI-229"
+      }
+    },
+    {
+      "cardId": "dri-230",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "230/182",
+        "sortKey": 230
+      },
+      "name": "Ethan's Ho-Oh ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/230.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-230",
+        "legacyInventoryCardId": "DRI-230"
+      }
+    },
+    {
+      "cardId": "dri-231",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "231/182",
+        "sortKey": 231
+      },
+      "name": "Team Rocket's Mewtwo ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/231.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-231",
+        "legacyInventoryCardId": "DRI-231"
+      }
+    },
+    {
+      "cardId": "dri-232",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "232/182",
+        "sortKey": 232
+      },
+      "name": "Cynthia's Garchomp ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/232.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-232",
+        "legacyInventoryCardId": "DRI-232"
+      }
+    },
+    {
+      "cardId": "dri-233",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "233/182",
+        "sortKey": 233
+      },
+      "name": "Team Rocket's Nidoking ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/233.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-233",
+        "legacyInventoryCardId": "DRI-233"
+      }
+    },
+    {
+      "cardId": "dri-234",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "234/182",
+        "sortKey": 234
+      },
+      "name": "Team Rocket's Crobat ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/234.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-234",
+        "legacyInventoryCardId": "DRI-234"
+      }
+    },
+    {
+      "cardId": "dri-235",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "235/182",
+        "sortKey": 235
+      },
+      "name": "Arven's Mabosstiff ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/235.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-235",
+        "legacyInventoryCardId": "DRI-235"
+      }
+    },
+    {
+      "cardId": "dri-236",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "236/182",
+        "sortKey": 236
+      },
+      "name": "Ethan's Adventure",
+      "referenceImage": "https://images.pokemontcg.io/sv10/236.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-236",
+        "legacyInventoryCardId": "DRI-236"
+      }
+    },
+    {
+      "cardId": "dri-237",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "237/182",
+        "sortKey": 237
+      },
+      "name": "Team Rocket's Ariana",
+      "referenceImage": "https://images.pokemontcg.io/sv10/237.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-237",
+        "legacyInventoryCardId": "DRI-237"
+      }
+    },
+    {
+      "cardId": "dri-238",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "238/182",
+        "sortKey": 238
+      },
+      "name": "Team Rocket's Giovanni",
+      "referenceImage": "https://images.pokemontcg.io/sv10/238.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-238",
+        "legacyInventoryCardId": "DRI-238"
+      }
+    },
+    {
+      "cardId": "dri-239",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "239/182",
+        "sortKey": 239
+      },
+      "name": "Ethan's Ho-Oh ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/239.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-239",
+        "legacyInventoryCardId": "DRI-239"
+      }
+    },
+    {
+      "cardId": "dri-240",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "240/182",
+        "sortKey": 240
+      },
+      "name": "Team Rocket's Mewtwo ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/240.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-240",
+        "legacyInventoryCardId": "DRI-240"
+      }
+    },
+    {
+      "cardId": "dri-241",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "241/182",
+        "sortKey": 241
+      },
+      "name": "Cynthia's Garchomp ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/241.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-241",
+        "legacyInventoryCardId": "DRI-241"
+      }
+    },
+    {
+      "cardId": "dri-242",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "242/182",
+        "sortKey": 242
+      },
+      "name": "Team Rocket's Crobat ex",
+      "referenceImage": "https://images.pokemontcg.io/sv10/242.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-242",
+        "legacyInventoryCardId": "DRI-242"
+      }
+    },
+    {
+      "cardId": "dri-243",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "243/182",
+        "sortKey": 243
+      },
+      "name": "Jamming Tower",
+      "referenceImage": "https://images.pokemontcg.io/sv10/243.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-243",
+        "legacyInventoryCardId": "DRI-243"
+      }
+    },
+    {
+      "cardId": "dri-244",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "244/182",
+        "sortKey": 244
+      },
+      "name": "Levincia",
+      "referenceImage": "https://images.pokemontcg.io/sv10/244.png",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgIo": "sv10-244",
+        "legacyInventoryCardId": "DRI-244"
+      }
+    }
+  ]
+}
