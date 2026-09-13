@@ -4,9 +4,42 @@ from fastapi.middleware.cors import CORSMiddleware
 import cv2
 import numpy as np
 import gc
+from pathlib import Path
 
 from sets.destined_rivals import recognizer as destined_rivals
 from sets.ascended_heroes import recognizer as ascended_heroes
+from sets.destined_rivals.public_package import (
+    build_public_package as build_destined_rivals_public_package
+)
+
+
+# =========================================================
+# SCHEMA V1 SHADOW LOAD
+# =========================================================
+
+# Diagnostic only. Even an import or loader failure is
+# contained so Schema v1 has no authority over service
+# availability, routing or recognition behavior.
+try:
+
+    from schema_v1_loader import (
+        load_schema_v1_packages_in_shadow
+    )
+
+    SCHEMA_V1_SHADOW_REPORT = (
+        load_schema_v1_packages_in_shadow(
+            Path(__file__).parent / "sets"
+        )
+    )
+
+except Exception as error:
+
+    SCHEMA_V1_SHADOW_REPORT = None
+
+    print(
+        "Schema v1 shadow loader unavailable:",
+        error
+    )
 
 
 # =========================================================
@@ -257,6 +290,33 @@ def root():
                 ascended_heroes.get_status()
         }
     }
+
+
+# =========================================================
+# PUBLIC SET PACKAGE
+# =========================================================
+
+@app.get("/api/v1/sets/destined-rivals/package")
+def destined_rivals_public_package():
+
+    try:
+
+        return build_destined_rivals_public_package()
+
+    except Exception as error:
+
+        print(
+            "Destined Rivals public package unavailable:",
+            error
+        )
+
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Public set package unavailable",
+                "set": "destined-rivals"
+            }
+        ) from error
 
 
 # =========================================================
