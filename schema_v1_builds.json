@@ -1,0 +1,10 @@
+{
+  "sets": [
+    {
+      "setId": "perfect-order",
+      "package": "sets/perfect_order",
+      "expectedRecords": 124,
+      "output": "sets/perfect_order/card_library.pkl"
+    }
+  ]
+}
