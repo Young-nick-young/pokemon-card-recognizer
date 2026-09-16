@@ -8,8 +8,12 @@ from pathlib import Path
 
 from sets.destined_rivals import recognizer as destined_rivals
 from sets.ascended_heroes import recognizer as ascended_heroes
+from sets.perfect_order import recognizer as perfect_order
 from sets.destined_rivals.public_package import (
     build_public_package as build_destined_rivals_public_package
+)
+from sets.perfect_order.public_package import (
+    build_public_package as build_perfect_order_public_package
 )
 
 
@@ -69,7 +73,8 @@ app.add_middleware(
 
 RECOGNIZERS = {
     "destined-rivals": destined_rivals,
-    "ascended-heroes": ascended_heroes
+    "ascended-heroes": ascended_heroes,
+    "perfect-order": perfect_order
 }
 
 
@@ -81,7 +86,12 @@ SET_ALIASES = {
 
     "ascended-heroes": "ascended-heroes",
     "ascended_heroes": "ascended-heroes",
-    "asc": "ascended-heroes"
+    "asc": "ascended-heroes",
+
+    "perfect-order": "perfect-order",
+    "perfect_order": "perfect-order",
+    "por": "perfect-order",
+    "me3": "perfect-order"
 }
 
 
@@ -142,17 +152,33 @@ def unload_recognizer(recognizer):
 
     try:
 
-        recognizer.REFERENCE_CARDS = {}
+        # New Schema v1 wrappers expose their own unload hook so
+        # internal shared-engine state and compatibility mirrors
+        # are cleared together. Legacy recognizers keep the
+        # established direct-state reset below.
+        unload_hook = getattr(
+            recognizer,
+            "unload_library",
+            None
+        )
 
-        recognizer.GLOBAL_DESCRIPTORS = None
+        if callable(unload_hook):
 
-        recognizer.GLOBAL_CARD_NUMBERS = None
+            unload_hook()
 
-        recognizer.global_matcher = None
+        else:
 
-        recognizer.library_ready = False
+            recognizer.REFERENCE_CARDS = {}
 
-        recognizer.library_error = None
+            recognizer.GLOBAL_DESCRIPTORS = None
+
+            recognizer.GLOBAL_CARD_NUMBERS = None
+
+            recognizer.global_matcher = None
+
+            recognizer.library_ready = False
+
+            recognizer.library_error = None
 
         gc.collect()
 
@@ -287,7 +313,10 @@ def root():
                 destined_rivals.get_status(),
 
             "ascended-heroes":
-                ascended_heroes.get_status()
+                ascended_heroes.get_status(),
+
+            "perfect-order":
+                perfect_order.get_status()
         }
     }
 
@@ -315,6 +344,29 @@ def destined_rivals_public_package():
             detail={
                 "error": "Public set package unavailable",
                 "set": "destined-rivals"
+            }
+        ) from error
+
+
+@app.get("/api/v1/sets/perfect-order/package")
+def perfect_order_public_package():
+
+    try:
+
+        return build_perfect_order_public_package()
+
+    except Exception as error:
+
+        print(
+            "Perfect Order public package unavailable:",
+            error
+        )
+
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Public set package unavailable",
+                "set": "perfect-order"
             }
         ) from error
 
