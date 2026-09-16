@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "manifestVersion": 1,
+  "setId": "perfect-order",
+  "displayName": "Perfect Order",
+  "language": "en",
+  "market": "international",
+  "aliases": [
+    "por",
+    "me3",
+    "perfect_order"
+  ],
+  "externalIds": {
+    "displayCode": "POR",
+    "officialCode": "ME03",
+    "pokemonTcgData": "me3"
+  },
+  "collections": [
+    {
+      "collectionId": "main",
+      "label": "Main Set"
+    }
+  ],
+  "numberingNamespaces": [
+    {
+      "namespaceId": "main",
+      "label": "Main and Secret Cards",
+      "denominator": "088"
+    }
+  ],
+  "variants": [
+    {
+      "variantId": "normal",
+      "label": "Normal",
+      "inventoryKey": "normal"
+    },
+    {
+      "variantId": "reverse-holo",
+      "label": "Reverse Holo",
+      "inventoryKey": "reverse"
+    },
+    {
+      "variantId": "holo",
+      "label": "Holo",
+      "inventoryKey": "holo"
+    },
+    {
+      "variantId": "other",
+      "label": "Other",
+      "inventoryKey": "other"
+    }
+  ],
+  "catalogue": {
+    "path": "cards.json",
+    "expectedRecords": 124
+  },
+  "inventory": {
+    "destinationKey": "perfect-order-inventory",
+    "sheetName": "Perfect Order",
+    "startRow": 13,
+    "cardIdColumn": 17,
+    "quantityColumns": {
+      "normal": 6,
+      "reverse": 7,
+      "holo": 8,
+      "other": 9
+    }
+  }
+}
