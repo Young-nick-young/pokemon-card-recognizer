@@ -16,6 +16,11 @@ from sets.perfect_order.public_package import (
     build_public_package as build_perfect_order_public_package
 )
 
+from sets.chaos_rising import recognizer as chaos_rising
+from sets.chaos_rising.public_package import (
+    build_public_package as build_chaos_rising_public_package
+)
+
 
 # =========================================================
 # SCHEMA V1 SHADOW LOAD
@@ -74,7 +79,8 @@ app.add_middleware(
 RECOGNIZERS = {
     "destined-rivals": destined_rivals,
     "ascended-heroes": ascended_heroes,
-    "perfect-order": perfect_order
+    "perfect-order": perfect_order,
+    "chaos-rising": chaos_rising
 }
 
 
@@ -91,7 +97,12 @@ SET_ALIASES = {
     "perfect-order": "perfect-order",
     "perfect_order": "perfect-order",
     "por": "perfect-order",
-    "me3": "perfect-order"
+    "me3": "perfect-order",
+    "chaos-rising": "chaos-rising",
+    "chaos_rising": "chaos-rising",
+    "cri": "chaos-rising",
+    "me4": "chaos-rising",
+    "me04": "chaos-rising"
 }
 
 
@@ -316,7 +327,10 @@ def root():
                 ascended_heroes.get_status(),
 
             "perfect-order":
-                perfect_order.get_status()
+                perfect_order.get_status(),
+
+            "chaos-rising":
+                chaos_rising.get_status()
         }
     }
 
@@ -369,6 +383,15 @@ def perfect_order_public_package():
                 "set": "perfect-order"
             }
         ) from error
+
+
+@app.get("/api/v1/sets/chaos-rising/package")
+def chaos_rising_public_package():
+    try:
+        return build_chaos_rising_public_package()
+    except Exception as error:
+        print("Chaos Rising public package unavailable:", error)
+        raise HTTPException(status_code=503, detail={"error": "Public set package unavailable", "set": "chaos-rising"}) from error
 
 
 # =========================================================
