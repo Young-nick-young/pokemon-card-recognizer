@@ -82,6 +82,31 @@ def check_manifest_and_cards(set_id,manifest,catalogue,report):
             if not isinstance(vals,list) or not vals or any(v not in declared for v in vals): bad.append(str(c.get("cardId")))
     report.failed("card variant definitions invalid for: "+", ".join(bad[:20])) if bad else report.passed("all card variants are declared by the manifest")
 
+
+def check_inventory_metadata(package_dir,set_id,manifest,catalogue,report):
+    metadata=read_json(package_dir/"inventory_metadata.json",report,"inventory metadata")
+    if not isinstance(metadata,dict): return None
+    if metadata.get("inventoryMetadataVersion")!=1: report.failed("inventory metadata version must be 1")
+    if metadata.get("setId")!=set_id: report.failed("inventory metadata setId mismatch")
+    rows=metadata.get("cards")
+    cards=catalogue.get("cards") if isinstance(catalogue,dict) else None
+    if not isinstance(rows,list) or not isinstance(cards,list): report.failed("inventory metadata cards must be an array"); return metadata
+    if len(rows)!=len(cards): report.failed("inventory metadata card count differs from Schema catalogue")
+    declared={v.get("variantId") for v in (manifest.get("variants") or []) if isinstance(v,dict)}
+    expected_ids=[c.get("cardId") for c in cards if isinstance(c,dict)]
+    actual_ids=[]; bad=[]
+    for entry in rows:
+        if not isinstance(entry,dict): bad.append("<non-object>"); continue
+        cid=entry.get("cardId"); actual_ids.append(cid)
+        rarity=entry.get("rarity"); card_type=entry.get("cardType"); variants=entry.get("inventoryVariants")
+        if not isinstance(cid,str) or not cid or not isinstance(rarity,str) or not rarity.strip(): bad.append(str(cid))
+        if card_type is not None and not isinstance(card_type,str): bad.append(str(cid))
+        if not isinstance(variants,list) or not variants or len(variants)!=len(set(variants)) or any(v not in declared for v in variants): bad.append(str(cid))
+    if actual_ids!=expected_ids: report.failed("inventory metadata card order/identity differs from Schema catalogue")
+    elif bad: report.failed("invalid inventory metadata entries: "+", ".join(bad[:20]))
+    else: report.passed(str(len(rows))+" explicit inventory metadata records match Schema catalogue")
+    return metadata
+
 def check_projection(root,package_dir,manifest,report):
     try:
         sys.path.insert(0,str(root)); from schema_v1_inventory_projection import build_inventory_projection; p=build_inventory_projection(package_dir)
@@ -204,7 +229,7 @@ def validate(set_id,recognizer_root=ROOT,frontend_root=None,apps_script_root=Non
         if frontend_root is None: report.failed("--integration requires --frontend-root")
         if apps_script_root is None: report.failed("--integration requires --apps-script-root")
     if isinstance(manifest,dict) and isinstance(catalogue,dict):
-        check_manifest_and_cards(set_id,manifest,catalogue,report); projection=check_projection(recognizer_root,package_dir,manifest,report)
+        check_manifest_and_cards(set_id,manifest,catalogue,report); check_inventory_metadata(package_dir,set_id,manifest,catalogue,report); projection=check_projection(recognizer_root,package_dir,manifest,report)
         check_build_registry(recognizer_root,set_id,manifest,p,report,require_library); check_runtime(recognizer_root,set_id,p,manifest,report); check_router(recognizer_root,set_id,p,manifest,report); check_public_package(recognizer_root,set_id,p,manifest,report); check_alias_collisions(recognizer_root,set_id,manifest,report)
         if frontend_root is not None: check_frontend(Path(frontend_root).resolve(),set_id,manifest,report)
         elif not integration: report.passed("frontend validation not requested in recognizer-side mode")
