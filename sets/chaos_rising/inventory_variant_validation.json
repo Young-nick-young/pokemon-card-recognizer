@@ -1,0 +1,91 @@
+{
+  "setId": "chaos-rising",
+  "generatedAt": "2026-09-20",
+  "policy": "Only physically released/verified Chaos Rising-numbered alternates at onboarding time. Announced October Pokéween #049/#050/#051 excluded.",
+  "cards": [
+    {
+      "number": 10,
+      "name": "Ho-Oh",
+      "rarity": "Rare",
+      "inventoryVariants": [
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "reason": "Released EB Games Pixel Cosmos Holofoil stamped Chaos Rising print.",
+      "source": "Bulbapedia Chaos Rising / card release information verified 2026-09-20"
+    },
+    {
+      "number": 13,
+      "name": "Delphox",
+      "rarity": "Rare",
+      "inventoryVariants": [
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "reason": "Released Non-Holo Build & Battle print and released retailer-stamped Chaos Rising print.",
+      "source": "Bulbapedia Chaos Rising / card release information verified 2026-09-20"
+    },
+    {
+      "number": 19,
+      "name": "Keldeo",
+      "rarity": "Rare",
+      "inventoryVariants": [
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "reason": "Released retailer-stamped Chaos Rising print.",
+      "source": "Bulbapedia Chaos Rising / card release information verified 2026-09-20"
+    },
+    {
+      "number": 29,
+      "name": "Ampharos",
+      "rarity": "Rare",
+      "inventoryVariants": [
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "reason": "Released Non-Holo Build & Battle Chaos Rising print.",
+      "source": "Bulbapedia Chaos Rising / card release information verified 2026-09-20"
+    },
+    {
+      "number": 51,
+      "name": "Crobat",
+      "rarity": "Rare",
+      "inventoryVariants": [
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "reason": "Released Non-Holo Build & Battle Chaos Rising print. October Pokéween stamp intentionally excluded.",
+      "source": "Bulbapedia Chaos Rising / card release information verified 2026-09-20"
+    },
+    {
+      "number": 68,
+      "name": "Goodra",
+      "rarity": "Rare",
+      "inventoryVariants": [
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "reason": "Released Non-Holo Build & Battle Chaos Rising print.",
+      "source": "Bulbapedia Chaos Rising / card release information verified 2026-09-20"
+    },
+    {
+      "number": 85,
+      "name": "Magnetic Metal Energy",
+      "rarity": "Rare",
+      "inventoryVariants": [
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "reason": "Released Non-Holo Chaos Rising-numbered alternate print.",
+      "source": "Bulbapedia Chaos Rising / card release information verified 2026-09-20"
+    }
+  ]
+}
