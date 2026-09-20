@@ -5,6 +5,12 @@
       "package": "sets/perfect_order",
       "expectedRecords": 124,
       "output": "sets/perfect_order/card_library.pkl"
+    },
+    {
+      "setId": "chaos-rising",
+      "package": "sets/chaos_rising",
+      "expectedRecords": 122,
+      "output": "sets/chaos_rising/card_library.pkl"
     }
   ]
 }
