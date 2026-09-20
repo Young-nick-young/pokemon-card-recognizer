@@ -1,0 +1,14 @@
+Inventory Sheet Automation v1 — DRY RUN
+Set: chaos-rising
+Planned production sheet name: Chaos Rising
+Test destination: Pokémon Inventory Sheet Automation v1 - TEST → TEST - Chaos Rising
+Rows: 13–134 (122 cards)
+Header row: 12; frozen rows: 12
+Write range: A12:Q134
+Unavailable quantity cells left blank: normal=58, reverse-holo=46, holo=64, other=115
+Price columns K:N: blank
+Storage column P: blank
+Identity: explicit collector numbers + compatibility IDs; no ROW()-based identity formulas
+Authority: inventory_metadata.json; Schema cards[].variants does not determine Sheet availability
+Cross-pipeline invariant before render: source=122; schema=122; inventory=122; sheet-plan=122
+Google writes: TEST WORKBOOK ONLY
