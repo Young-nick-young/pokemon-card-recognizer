@@ -47,6 +47,26 @@ def replace_once(path, old, new):
     if text.count(old) != 1: raise ScaffoldError(str(path) + ": expected exactly one registration anchor, found " + str(text.count(old)) + ".")
     path.write_text(text.replace(old,new,1), encoding="utf-8")
 
+def resolve_inventory_variants(source, variant_ids, rarity_rules, number):
+    rarity=source.get("rarity")
+    if not isinstance(rarity,str) or not rarity.strip():
+        raise ScaffoldError("Card "+str(number)+" is missing rarity required for inventory metadata.")
+    rarity=rarity.strip()
+    selected=source.get("inventory_variants",source.get("inventoryVariants"))
+    if selected is None:
+        selected=rarity_rules.get(rarity)
+    if not isinstance(selected,list) or not selected:
+        raise ScaffoldError("Card "+str(number)+" must provide inventory_variants or match an inventory_variant_rules rarity.")
+    unknown=[v for v in selected if v not in variant_ids]
+    if unknown:
+        raise ScaffoldError("Card "+str(number)+" uses undeclared inventory variants: "+", ".join(unknown))
+    if len(selected)!=len(set(selected)):
+        raise ScaffoldError("Card "+str(number)+" inventory variants contain duplicates.")
+    card_type=source.get("card_type",source.get("cardType"))
+    if card_type is not None and not isinstance(card_type,str):
+        raise ScaffoldError("Card "+str(number)+" card_type must be text or null.")
+    return rarity, (card_type.strip() if isinstance(card_type,str) and card_type.strip() else None), list(selected)
+
 def normalize_definition(raw, definition_path):
     name = required_text(raw,"name"); set_id = required_text(raw,"set_id").lower()
     if not ID_PATTERN.fullmatch(set_id): raise ScaffoldError("set_id must be a lowercase Schema v1 identifier.")
@@ -80,10 +100,12 @@ def normalize_definition(raw, definition_path):
     if isinstance(cards,dict) and "cards" in cards: cards=cards["cards"]
     if not isinstance(cards,list): raise ScaffoldError("Card source must be an array (or an object containing cards).")
     if len(cards)!=expected_cards: raise ScaffoldError("Card source contains "+str(len(cards))+" records; expected "+str(expected_cards)+".")
+    rarity_rules=raw.get("inventory_variant_rules",{})
+    if not isinstance(rarity_rules,dict): raise ScaffoldError("inventory_variant_rules must be an object when provided.")
     return {
         "display_name":name,"set_id":set_id,"series":series,"display_code":display_code,"official_code":official_code,
         "dataset_id":dataset_id,"expected_cards":expected_cards,"denominator":denominator,"aliases":aliases,
-        "variants":normalized,"variant_columns":columns,"cards":cards,"spreadsheet_id":spreadsheet_id,
+        "variants":normalized,"variant_columns":columns,"cards":cards,"spreadsheet_id":spreadsheet_id,"inventory_variant_rules":rarity_rules,
         "sheet_name":str(raw.get("sheet_name") or name).strip(),"script_url":script_url,
         "canonical_prefix":str(raw.get("canonical_card_prefix") or display_code.lower()+"-"),
         "legacy_prefix":str(raw.get("legacy_card_prefix") or display_code.upper()+"-"),
@@ -100,7 +122,7 @@ def build_schema_files(c):
       "collections":[{"collectionId":"main","label":"Main Set"}],"numberingNamespaces":[{"namespaceId":"main","label":"Main and Secret Cards","denominator":denom}],
       "variants":c["variants"],"catalogue":{"path":"cards.json","expectedRecords":c["expected_cards"]},
       "inventory":{"destinationKey":c["destination_key"],"sheetName":c["sheet_name"],"startRow":c["start_row"],"cardIdColumn":c["card_id_column"],"quantityColumns":c["variant_columns"]}}
-    variant_ids=[v["variantId"] for v in c["variants"]]; cards=[]
+    variant_ids=[v["variantId"] for v in c["variants"]]; cards=[]; inventory_cards=[]
     for expected, source in enumerate(c["cards"],start=1):
         if not isinstance(source,dict): raise ScaffoldError("Card record "+str(expected)+" must be an object.")
         number=source.get("number",expected)
@@ -111,9 +133,13 @@ def build_schema_files(c):
         if not isinstance(selected,list) or not selected: raise ScaffoldError("Card "+str(number)+" variants must be a non-empty array.")
         unknown=[v for v in selected if v not in variant_ids]
         if unknown: raise ScaffoldError("Card "+str(number)+" uses undeclared variants: "+", ".join(unknown))
-        cards.append({"cardId":c["canonical_prefix"]+str(number).zfill(3),"collectionId":"main","number":{"namespaceId":"main","display":str(number).zfill(3)+"/"+denom,"sortKey":number},"name":name,"referenceImage":image.strip(),"variants":selected,
+        card_id=c["canonical_prefix"]+str(number).zfill(3)
+        cards.append({"cardId":card_id,"collectionId":"main","number":{"namespaceId":"main","display":str(number).zfill(3)+"/"+denom,"sortKey":number},"name":name,"referenceImage":image.strip(),"variants":selected,
           "externalIds":{"pokemonTcgData":str(source.get("external_id") or c["dataset_id"]+"-"+str(number)),"legacyInventoryCardId":c["legacy_prefix"]+str(number).zfill(3)}})
-    return manifest,{"schemaVersion":"1.0","setId":c["set_id"],"cards":cards}
+        rarity,card_type,inventory_variants=resolve_inventory_variants(source,variant_ids,c["inventory_variant_rules"],number)
+        inventory_cards.append({"cardId":card_id,"rarity":rarity,"cardType":card_type,"inventoryVariants":inventory_variants})
+    metadata={"inventoryMetadataVersion":1,"setId":c["set_id"],"source":{"kind":"generated","note":"Explicit physical inventory availability generated by Scaffold + Validator v1."},"cards":inventory_cards}
+    return manifest,{"schemaVersion":"1.0","setId":c["set_id"],"cards":cards},metadata
 
 def values(c):
     p=python_name(c["set_id"]); j=js_constant(c["display_name"])
@@ -153,12 +179,12 @@ def generate(definition_path, recognizer_root=ROOT, frontend_root=None, apps_scr
     definition_path=Path(definition_path).resolve(); recognizer_root=Path(recognizer_root).resolve()
     raw=json.loads(definition_path.read_text(encoding="utf-8"))
     if not isinstance(raw,dict): raise ScaffoldError("Definition root must be an object.")
-    c=normalize_definition(raw,definition_path); manifest,catalogue=build_schema_files(c); v=values(c); p=python_name(c["set_id"])
+    c=normalize_definition(raw,definition_path); manifest,catalogue,inventory_metadata=build_schema_files(c); v=values(c); p=python_name(c["set_id"])
     output_root=Path(candidate_output_root).resolve() if candidate_output_root else recognizer_root/"generated"/c["set_id"]
     effective_frontend=Path(frontend_root).resolve() if frontend_root else output_root/"frontend"
     effective_apps=Path(apps_script_root).resolve() if apps_script_root else output_root/"apps_script"
     package=recognizer_root/"sets"/p
-    write_new(package/"manifest.json",json.dumps(manifest,indent=2)+"\n"); write_new(package/"cards.json",json.dumps(catalogue,indent=2)+"\n")
+    write_new(package/"manifest.json",json.dumps(manifest,indent=2)+"\n"); write_new(package/"cards.json",json.dumps(catalogue,indent=2)+"\n"); write_new(package/"inventory_metadata.json",json.dumps(inventory_metadata,indent=2)+"\n")
     write_new(package/"runtime_metadata.py",render_template("runtime_metadata.py.tpl",v)); write_new(package/"recognizer.py",render_template("recognizer.py.tpl",v)); write_new(package/"public_package.py",render_template("public_package.py.tpl",v))
     write_new(effective_frontend/"js"/"sets"/(c["set_id"]+".js"),render_template("frontend_set.js.tpl",v))
     if frontend_root is not None: register_frontend(effective_frontend,c)
