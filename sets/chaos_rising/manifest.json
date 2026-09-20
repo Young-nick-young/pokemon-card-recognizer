@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "manifestVersion": 1,
+  "setId": "chaos-rising",
+  "displayName": "Chaos Rising",
+  "language": "en",
+  "market": "international",
+  "aliases": [
+    "chaos_rising",
+    "cri",
+    "me4",
+    "me04"
+  ],
+  "externalIds": {
+    "displayCode": "CRI",
+    "officialCode": "ME04",
+    "pokemonTcgData": "me4"
+  },
+  "collections": [
+    {
+      "collectionId": "main",
+      "label": "Main Set"
+    }
+  ],
+  "numberingNamespaces": [
+    {
+      "namespaceId": "main",
+      "label": "Main and Secret Cards",
+      "denominator": "086"
+    }
+  ],
+  "variants": [
+    {
+      "variantId": "normal",
+      "label": "Normal",
+      "inventoryKey": "normal"
+    },
+    {
+      "variantId": "reverse-holo",
+      "label": "Reverse Holo",
+      "inventoryKey": "reverse"
+    },
+    {
+      "variantId": "holo",
+      "label": "Holo",
+      "inventoryKey": "holo"
+    },
+    {
+      "variantId": "other",
+      "label": "Other",
+      "inventoryKey": "other"
+    }
+  ],
+  "catalogue": {
+    "path": "cards.json",
+    "expectedRecords": 122
+  },
+  "inventory": {
+    "destinationKey": "chaos-rising-inventory",
+    "sheetName": "Chaos Rising",
+    "startRow": 13,
+    "cardIdColumn": 17,
+    "quantityColumns": {
+      "normal": 6,
+      "reverse": 7,
+      "holo": 8,
+      "other": 9
+    }
+  }
+}
