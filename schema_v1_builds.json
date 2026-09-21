@@ -11,6 +11,12 @@
       "package": "sets/chaos_rising",
       "expectedRecords": 122,
       "output": "sets/chaos_rising/card_library.pkl"
+    },
+    {
+      "setId": "pitch-black",
+      "package": "sets/pitch_black",
+      "expectedRecords": 120,
+      "output": "sets/pitch_black/card_library.pkl"
     }
   ]
 }

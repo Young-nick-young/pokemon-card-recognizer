@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "manifestVersion": 1,
+  "setId": "pitch-black",
+  "displayName": "Pitch Black",
+  "language": "en",
+  "market": "international",
+  "aliases": [
+    "pitch_black",
+    "pbl",
+    "me5",
+    "me05"
+  ],
+  "externalIds": {
+    "displayCode": "PBL",
+    "officialCode": "ME05",
+    "pokemonTcgData": "me5"
+  },
+  "collections": [
+    {
+      "collectionId": "main",
+      "label": "Main Set"
+    }
+  ],
+  "numberingNamespaces": [
+    {
+      "namespaceId": "main",
+      "label": "Main and Secret Cards",
+      "denominator": "084"
+    }
+  ],
+  "variants": [
+    {
+      "variantId": "normal",
+      "label": "Normal",
+      "inventoryKey": "normal"
+    },
+    {
+      "variantId": "reverse-holo",
+      "label": "Reverse Holo",
+      "inventoryKey": "reverse"
+    },
+    {
+      "variantId": "holo",
+      "label": "Holo",
+      "inventoryKey": "holo"
+    },
+    {
+      "variantId": "other",
+      "label": "Other",
+      "inventoryKey": "other"
+    }
+  ],
+  "catalogue": {
+    "path": "cards.json",
+    "expectedRecords": 120
+  },
+  "inventory": {
+    "destinationKey": "pitch-black-inventory",
+    "sheetName": "Pitch Black",
+    "startRow": 13,
+    "cardIdColumn": 17,
+    "quantityColumns": {
+      "normal": 6,
+      "reverse": 7,
+      "holo": 8,
+      "other": 9
+    }
+  }
+}

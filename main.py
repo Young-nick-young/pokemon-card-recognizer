@@ -20,6 +20,10 @@ from sets.chaos_rising import recognizer as chaos_rising
 from sets.chaos_rising.public_package import (
     build_public_package as build_chaos_rising_public_package
 )
+from sets.pitch_black import recognizer as pitch_black
+from sets.pitch_black.public_package import (
+    build_public_package as build_pitch_black_public_package
+)
 
 
 # =========================================================
@@ -80,7 +84,8 @@ RECOGNIZERS = {
     "destined-rivals": destined_rivals,
     "ascended-heroes": ascended_heroes,
     "perfect-order": perfect_order,
-    "chaos-rising": chaos_rising
+    "chaos-rising": chaos_rising,
+    "pitch-black": pitch_black
 }
 
 
@@ -102,7 +107,12 @@ SET_ALIASES = {
     "chaos_rising": "chaos-rising",
     "cri": "chaos-rising",
     "me4": "chaos-rising",
-    "me04": "chaos-rising"
+    "me04": "chaos-rising",
+    "pitch-black": "pitch-black",
+    "pitch_black": "pitch-black",
+    "pbl": "pitch-black",
+    "me5": "pitch-black",
+    "me05": "pitch-black"
 }
 
 
@@ -330,7 +340,10 @@ def root():
                 perfect_order.get_status(),
 
             "chaos-rising":
-                chaos_rising.get_status()
+                chaos_rising.get_status(),
+
+            "pitch-black":
+                pitch_black.get_status()
         }
     }
 
@@ -392,6 +405,14 @@ def chaos_rising_public_package():
     except Exception as error:
         print("Chaos Rising public package unavailable:", error)
         raise HTTPException(status_code=503, detail={"error": "Public set package unavailable", "set": "chaos-rising"}) from error
+
+@app.get("/api/v1/sets/pitch-black/package")
+def pitch_black_public_package():
+    try:
+        return build_pitch_black_public_package()
+    except Exception as error:
+        print("Pitch Black public package unavailable:", error)
+        raise HTTPException(status_code=503, detail={"error": "Public set package unavailable", "set": "pitch-black"}) from error
 
 
 # =========================================================
