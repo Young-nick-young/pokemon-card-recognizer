@@ -1,0 +1,15 @@
+Inventory Sheet Automation v1 — DRY RUN
+Set: pitch-black
+Planned production sheet name: Pitch Black
+Test destination: Pokémon Inventory Sheet Automation v1 - TEST → TEST - Pitch Black
+Rows: 13–132 (120 cards)
+Header row: 12; frozen rows: 12
+Write range: A12:Q132
+Unavailable quantity cells left blank: normal=52, reverse-holo=46, holo=63, other=116
+Price columns K:N: blank
+Storage column P: blank
+Identity: explicit collector numbers + compatibility IDs; no ROW()-based identity formulas
+Authority: inventory_metadata.json; Schema cards[].variants does not determine Sheet availability
+Accepted dimensions: header row=42 px; card rows=96 px; A:Q widths=110,65,170,120,95,70,95,70,70,70,115,115,115,115,115,130,90
+Cross-pipeline invariant before render: source=120; schema=120; inventory=120; sheet-plan=120
+Google writes: TEST WORKBOOK ONLY
