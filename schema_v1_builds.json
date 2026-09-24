@@ -1,6 +1,12 @@
 {
   "sets": [
     {
+      "setId": "destined-rivals",
+      "package": "sets/destined_rivals",
+      "expectedRecords": 244,
+      "output": "sets/destined_rivals/card_library.pkl"
+    },
+    {
       "setId": "perfect-order",
       "package": "sets/perfect_order",
       "expectedRecords": 124,
