@@ -1,42 +1,71 @@
-import cv2
-import numpy as np
-import pickle
-import os
-import time
-from collections import defaultdict
+"""Destined Rivals recognizer wrapper over the shared Schema v1 engine.
 
+Stage A preserves the existing DRI runtime-metadata behavior and continues to
+use the existing DRI card_library.pkl produced by sets/destined_rivals/build_library.py.
+Only recognition runtime behavior is delegated to SchemaV1RecognizerEngine.
+"""
+
+import os
+
+from schema_v1_recognizer_engine import SchemaV1RecognizerEngine
 from sets.destined_rivals.runtime_metadata import (
     get_requested_metadata_source,
-    load_runtime_metadata
+    load_runtime_metadata,
 )
 
-
-# =========================================================
-# DESTINED RIVALS
-# =========================================================
-
-SET_ID = "destined-rivals"
-SET_CODE = "sv10"
-SET_NAME = "Destined Rivals"
-
-CARD_COUNT = 244
-
-RUNTIME_METADATA = None
-RUNTIME_METADATA_SOURCE = (
-    get_requested_metadata_source()
-)
-RUNTIME_METADATA_ERROR = None
 
 LIBRARY_FILE = os.path.join(
     os.path.dirname(__file__),
-    "card_library.pkl"
+    "card_library.pkl",
 )
+
+RUNTIME_METADATA = None
+RUNTIME_METADATA_SOURCE = get_requested_metadata_source()
+RUNTIME_METADATA_ERROR = None
+ENGINE = None
+
+# Compatibility state exposed for the existing multi-set router/status code.
+SET_ID = "destined-rivals"
+SET_CODE = "sv10"
+SET_NAME = "Destined Rivals"
+CARD_COUNT = 244
+REFERENCE_CARDS = {}
+GLOBAL_DESCRIPTORS = None
+GLOBAL_CARD_NUMBERS = None
+global_matcher = None
+library_ready = False
+library_error = None
+
+
+def _sync_compatibility_state():
+    global REFERENCE_CARDS
+    global GLOBAL_DESCRIPTORS
+    global GLOBAL_CARD_NUMBERS
+    global global_matcher
+    global library_ready
+    global library_error
+
+    if ENGINE is None:
+        REFERENCE_CARDS = {}
+        GLOBAL_DESCRIPTORS = None
+        GLOBAL_CARD_NUMBERS = None
+        global_matcher = None
+        library_ready = False
+        library_error = RUNTIME_METADATA_ERROR
+        return
+
+    REFERENCE_CARDS = ENGINE.reference_cards
+    GLOBAL_DESCRIPTORS = ENGINE.global_descriptors
+    GLOBAL_CARD_NUMBERS = ENGINE.global_card_numbers
+    global_matcher = ENGINE.global_matcher
+    library_ready = ENGINE.library_ready
+    library_error = ENGINE.library_error
+
 
 def configure_runtime_metadata(
     source=None,
-    package_directory=None
+    package_directory=None,
 ):
-
     global SET_ID
     global SET_CODE
     global SET_NAME
@@ -44,6 +73,7 @@ def configure_runtime_metadata(
     global RUNTIME_METADATA
     global RUNTIME_METADATA_SOURCE
     global RUNTIME_METADATA_ERROR
+    global ENGINE
 
     requested_source = (
         get_requested_metadata_source()
@@ -52,60 +82,60 @@ def configure_runtime_metadata(
     )
 
     arguments = {}
-
     if package_directory is not None:
-
-        arguments["package_directory"] = (
-            package_directory
-        )
+        arguments["package_directory"] = package_directory
 
     try:
-
         metadata = load_runtime_metadata(
             source=requested_source,
-            **arguments
+            **arguments,
         )
-
     except Exception as error:
-
         RUNTIME_METADATA = None
         RUNTIME_METADATA_SOURCE = requested_source
         RUNTIME_METADATA_ERROR = str(error)
-
+        _sync_compatibility_state()
         raise
 
     SET_ID = metadata.set_id
     SET_CODE = metadata.set_code
     SET_NAME = metadata.set_name
     CARD_COUNT = metadata.card_count
-
     RUNTIME_METADATA = metadata
     RUNTIME_METADATA_SOURCE = metadata.source
     RUNTIME_METADATA_ERROR = None
 
+    if ENGINE is None:
+        ENGINE = SchemaV1RecognizerEngine(
+            set_id=metadata.set_id,
+            set_name=metadata.set_name,
+            card_count=metadata.card_count,
+            library_file=LIBRARY_FILE,
+            cards_by_number=metadata.cards_by_number,
+        )
+    else:
+        ENGINE.configure_metadata(
+            set_id=metadata.set_id,
+            set_name=metadata.set_name,
+            card_count=metadata.card_count,
+            cards_by_number=metadata.cards_by_number,
+        )
+
+    _sync_compatibility_state()
     return metadata
 
 
 def get_runtime_card_metadata(number):
-
     if RUNTIME_METADATA is None:
-
         raise RuntimeError(
             "Destined Rivals runtime metadata unavailable: "
             + str(RUNTIME_METADATA_ERROR)
         )
 
-    metadata = (
-        RUNTIME_METADATA.cards_by_number.get(
-            number
-        )
-    )
-
+    metadata = RUNTIME_METADATA.cards_by_number.get(number)
     if metadata is None:
-
         raise RuntimeError(
-            "Destined Rivals runtime metadata has no collector "
-            "number "
+            "Destined Rivals runtime metadata has no collector number "
             + str(number)
             + "."
         )
@@ -113,921 +143,66 @@ def get_runtime_card_metadata(number):
     return metadata
 
 
-try:
-
-    configure_runtime_metadata(
-        source=RUNTIME_METADATA_SOURCE
-    )
-
-except Exception as error:
-
-    RUNTIME_METADATA = None
-    RUNTIME_METADATA_ERROR = str(error)
-
-    print(
-        "Destined Rivals runtime metadata load failed:",
-        error
-    )
-
-
-# =========================================================
-# RECOGNITION SETTINGS — v6.1
-# =========================================================
-
-GEOMETRY_CANDIDATES = 8
-
-MAX_SIFT_FEATURES = 500
-
-LOWE_RATIO = 0.78
-
-MIN_GOOD_MATCHES = 8
-
-
-# =========================================================
-# STATE
-# =========================================================
-
-REFERENCE_CARDS = {}
-
-GLOBAL_DESCRIPTORS = None
-
-GLOBAL_CARD_NUMBERS = None
-
-global_matcher = None
-
-library_ready = False
-
-library_error = None
-
-
-# =========================================================
-# SIFT
-# =========================================================
-
-sift = cv2.SIFT_create(
-    nfeatures=MAX_SIFT_FEATURES,
-    contrastThreshold=0.03,
-    edgeThreshold=10,
-    sigma=1.6
-)
-
-
-# =========================================================
-# FLANN
-# =========================================================
-
-FLANN_INDEX_KDTREE = 1
-
-index_params = dict(
-    algorithm=FLANN_INDEX_KDTREE,
-    trees=1
-)
-
-search_params = dict(
-    checks=24
-)
-
-
-# =========================================================
-# IMAGE FUNCTIONS
-# =========================================================
-
-def normalize_card_image(image):
-
-    if image is None:
-        return None
-
-    height, width = image.shape[:2]
-
-    max_dimension = 700
-
-    if max(height, width) > max_dimension:
-
-        scale = (
-            max_dimension
-            /
-            max(height, width)
-        )
-
-        image = cv2.resize(
-            image,
-            (
-                int(width * scale),
-                int(height * scale)
-            ),
-            interpolation=cv2.INTER_AREA
-        )
-
-    return image
-
-
-def calculate_sift(image):
-
-    gray = cv2.cvtColor(
-        image,
-        cv2.COLOR_BGR2GRAY
-    )
-
-    keypoints, descriptors = (
-        sift.detectAndCompute(
-            gray,
-            None
-        )
-    )
-
-    if descriptors is not None:
-
-        descriptors = descriptors.astype(
-            np.float32
-        )
-
-    return keypoints, descriptors
-
-
-# =========================================================
-# LOAD LIBRARY
-# =========================================================
-
 def load_library():
-
-    global REFERENCE_CARDS
-    global GLOBAL_DESCRIPTORS
-    global GLOBAL_CARD_NUMBERS
-    global global_matcher
-    global library_ready
     global library_error
 
-    try:
-
-        if RUNTIME_METADATA is None:
-
-            raise RuntimeError(
-                "Destined Rivals runtime metadata unavailable: "
-                + str(RUNTIME_METADATA_ERROR)
-            )
-
-        print(
-            "Loading Destined Rivals "
-            "memory-optimized card library..."
+    if ENGINE is None:
+        library_error = (
+            "Destined Rivals runtime metadata unavailable: "
+            + str(RUNTIME_METADATA_ERROR)
         )
+        _sync_compatibility_state()
+        return
 
-        if not os.path.exists(
-            LIBRARY_FILE
-        ):
+    ENGINE.load_library()
+    _sync_compatibility_state()
 
-            raise RuntimeError(
-                "Destined Rivals card_library.pkl not found."
-            )
 
-        with open(
-            LIBRARY_FILE,
-            "rb"
-        ) as file:
+def unload_library():
+    if ENGINE is not None:
+        ENGINE.unload_library()
+    _sync_compatibility_state()
 
-            data = pickle.load(file)
-
-        REFERENCE_CARDS = (
-            data["cards"]
-        )
-
-        GLOBAL_DESCRIPTORS = (
-            data[
-                "global_descriptors"
-            ]
-        )
-
-        if (
-            GLOBAL_DESCRIPTORS.dtype
-            != np.float32
-        ):
-
-            GLOBAL_DESCRIPTORS = (
-                GLOBAL_DESCRIPTORS.astype(
-                    np.float32,
-                    copy=False
-                )
-            )
-
-        GLOBAL_CARD_NUMBERS = (
-            data[
-                "global_card_numbers"
-            ]
-        )
-
-        if (
-            len(REFERENCE_CARDS)
-            != CARD_COUNT
-        ):
-
-            raise RuntimeError(
-                f"Expected {CARD_COUNT} cards, "
-                f"found {len(REFERENCE_CARDS)}."
-            )
-
-        descriptor_mb = (
-            GLOBAL_DESCRIPTORS.nbytes
-            /
-            1024
-            /
-            1024
-        )
-
-        print(
-            "Loaded",
-            len(GLOBAL_DESCRIPTORS),
-            "Destined Rivals features"
-        )
-
-        print(
-            "Descriptor memory:",
-            round(
-                descriptor_mb,
-                1
-            ),
-            "MB"
-        )
-
-        print(
-            "Building Destined Rivals "
-            "lightweight FLANN index..."
-        )
-
-        global_matcher = (
-            cv2.FlannBasedMatcher(
-                index_params,
-                search_params
-            )
-        )
-
-        global_matcher.add(
-            [GLOBAL_DESCRIPTORS]
-        )
-
-        global_matcher.train()
-
-        library_ready = True
-
-        library_error = None
-
-        print(
-            "Destined Rivals library ready:",
-            len(REFERENCE_CARDS),
-            "cards"
-        )
-
-    except Exception as error:
-
-        library_ready = False
-
-        library_error = str(error)
-
-        print(
-            "Destined Rivals library load failed:",
-            error
-        )
-
-
-# =========================================================
-# GLOBAL CARD RANKING
-# =========================================================
-
-def rank_cards_global(
-    query_descriptors
-):
-
-    if (
-        query_descriptors is None
-        or
-        len(query_descriptors) < 2
-    ):
-
-        return []
-
-    matches = (
-        global_matcher.knnMatch(
-            query_descriptors,
-            k=2
-        )
-    )
-
-    votes = defaultdict(int)
-
-    distances = defaultdict(float)
-
-    for pair in matches:
-
-        if len(pair) < 2:
-            continue
-
-        first, second = pair
-
-        if (
-            first.distance
-            >=
-            LOWE_RATIO
-            *
-            second.distance
-        ):
-
-            continue
-
-        train_index = (
-            first.trainIdx
-        )
-
-        if (
-            train_index < 0
-            or
-            train_index
-            >=
-            len(GLOBAL_CARD_NUMBERS)
-        ):
-
-            continue
-
-        number = int(
-            GLOBAL_CARD_NUMBERS[
-                train_index
-            ]
-        )
-
-        votes[number] += 1
-
-        distances[number] += (
-            first.distance
-        )
-
-    results = []
-
-    for (
-        number,
-        vote_count
-    ) in votes.items():
-
-        average_distance = (
-            distances[number]
-            /
-            vote_count
-        )
-
-        results.append({
-            "number":
-                number,
-
-            "votes":
-                vote_count,
-
-            "avg_distance":
-                average_distance
-        })
-
-    results.sort(
-        key=lambda item: (
-            item["votes"],
-            -item["avg_distance"]
-        ),
-        reverse=True
-    )
-
-    return results
-
-
-# =========================================================
-# GET REFERENCE DESCRIPTORS
-# =========================================================
-
-def get_reference_descriptors(
-    reference
-):
-
-    start = (
-        reference[
-            "descriptor_start"
-        ]
-    )
-
-    end = (
-        reference[
-            "descriptor_end"
-        ]
-    )
-
-    return GLOBAL_DESCRIPTORS[
-        start:end
-    ]
-
-
-# =========================================================
-# PER-CARD FEATURE MATCHING
-# =========================================================
-
-def get_card_matches(
-    query_descriptors,
-    reference_descriptors
-):
-
-    if (
-        query_descriptors is None
-        or
-        reference_descriptors is None
-        or
-        len(query_descriptors) < 2
-        or
-        len(reference_descriptors) < 2
-    ):
-
-        return []
-
-    matcher = cv2.BFMatcher(
-        cv2.NORM_L2,
-        crossCheck=False
-    )
-
-    pairs = matcher.knnMatch(
-        query_descriptors,
-        reference_descriptors,
-        k=2
-    )
-
-    good = []
-
-    for pair in pairs:
-
-        if len(pair) < 2:
-            continue
-
-        first, second = pair
-
-        if (
-            first.distance
-            <
-            LOWE_RATIO
-            *
-            second.distance
-        ):
-
-            good.append(first)
-
-    return good
-
-
-# =========================================================
-# GEOMETRIC VERIFICATION
-# =========================================================
-
-def geometric_verification(
-    query_keypoints,
-    reference_keypoints,
-    good_matches
-):
-
-    if (
-        len(good_matches)
-        <
-        MIN_GOOD_MATCHES
-    ):
-
-        return {
-            "inliers": 0,
-            "inlier_ratio": 0.0
-        }
-
-    source_points = np.float32([
-        query_keypoints[
-            match.queryIdx
-        ].pt
-        for match
-        in good_matches
-    ]).reshape(
-        -1,
-        1,
-        2
-    )
-
-    destination_points = np.float32([
-        reference_keypoints[
-            match.trainIdx
-        ]
-        for match
-        in good_matches
-    ]).reshape(
-        -1,
-        1,
-        2
-    )
-
-    try:
-
-        matrix, mask = (
-            cv2.findHomography(
-                source_points,
-                destination_points,
-                cv2.RANSAC,
-                5.0
-            )
-        )
-
-        if (
-            matrix is None
-            or
-            mask is None
-        ):
-
-            return {
-                "inliers": 0,
-                "inlier_ratio": 0.0
-            }
-
-        inliers = int(
-            mask.ravel().sum()
-        )
-
-        ratio = (
-            inliers
-            /
-            len(good_matches)
-        )
-
-        return {
-            "inliers":
-                inliers,
-
-            "inlier_ratio":
-                float(ratio)
-        }
-
-    except cv2.error:
-
-        return {
-            "inliers": 0,
-            "inlier_ratio": 0.0
-        }
-
-
-# =========================================================
-# RECOGNITION
-# =========================================================
 
 def recognize_image(image):
-
-    if not library_ready:
-
+    if ENGINE is None:
         return {
-            "status":
-                "error",
-
-            "reason":
-                "Destined Rivals library unavailable",
-
-            "library_error":
-                library_error,
-
-            "top_matches":
-                []
+            "status": "error",
+            "reason": "Destined Rivals library unavailable",
+            "library_error": RUNTIME_METADATA_ERROR,
+            "top_matches": [],
         }
 
-    started = time.time()
+    result = ENGINE.recognize_image(image)
+    _sync_compatibility_state()
+    return result
 
-    image = normalize_card_image(
-        image
-    )
-
-    # -----------------------------------------------------
-    # QUERY FEATURES
-    # -----------------------------------------------------
-
-    query_started = time.time()
-
-    (
-        query_keypoints,
-        query_descriptors
-    ) = calculate_sift(
-        image
-    )
-
-    query_time = (
-        time.time()
-        -
-        query_started
-    )
-
-    if (
-        query_descriptors is None
-        or
-        len(query_descriptors) < 8
-    ):
-
-        return {
-            "status":
-                "no_match",
-
-            "reason":
-                "Not enough image features",
-
-            "top_matches":
-                []
-        }
-
-    # -----------------------------------------------------
-    # GLOBAL SEARCH
-    # -----------------------------------------------------
-
-    search_started = time.time()
-
-    ranked = rank_cards_global(
-        query_descriptors
-    )
-
-    global_search_time = (
-        time.time()
-        -
-        search_started
-    )
-
-    if not ranked:
-
-        return {
-            "status":
-                "no_match",
-
-            "reason":
-                "No feature matches",
-
-            "top_matches":
-                []
-        }
-
-    # -----------------------------------------------------
-    # VERIFY TOP CARDS
-    # -----------------------------------------------------
-
-    geometry_started = time.time()
-
-    final_results = []
-
-    for candidate in ranked[
-        :GEOMETRY_CANDIDATES
-    ]:
-
-        number = (
-            candidate["number"]
-        )
-
-        reference = (
-            REFERENCE_CARDS[
-                number
-            ]
-        )
-
-        reference_descriptors = (
-            get_reference_descriptors(
-                reference
-            )
-        )
-
-        good_matches = (
-            get_card_matches(
-                query_descriptors,
-                reference_descriptors
-            )
-        )
-
-        geometry = (
-            geometric_verification(
-                query_keypoints,
-                reference[
-                    "keypoints"
-                ],
-                good_matches
-            )
-        )
-
-        inliers = (
-            geometry[
-                "inliers"
-            ]
-        )
-
-        inlier_ratio = (
-            geometry[
-                "inlier_ratio"
-            ]
-        )
-
-        good_count = len(
-            good_matches
-        )
-
-        card_metadata = (
-            get_runtime_card_metadata(
-                number
-            )
-        )
-
-        score = (
-            inliers * 6.0
-            +
-            inlier_ratio * 220.0
-            +
-            good_count * 0.25
-            +
-            candidate["votes"] * 0.5
-        )
-
-        final_results.append({
-            "number":
-                card_metadata.number,
-
-            "display_number":
-                card_metadata.display_number,
-
-            "image":
-                card_metadata.reference_image,
-
-            "global_votes":
-                candidate[
-                    "votes"
-                ],
-
-            "good_matches":
-                good_count,
-
-            "inliers":
-                inliers,
-
-            "inlier_ratio":
-                round(
-                    inlier_ratio,
-                    4
-                ),
-
-            "score":
-                round(
-                    score,
-                    3
-                )
-        })
-
-    geometry_time = (
-        time.time()
-        -
-        geometry_started
-    )
-
-    final_results.sort(
-        key=lambda item:
-            item["score"],
-        reverse=True
-    )
-
-    if not final_results:
-
-        return {
-            "status":
-                "no_match",
-
-            "reason":
-                "No verified candidates",
-
-            "top_matches":
-                []
-        }
-
-    best = final_results[0]
-
-    second = (
-        final_results[1]
-        if
-        len(final_results) > 1
-        else
-        None
-    )
-
-    score_gap = (
-        best["score"]
-        -
-        second["score"]
-        if second
-        else
-        best["score"]
-    )
-
-    confident = False
-
-    if (
-        best["inliers"] >= 16
-        and
-        best["inlier_ratio"] >= 0.42
-        and
-        score_gap >= 18
-    ):
-
-        confident = True
-
-    if (
-        best["inliers"] >= 28
-        and
-        best["inlier_ratio"] >= 0.50
-    ):
-
-        confident = True
-
-    total_time = (
-        time.time()
-        -
-        started
-    )
-
-    return {
-        "status":
-            "matched",
-
-        "set":
-            SET_NAME,
-
-        "set_id":
-            SET_ID,
-
-        "best_match":
-            best,
-
-        "confident":
-            confident,
-
-        "score_gap":
-            round(
-                score_gap,
-                3
-            ),
-
-        "top_matches":
-            final_results[:5],
-
-        "timing": {
-
-            "query_sift":
-                round(
-                    query_time,
-                    3
-                ),
-
-            "global_search":
-                round(
-                    global_search_time,
-                    3
-                ),
-
-            "geometry":
-                round(
-                    geometry_time,
-                    3
-                ),
-
-            "total":
-                round(
-                    total_time,
-                    3
-                )
-        }
-    }
-
-
-# =========================================================
-# STATUS
-# =========================================================
 
 def get_status():
+    if ENGINE is None:
+        return {
+            "set": SET_NAME,
+            "set_id": SET_ID,
+            "library_ready": False,
+            "cards_prepared": 0,
+            "cards_expected": CARD_COUNT,
+            "global_features": 0,
+            "library_error": RUNTIME_METADATA_ERROR,
+        }
 
-    return {
-        "set":
-            SET_NAME,
+    _sync_compatibility_state()
+    return ENGINE.get_status()
 
-        "set_id":
-            SET_ID,
 
-        "library_ready":
-            library_ready,
-
-        "cards_prepared":
-            len(
-                REFERENCE_CARDS
-            ),
-
-        "cards_expected":
-            CARD_COUNT,
-
-        "global_features":
-            (
-                len(
-                    GLOBAL_DESCRIPTORS
-                )
-                if
-                GLOBAL_DESCRIPTORS
-                is not None
-                else
-                0
-            ),
-
-        "library_error":
-            library_error
-    }
+try:
+    configure_runtime_metadata(
+        source=RUNTIME_METADATA_SOURCE,
+    )
+except Exception as error:
+    RUNTIME_METADATA = None
+    RUNTIME_METADATA_ERROR = str(error)
+    _sync_compatibility_state()
+    print(
+        "Destined Rivals runtime metadata load failed:",
+        error,
+    )
