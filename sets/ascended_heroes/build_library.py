@@ -31,13 +31,12 @@ MAX_SIFT_FEATURES = 500
 # ASCENDED HEROES CARD DATA
 # =========================================================
 
-# This is the working Ascended Heroes Google Apps Script API.
-# It returns all 295 cards and their correct TCGplayer image URLs.
+# Static recovery catalogue preserving the existing 295-card
+# ASC identities and TCGplayer reference-image URLs.
 
-CARD_API_URL = (
-    "https://script.google.com/macros/s/"
-    "AKfycbxzaDPrnUX_a8P7UXxAQ-lWCCbJ9RG_kiXzvUfERWk41cCDhdY5yIr8S1PK9CAD10vv"
-    "/exec?api=cards"
+CATALOGUE_FILE = os.path.join(
+    os.path.dirname(__file__),
+    "catalogue.json"
 )
 
 
@@ -59,37 +58,29 @@ sift = cv2.SIFT_create(
 
 def download_card_list():
 
-    print("Downloading Ascended Heroes card list...")
+    print("Loading Ascended Heroes static card catalogue...")
 
-    request = urllib.request.Request(
-        CARD_API_URL,
-        headers={
-            "User-Agent": "Mozilla/5.0"
-        }
-    )
+    with open(
+        CATALOGUE_FILE,
+        "r",
+        encoding="utf-8"
+    ) as file:
 
-    with urllib.request.urlopen(
-        request,
-        timeout=60
-    ) as response:
-
-        data = response.read()
-
-    cards = json.loads(
-        data.decode("utf-8")
-    )
+        cards = json.load(
+            file
+        )
 
     if not isinstance(cards, list):
 
         raise RuntimeError(
-            "Ascended Heroes API did not return a card list."
+            "Ascended Heroes catalogue did not return a card list."
         )
 
     if len(cards) != CARD_COUNT:
 
         raise RuntimeError(
             f"Expected {CARD_COUNT} cards, "
-            f"but API returned {len(cards)}."
+            f"but catalogue returned {len(cards)}."
         )
 
     print(
