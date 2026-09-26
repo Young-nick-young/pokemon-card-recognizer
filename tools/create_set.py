@@ -206,10 +206,14 @@ def generate(definition_path, recognizer_root=ROOT, frontend_root=None, apps_scr
     write_new(effective_frontend/"js"/"sets"/(c["set_id"]+".js"),render_template("frontend_set.js.tpl",v))
     if frontend_root is not None: register_frontend(effective_frontend,c)
     write_new(effective_apps/(p+"_config.gs"),render_template("apps_script_config.gs.tpl",v))
-    register_build(recognizer_root,c,p); register_router(recognizer_root,c,p)
-    from schema_v1_inventory_sheet_plan import build_inventory_sheet_plan
-    plan=build_inventory_sheet_plan(package)
+    sys.path.insert(0,str(recognizer_root))
+    try:
+        from schema_v1_inventory_sheet_plan import build_inventory_sheet_plan
+        plan=build_inventory_sheet_plan(package)
+    finally:
+        if sys.path and sys.path[0]==str(recognizer_root): sys.path.pop(0)
     write_new(package/"inventory_sheet_plan.json",json.dumps(plan,indent=2)+"\n")
+    register_build(recognizer_root,c,p); register_router(recognizer_root,c,p)
     print("Generated Schema v1 candidate:",c["display_name"]); print("Set ID:",c["set_id"]); print("Cards:",c["expected_cards"]); print("Series:",c["series"])
     print("Inventory Sheet Plan v2:",package/"inventory_sheet_plan.json")
     print("Frontend candidate:",effective_frontend); print("Apps Script candidate:",effective_apps); return c
