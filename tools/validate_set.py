@@ -93,6 +93,40 @@ def check_projection(root,package_dir,manifest,report):
     else: report.passed("inventory projection matches schema (rows "+str(p["startRow"])+"–"+str(p["endRow"])+")")
     return p
 
+def check_inventory_sheet_plan(root,package_dir,report):
+    metadata_path=package_dir/"inventory_metadata.json"
+    plan_path=package_dir/"inventory_sheet_plan.json"
+    if not metadata_path.exists():
+        report.failed("inventory metadata missing: "+str(metadata_path)); return
+    if not plan_path.exists():
+        report.failed("inventory sheet plan missing: "+str(plan_path)); return
+    try:
+        sys.path.insert(0,str(root))
+        from schema_v1_inventory_sheet_plan import build_inventory_sheet_plan
+        generated=build_inventory_sheet_plan(package_dir)
+    except Exception as e:
+        report.failed("inventory sheet plan generation failed: "+str(e).replace("\n"," | ")); return
+    finally:
+        if sys.path and sys.path[0]==str(root): sys.path.pop(0)
+    try:
+        stored=json.loads(plan_path.read_text(encoding="utf-8"))
+    except Exception as e:
+        report.failed("inventory sheet plan unreadable: "+str(e)); return
+    if stored!=generated:
+        report.failed("stored inventory sheet plan differs from deterministic regenerated plan"); return
+    try:
+        sys.path.insert(0,str(root/"tools"))
+        from validate_inventory_sheet_v2 import validate_plan
+        errors=validate_plan(stored)
+    except Exception as e:
+        report.failed("inventory sheet plan validator failed: "+str(e)); return
+    finally:
+        if sys.path and sys.path[0]==str(root/"tools"): sys.path.pop(0)
+    if errors:
+        report.failed("inventory sheet plan invalid: "+" | ".join(errors[:20]))
+    else:
+        report.passed("Inventory Sheet Plan v2 is deterministic and valid")
+
 def check_build_registry(root,set_id,manifest,p_name,report,require_library):
     registry=read_json(root/"schema_v1_builds.json",report,"build registry")
     if not isinstance(registry,dict) or not isinstance(registry.get("sets"),list): report.failed("build registry has no sets array"); return
@@ -205,7 +239,7 @@ def validate(set_id,recognizer_root=ROOT,frontend_root=None,apps_script_root=Non
         if apps_script_root is None: report.failed("--integration requires --apps-script-root")
     if isinstance(manifest,dict) and isinstance(catalogue,dict):
         check_manifest_and_cards(set_id,manifest,catalogue,report); projection=check_projection(recognizer_root,package_dir,manifest,report)
-        check_build_registry(recognizer_root,set_id,manifest,p,report,require_library); check_runtime(recognizer_root,set_id,p,manifest,report); check_router(recognizer_root,set_id,p,manifest,report); check_public_package(recognizer_root,set_id,p,manifest,report); check_alias_collisions(recognizer_root,set_id,manifest,report)
+        check_inventory_sheet_plan(recognizer_root,package_dir,report); check_build_registry(recognizer_root,set_id,manifest,p,report,require_library); check_runtime(recognizer_root,set_id,p,manifest,report); check_router(recognizer_root,set_id,p,manifest,report); check_public_package(recognizer_root,set_id,p,manifest,report); check_alias_collisions(recognizer_root,set_id,manifest,report)
         if frontend_root is not None: check_frontend(Path(frontend_root).resolve(),set_id,manifest,report)
         elif not integration: report.passed("frontend validation not requested in recognizer-side mode")
         if apps_script_root is not None: check_apps(Path(apps_script_root).resolve(),set_id,p,manifest,projection,report)
