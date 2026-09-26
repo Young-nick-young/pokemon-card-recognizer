@@ -96,10 +96,13 @@ def check_projection(root,package_dir,manifest,report):
 def check_inventory_sheet_plan(root,package_dir,report):
     metadata_path=package_dir/"inventory_metadata.json"
     plan_path=package_dir/"inventory_sheet_plan.json"
+    if not metadata_path.exists() and not plan_path.exists():
+        report.warned("legacy set has no Inventory Sheet Plan v2 artifacts; future scaffolded sets will include them")
+        return
     if not metadata_path.exists():
-        report.failed("inventory metadata missing: "+str(metadata_path)); return
+        report.failed("inventory metadata missing while inventory sheet plan exists: "+str(metadata_path)); return
     if not plan_path.exists():
-        report.failed("inventory sheet plan missing: "+str(plan_path)); return
+        report.failed("inventory sheet plan missing while inventory metadata exists: "+str(plan_path)); return
     try:
         sys.path.insert(0,str(root))
         from schema_v1_inventory_sheet_plan import build_inventory_sheet_plan
