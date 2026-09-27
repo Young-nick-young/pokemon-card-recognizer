@@ -1,0 +1,208 @@
+{
+  "inventoryLayoutVersion": 1,
+  "layoutId": "ascended-heroes-special-v1",
+  "kind": "custom-variable-width",
+  "setId": "ascended-heroes",
+  "sheetName": "Ascended Heroes",
+  "headerRow": 12,
+  "startRow": 13,
+  "freezeRows": 12,
+  "range": "A1:T307",
+  "logoRange": "A1:E10",
+  "columns": [
+    {
+      "letter": "A",
+      "key": "image",
+      "header": "Image"
+    },
+    {
+      "letter": "B",
+      "key": "collectorNumber",
+      "header": "Card #",
+      "numberFormat": "000"
+    },
+    {
+      "letter": "C",
+      "key": "name",
+      "header": "Card Name"
+    },
+    {
+      "letter": "D",
+      "key": "rarity",
+      "header": "Rarity"
+    },
+    {
+      "letter": "E",
+      "key": "cardType",
+      "header": "Card Type"
+    },
+    {
+      "letter": "F",
+      "key": "specialPattern",
+      "header": "Special Pattern"
+    },
+    {
+      "letter": "G",
+      "key": "normalQty",
+      "header": "Normal"
+    },
+    {
+      "letter": "H",
+      "key": "energyReverseQty",
+      "header": "Energy / Reverse Holo"
+    },
+    {
+      "letter": "I",
+      "key": "specialReverseQty",
+      "header": "Special Reverse"
+    },
+    {
+      "letter": "J",
+      "key": "holoQty",
+      "header": "Holo"
+    },
+    {
+      "letter": "K",
+      "key": "otherQty",
+      "header": "Other"
+    },
+    {
+      "letter": "L",
+      "key": "totalQty",
+      "header": "Total"
+    },
+    {
+      "letter": "M",
+      "key": "normalPriceBhd",
+      "header": "Normal Price (BHD)"
+    },
+    {
+      "letter": "N",
+      "key": "energyReversePriceBhd",
+      "header": "Energy / Reverse Price (BHD)"
+    },
+    {
+      "letter": "O",
+      "key": "specialReversePriceBhd",
+      "header": "Special Reverse Price (BHD)"
+    },
+    {
+      "letter": "P",
+      "key": "holoPriceBhd",
+      "header": "Holo Price (BHD)"
+    },
+    {
+      "letter": "Q",
+      "key": "otherPriceBhd",
+      "header": "Other Price (BHD)"
+    },
+    {
+      "letter": "R",
+      "key": "collectionValueBhd",
+      "header": "Collection Value (BHD)"
+    },
+    {
+      "letter": "S",
+      "key": "storageLocation",
+      "header": "Storage Location"
+    },
+    {
+      "letter": "T",
+      "key": "compatibilityCardId",
+      "header": "Card ID"
+    }
+  ],
+  "inventoryBuckets": [
+    {
+      "id": "normal",
+      "quantityColumn": "G",
+      "priceColumn": "M"
+    },
+    {
+      "id": "energy/reverse-holo",
+      "quantityColumn": "H",
+      "priceColumn": "N"
+    },
+    {
+      "id": "special-reverse",
+      "quantityColumn": "I",
+      "priceColumn": "O"
+    },
+    {
+      "id": "holo",
+      "quantityColumn": "J",
+      "priceColumn": "P"
+    },
+    {
+      "id": "other",
+      "quantityColumn": "K",
+      "priceColumn": "Q"
+    }
+  ],
+  "total": {
+    "column": "L",
+    "operation": "sumInventoryBuckets"
+  },
+  "collectionValue": {
+    "column": "R",
+    "operation": "sumQuantityTimesPrice"
+  },
+  "storage": {
+    "column": "S"
+  },
+  "identity": {
+    "column": "T"
+  },
+  "summaries": [
+    {
+      "label": "Total Bulk Copies",
+      "labelRange": "F1:G2",
+      "valueRange": "F3:G3",
+      "operation": "sumColumn",
+      "column": "L"
+    },
+    {
+      "label": "Total Bulk Value",
+      "labelRange": "F6:G7",
+      "valueRange": "F8:G8",
+      "operation": "sumColumn",
+      "column": "R",
+      "numberFormat": "\"BHD \"0.000"
+    },
+    {
+      "label": "Normal",
+      "labelRange": "I1:J2",
+      "valueRange": "I3:J3",
+      "operation": "sumBuckets",
+      "buckets": [
+        "normal"
+      ]
+    },
+    {
+      "label": "Holo",
+      "labelRange": "L1:M2",
+      "valueRange": "L3:M3",
+      "operation": "sumBuckets",
+      "buckets": [
+        "holo"
+      ]
+    },
+    {
+      "label": "Reverse Holo",
+      "labelRange": "O1:P2",
+      "valueRange": "O3:P3",
+      "operation": "sumBuckets",
+      "buckets": [
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    }
+  ],
+  "preservationRules": {
+    "standardFourVariantPathUnchanged": true,
+    "dynamicVariants": true,
+    "specialPatternColumn": "F",
+    "unavailableQuantityCells": "blank-and-grey",
+    "existingInventoryIsMigrationProtected": true
+  }
+}

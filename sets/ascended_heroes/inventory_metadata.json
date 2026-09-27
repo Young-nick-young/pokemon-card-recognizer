@@ -1,0 +1,3584 @@
+{
+  "inventoryMetadataVersion": 2,
+  "setId": "ascended-heroes",
+  "setCode": "ASC",
+  "model": "custom-physical-finishes",
+  "source": {
+    "helperSheet": "ASC_ascended-heroes",
+    "helperRows": 575,
+    "catalogueFile": "sets/ascended_heroes/catalogue.json",
+    "note": "Variant availability is derived from helper variant_kind + printing_options, not rarity inference."
+  },
+  "declaredInventoryBuckets": [
+    "normal",
+    "energy/reverse-holo",
+    "special-reverse",
+    "holo",
+    "other"
+  ],
+  "cards": [
+    {
+      "cardId": "ASC-001",
+      "collectorNumber": "001",
+      "name": "Erika's Oddish",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-002",
+      "collectorNumber": "002",
+      "name": "Erika's Gloom",
+      "rarity": "Uncommon",
+      "cardType": "Grass",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-003",
+      "collectorNumber": "003",
+      "name": "Erika's Vileplume ex",
+      "rarity": "Double Rare",
+      "cardType": "Grass",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-004",
+      "collectorNumber": "004",
+      "name": "Erika's Bellsprout",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-005",
+      "collectorNumber": "005",
+      "name": "Erika's Weepinbell",
+      "rarity": "Uncommon",
+      "cardType": "Grass",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-006",
+      "collectorNumber": "006",
+      "name": "Erika's Victreebel",
+      "rarity": "Rare",
+      "cardType": "Grass",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-007",
+      "collectorNumber": "007",
+      "name": "Erika's Tangela",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-008",
+      "collectorNumber": "008",
+      "name": "Chikorita",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-009",
+      "collectorNumber": "009",
+      "name": "Bayleef",
+      "rarity": "Uncommon",
+      "cardType": "Grass",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-010",
+      "collectorNumber": "010",
+      "name": "Mega Meganium ex",
+      "rarity": "Double Rare",
+      "cardType": "Grass",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-011",
+      "collectorNumber": "011",
+      "name": "Wurmple",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-012",
+      "collectorNumber": "012",
+      "name": "Silcoon",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-013",
+      "collectorNumber": "013",
+      "name": "Beautifly",
+      "rarity": "Uncommon",
+      "cardType": "Grass",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-014",
+      "collectorNumber": "014",
+      "name": "Cascoon",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-015",
+      "collectorNumber": "015",
+      "name": "Dustox",
+      "rarity": "Uncommon",
+      "cardType": "Grass",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-016",
+      "collectorNumber": "016",
+      "name": "Budew",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-017",
+      "collectorNumber": "017",
+      "name": "Grubbin",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-018",
+      "collectorNumber": "018",
+      "name": "Team Rocket's Tarountula",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "specialPattern": "Rocket R",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-019",
+      "collectorNumber": "019",
+      "name": "Team Rocket's Spidops",
+      "rarity": "Rare",
+      "cardType": "Grass",
+      "specialPattern": "Rocket R",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-020",
+      "collectorNumber": "020",
+      "name": "Charmander",
+      "rarity": "Common",
+      "cardType": "Fire",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-021",
+      "collectorNumber": "021",
+      "name": "Charmeleon",
+      "rarity": "Uncommon",
+      "cardType": "Fire",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-022",
+      "collectorNumber": "022",
+      "name": "Mega Charizard Y ex",
+      "rarity": "Double Rare",
+      "cardType": "Fire",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-023",
+      "collectorNumber": "023",
+      "name": "Ethan's Slugma",
+      "rarity": "Common",
+      "cardType": "Fire",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-024",
+      "collectorNumber": "024",
+      "name": "Ethan's Magcargo",
+      "rarity": "Rare",
+      "cardType": "Fire",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-025",
+      "collectorNumber": "025",
+      "name": "Entei",
+      "rarity": "Rare",
+      "cardType": "Fire",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-026",
+      "collectorNumber": "026",
+      "name": "Ethan's Ho-Oh ex",
+      "rarity": "Double Rare",
+      "cardType": "Fire",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-027",
+      "collectorNumber": "027",
+      "name": "Numel",
+      "rarity": "Common",
+      "cardType": "Fire",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-028",
+      "collectorNumber": "028",
+      "name": "Camerupt",
+      "rarity": "Uncommon",
+      "cardType": "Fire",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-029",
+      "collectorNumber": "029",
+      "name": "Tepig",
+      "rarity": "Common",
+      "cardType": "Fire",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-030",
+      "collectorNumber": "030",
+      "name": "Pignite",
+      "rarity": "Uncommon",
+      "cardType": "Fire",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-031",
+      "collectorNumber": "031",
+      "name": "Mega Emboar ex",
+      "rarity": "Double Rare",
+      "cardType": "Fire",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-032",
+      "collectorNumber": "032",
+      "name": "N's Darumaka",
+      "rarity": "Common",
+      "cardType": "Fire",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-033",
+      "collectorNumber": "033",
+      "name": "N's Darmanitan",
+      "rarity": "Uncommon",
+      "cardType": "Fire",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-034",
+      "collectorNumber": "034",
+      "name": "Salandit",
+      "rarity": "Common",
+      "cardType": "Fire",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-035",
+      "collectorNumber": "035",
+      "name": "Salazzle",
+      "rarity": "Uncommon",
+      "cardType": "Fire",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-036",
+      "collectorNumber": "036",
+      "name": "Scorbunny",
+      "rarity": "Common",
+      "cardType": "Fire",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-037",
+      "collectorNumber": "037",
+      "name": "Raboot",
+      "rarity": "Common",
+      "cardType": "Fire",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-038",
+      "collectorNumber": "038",
+      "name": "Cinderace ex",
+      "rarity": "Double Rare",
+      "cardType": "Fire",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-039",
+      "collectorNumber": "039",
+      "name": "Psyduck",
+      "rarity": "Common",
+      "cardType": "Water",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-040",
+      "collectorNumber": "040",
+      "name": "Golduck",
+      "rarity": "Uncommon",
+      "cardType": "Water",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-041",
+      "collectorNumber": "041",
+      "name": "Totodile",
+      "rarity": "Common",
+      "cardType": "Water",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-042",
+      "collectorNumber": "042",
+      "name": "Croconaw",
+      "rarity": "Uncommon",
+      "cardType": "Water",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-043",
+      "collectorNumber": "043",
+      "name": "Mega Feraligatr ex",
+      "rarity": "Double Rare",
+      "cardType": "Water",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-044",
+      "collectorNumber": "044",
+      "name": "Sneasel",
+      "rarity": "Common",
+      "cardType": "Water",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-045",
+      "collectorNumber": "045",
+      "name": "Weavile",
+      "rarity": "Uncommon",
+      "cardType": "Water",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-046",
+      "collectorNumber": "046",
+      "name": "Snorunt",
+      "rarity": "Common",
+      "cardType": "Water",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-047",
+      "collectorNumber": "047",
+      "name": "Mega Froslass ex",
+      "rarity": "Double Rare",
+      "cardType": "Water",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-048",
+      "collectorNumber": "048",
+      "name": "Regice ex",
+      "rarity": "Double Rare",
+      "cardType": "Water",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-049",
+      "collectorNumber": "049",
+      "name": "N's Vanillite",
+      "rarity": "Common",
+      "cardType": "Water",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-050",
+      "collectorNumber": "050",
+      "name": "N's Vanillish",
+      "rarity": "Common",
+      "cardType": "Water",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-051",
+      "collectorNumber": "051",
+      "name": "N's Vanilluxe",
+      "rarity": "Uncommon",
+      "cardType": "Water",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-052",
+      "collectorNumber": "052",
+      "name": "Snom",
+      "rarity": "Common",
+      "cardType": "Water",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-053",
+      "collectorNumber": "053",
+      "name": "Frosmoth",
+      "rarity": "Uncommon",
+      "cardType": "Water",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-054",
+      "collectorNumber": "054",
+      "name": "Glastrier",
+      "rarity": "Uncommon",
+      "cardType": "Water",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-055",
+      "collectorNumber": "055",
+      "name": "Pikachu",
+      "rarity": "Common",
+      "cardType": "Lightning",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-056",
+      "collectorNumber": "056",
+      "name": "Raichu",
+      "rarity": "Uncommon",
+      "cardType": "Lightning",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-057",
+      "collectorNumber": "057",
+      "name": "Pikachu ex",
+      "rarity": "Double Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-058",
+      "collectorNumber": "058",
+      "name": "Voltorb ex",
+      "rarity": "Double Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-059",
+      "collectorNumber": "059",
+      "name": "Tynamo",
+      "rarity": "Common",
+      "cardType": "Lightning",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-060",
+      "collectorNumber": "060",
+      "name": "Eelektrik",
+      "rarity": "Uncommon",
+      "cardType": "Lightning",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-061",
+      "collectorNumber": "061",
+      "name": "Mega Eelektross ex",
+      "rarity": "Double Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-062",
+      "collectorNumber": "062",
+      "name": "Stunfisk",
+      "rarity": "Common",
+      "cardType": "Lightning",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-063",
+      "collectorNumber": "063",
+      "name": "Helioptile",
+      "rarity": "Common",
+      "cardType": "Lightning",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-064",
+      "collectorNumber": "064",
+      "name": "Heliolisk",
+      "rarity": "Uncommon",
+      "cardType": "Lightning",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-065",
+      "collectorNumber": "065",
+      "name": "Charjabug",
+      "rarity": "Common",
+      "cardType": "Lightning",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-066",
+      "collectorNumber": "066",
+      "name": "Vikavolt",
+      "rarity": "Uncommon",
+      "cardType": "Lightning",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-067",
+      "collectorNumber": "067",
+      "name": "Tapu Koko",
+      "rarity": "Rare",
+      "cardType": "Lightning",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-068",
+      "collectorNumber": "068",
+      "name": "Hop's Pincurchin ex",
+      "rarity": "Double Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-069",
+      "collectorNumber": "069",
+      "name": "Iono's Tadbulb",
+      "rarity": "Common",
+      "cardType": "Lightning",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-070",
+      "collectorNumber": "070",
+      "name": "Iono's Bellibolt ex",
+      "rarity": "Double Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-071",
+      "collectorNumber": "071",
+      "name": "Iono's Wattrel",
+      "rarity": "Common",
+      "cardType": "Lightning",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-072",
+      "collectorNumber": "072",
+      "name": "Iono's Kilowattrel",
+      "rarity": "Rare",
+      "cardType": "Lightning",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-073",
+      "collectorNumber": "073",
+      "name": "Miraidon ex",
+      "rarity": "Double Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-074",
+      "collectorNumber": "074",
+      "name": "Clefairy",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-075",
+      "collectorNumber": "075",
+      "name": "Clefable",
+      "rarity": "Uncommon",
+      "cardType": "Psychic",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-076",
+      "collectorNumber": "076",
+      "name": "Lillie's Clefairy ex",
+      "rarity": "Double Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-077",
+      "collectorNumber": "077",
+      "name": "Team Rocket's Exeggcute",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "specialPattern": "Rocket R",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-078",
+      "collectorNumber": "078",
+      "name": "Team Rocket's Exeggutor",
+      "rarity": "Rare",
+      "cardType": "Psychic",
+      "specialPattern": "Rocket R",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-079",
+      "collectorNumber": "079",
+      "name": "Team Rocket's Mewtwo ex",
+      "rarity": "Double Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-080",
+      "collectorNumber": "080",
+      "name": "Togepi",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-081",
+      "collectorNumber": "081",
+      "name": "Togetic",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-082",
+      "collectorNumber": "082",
+      "name": "Togekiss",
+      "rarity": "Rare",
+      "cardType": "Psychic",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-083",
+      "collectorNumber": "083",
+      "name": "Marill",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-084",
+      "collectorNumber": "084",
+      "name": "Azumarill ex",
+      "rarity": "Double Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-085",
+      "collectorNumber": "085",
+      "name": "Misdreavus",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-086",
+      "collectorNumber": "086",
+      "name": "Mismagius",
+      "rarity": "Rare",
+      "cardType": "Psychic",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-087",
+      "collectorNumber": "087",
+      "name": "Ralts",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-088",
+      "collectorNumber": "088",
+      "name": "Kirlia",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-089",
+      "collectorNumber": "089",
+      "name": "Mega Gardevoir ex",
+      "rarity": "Double Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-090",
+      "collectorNumber": "090",
+      "name": "Shuppet",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-091",
+      "collectorNumber": "091",
+      "name": "Banette",
+      "rarity": "Uncommon",
+      "cardType": "Psychic",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-092",
+      "collectorNumber": "092",
+      "name": "Rotom",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-093",
+      "collectorNumber": "093",
+      "name": "Swirlix",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-094",
+      "collectorNumber": "094",
+      "name": "Slurpuff",
+      "rarity": "Uncommon",
+      "cardType": "Psychic",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-095",
+      "collectorNumber": "095",
+      "name": "Hop's Phantump",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-096",
+      "collectorNumber": "096",
+      "name": "Hop's Trevenant",
+      "rarity": "Rare",
+      "cardType": "Psychic",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-097",
+      "collectorNumber": "097",
+      "name": "Team Rocket's Mimikyu",
+      "rarity": "Uncommon",
+      "cardType": "Psychic",
+      "specialPattern": "Rocket R",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-098",
+      "collectorNumber": "098",
+      "name": "Spectrier",
+      "rarity": "Rare",
+      "cardType": "Psychic",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-099",
+      "collectorNumber": "099",
+      "name": "Munkidori",
+      "rarity": "Rare",
+      "cardType": "Psychic",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-100",
+      "collectorNumber": "100",
+      "name": "Team Rocket's Diglett",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "specialPattern": "Rocket R",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-101",
+      "collectorNumber": "101",
+      "name": "Team Rocket's Dugtrio",
+      "rarity": "Uncommon",
+      "cardType": "Fighting",
+      "specialPattern": "Rocket R",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-102",
+      "collectorNumber": "102",
+      "name": "Hitmontop",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-103",
+      "collectorNumber": "103",
+      "name": "Meditite",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-104",
+      "collectorNumber": "104",
+      "name": "Medicham",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-105",
+      "collectorNumber": "105",
+      "name": "Lunatone",
+      "rarity": "Rare",
+      "cardType": "Fighting",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-106",
+      "collectorNumber": "106",
+      "name": "Solrock",
+      "rarity": "Uncommon",
+      "cardType": "Fighting",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-107",
+      "collectorNumber": "107",
+      "name": "Regirock ex",
+      "rarity": "Double Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-108",
+      "collectorNumber": "108",
+      "name": "Groudon",
+      "rarity": "Rare",
+      "cardType": "Fighting",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-109",
+      "collectorNumber": "109",
+      "name": "Cynthia's Gible",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-110",
+      "collectorNumber": "110",
+      "name": "Cynthia's Gabite",
+      "rarity": "Uncommon",
+      "cardType": "Fighting",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-111",
+      "collectorNumber": "111",
+      "name": "Cynthia's Garchomp ex",
+      "rarity": "Double Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-112",
+      "collectorNumber": "112",
+      "name": "Riolu",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-113",
+      "collectorNumber": "113",
+      "name": "Mega Lucario ex",
+      "rarity": "Double Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-114",
+      "collectorNumber": "114",
+      "name": "Stunfisk ex",
+      "rarity": "Double Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-115",
+      "collectorNumber": "115",
+      "name": "Pancham",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-116",
+      "collectorNumber": "116",
+      "name": "Mega Hawlucha ex",
+      "rarity": "Double Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-117",
+      "collectorNumber": "117",
+      "name": "Carbink",
+      "rarity": "Uncommon",
+      "cardType": "Fighting",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-118",
+      "collectorNumber": "118",
+      "name": "Rolycoly",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-119",
+      "collectorNumber": "119",
+      "name": "Carkol",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-120",
+      "collectorNumber": "120",
+      "name": "Coalossal",
+      "rarity": "Rare",
+      "cardType": "Fighting",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-121",
+      "collectorNumber": "121",
+      "name": "Koraidon ex",
+      "rarity": "Double Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-122",
+      "collectorNumber": "122",
+      "name": "Okidogi",
+      "rarity": "Rare",
+      "cardType": "Fighting",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-123",
+      "collectorNumber": "123",
+      "name": "Gastly",
+      "rarity": "Common",
+      "cardType": "Darkness",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-124",
+      "collectorNumber": "124",
+      "name": "Haunter",
+      "rarity": "Uncommon",
+      "cardType": "Darkness",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-125",
+      "collectorNumber": "125",
+      "name": "Mega Gengar ex",
+      "rarity": "Double Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-126",
+      "collectorNumber": "126",
+      "name": "Team Rocket's Murkrow",
+      "rarity": "Common",
+      "cardType": "Darkness",
+      "specialPattern": "Rocket R",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-127",
+      "collectorNumber": "127",
+      "name": "Team Rocket's Honchkrow",
+      "rarity": "Rare",
+      "cardType": "Darkness",
+      "specialPattern": "Rocket R",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-128",
+      "collectorNumber": "128",
+      "name": "Poochyena",
+      "rarity": "Common",
+      "cardType": "Darkness",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-129",
+      "collectorNumber": "129",
+      "name": "Mightyena",
+      "rarity": "Uncommon",
+      "cardType": "Darkness",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-130",
+      "collectorNumber": "130",
+      "name": "Galarian Zigzagoon",
+      "rarity": "Common",
+      "cardType": "Darkness",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-131",
+      "collectorNumber": "131",
+      "name": "Galarian Linoone",
+      "rarity": "Common",
+      "cardType": "Darkness",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-132",
+      "collectorNumber": "132",
+      "name": "Galarian Obstagoon",
+      "rarity": "Uncommon",
+      "cardType": "Darkness",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-133",
+      "collectorNumber": "133",
+      "name": "Cynthia's Spiritomb",
+      "rarity": "Uncommon",
+      "cardType": "Darkness",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-134",
+      "collectorNumber": "134",
+      "name": "Scraggy",
+      "rarity": "Common",
+      "cardType": "Darkness",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-135",
+      "collectorNumber": "135",
+      "name": "Mega Scrafty ex",
+      "rarity": "Double Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-136",
+      "collectorNumber": "136",
+      "name": "N's Zorua",
+      "rarity": "Common",
+      "cardType": "Darkness",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-137",
+      "collectorNumber": "137",
+      "name": "N's Zoroark ex",
+      "rarity": "Double Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-138",
+      "collectorNumber": "138",
+      "name": "Vullaby",
+      "rarity": "Common",
+      "cardType": "Darkness",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-139",
+      "collectorNumber": "139",
+      "name": "Mandibuzz ex",
+      "rarity": "Double Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-140",
+      "collectorNumber": "140",
+      "name": "Pangoro",
+      "rarity": "Uncommon",
+      "cardType": "Darkness",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-141",
+      "collectorNumber": "141",
+      "name": "Hoopa",
+      "rarity": "Rare",
+      "cardType": "Darkness",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-142",
+      "collectorNumber": "142",
+      "name": "Fezandipiti ex",
+      "rarity": "Double Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-143",
+      "collectorNumber": "143",
+      "name": "Pecharunt",
+      "rarity": "Rare",
+      "cardType": "Darkness",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-144",
+      "collectorNumber": "144",
+      "name": "Mawile",
+      "rarity": "Uncommon",
+      "cardType": "Metal",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-145",
+      "collectorNumber": "145",
+      "name": "Registeel ex",
+      "rarity": "Double Rare",
+      "cardType": "Metal",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-146",
+      "collectorNumber": "146",
+      "name": "Pawniard",
+      "rarity": "Common",
+      "cardType": "Metal",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-147",
+      "collectorNumber": "147",
+      "name": "Bisharp",
+      "rarity": "Common",
+      "cardType": "Metal",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-148",
+      "collectorNumber": "148",
+      "name": "Kingambit",
+      "rarity": "Rare",
+      "cardType": "Metal",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-149",
+      "collectorNumber": "149",
+      "name": "Togedemaru ex",
+      "rarity": "Double Rare",
+      "cardType": "Metal",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-150",
+      "collectorNumber": "150",
+      "name": "Dratini",
+      "rarity": "Common",
+      "cardType": "Dragon",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-151",
+      "collectorNumber": "151",
+      "name": "Dragonair",
+      "rarity": "Uncommon",
+      "cardType": "Dragon",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-152",
+      "collectorNumber": "152",
+      "name": "Mega Dragonite ex",
+      "rarity": "Double Rare",
+      "cardType": "Dragon",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-153",
+      "collectorNumber": "153",
+      "name": "Rayquaza",
+      "rarity": "Rare",
+      "cardType": "Dragon",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-154",
+      "collectorNumber": "154",
+      "name": "N's Reshiram",
+      "rarity": "Rare",
+      "cardType": "Dragon",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-155",
+      "collectorNumber": "155",
+      "name": "N's Zekrom",
+      "rarity": "Rare",
+      "cardType": "Dragon",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-156",
+      "collectorNumber": "156",
+      "name": "Noibat",
+      "rarity": "Common",
+      "cardType": "Dragon",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-157",
+      "collectorNumber": "157",
+      "name": "Noivern",
+      "rarity": "Uncommon",
+      "cardType": "Dragon",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-158",
+      "collectorNumber": "158",
+      "name": "Dreepy",
+      "rarity": "Common",
+      "cardType": "Dragon",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-159",
+      "collectorNumber": "159",
+      "name": "Drakloak",
+      "rarity": "Common",
+      "cardType": "Dragon",
+      "specialPattern": "Quick Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-160",
+      "collectorNumber": "160",
+      "name": "Dragapult ex",
+      "rarity": "Double Rare",
+      "cardType": "Dragon",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-161",
+      "collectorNumber": "161",
+      "name": "Team Rocket's Meowth",
+      "rarity": "Common",
+      "cardType": "Colorless",
+      "specialPattern": "Rocket R",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-162",
+      "collectorNumber": "162",
+      "name": "Team Rocket's Kangaskhan ex",
+      "rarity": "Double Rare",
+      "cardType": "Colorless",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-163",
+      "collectorNumber": "163",
+      "name": "Larry's Dunsparce",
+      "rarity": "Common",
+      "cardType": "Colorless",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-164",
+      "collectorNumber": "164",
+      "name": "Larry's Dudunsparce ex",
+      "rarity": "Double Rare",
+      "cardType": "Colorless",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-165",
+      "collectorNumber": "165",
+      "name": "Skitty",
+      "rarity": "Common",
+      "cardType": "Colorless",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-166",
+      "collectorNumber": "166",
+      "name": "Delcatty",
+      "rarity": "Uncommon",
+      "cardType": "Colorless",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-167",
+      "collectorNumber": "167",
+      "name": "Zangoose ex",
+      "rarity": "Double Rare",
+      "cardType": "Colorless",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-168",
+      "collectorNumber": "168",
+      "name": "Larry's Starly",
+      "rarity": "Common",
+      "cardType": "Colorless",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-169",
+      "collectorNumber": "169",
+      "name": "Larry's Staravia",
+      "rarity": "Uncommon",
+      "cardType": "Colorless",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-170",
+      "collectorNumber": "170",
+      "name": "Larry's Staraptor",
+      "rarity": "Rare",
+      "cardType": "Colorless",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-171",
+      "collectorNumber": "171",
+      "name": "Fan Rotom",
+      "rarity": "Common",
+      "cardType": "Colorless",
+      "specialPattern": "Dusk Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-172",
+      "collectorNumber": "172",
+      "name": "Mega Audino ex",
+      "rarity": "Double Rare",
+      "cardType": "Colorless",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-173",
+      "collectorNumber": "173",
+      "name": "Larry's Rufflet",
+      "rarity": "Common",
+      "cardType": "Colorless",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-174",
+      "collectorNumber": "174",
+      "name": "Larry's Braviary",
+      "rarity": "Uncommon",
+      "cardType": "Colorless",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-175",
+      "collectorNumber": "175",
+      "name": "Larry's Komala",
+      "rarity": "Common",
+      "cardType": "Colorless",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-176",
+      "collectorNumber": "176",
+      "name": "Drampa",
+      "rarity": "Uncommon",
+      "cardType": "Colorless",
+      "specialPattern": "Friend Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-177",
+      "collectorNumber": "177",
+      "name": "Hop's Cramorant",
+      "rarity": "Uncommon",
+      "cardType": "Colorless",
+      "specialPattern": "Poké Ball",
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo",
+        "special-reverse"
+      ]
+    },
+    {
+      "cardId": "ASC-178",
+      "collectorNumber": "178",
+      "name": "Terapagos",
+      "rarity": "Rare",
+      "cardType": "Colorless",
+      "specialPattern": "Love Ball",
+      "inventoryVariants": [
+        "energy/reverse-holo",
+        "special-reverse",
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-179",
+      "collectorNumber": "179",
+      "name": "Terapagos ex",
+      "rarity": "Double Rare",
+      "cardType": "Colorless",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-180",
+      "collectorNumber": "180",
+      "name": "Acerola's Mischief",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-181",
+      "collectorNumber": "181",
+      "name": "Air Balloon",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Pokemon Tool",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-182",
+      "collectorNumber": "182",
+      "name": "Anthea & Concordia",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-183",
+      "collectorNumber": "183",
+      "name": "Boss's Orders [Corbeau]",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-184",
+      "collectorNumber": "184",
+      "name": "Buddy-Buddy Poffin",
+      "rarity": "Common",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-185",
+      "collectorNumber": "185",
+      "name": "Canari",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-186",
+      "collectorNumber": "186",
+      "name": "Counter Gain",
+      "rarity": "Common",
+      "cardType": "Trainer - Pokemon Tool",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-187",
+      "collectorNumber": "187",
+      "name": "Fighting Gong",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-188",
+      "collectorNumber": "188",
+      "name": "Forest of Vitality",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Stadium",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-189",
+      "collectorNumber": "189",
+      "name": "Glass Trumpet",
+      "rarity": "Common",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-190",
+      "collectorNumber": "190",
+      "name": "Iris's Fighting Spirit",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-191",
+      "collectorNumber": "191",
+      "name": "Light Ball",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Pokemon Tool",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-192",
+      "collectorNumber": "192",
+      "name": "Lillie's Determination",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-193",
+      "collectorNumber": "193",
+      "name": "Mega Signal",
+      "rarity": "Common",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-194",
+      "collectorNumber": "194",
+      "name": "Mystery Garden",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Stadium",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-195",
+      "collectorNumber": "195",
+      "name": "N's PP Up",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-196",
+      "collectorNumber": "196",
+      "name": "Night Stretcher",
+      "rarity": "Common",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-197",
+      "collectorNumber": "197",
+      "name": "Nighttime Mine",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Stadium",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-198",
+      "collectorNumber": "198",
+      "name": "Poke Pad",
+      "rarity": "Common",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-199",
+      "collectorNumber": "199",
+      "name": "Premium Power Pro",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-200",
+      "collectorNumber": "200",
+      "name": "Surfer",
+      "rarity": "Common",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-201",
+      "collectorNumber": "201",
+      "name": "Team Rocket's Archer",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-202",
+      "collectorNumber": "202",
+      "name": "Team Rocket's Ariana",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-203",
+      "collectorNumber": "203",
+      "name": "Team Rocket's Factory",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Stadium",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-204",
+      "collectorNumber": "204",
+      "name": "Team Rocket's Giovanni",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-205",
+      "collectorNumber": "205",
+      "name": "Team Rocket's Great Ball",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-206",
+      "collectorNumber": "206",
+      "name": "Team Rocket's Hypnotizer",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Pokemon Tool",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-207",
+      "collectorNumber": "207",
+      "name": "Team Rocket's Petrel",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-208",
+      "collectorNumber": "208",
+      "name": "Team Rocket's Proton",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-209",
+      "collectorNumber": "209",
+      "name": "Team Rocket's Transceiver",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-210",
+      "collectorNumber": "210",
+      "name": "Team Rocket's Watchtower",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Stadium",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-211",
+      "collectorNumber": "211",
+      "name": "Thick Scale",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Pokemon Tool",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-212",
+      "collectorNumber": "212",
+      "name": "Tool Scrapper",
+      "rarity": "Common",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-213",
+      "collectorNumber": "213",
+      "name": "Ultra Ball",
+      "rarity": "Common",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-214",
+      "collectorNumber": "214",
+      "name": "Urbain",
+      "rarity": "Uncommon",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-215",
+      "collectorNumber": "215",
+      "name": "Waitress",
+      "rarity": "Common",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-216",
+      "collectorNumber": "216",
+      "name": "Prism Energy",
+      "rarity": "Uncommon",
+      "cardType": "Special Rainbow Energy",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-217",
+      "collectorNumber": "217",
+      "name": "Team Rocket's Energy",
+      "rarity": "Uncommon",
+      "cardType": null,
+      "specialPattern": null,
+      "inventoryVariants": [
+        "normal",
+        "energy/reverse-holo"
+      ]
+    },
+    {
+      "cardId": "ASC-218",
+      "collectorNumber": "218",
+      "name": "Erika's Tangela",
+      "rarity": "Illustration Rare",
+      "cardType": "Grass",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-219",
+      "collectorNumber": "219",
+      "name": "Beautifly",
+      "rarity": "Illustration Rare",
+      "cardType": "Grass",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-220",
+      "collectorNumber": "220",
+      "name": "Dustox",
+      "rarity": "Illustration Rare",
+      "cardType": "Grass",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-221",
+      "collectorNumber": "221",
+      "name": "Budew",
+      "rarity": "Illustration Rare",
+      "cardType": "Grass",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-222",
+      "collectorNumber": "222",
+      "name": "Ethan's Magcargo",
+      "rarity": "Illustration Rare",
+      "cardType": "Fire",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-223",
+      "collectorNumber": "223",
+      "name": "Numel",
+      "rarity": "Illustration Rare",
+      "cardType": "Fire",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-224",
+      "collectorNumber": "224",
+      "name": "Salazzle",
+      "rarity": "Illustration Rare",
+      "cardType": "Fire",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-225",
+      "collectorNumber": "225",
+      "name": "Scorbunny",
+      "rarity": "Illustration Rare",
+      "cardType": "Fire",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-226",
+      "collectorNumber": "226",
+      "name": "Psyduck",
+      "rarity": "Illustration Rare",
+      "cardType": "Water",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-227",
+      "collectorNumber": "227",
+      "name": "Snorunt",
+      "rarity": "Illustration Rare",
+      "cardType": "Water",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-228",
+      "collectorNumber": "228",
+      "name": "Weavile",
+      "rarity": "Illustration Rare",
+      "cardType": "Water",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-229",
+      "collectorNumber": "229",
+      "name": "Heliolisk",
+      "rarity": "Illustration Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-230",
+      "collectorNumber": "230",
+      "name": "Vikavolt",
+      "rarity": "Illustration Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-231",
+      "collectorNumber": "231",
+      "name": "Iono's Wattrel",
+      "rarity": "Illustration Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-232",
+      "collectorNumber": "232",
+      "name": "Marill",
+      "rarity": "Illustration Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-233",
+      "collectorNumber": "233",
+      "name": "Misdreavus",
+      "rarity": "Illustration Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-234",
+      "collectorNumber": "234",
+      "name": "Banette",
+      "rarity": "Illustration Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-235",
+      "collectorNumber": "235",
+      "name": "Togekiss",
+      "rarity": "Illustration Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-236",
+      "collectorNumber": "236",
+      "name": "Slurpuff",
+      "rarity": "Illustration Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-237",
+      "collectorNumber": "237",
+      "name": "Hop's Trevenant",
+      "rarity": "Illustration Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-238",
+      "collectorNumber": "238",
+      "name": "Team Rocket's Mimikyu",
+      "rarity": "Illustration Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-239",
+      "collectorNumber": "239",
+      "name": "Team Rocket's Dugtrio",
+      "rarity": "Illustration Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-240",
+      "collectorNumber": "240",
+      "name": "Hitmontop",
+      "rarity": "Illustration Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-241",
+      "collectorNumber": "241",
+      "name": "Medicham",
+      "rarity": "Illustration Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-242",
+      "collectorNumber": "242",
+      "name": "Carbink",
+      "rarity": "Illustration Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-243",
+      "collectorNumber": "243",
+      "name": "Mightyena",
+      "rarity": "Illustration Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-244",
+      "collectorNumber": "244",
+      "name": "Cynthia's Spiritomb",
+      "rarity": "Illustration Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-245",
+      "collectorNumber": "245",
+      "name": "Galarian Obstagoon",
+      "rarity": "Illustration Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-246",
+      "collectorNumber": "246",
+      "name": "Mawile",
+      "rarity": "Illustration Rare",
+      "cardType": "Metal",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-247",
+      "collectorNumber": "247",
+      "name": "Dreepy",
+      "rarity": "Illustration Rare",
+      "cardType": "Dragon",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-248",
+      "collectorNumber": "248",
+      "name": "Drakloak",
+      "rarity": "Illustration Rare",
+      "cardType": "Dragon",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-249",
+      "collectorNumber": "249",
+      "name": "Larry's Staraptor",
+      "rarity": "Illustration Rare",
+      "cardType": "Colorless",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-250",
+      "collectorNumber": "250",
+      "name": "Fan Rotom",
+      "rarity": "Illustration Rare",
+      "cardType": "Colorless",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-251",
+      "collectorNumber": "251",
+      "name": "Sprigatito ex",
+      "rarity": "Ultra Rare",
+      "cardType": "Grass",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-252",
+      "collectorNumber": "252",
+      "name": "Stunfisk ex",
+      "rarity": "Ultra Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-253",
+      "collectorNumber": "253",
+      "name": "Mega Audino ex",
+      "rarity": "Ultra Rare",
+      "cardType": "Colorless",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-254",
+      "collectorNumber": "254",
+      "name": "Anthea & Concordia",
+      "rarity": "Ultra Rare",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-255",
+      "collectorNumber": "255",
+      "name": "Black Belt's Training",
+      "rarity": "Ultra Rare",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-256",
+      "collectorNumber": "256",
+      "name": "Boss's Orders [Corbeau]",
+      "rarity": "Ultra Rare",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-257",
+      "collectorNumber": "257",
+      "name": "Canari",
+      "rarity": "Ultra Rare",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-258",
+      "collectorNumber": "258",
+      "name": "Cheren",
+      "rarity": "Ultra Rare",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-259",
+      "collectorNumber": "259",
+      "name": "Counter Gain",
+      "rarity": "Ultra Rare",
+      "cardType": "Trainer - Pokemon Tool",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-260",
+      "collectorNumber": "260",
+      "name": "Glass Trumpet",
+      "rarity": "Ultra Rare",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-261",
+      "collectorNumber": "261",
+      "name": "Jamming Tower",
+      "rarity": "Ultra Rare",
+      "cardType": "Trainer - Stadium",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-262",
+      "collectorNumber": "262",
+      "name": "N's PP Up",
+      "rarity": "Ultra Rare",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-263",
+      "collectorNumber": "263",
+      "name": "Team Rocket's Transceiver",
+      "rarity": "Ultra Rare",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-264",
+      "collectorNumber": "264",
+      "name": "Ultra Ball",
+      "rarity": "Ultra Rare",
+      "cardType": "Trainer - Item",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-265",
+      "collectorNumber": "265",
+      "name": "Mega Froslass ex",
+      "rarity": "Mega Attack Rare",
+      "cardType": "Water",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-266",
+      "collectorNumber": "266",
+      "name": "Mega Eelektross ex",
+      "rarity": "Mega Attack Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-267",
+      "collectorNumber": "267",
+      "name": "Mega Diancie ex",
+      "rarity": "Mega Attack Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-268",
+      "collectorNumber": "268",
+      "name": "Mega Hawlucha ex",
+      "rarity": "Mega Attack Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-269",
+      "collectorNumber": "269",
+      "name": "Mega Gengar ex",
+      "rarity": "Mega Attack Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-270",
+      "collectorNumber": "270",
+      "name": "Mega Scrafty ex",
+      "rarity": "Mega Attack Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-271",
+      "collectorNumber": "271",
+      "name": "Mega Dragonite ex",
+      "rarity": "Mega Attack Rare",
+      "cardType": "Dragon",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-272",
+      "collectorNumber": "272",
+      "name": "Mega Meganium ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Grass",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-273",
+      "collectorNumber": "273",
+      "name": "Mega Emboar ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Fire",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-274",
+      "collectorNumber": "274",
+      "name": "Mega Feraligatr ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Water",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-275",
+      "collectorNumber": "275",
+      "name": "Mega Froslass ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Water",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-276",
+      "collectorNumber": "276",
+      "name": "Pikachu ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-277",
+      "collectorNumber": "277",
+      "name": "Pikachu ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-278",
+      "collectorNumber": "278",
+      "name": "Mega Eelektross ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-279",
+      "collectorNumber": "279",
+      "name": "Iono's Bellibolt ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Lightning",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-280",
+      "collectorNumber": "280",
+      "name": "Lillie's Clefairy ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-281",
+      "collectorNumber": "281",
+      "name": "Team Rocket's Mewtwo ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-282",
+      "collectorNumber": "282",
+      "name": "Mega Diancie ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Psychic",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-283",
+      "collectorNumber": "283",
+      "name": "Mega Hawlucha ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Fighting",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-284",
+      "collectorNumber": "284",
+      "name": "Mega Gengar ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-285",
+      "collectorNumber": "285",
+      "name": "Mega Scrafty ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-286",
+      "collectorNumber": "286",
+      "name": "N's Zoroark ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-287",
+      "collectorNumber": "287",
+      "name": "Marnie's Grimmsnarl ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-288",
+      "collectorNumber": "288",
+      "name": "Fezandipiti ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Darkness",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-289",
+      "collectorNumber": "289",
+      "name": "Steven's Metagross ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Metal",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-290",
+      "collectorNumber": "290",
+      "name": "Mega Dragonite ex",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Dragon",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-291",
+      "collectorNumber": "291",
+      "name": "Canari",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-292",
+      "collectorNumber": "292",
+      "name": "Iris's Fighting Spirit",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-293",
+      "collectorNumber": "293",
+      "name": "Surfer",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Trainer - Supporter",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-294",
+      "collectorNumber": "294",
+      "name": "Mega Charizard Y ex",
+      "rarity": "Mega Hyper Rare",
+      "cardType": "Fire",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    },
+    {
+      "cardId": "ASC-295",
+      "collectorNumber": "295",
+      "name": "Mega Dragonite ex",
+      "rarity": "Mega Hyper Rare",
+      "cardType": "Dragon",
+      "specialPattern": null,
+      "inventoryVariants": [
+        "holo"
+      ]
+    }
+  ]
+}
