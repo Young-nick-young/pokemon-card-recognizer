@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "manifestVersion": 1,
+  "setId": "ascended-heroes",
+  "displayName": "Ascended Heroes",
+  "language": "en",
+  "market": "international",
+  "aliases": [
+    "asc",
+    "ascended_heroes"
+  ],
+  "externalIds": {
+    "displayCode": "ASC"
+  },
+  "collections": [
+    {
+      "collectionId": "main",
+      "label": "Main Set"
+    }
+  ],
+  "numberingNamespaces": [
+    {
+      "namespaceId": "main",
+      "label": "Main and Secret Cards",
+      "denominator": "217"
+    }
+  ],
+  "variants": [
+    {
+      "variantId": "normal",
+      "label": "Normal",
+      "inventoryKey": "normal"
+    },
+    {
+      "variantId": "energy-reverse-holo",
+      "label": "Energy / Reverse Holo",
+      "inventoryKey": "energy-reverse-holo"
+    },
+    {
+      "variantId": "special-reverse",
+      "label": "Special Reverse",
+      "inventoryKey": "special-reverse"
+    },
+    {
+      "variantId": "holo",
+      "label": "Holo",
+      "inventoryKey": "holo"
+    },
+    {
+      "variantId": "other",
+      "label": "Other",
+      "inventoryKey": "other"
+    }
+  ],
+  "catalogue": {
+    "path": "cards.json",
+    "expectedRecords": 295
+  },
+  "inventory": {
+    "destinationKey": "ascended-heroes-inventory",
+    "sheetName": "Ascended Heroes",
+    "startRow": 13,
+    "cardIdColumn": 20,
+    "quantityColumns": {
+      "normal": 7,
+      "energy-reverse-holo": 8,
+      "special-reverse": 9,
+      "holo": 10,
+      "other": 11
+    }
+  }
+}
