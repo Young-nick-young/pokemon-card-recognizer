@@ -47,10 +47,14 @@ def _summary_formula(summary, buckets, start_row, end_row):
         return "="+ "+".join(parts)
     raise CustomInventoryLayoutError("unsupported summary operation: "+str(op))
 
-def build_custom_inventory_sheet_plan(catalogue_path, metadata_path, layout_path):
+def build_custom_inventory_sheet_plan(catalogue_path, metadata_path, layout_path, preservation_checkpoint_path=None):
     catalogue=_load(catalogue_path)
     metadata=_load(metadata_path)
     layout=_load(layout_path)
+    checkpoint=_load(preservation_checkpoint_path) if preservation_checkpoint_path else None
+    checkpoint_rows={}
+    if checkpoint:
+        checkpoint_rows={int(r["row"]):r for r in checkpoint.get("rows",[])}
     if layout.get("kind")!="custom-variable-width":
         raise CustomInventoryLayoutError("custom-variable-width layout required")
     if metadata.get("setId")!=layout.get("setId"):
@@ -76,7 +80,26 @@ def build_custom_inventory_sheet_plan(catalogue_path, metadata_path, layout_path
         unknown=[v for v in enabled if v not in declared]
         if unknown:
             raise CustomInventoryLayoutError(f'{card["cardId"]}: unknown buckets {unknown}')
-        quantityValues={bid:(0 if bid in enabled else None) for bid in buckets}
+        old=checkpoint_rows.get(row)
+        if checkpoint and old is None:
+            raise CustomInventoryLayoutError(f"checkpoint missing row {row}")
+        if old and old.get("cardId")!=card["cardId"]:
+            raise CustomInventoryLayoutError(f'checkpoint identity mismatch at row {row}: {old.get("cardId")} != {card["cardId"]}')
+        quantityValues={}
+        variantCells={}
+        priceValues={}
+        for bid,b in buckets.items():
+            qcol=b["quantityColumn"]
+            pcol=b["priceColumn"]
+            available=bid in enabled
+            if old:
+                existing=old["quantities"].get(qcol)
+                qvalue=existing if available else None
+            else:
+                qvalue=0 if available else None
+            quantityValues[bid]=qvalue
+            variantCells[bid]={"quantityColumn":qcol,"available":available,"value":qvalue,"grey":not available}
+            priceValues[bid]=old["prices"].get(pcol) if old else None
         rows.append({
             "row":row,
             "cardId":card["cardId"],
@@ -87,6 +110,10 @@ def build_custom_inventory_sheet_plan(catalogue_path, metadata_path, layout_path
             "specialPattern":m.get("specialPattern"),
             "inventoryVariants":enabled,
             "quantityValues":quantityValues,
+            "variantCells":variantCells,
+            "priceValues":priceValues,
+            "storage":old.get("storage") if old else None,
+            "compatibilityCardId":old.get("cardId") if old else card["cardId"],
             "totalFormula":_sum_formula([b["quantityColumn"] for b in buckets.values()],row),
             "collectionValueFormula":_value_formula(list(buckets.values()),row,collection_guard_col),
         })
@@ -121,9 +148,10 @@ if __name__=="__main__":
     p.add_argument("catalogue")
     p.add_argument("metadata")
     p.add_argument("layout")
+    p.add_argument("--preservation-checkpoint")
     p.add_argument("--output")
     a=p.parse_args()
-    plan=build_custom_inventory_sheet_plan(a.catalogue,a.metadata,a.layout)
+    plan=build_custom_inventory_sheet_plan(a.catalogue,a.metadata,a.layout,a.preservation_checkpoint)
     text=json.dumps(plan,indent=2,ensure_ascii=False)+"\\n"
     if a.output:
         Path(a.output).write_text(text,encoding="utf-8")
