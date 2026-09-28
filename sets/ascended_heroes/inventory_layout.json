@@ -145,7 +145,8 @@
   },
   "collectionValue": {
     "column": "R",
-    "operation": "sumQuantityTimesPrice"
+    "operation": "sumQuantityTimesPrice",
+    "guardColumn": "B"
   },
   "storage": {
     "column": "S"
@@ -204,5 +205,41 @@
     "specialPatternColumn": "F",
     "unavailableQuantityCells": "blank-and-grey",
     "existingInventoryIsMigrationProtected": true
+  },
+  "formatting": {
+    "rowHeights": {
+      "headerPx": 42,
+      "bodyPx": 96
+    },
+    "header": {
+      "bold": true,
+      "horizontalAlignment": "CENTER",
+      "wrap": true,
+      "preserveGreenWhite": true
+    },
+    "freezeRows": 12,
+    "columnWidthsPx": {
+      "A": 80,
+      "B": 108,
+      "C": 180,
+      "D": 110,
+      "E": 120,
+      "F": 120,
+      "G": 120,
+      "H": 130,
+      "I": 120,
+      "J": 118,
+      "K": 116,
+      "L": 100,
+      "M": 101,
+      "N": 115,
+      "O": 115,
+      "P": 100,
+      "Q": 100,
+      "R": 110,
+      "S": 100,
+      "T": 96
+    },
+    "widthBasis": "Inventory Sheet Automation v2 semantic roles, with explicit ASC widths for Special Pattern, Energy / Reverse Holo, Special Reverse, and their price columns."
   }
 }
