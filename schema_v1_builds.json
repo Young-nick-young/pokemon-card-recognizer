@@ -23,6 +23,12 @@
       "package": "sets/pitch_black",
       "expectedRecords": 120,
       "output": "sets/pitch_black/card_library.pkl"
+    },
+    {
+      "setId": "ascended-heroes",
+      "package": "sets/ascended_heroes",
+      "expectedRecords": 295,
+      "output": "sets/ascended_heroes/card_library.pkl"
     }
   ]
 }
