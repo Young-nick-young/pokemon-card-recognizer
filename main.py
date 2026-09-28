@@ -15,6 +15,9 @@ from sets.destined_rivals.public_package import (
 from sets.perfect_order.public_package import (
     build_public_package as build_perfect_order_public_package
 )
+from sets.ascended_heroes.public_package import (
+    build_public_package as build_ascended_heroes_public_package
+)
 
 from sets.chaos_rising import recognizer as chaos_rising
 from sets.chaos_rising.public_package import (
@@ -373,6 +376,15 @@ def destined_rivals_public_package():
                 "set": "destined-rivals"
             }
         ) from error
+
+
+@app.get("/api/v1/sets/ascended-heroes/package")
+def ascended_heroes_public_package():
+    try:
+        return build_ascended_heroes_public_package()
+    except Exception as error:
+        print("Ascended Heroes public package unavailable:", error)
+        raise HTTPException(status_code=503, detail={"error":"Public set package unavailable","set":"ascended-heroes"}) from error
 
 
 @app.get("/api/v1/sets/perfect-order/package")
