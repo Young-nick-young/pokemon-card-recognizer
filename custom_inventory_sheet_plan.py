@@ -14,6 +14,38 @@ class CustomInventoryLayoutError(RuntimeError):
 def _load(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
+def _normalize_catalogue(data):
+    if isinstance(data, dict):
+        cards=data.get("cards")
+        if not isinstance(cards, list):
+            raise CustomInventoryLayoutError("Schema catalogue must contain a cards array")
+        out=[]
+        for card in cards:
+            external=card.get("externalIds") or {}
+            legacy=external.get("legacyInventoryCardId")
+            if not legacy:
+                raise CustomInventoryLayoutError("Schema card missing legacyInventoryCardId: "+str(card.get("cardId")))
+            out.append({
+                "schemaCardId":card["cardId"],
+                "cardId":legacy,
+                "number":card["number"]["sortKey"],
+                "name":card["name"],
+                "referenceImage":card["referenceImage"],
+                "variants":list(card["variants"]),
+            })
+        return out
+    if isinstance(data, list):
+        return [{
+            "schemaCardId":card.get("schemaCardId"),
+            "cardId":card["cardId"],
+            "number":card["number"],
+            "name":card["name"],
+            "referenceImage":card.get("imageUrl"),
+            "variants":None,
+        } for card in data]
+    raise CustomInventoryLayoutError("Unsupported catalogue shape")
+
+
 def _bucket_map(layout):
     out={}
     for b in layout["inventoryBuckets"]:
@@ -48,7 +80,7 @@ def _summary_formula(summary, buckets, start_row, end_row):
     raise CustomInventoryLayoutError("unsupported summary operation: "+str(op))
 
 def build_custom_inventory_sheet_plan(catalogue_path, metadata_path, layout_path, preservation_checkpoint_path=None):
-    catalogue=_load(catalogue_path)
+    catalogue=_normalize_catalogue(_load(catalogue_path))
     metadata=_load(metadata_path)
     layout=_load(layout_path)
     checkpoint=_load(preservation_checkpoint_path) if preservation_checkpoint_path else None
@@ -64,22 +96,36 @@ def build_custom_inventory_sheet_plan(catalogue_path, metadata_path, layout_path
     cards=metadata.get("cards") or []
     if len(catalogue)!=len(cards):
         raise CustomInventoryLayoutError(f"catalogue count {len(catalogue)} != metadata count {len(cards)}")
-    meta={c["cardId"]:c for c in cards}
-    if len(meta)!=len(cards):
-        raise CustomInventoryLayoutError("duplicate metadata cardId")
+    meta={}
+    for c in cards:
+        key=c.get("schemaCardId") or c["cardId"]
+        if key in meta:
+            raise CustomInventoryLayoutError("duplicate metadata identity: "+key)
+        meta[key]=c
     start=int(layout["startRow"])
     identity_col=layout["identity"]["column"]
     collection_guard_col=layout["collectionValue"].get("guardColumn", identity_col)
     rows=[]
     for offset,card in enumerate(catalogue):
         row=start+offset
-        m=meta.get(card["cardId"])
+        source_key=card.get("schemaCardId") or card["cardId"]
+        m=meta.get(source_key)
         if m is None:
-            raise CustomInventoryLayoutError("missing metadata: "+card["cardId"])
+            raise CustomInventoryLayoutError("missing metadata: "+source_key)
+        if card.get("schemaCardId") and m.get("cardId") != card["cardId"]:
+            raise CustomInventoryLayoutError("stable inventory identity mismatch: "+source_key)
         enabled=list(m["inventoryVariants"])
         unknown=[v for v in enabled if v not in declared]
         if unknown:
             raise CustomInventoryLayoutError(f'{card["cardId"]}: unknown buckets {unknown}')
+        if card.get("variants") is not None:
+            expected_schema={buckets[v].get("schemaVariantId",v) for v in enabled}
+            actual_schema=set(card["variants"])
+            if expected_schema != actual_schema:
+                raise CustomInventoryLayoutError(
+                    f'{card["cardId"]}: schema/custom variant mismatch '
+                    f'{sorted(actual_schema)} != {sorted(expected_schema)}'
+                )
         old=checkpoint_rows.get(row)
         if checkpoint and old is None:
             raise CustomInventoryLayoutError(f"checkpoint missing row {row}")
@@ -102,6 +148,7 @@ def build_custom_inventory_sheet_plan(catalogue_path, metadata_path, layout_path
             priceValues[bid]=old["prices"].get(pcol) if old else None
         rows.append({
             "row":row,
+            "schemaCardId":card.get("schemaCardId"),
             "cardId":card["cardId"],
             "collectorNumber":str(card["number"]).zfill(3),
             "name":card["name"],
@@ -117,7 +164,8 @@ def build_custom_inventory_sheet_plan(catalogue_path, metadata_path, layout_path
             "totalFormula":_sum_formula([b["quantityColumn"] for b in buckets.values()],row),
             "collectionValueFormula":_value_formula(list(buckets.values()),row,collection_guard_col),
         })
-    if set(meta)!={c["cardId"] for c in catalogue}:
+    source_keys={c.get("schemaCardId") or c["cardId"] for c in catalogue}
+    if set(meta)!=source_keys:
         raise CustomInventoryLayoutError("metadata/catalogue identity sets differ")
     end=start+len(rows)-1
     summaries=[]
