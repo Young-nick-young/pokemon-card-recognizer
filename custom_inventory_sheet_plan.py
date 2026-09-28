@@ -24,7 +24,9 @@ def _bucket_map(layout):
     return out
 
 def _sum_formula(columns, row):
-    return "=SUM("+",".join(f"{c}{row}" for c in columns)+")"
+    if not columns:
+        raise CustomInventoryLayoutError("at least one inventory quantity column is required")
+    return f"=SUM({columns[0]}{row}:{columns[-1]}{row})"
 
 def _value_formula(buckets, row, identity_col):
     terms=[f'({b["quantityColumn"]}{row}*{b["priceColumn"]}{row})' for b in buckets]
@@ -63,6 +65,7 @@ def build_custom_inventory_sheet_plan(catalogue_path, metadata_path, layout_path
         raise CustomInventoryLayoutError("duplicate metadata cardId")
     start=int(layout["startRow"])
     identity_col=layout["identity"]["column"]
+    collection_guard_col=layout["collectionValue"].get("guardColumn", identity_col)
     rows=[]
     for offset,card in enumerate(catalogue):
         row=start+offset
@@ -85,7 +88,7 @@ def build_custom_inventory_sheet_plan(catalogue_path, metadata_path, layout_path
             "inventoryVariants":enabled,
             "quantityValues":quantityValues,
             "totalFormula":_sum_formula([b["quantityColumn"] for b in buckets.values()],row),
-            "collectionValueFormula":_value_formula(list(buckets.values()),row,identity_col),
+            "collectionValueFormula":_value_formula(list(buckets.values()),row,collection_guard_col),
         })
     if set(meta)!={c["cardId"] for c in catalogue}:
         raise CustomInventoryLayoutError("metadata/catalogue identity sets differ")
@@ -106,6 +109,7 @@ def build_custom_inventory_sheet_plan(catalogue_path, metadata_path, layout_path
         "freezeRows":layout["freezeRows"],
         "range":layout["range"],
         "columns":layout["columns"],
+        "formatting":layout.get("formatting"),
         "inventoryBuckets":layout["inventoryBuckets"],
         "summaries":summaries,
         "rows":rows,
