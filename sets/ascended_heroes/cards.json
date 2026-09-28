@@ -1,0 +1,5339 @@
+{
+  "schemaVersion": "1.0",
+  "setId": "ascended-heroes",
+  "cards": [
+    {
+      "cardId": "asc-001",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "001/217",
+        "sortKey": 1
+      },
+      "name": "Erika's Oddish",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675813_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-001"
+      }
+    },
+    {
+      "cardId": "asc-002",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "002/217",
+        "sortKey": 2
+      },
+      "name": "Erika's Gloom",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675814_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-002"
+      }
+    },
+    {
+      "cardId": "asc-003",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "003/217",
+        "sortKey": 3
+      },
+      "name": "Erika's Vileplume ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675815_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-003"
+      }
+    },
+    {
+      "cardId": "asc-004",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "004/217",
+        "sortKey": 4
+      },
+      "name": "Erika's Bellsprout",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675816_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-004"
+      }
+    },
+    {
+      "cardId": "asc-005",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "005/217",
+        "sortKey": 5
+      },
+      "name": "Erika's Weepinbell",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675817_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-005"
+      }
+    },
+    {
+      "cardId": "asc-006",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "006/217",
+        "sortKey": 6
+      },
+      "name": "Erika's Victreebel",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675818_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-006"
+      }
+    },
+    {
+      "cardId": "asc-007",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "007/217",
+        "sortKey": 7
+      },
+      "name": "Erika's Tangela",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675819_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-007"
+      }
+    },
+    {
+      "cardId": "asc-008",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "008/217",
+        "sortKey": 8
+      },
+      "name": "Chikorita",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675820_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-008"
+      }
+    },
+    {
+      "cardId": "asc-009",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "009/217",
+        "sortKey": 9
+      },
+      "name": "Bayleef",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675821_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-009"
+      }
+    },
+    {
+      "cardId": "asc-010",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "010/217",
+        "sortKey": 10
+      },
+      "name": "Mega Meganium ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675822_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-010"
+      }
+    },
+    {
+      "cardId": "asc-011",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "011/217",
+        "sortKey": 11
+      },
+      "name": "Wurmple",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675823_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-011"
+      }
+    },
+    {
+      "cardId": "asc-012",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "012/217",
+        "sortKey": 12
+      },
+      "name": "Silcoon",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675824_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-012"
+      }
+    },
+    {
+      "cardId": "asc-013",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "013/217",
+        "sortKey": 13
+      },
+      "name": "Beautifly",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675825_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-013"
+      }
+    },
+    {
+      "cardId": "asc-014",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "014/217",
+        "sortKey": 14
+      },
+      "name": "Cascoon",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675826_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-014"
+      }
+    },
+    {
+      "cardId": "asc-015",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "015/217",
+        "sortKey": 15
+      },
+      "name": "Dustox",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675827_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-015"
+      }
+    },
+    {
+      "cardId": "asc-016",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "016/217",
+        "sortKey": 16
+      },
+      "name": "Budew",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675828_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-016"
+      }
+    },
+    {
+      "cardId": "asc-017",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "017/217",
+        "sortKey": 17
+      },
+      "name": "Grubbin",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675829_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-017"
+      }
+    },
+    {
+      "cardId": "asc-018",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "018/217",
+        "sortKey": 18
+      },
+      "name": "Team Rocket's Tarountula",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675830_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-018"
+      }
+    },
+    {
+      "cardId": "asc-019",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "019/217",
+        "sortKey": 19
+      },
+      "name": "Team Rocket's Spidops",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675831_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-019"
+      }
+    },
+    {
+      "cardId": "asc-020",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "020/217",
+        "sortKey": 20
+      },
+      "name": "Charmander",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675832_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-020"
+      }
+    },
+    {
+      "cardId": "asc-021",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "021/217",
+        "sortKey": 21
+      },
+      "name": "Charmeleon",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675833_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-021"
+      }
+    },
+    {
+      "cardId": "asc-022",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "022/217",
+        "sortKey": 22
+      },
+      "name": "Mega Charizard Y ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675834_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-022"
+      }
+    },
+    {
+      "cardId": "asc-023",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "023/217",
+        "sortKey": 23
+      },
+      "name": "Ethan's Slugma",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675835_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-023"
+      }
+    },
+    {
+      "cardId": "asc-024",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "024/217",
+        "sortKey": 24
+      },
+      "name": "Ethan's Magcargo",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675836_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-024"
+      }
+    },
+    {
+      "cardId": "asc-025",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "025/217",
+        "sortKey": 25
+      },
+      "name": "Entei",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675837_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-025"
+      }
+    },
+    {
+      "cardId": "asc-026",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "026/217",
+        "sortKey": 26
+      },
+      "name": "Ethan's Ho-Oh ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675838_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-026"
+      }
+    },
+    {
+      "cardId": "asc-027",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "027/217",
+        "sortKey": 27
+      },
+      "name": "Numel",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675839_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-027"
+      }
+    },
+    {
+      "cardId": "asc-028",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "028/217",
+        "sortKey": 28
+      },
+      "name": "Camerupt",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675840_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-028"
+      }
+    },
+    {
+      "cardId": "asc-029",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "029/217",
+        "sortKey": 29
+      },
+      "name": "Tepig",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675841_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-029"
+      }
+    },
+    {
+      "cardId": "asc-030",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "030/217",
+        "sortKey": 30
+      },
+      "name": "Pignite",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675842_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-030"
+      }
+    },
+    {
+      "cardId": "asc-031",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "031/217",
+        "sortKey": 31
+      },
+      "name": "Mega Emboar ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675843_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-031"
+      }
+    },
+    {
+      "cardId": "asc-032",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "032/217",
+        "sortKey": 32
+      },
+      "name": "N's Darumaka",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675844_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-032"
+      }
+    },
+    {
+      "cardId": "asc-033",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "033/217",
+        "sortKey": 33
+      },
+      "name": "N's Darmanitan",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675845_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-033"
+      }
+    },
+    {
+      "cardId": "asc-034",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "034/217",
+        "sortKey": 34
+      },
+      "name": "Salandit",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675846_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-034"
+      }
+    },
+    {
+      "cardId": "asc-035",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "035/217",
+        "sortKey": 35
+      },
+      "name": "Salazzle",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675847_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-035"
+      }
+    },
+    {
+      "cardId": "asc-036",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "036/217",
+        "sortKey": 36
+      },
+      "name": "Scorbunny",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675848_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-036"
+      }
+    },
+    {
+      "cardId": "asc-037",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "037/217",
+        "sortKey": 37
+      },
+      "name": "Raboot",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675849_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-037"
+      }
+    },
+    {
+      "cardId": "asc-038",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "038/217",
+        "sortKey": 38
+      },
+      "name": "Cinderace ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675850_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-038"
+      }
+    },
+    {
+      "cardId": "asc-039",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "039/217",
+        "sortKey": 39
+      },
+      "name": "Psyduck",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675851_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-039"
+      }
+    },
+    {
+      "cardId": "asc-040",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "040/217",
+        "sortKey": 40
+      },
+      "name": "Golduck",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675852_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-040"
+      }
+    },
+    {
+      "cardId": "asc-041",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "041/217",
+        "sortKey": 41
+      },
+      "name": "Totodile",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675853_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-041"
+      }
+    },
+    {
+      "cardId": "asc-042",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "042/217",
+        "sortKey": 42
+      },
+      "name": "Croconaw",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675854_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-042"
+      }
+    },
+    {
+      "cardId": "asc-043",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "043/217",
+        "sortKey": 43
+      },
+      "name": "Mega Feraligatr ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675855_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-043"
+      }
+    },
+    {
+      "cardId": "asc-044",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "044/217",
+        "sortKey": 44
+      },
+      "name": "Sneasel",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675856_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-044"
+      }
+    },
+    {
+      "cardId": "asc-045",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "045/217",
+        "sortKey": 45
+      },
+      "name": "Weavile",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675857_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-045"
+      }
+    },
+    {
+      "cardId": "asc-046",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "046/217",
+        "sortKey": 46
+      },
+      "name": "Snorunt",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675858_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-046"
+      }
+    },
+    {
+      "cardId": "asc-047",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "047/217",
+        "sortKey": 47
+      },
+      "name": "Mega Froslass ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675859_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-047"
+      }
+    },
+    {
+      "cardId": "asc-048",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "048/217",
+        "sortKey": 48
+      },
+      "name": "Regice ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675860_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-048"
+      }
+    },
+    {
+      "cardId": "asc-049",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "049/217",
+        "sortKey": 49
+      },
+      "name": "N's Vanillite",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675861_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-049"
+      }
+    },
+    {
+      "cardId": "asc-050",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "050/217",
+        "sortKey": 50
+      },
+      "name": "N's Vanillish",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675862_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-050"
+      }
+    },
+    {
+      "cardId": "asc-051",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "051/217",
+        "sortKey": 51
+      },
+      "name": "N's Vanilluxe",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675863_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-051"
+      }
+    },
+    {
+      "cardId": "asc-052",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "052/217",
+        "sortKey": 52
+      },
+      "name": "Snom",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675864_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-052"
+      }
+    },
+    {
+      "cardId": "asc-053",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "053/217",
+        "sortKey": 53
+      },
+      "name": "Frosmoth",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675865_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-053"
+      }
+    },
+    {
+      "cardId": "asc-054",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "054/217",
+        "sortKey": 54
+      },
+      "name": "Glastrier",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675866_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-054"
+      }
+    },
+    {
+      "cardId": "asc-055",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "055/217",
+        "sortKey": 55
+      },
+      "name": "Pikachu",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675867_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-055"
+      }
+    },
+    {
+      "cardId": "asc-056",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "056/217",
+        "sortKey": 56
+      },
+      "name": "Raichu",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675868_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-056"
+      }
+    },
+    {
+      "cardId": "asc-057",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "057/217",
+        "sortKey": 57
+      },
+      "name": "Pikachu ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675869_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-057"
+      }
+    },
+    {
+      "cardId": "asc-058",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "058/217",
+        "sortKey": 58
+      },
+      "name": "Voltorb ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675870_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-058"
+      }
+    },
+    {
+      "cardId": "asc-059",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "059/217",
+        "sortKey": 59
+      },
+      "name": "Tynamo",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675871_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-059"
+      }
+    },
+    {
+      "cardId": "asc-060",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "060/217",
+        "sortKey": 60
+      },
+      "name": "Eelektrik",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675872_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-060"
+      }
+    },
+    {
+      "cardId": "asc-061",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "061/217",
+        "sortKey": 61
+      },
+      "name": "Mega Eelektross ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675873_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-061"
+      }
+    },
+    {
+      "cardId": "asc-062",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "062/217",
+        "sortKey": 62
+      },
+      "name": "Stunfisk",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675874_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-062"
+      }
+    },
+    {
+      "cardId": "asc-063",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "063/217",
+        "sortKey": 63
+      },
+      "name": "Helioptile",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675875_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-063"
+      }
+    },
+    {
+      "cardId": "asc-064",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "064/217",
+        "sortKey": 64
+      },
+      "name": "Heliolisk",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675876_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-064"
+      }
+    },
+    {
+      "cardId": "asc-065",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "065/217",
+        "sortKey": 65
+      },
+      "name": "Charjabug",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675877_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-065"
+      }
+    },
+    {
+      "cardId": "asc-066",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "066/217",
+        "sortKey": 66
+      },
+      "name": "Vikavolt",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675878_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-066"
+      }
+    },
+    {
+      "cardId": "asc-067",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "067/217",
+        "sortKey": 67
+      },
+      "name": "Tapu Koko",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675879_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-067"
+      }
+    },
+    {
+      "cardId": "asc-068",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "068/217",
+        "sortKey": 68
+      },
+      "name": "Hop's Pincurchin ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675880_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-068"
+      }
+    },
+    {
+      "cardId": "asc-069",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "069/217",
+        "sortKey": 69
+      },
+      "name": "Iono's Tadbulb",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675881_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-069"
+      }
+    },
+    {
+      "cardId": "asc-070",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "070/217",
+        "sortKey": 70
+      },
+      "name": "Iono's Bellibolt ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675882_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-070"
+      }
+    },
+    {
+      "cardId": "asc-071",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "071/217",
+        "sortKey": 71
+      },
+      "name": "Iono's Wattrel",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675883_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-071"
+      }
+    },
+    {
+      "cardId": "asc-072",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "072/217",
+        "sortKey": 72
+      },
+      "name": "Iono's Kilowattrel",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675884_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-072"
+      }
+    },
+    {
+      "cardId": "asc-073",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "073/217",
+        "sortKey": 73
+      },
+      "name": "Miraidon ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675885_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-073"
+      }
+    },
+    {
+      "cardId": "asc-074",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "074/217",
+        "sortKey": 74
+      },
+      "name": "Clefairy",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675886_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-074"
+      }
+    },
+    {
+      "cardId": "asc-075",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "075/217",
+        "sortKey": 75
+      },
+      "name": "Clefable",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675887_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-075"
+      }
+    },
+    {
+      "cardId": "asc-076",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "076/217",
+        "sortKey": 76
+      },
+      "name": "Lillie's Clefairy ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675888_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-076"
+      }
+    },
+    {
+      "cardId": "asc-077",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "077/217",
+        "sortKey": 77
+      },
+      "name": "Team Rocket's Exeggcute",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675889_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-077"
+      }
+    },
+    {
+      "cardId": "asc-078",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "078/217",
+        "sortKey": 78
+      },
+      "name": "Team Rocket's Exeggutor",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675890_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-078"
+      }
+    },
+    {
+      "cardId": "asc-079",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "079/217",
+        "sortKey": 79
+      },
+      "name": "Team Rocket's Mewtwo ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675891_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-079"
+      }
+    },
+    {
+      "cardId": "asc-080",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "080/217",
+        "sortKey": 80
+      },
+      "name": "Togepi",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675892_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-080"
+      }
+    },
+    {
+      "cardId": "asc-081",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "081/217",
+        "sortKey": 81
+      },
+      "name": "Togetic",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675893_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-081"
+      }
+    },
+    {
+      "cardId": "asc-082",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "082/217",
+        "sortKey": 82
+      },
+      "name": "Togekiss",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675894_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-082"
+      }
+    },
+    {
+      "cardId": "asc-083",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "083/217",
+        "sortKey": 83
+      },
+      "name": "Marill",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675895_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-083"
+      }
+    },
+    {
+      "cardId": "asc-084",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "084/217",
+        "sortKey": 84
+      },
+      "name": "Azumarill ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675896_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-084"
+      }
+    },
+    {
+      "cardId": "asc-085",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "085/217",
+        "sortKey": 85
+      },
+      "name": "Misdreavus",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675897_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-085"
+      }
+    },
+    {
+      "cardId": "asc-086",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "086/217",
+        "sortKey": 86
+      },
+      "name": "Mismagius",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675898_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-086"
+      }
+    },
+    {
+      "cardId": "asc-087",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "087/217",
+        "sortKey": 87
+      },
+      "name": "Ralts",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675899_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-087"
+      }
+    },
+    {
+      "cardId": "asc-088",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "088/217",
+        "sortKey": 88
+      },
+      "name": "Kirlia",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675900_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-088"
+      }
+    },
+    {
+      "cardId": "asc-089",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "089/217",
+        "sortKey": 89
+      },
+      "name": "Mega Gardevoir ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675901_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-089"
+      }
+    },
+    {
+      "cardId": "asc-090",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "090/217",
+        "sortKey": 90
+      },
+      "name": "Shuppet",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675902_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-090"
+      }
+    },
+    {
+      "cardId": "asc-091",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "091/217",
+        "sortKey": 91
+      },
+      "name": "Banette",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675903_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-091"
+      }
+    },
+    {
+      "cardId": "asc-092",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "092/217",
+        "sortKey": 92
+      },
+      "name": "Rotom",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675904_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-092"
+      }
+    },
+    {
+      "cardId": "asc-093",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "093/217",
+        "sortKey": 93
+      },
+      "name": "Swirlix",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675905_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-093"
+      }
+    },
+    {
+      "cardId": "asc-094",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "094/217",
+        "sortKey": 94
+      },
+      "name": "Slurpuff",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675906_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-094"
+      }
+    },
+    {
+      "cardId": "asc-095",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "095/217",
+        "sortKey": 95
+      },
+      "name": "Hop's Phantump",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675907_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-095"
+      }
+    },
+    {
+      "cardId": "asc-096",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "096/217",
+        "sortKey": 96
+      },
+      "name": "Hop's Trevenant",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675908_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-096"
+      }
+    },
+    {
+      "cardId": "asc-097",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "097/217",
+        "sortKey": 97
+      },
+      "name": "Team Rocket's Mimikyu",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675909_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-097"
+      }
+    },
+    {
+      "cardId": "asc-098",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "098/217",
+        "sortKey": 98
+      },
+      "name": "Spectrier",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675910_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-098"
+      }
+    },
+    {
+      "cardId": "asc-099",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "099/217",
+        "sortKey": 99
+      },
+      "name": "Munkidori",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675911_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-099"
+      }
+    },
+    {
+      "cardId": "asc-100",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "100/217",
+        "sortKey": 100
+      },
+      "name": "Team Rocket's Diglett",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675912_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-100"
+      }
+    },
+    {
+      "cardId": "asc-101",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "101/217",
+        "sortKey": 101
+      },
+      "name": "Team Rocket's Dugtrio",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675913_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-101"
+      }
+    },
+    {
+      "cardId": "asc-102",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "102/217",
+        "sortKey": 102
+      },
+      "name": "Hitmontop",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675914_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-102"
+      }
+    },
+    {
+      "cardId": "asc-103",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "103/217",
+        "sortKey": 103
+      },
+      "name": "Meditite",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675915_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-103"
+      }
+    },
+    {
+      "cardId": "asc-104",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "104/217",
+        "sortKey": 104
+      },
+      "name": "Medicham",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675916_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-104"
+      }
+    },
+    {
+      "cardId": "asc-105",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "105/217",
+        "sortKey": 105
+      },
+      "name": "Lunatone",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675917_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-105"
+      }
+    },
+    {
+      "cardId": "asc-106",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "106/217",
+        "sortKey": 106
+      },
+      "name": "Solrock",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675918_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-106"
+      }
+    },
+    {
+      "cardId": "asc-107",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "107/217",
+        "sortKey": 107
+      },
+      "name": "Regirock ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675919_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-107"
+      }
+    },
+    {
+      "cardId": "asc-108",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "108/217",
+        "sortKey": 108
+      },
+      "name": "Groudon",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675920_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-108"
+      }
+    },
+    {
+      "cardId": "asc-109",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "109/217",
+        "sortKey": 109
+      },
+      "name": "Cynthia's Gible",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675921_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-109"
+      }
+    },
+    {
+      "cardId": "asc-110",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "110/217",
+        "sortKey": 110
+      },
+      "name": "Cynthia's Gabite",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675922_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-110"
+      }
+    },
+    {
+      "cardId": "asc-111",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "111/217",
+        "sortKey": 111
+      },
+      "name": "Cynthia's Garchomp ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675923_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-111"
+      }
+    },
+    {
+      "cardId": "asc-112",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "112/217",
+        "sortKey": 112
+      },
+      "name": "Riolu",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675924_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-112"
+      }
+    },
+    {
+      "cardId": "asc-113",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "113/217",
+        "sortKey": 113
+      },
+      "name": "Mega Lucario ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675925_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-113"
+      }
+    },
+    {
+      "cardId": "asc-114",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "114/217",
+        "sortKey": 114
+      },
+      "name": "Stunfisk ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675926_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-114"
+      }
+    },
+    {
+      "cardId": "asc-115",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "115/217",
+        "sortKey": 115
+      },
+      "name": "Pancham",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675927_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-115"
+      }
+    },
+    {
+      "cardId": "asc-116",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "116/217",
+        "sortKey": 116
+      },
+      "name": "Mega Hawlucha ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675928_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-116"
+      }
+    },
+    {
+      "cardId": "asc-117",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "117/217",
+        "sortKey": 117
+      },
+      "name": "Carbink",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675929_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-117"
+      }
+    },
+    {
+      "cardId": "asc-118",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "118/217",
+        "sortKey": 118
+      },
+      "name": "Rolycoly",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675930_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-118"
+      }
+    },
+    {
+      "cardId": "asc-119",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "119/217",
+        "sortKey": 119
+      },
+      "name": "Carkol",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675931_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-119"
+      }
+    },
+    {
+      "cardId": "asc-120",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "120/217",
+        "sortKey": 120
+      },
+      "name": "Coalossal",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675932_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-120"
+      }
+    },
+    {
+      "cardId": "asc-121",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "121/217",
+        "sortKey": 121
+      },
+      "name": "Koraidon ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675933_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-121"
+      }
+    },
+    {
+      "cardId": "asc-122",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "122/217",
+        "sortKey": 122
+      },
+      "name": "Okidogi",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675934_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-122"
+      }
+    },
+    {
+      "cardId": "asc-123",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "123/217",
+        "sortKey": 123
+      },
+      "name": "Gastly",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675935_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-123"
+      }
+    },
+    {
+      "cardId": "asc-124",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "124/217",
+        "sortKey": 124
+      },
+      "name": "Haunter",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675936_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-124"
+      }
+    },
+    {
+      "cardId": "asc-125",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "125/217",
+        "sortKey": 125
+      },
+      "name": "Mega Gengar ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675937_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-125"
+      }
+    },
+    {
+      "cardId": "asc-126",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "126/217",
+        "sortKey": 126
+      },
+      "name": "Team Rocket's Murkrow",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675938_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-126"
+      }
+    },
+    {
+      "cardId": "asc-127",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "127/217",
+        "sortKey": 127
+      },
+      "name": "Team Rocket's Honchkrow",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675939_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-127"
+      }
+    },
+    {
+      "cardId": "asc-128",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "128/217",
+        "sortKey": 128
+      },
+      "name": "Poochyena",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675940_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-128"
+      }
+    },
+    {
+      "cardId": "asc-129",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "129/217",
+        "sortKey": 129
+      },
+      "name": "Mightyena",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675941_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-129"
+      }
+    },
+    {
+      "cardId": "asc-130",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "130/217",
+        "sortKey": 130
+      },
+      "name": "Galarian Zigzagoon",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675942_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-130"
+      }
+    },
+    {
+      "cardId": "asc-131",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "131/217",
+        "sortKey": 131
+      },
+      "name": "Galarian Linoone",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675943_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-131"
+      }
+    },
+    {
+      "cardId": "asc-132",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "132/217",
+        "sortKey": 132
+      },
+      "name": "Galarian Obstagoon",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675944_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-132"
+      }
+    },
+    {
+      "cardId": "asc-133",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "133/217",
+        "sortKey": 133
+      },
+      "name": "Cynthia's Spiritomb",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675945_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-133"
+      }
+    },
+    {
+      "cardId": "asc-134",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "134/217",
+        "sortKey": 134
+      },
+      "name": "Scraggy",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675946_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-134"
+      }
+    },
+    {
+      "cardId": "asc-135",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "135/217",
+        "sortKey": 135
+      },
+      "name": "Mega Scrafty ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675947_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-135"
+      }
+    },
+    {
+      "cardId": "asc-136",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "136/217",
+        "sortKey": 136
+      },
+      "name": "N's Zorua",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675948_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-136"
+      }
+    },
+    {
+      "cardId": "asc-137",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "137/217",
+        "sortKey": 137
+      },
+      "name": "N's Zoroark ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675949_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-137"
+      }
+    },
+    {
+      "cardId": "asc-138",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "138/217",
+        "sortKey": 138
+      },
+      "name": "Vullaby",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675950_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-138"
+      }
+    },
+    {
+      "cardId": "asc-139",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "139/217",
+        "sortKey": 139
+      },
+      "name": "Mandibuzz ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675951_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-139"
+      }
+    },
+    {
+      "cardId": "asc-140",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "140/217",
+        "sortKey": 140
+      },
+      "name": "Pangoro",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675952_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-140"
+      }
+    },
+    {
+      "cardId": "asc-141",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "141/217",
+        "sortKey": 141
+      },
+      "name": "Hoopa",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675953_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-141"
+      }
+    },
+    {
+      "cardId": "asc-142",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "142/217",
+        "sortKey": 142
+      },
+      "name": "Fezandipiti ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675954_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-142"
+      }
+    },
+    {
+      "cardId": "asc-143",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "143/217",
+        "sortKey": 143
+      },
+      "name": "Pecharunt",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675955_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-143"
+      }
+    },
+    {
+      "cardId": "asc-144",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "144/217",
+        "sortKey": 144
+      },
+      "name": "Mawile",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675956_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-144"
+      }
+    },
+    {
+      "cardId": "asc-145",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "145/217",
+        "sortKey": 145
+      },
+      "name": "Registeel ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675957_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-145"
+      }
+    },
+    {
+      "cardId": "asc-146",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "146/217",
+        "sortKey": 146
+      },
+      "name": "Pawniard",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675958_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-146"
+      }
+    },
+    {
+      "cardId": "asc-147",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "147/217",
+        "sortKey": 147
+      },
+      "name": "Bisharp",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675959_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-147"
+      }
+    },
+    {
+      "cardId": "asc-148",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "148/217",
+        "sortKey": 148
+      },
+      "name": "Kingambit",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675960_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-148"
+      }
+    },
+    {
+      "cardId": "asc-149",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "149/217",
+        "sortKey": 149
+      },
+      "name": "Togedemaru ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675961_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-149"
+      }
+    },
+    {
+      "cardId": "asc-150",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "150/217",
+        "sortKey": 150
+      },
+      "name": "Dratini",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675962_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-150"
+      }
+    },
+    {
+      "cardId": "asc-151",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "151/217",
+        "sortKey": 151
+      },
+      "name": "Dragonair",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675963_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-151"
+      }
+    },
+    {
+      "cardId": "asc-152",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "152/217",
+        "sortKey": 152
+      },
+      "name": "Mega Dragonite ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675964_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-152"
+      }
+    },
+    {
+      "cardId": "asc-153",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "153/217",
+        "sortKey": 153
+      },
+      "name": "Rayquaza",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675965_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-153"
+      }
+    },
+    {
+      "cardId": "asc-154",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "154/217",
+        "sortKey": 154
+      },
+      "name": "N's Reshiram",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675966_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-154"
+      }
+    },
+    {
+      "cardId": "asc-155",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "155/217",
+        "sortKey": 155
+      },
+      "name": "N's Zekrom",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675967_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-155"
+      }
+    },
+    {
+      "cardId": "asc-156",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "156/217",
+        "sortKey": 156
+      },
+      "name": "Noibat",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675968_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-156"
+      }
+    },
+    {
+      "cardId": "asc-157",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "157/217",
+        "sortKey": 157
+      },
+      "name": "Noivern",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675969_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-157"
+      }
+    },
+    {
+      "cardId": "asc-158",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "158/217",
+        "sortKey": 158
+      },
+      "name": "Dreepy",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675970_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-158"
+      }
+    },
+    {
+      "cardId": "asc-159",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "159/217",
+        "sortKey": 159
+      },
+      "name": "Drakloak",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675971_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-159"
+      }
+    },
+    {
+      "cardId": "asc-160",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "160/217",
+        "sortKey": 160
+      },
+      "name": "Dragapult ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675972_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-160"
+      }
+    },
+    {
+      "cardId": "asc-161",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "161/217",
+        "sortKey": 161
+      },
+      "name": "Team Rocket's Meowth",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675973_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-161"
+      }
+    },
+    {
+      "cardId": "asc-162",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "162/217",
+        "sortKey": 162
+      },
+      "name": "Team Rocket's Kangaskhan ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675974_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-162"
+      }
+    },
+    {
+      "cardId": "asc-163",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "163/217",
+        "sortKey": 163
+      },
+      "name": "Larry's Dunsparce",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675975_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-163"
+      }
+    },
+    {
+      "cardId": "asc-164",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "164/217",
+        "sortKey": 164
+      },
+      "name": "Larry's Dudunsparce ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675976_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-164"
+      }
+    },
+    {
+      "cardId": "asc-165",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "165/217",
+        "sortKey": 165
+      },
+      "name": "Skitty",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675977_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-165"
+      }
+    },
+    {
+      "cardId": "asc-166",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "166/217",
+        "sortKey": 166
+      },
+      "name": "Delcatty",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675978_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-166"
+      }
+    },
+    {
+      "cardId": "asc-167",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "167/217",
+        "sortKey": 167
+      },
+      "name": "Zangoose ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675979_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-167"
+      }
+    },
+    {
+      "cardId": "asc-168",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "168/217",
+        "sortKey": 168
+      },
+      "name": "Larry's Starly",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675980_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-168"
+      }
+    },
+    {
+      "cardId": "asc-169",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "169/217",
+        "sortKey": 169
+      },
+      "name": "Larry's Staravia",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675981_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-169"
+      }
+    },
+    {
+      "cardId": "asc-170",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "170/217",
+        "sortKey": 170
+      },
+      "name": "Larry's Staraptor",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675982_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-170"
+      }
+    },
+    {
+      "cardId": "asc-171",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "171/217",
+        "sortKey": 171
+      },
+      "name": "Fan Rotom",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675983_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-171"
+      }
+    },
+    {
+      "cardId": "asc-172",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "172/217",
+        "sortKey": 172
+      },
+      "name": "Mega Audino ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675984_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-172"
+      }
+    },
+    {
+      "cardId": "asc-173",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "173/217",
+        "sortKey": 173
+      },
+      "name": "Larry's Rufflet",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675985_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-173"
+      }
+    },
+    {
+      "cardId": "asc-174",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "174/217",
+        "sortKey": 174
+      },
+      "name": "Larry's Braviary",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675986_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-174"
+      }
+    },
+    {
+      "cardId": "asc-175",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "175/217",
+        "sortKey": 175
+      },
+      "name": "Larry's Komala",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675987_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-175"
+      }
+    },
+    {
+      "cardId": "asc-176",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "176/217",
+        "sortKey": 176
+      },
+      "name": "Drampa",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675988_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-176"
+      }
+    },
+    {
+      "cardId": "asc-177",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "177/217",
+        "sortKey": 177
+      },
+      "name": "Hop's Cramorant",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675989_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo",
+        "special-reverse"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-177"
+      }
+    },
+    {
+      "cardId": "asc-178",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "178/217",
+        "sortKey": 178
+      },
+      "name": "Terapagos",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675990_200w.jpg",
+      "variants": [
+        "energy-reverse-holo",
+        "special-reverse",
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-178"
+      }
+    },
+    {
+      "cardId": "asc-179",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "179/217",
+        "sortKey": 179
+      },
+      "name": "Terapagos ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675991_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-179"
+      }
+    },
+    {
+      "cardId": "asc-180",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "180/217",
+        "sortKey": 180
+      },
+      "name": "Acerola's Mischief",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675992_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-180"
+      }
+    },
+    {
+      "cardId": "asc-181",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "181/217",
+        "sortKey": 181
+      },
+      "name": "Air Balloon",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675993_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-181"
+      }
+    },
+    {
+      "cardId": "asc-182",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "182/217",
+        "sortKey": 182
+      },
+      "name": "Anthea & Concordia",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675994_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-182"
+      }
+    },
+    {
+      "cardId": "asc-183",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "183/217",
+        "sortKey": 183
+      },
+      "name": "Boss's Orders [Corbeau]",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675995_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-183"
+      }
+    },
+    {
+      "cardId": "asc-184",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "184/217",
+        "sortKey": 184
+      },
+      "name": "Buddy-Buddy Poffin",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675996_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-184"
+      }
+    },
+    {
+      "cardId": "asc-185",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "185/217",
+        "sortKey": 185
+      },
+      "name": "Canari",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675997_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-185"
+      }
+    },
+    {
+      "cardId": "asc-186",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "186/217",
+        "sortKey": 186
+      },
+      "name": "Counter Gain",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675998_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-186"
+      }
+    },
+    {
+      "cardId": "asc-187",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "187/217",
+        "sortKey": 187
+      },
+      "name": "Fighting Gong",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/675999_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-187"
+      }
+    },
+    {
+      "cardId": "asc-188",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "188/217",
+        "sortKey": 188
+      },
+      "name": "Forest of Vitality",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676000_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-188"
+      }
+    },
+    {
+      "cardId": "asc-189",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "189/217",
+        "sortKey": 189
+      },
+      "name": "Glass Trumpet",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676001_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-189"
+      }
+    },
+    {
+      "cardId": "asc-190",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "190/217",
+        "sortKey": 190
+      },
+      "name": "Iris's Fighting Spirit",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676002_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-190"
+      }
+    },
+    {
+      "cardId": "asc-191",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "191/217",
+        "sortKey": 191
+      },
+      "name": "Light Ball",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676003_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-191"
+      }
+    },
+    {
+      "cardId": "asc-192",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "192/217",
+        "sortKey": 192
+      },
+      "name": "Lillie's Determination",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676004_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-192"
+      }
+    },
+    {
+      "cardId": "asc-193",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "193/217",
+        "sortKey": 193
+      },
+      "name": "Mega Signal",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676005_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-193"
+      }
+    },
+    {
+      "cardId": "asc-194",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "194/217",
+        "sortKey": 194
+      },
+      "name": "Mystery Garden",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676006_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-194"
+      }
+    },
+    {
+      "cardId": "asc-195",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "195/217",
+        "sortKey": 195
+      },
+      "name": "N's PP Up",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676007_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-195"
+      }
+    },
+    {
+      "cardId": "asc-196",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "196/217",
+        "sortKey": 196
+      },
+      "name": "Night Stretcher",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676008_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-196"
+      }
+    },
+    {
+      "cardId": "asc-197",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "197/217",
+        "sortKey": 197
+      },
+      "name": "Nighttime Mine",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676009_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-197"
+      }
+    },
+    {
+      "cardId": "asc-198",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "198/217",
+        "sortKey": 198
+      },
+      "name": "Poke Pad",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676010_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-198"
+      }
+    },
+    {
+      "cardId": "asc-199",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "199/217",
+        "sortKey": 199
+      },
+      "name": "Premium Power Pro",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676011_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-199"
+      }
+    },
+    {
+      "cardId": "asc-200",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "200/217",
+        "sortKey": 200
+      },
+      "name": "Surfer",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676012_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-200"
+      }
+    },
+    {
+      "cardId": "asc-201",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "201/217",
+        "sortKey": 201
+      },
+      "name": "Team Rocket's Archer",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676013_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-201"
+      }
+    },
+    {
+      "cardId": "asc-202",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "202/217",
+        "sortKey": 202
+      },
+      "name": "Team Rocket's Ariana",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676014_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-202"
+      }
+    },
+    {
+      "cardId": "asc-203",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "203/217",
+        "sortKey": 203
+      },
+      "name": "Team Rocket's Factory",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676015_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-203"
+      }
+    },
+    {
+      "cardId": "asc-204",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "204/217",
+        "sortKey": 204
+      },
+      "name": "Team Rocket's Giovanni",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676016_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-204"
+      }
+    },
+    {
+      "cardId": "asc-205",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "205/217",
+        "sortKey": 205
+      },
+      "name": "Team Rocket's Great Ball",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676017_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-205"
+      }
+    },
+    {
+      "cardId": "asc-206",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "206/217",
+        "sortKey": 206
+      },
+      "name": "Team Rocket's Hypnotizer",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676018_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-206"
+      }
+    },
+    {
+      "cardId": "asc-207",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "207/217",
+        "sortKey": 207
+      },
+      "name": "Team Rocket's Petrel",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676019_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-207"
+      }
+    },
+    {
+      "cardId": "asc-208",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "208/217",
+        "sortKey": 208
+      },
+      "name": "Team Rocket's Proton",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676020_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-208"
+      }
+    },
+    {
+      "cardId": "asc-209",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "209/217",
+        "sortKey": 209
+      },
+      "name": "Team Rocket's Transceiver",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676021_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-209"
+      }
+    },
+    {
+      "cardId": "asc-210",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "210/217",
+        "sortKey": 210
+      },
+      "name": "Team Rocket's Watchtower",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676022_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-210"
+      }
+    },
+    {
+      "cardId": "asc-211",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "211/217",
+        "sortKey": 211
+      },
+      "name": "Thick Scale",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676023_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-211"
+      }
+    },
+    {
+      "cardId": "asc-212",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "212/217",
+        "sortKey": 212
+      },
+      "name": "Tool Scrapper",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676024_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-212"
+      }
+    },
+    {
+      "cardId": "asc-213",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "213/217",
+        "sortKey": 213
+      },
+      "name": "Ultra Ball",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676025_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-213"
+      }
+    },
+    {
+      "cardId": "asc-214",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "214/217",
+        "sortKey": 214
+      },
+      "name": "Urbain",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676026_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-214"
+      }
+    },
+    {
+      "cardId": "asc-215",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "215/217",
+        "sortKey": 215
+      },
+      "name": "Waitress",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676027_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-215"
+      }
+    },
+    {
+      "cardId": "asc-216",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "216/217",
+        "sortKey": 216
+      },
+      "name": "Prism Energy",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676028_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-216"
+      }
+    },
+    {
+      "cardId": "asc-217",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "217/217",
+        "sortKey": 217
+      },
+      "name": "Team Rocket's Energy",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676029_200w.jpg",
+      "variants": [
+        "normal",
+        "energy-reverse-holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-217"
+      }
+    },
+    {
+      "cardId": "asc-218",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "218/217",
+        "sortKey": 218
+      },
+      "name": "Erika's Tangela",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676030_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-218"
+      }
+    },
+    {
+      "cardId": "asc-219",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "219/217",
+        "sortKey": 219
+      },
+      "name": "Beautifly",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676031_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-219"
+      }
+    },
+    {
+      "cardId": "asc-220",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "220/217",
+        "sortKey": 220
+      },
+      "name": "Dustox",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676032_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-220"
+      }
+    },
+    {
+      "cardId": "asc-221",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "221/217",
+        "sortKey": 221
+      },
+      "name": "Budew",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676033_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-221"
+      }
+    },
+    {
+      "cardId": "asc-222",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "222/217",
+        "sortKey": 222
+      },
+      "name": "Ethan's Magcargo",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676034_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-222"
+      }
+    },
+    {
+      "cardId": "asc-223",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "223/217",
+        "sortKey": 223
+      },
+      "name": "Numel",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676035_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-223"
+      }
+    },
+    {
+      "cardId": "asc-224",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "224/217",
+        "sortKey": 224
+      },
+      "name": "Salazzle",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676036_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-224"
+      }
+    },
+    {
+      "cardId": "asc-225",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "225/217",
+        "sortKey": 225
+      },
+      "name": "Scorbunny",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676037_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-225"
+      }
+    },
+    {
+      "cardId": "asc-226",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "226/217",
+        "sortKey": 226
+      },
+      "name": "Psyduck",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676038_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-226"
+      }
+    },
+    {
+      "cardId": "asc-227",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "227/217",
+        "sortKey": 227
+      },
+      "name": "Snorunt",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676039_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-227"
+      }
+    },
+    {
+      "cardId": "asc-228",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "228/217",
+        "sortKey": 228
+      },
+      "name": "Weavile",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676040_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-228"
+      }
+    },
+    {
+      "cardId": "asc-229",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "229/217",
+        "sortKey": 229
+      },
+      "name": "Heliolisk",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676041_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-229"
+      }
+    },
+    {
+      "cardId": "asc-230",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "230/217",
+        "sortKey": 230
+      },
+      "name": "Vikavolt",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676042_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-230"
+      }
+    },
+    {
+      "cardId": "asc-231",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "231/217",
+        "sortKey": 231
+      },
+      "name": "Iono's Wattrel",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676043_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-231"
+      }
+    },
+    {
+      "cardId": "asc-232",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "232/217",
+        "sortKey": 232
+      },
+      "name": "Marill",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676044_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-232"
+      }
+    },
+    {
+      "cardId": "asc-233",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "233/217",
+        "sortKey": 233
+      },
+      "name": "Misdreavus",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676045_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-233"
+      }
+    },
+    {
+      "cardId": "asc-234",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "234/217",
+        "sortKey": 234
+      },
+      "name": "Banette",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676046_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-234"
+      }
+    },
+    {
+      "cardId": "asc-235",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "235/217",
+        "sortKey": 235
+      },
+      "name": "Togekiss",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676047_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-235"
+      }
+    },
+    {
+      "cardId": "asc-236",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "236/217",
+        "sortKey": 236
+      },
+      "name": "Slurpuff",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676048_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-236"
+      }
+    },
+    {
+      "cardId": "asc-237",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "237/217",
+        "sortKey": 237
+      },
+      "name": "Hop's Trevenant",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676049_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-237"
+      }
+    },
+    {
+      "cardId": "asc-238",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "238/217",
+        "sortKey": 238
+      },
+      "name": "Team Rocket's Mimikyu",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676050_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-238"
+      }
+    },
+    {
+      "cardId": "asc-239",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "239/217",
+        "sortKey": 239
+      },
+      "name": "Team Rocket's Dugtrio",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676051_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-239"
+      }
+    },
+    {
+      "cardId": "asc-240",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "240/217",
+        "sortKey": 240
+      },
+      "name": "Hitmontop",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676052_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-240"
+      }
+    },
+    {
+      "cardId": "asc-241",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "241/217",
+        "sortKey": 241
+      },
+      "name": "Medicham",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676053_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-241"
+      }
+    },
+    {
+      "cardId": "asc-242",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "242/217",
+        "sortKey": 242
+      },
+      "name": "Carbink",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676054_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-242"
+      }
+    },
+    {
+      "cardId": "asc-243",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "243/217",
+        "sortKey": 243
+      },
+      "name": "Mightyena",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676055_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-243"
+      }
+    },
+    {
+      "cardId": "asc-244",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "244/217",
+        "sortKey": 244
+      },
+      "name": "Cynthia's Spiritomb",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676056_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-244"
+      }
+    },
+    {
+      "cardId": "asc-245",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "245/217",
+        "sortKey": 245
+      },
+      "name": "Galarian Obstagoon",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676057_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-245"
+      }
+    },
+    {
+      "cardId": "asc-246",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "246/217",
+        "sortKey": 246
+      },
+      "name": "Mawile",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676058_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-246"
+      }
+    },
+    {
+      "cardId": "asc-247",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "247/217",
+        "sortKey": 247
+      },
+      "name": "Dreepy",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676059_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-247"
+      }
+    },
+    {
+      "cardId": "asc-248",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "248/217",
+        "sortKey": 248
+      },
+      "name": "Drakloak",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676060_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-248"
+      }
+    },
+    {
+      "cardId": "asc-249",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "249/217",
+        "sortKey": 249
+      },
+      "name": "Larry's Staraptor",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676061_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-249"
+      }
+    },
+    {
+      "cardId": "asc-250",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "250/217",
+        "sortKey": 250
+      },
+      "name": "Fan Rotom",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676062_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-250"
+      }
+    },
+    {
+      "cardId": "asc-251",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "251/217",
+        "sortKey": 251
+      },
+      "name": "Sprigatito ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676063_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-251"
+      }
+    },
+    {
+      "cardId": "asc-252",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "252/217",
+        "sortKey": 252
+      },
+      "name": "Stunfisk ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676064_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-252"
+      }
+    },
+    {
+      "cardId": "asc-253",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "253/217",
+        "sortKey": 253
+      },
+      "name": "Mega Audino ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676065_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-253"
+      }
+    },
+    {
+      "cardId": "asc-254",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "254/217",
+        "sortKey": 254
+      },
+      "name": "Anthea & Concordia",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676066_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-254"
+      }
+    },
+    {
+      "cardId": "asc-255",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "255/217",
+        "sortKey": 255
+      },
+      "name": "Black Belt's Training",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676067_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-255"
+      }
+    },
+    {
+      "cardId": "asc-256",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "256/217",
+        "sortKey": 256
+      },
+      "name": "Boss's Orders [Corbeau]",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676068_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-256"
+      }
+    },
+    {
+      "cardId": "asc-257",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "257/217",
+        "sortKey": 257
+      },
+      "name": "Canari",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676069_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-257"
+      }
+    },
+    {
+      "cardId": "asc-258",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "258/217",
+        "sortKey": 258
+      },
+      "name": "Cheren",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676070_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-258"
+      }
+    },
+    {
+      "cardId": "asc-259",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "259/217",
+        "sortKey": 259
+      },
+      "name": "Counter Gain",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676071_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-259"
+      }
+    },
+    {
+      "cardId": "asc-260",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "260/217",
+        "sortKey": 260
+      },
+      "name": "Glass Trumpet",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676072_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-260"
+      }
+    },
+    {
+      "cardId": "asc-261",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "261/217",
+        "sortKey": 261
+      },
+      "name": "Jamming Tower",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676073_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-261"
+      }
+    },
+    {
+      "cardId": "asc-262",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "262/217",
+        "sortKey": 262
+      },
+      "name": "N's PP Up",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676074_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-262"
+      }
+    },
+    {
+      "cardId": "asc-263",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "263/217",
+        "sortKey": 263
+      },
+      "name": "Team Rocket's Transceiver",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676075_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-263"
+      }
+    },
+    {
+      "cardId": "asc-264",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "264/217",
+        "sortKey": 264
+      },
+      "name": "Ultra Ball",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676076_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-264"
+      }
+    },
+    {
+      "cardId": "asc-265",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "265/217",
+        "sortKey": 265
+      },
+      "name": "Mega Froslass ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676077_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-265"
+      }
+    },
+    {
+      "cardId": "asc-266",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "266/217",
+        "sortKey": 266
+      },
+      "name": "Mega Eelektross ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676078_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-266"
+      }
+    },
+    {
+      "cardId": "asc-267",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "267/217",
+        "sortKey": 267
+      },
+      "name": "Mega Diancie ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676079_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-267"
+      }
+    },
+    {
+      "cardId": "asc-268",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "268/217",
+        "sortKey": 268
+      },
+      "name": "Mega Hawlucha ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676080_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-268"
+      }
+    },
+    {
+      "cardId": "asc-269",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "269/217",
+        "sortKey": 269
+      },
+      "name": "Mega Gengar ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676081_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-269"
+      }
+    },
+    {
+      "cardId": "asc-270",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "270/217",
+        "sortKey": 270
+      },
+      "name": "Mega Scrafty ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676082_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-270"
+      }
+    },
+    {
+      "cardId": "asc-271",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "271/217",
+        "sortKey": 271
+      },
+      "name": "Mega Dragonite ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676083_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-271"
+      }
+    },
+    {
+      "cardId": "asc-272",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "272/217",
+        "sortKey": 272
+      },
+      "name": "Mega Meganium ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676084_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-272"
+      }
+    },
+    {
+      "cardId": "asc-273",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "273/217",
+        "sortKey": 273
+      },
+      "name": "Mega Emboar ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676085_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-273"
+      }
+    },
+    {
+      "cardId": "asc-274",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "274/217",
+        "sortKey": 274
+      },
+      "name": "Mega Feraligatr ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676086_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-274"
+      }
+    },
+    {
+      "cardId": "asc-275",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "275/217",
+        "sortKey": 275
+      },
+      "name": "Mega Froslass ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676087_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-275"
+      }
+    },
+    {
+      "cardId": "asc-276",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "276/217",
+        "sortKey": 276
+      },
+      "name": "Pikachu ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676088_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-276"
+      }
+    },
+    {
+      "cardId": "asc-277",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "277/217",
+        "sortKey": 277
+      },
+      "name": "Pikachu ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676089_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-277"
+      }
+    },
+    {
+      "cardId": "asc-278",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "278/217",
+        "sortKey": 278
+      },
+      "name": "Mega Eelektross ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676090_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-278"
+      }
+    },
+    {
+      "cardId": "asc-279",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "279/217",
+        "sortKey": 279
+      },
+      "name": "Iono's Bellibolt ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676091_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-279"
+      }
+    },
+    {
+      "cardId": "asc-280",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "280/217",
+        "sortKey": 280
+      },
+      "name": "Lillie's Clefairy ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676092_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-280"
+      }
+    },
+    {
+      "cardId": "asc-281",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "281/217",
+        "sortKey": 281
+      },
+      "name": "Team Rocket's Mewtwo ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676093_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-281"
+      }
+    },
+    {
+      "cardId": "asc-282",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "282/217",
+        "sortKey": 282
+      },
+      "name": "Mega Diancie ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676094_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-282"
+      }
+    },
+    {
+      "cardId": "asc-283",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "283/217",
+        "sortKey": 283
+      },
+      "name": "Mega Hawlucha ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676095_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-283"
+      }
+    },
+    {
+      "cardId": "asc-284",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "284/217",
+        "sortKey": 284
+      },
+      "name": "Mega Gengar ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676096_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-284"
+      }
+    },
+    {
+      "cardId": "asc-285",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "285/217",
+        "sortKey": 285
+      },
+      "name": "Mega Scrafty ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676097_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-285"
+      }
+    },
+    {
+      "cardId": "asc-286",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "286/217",
+        "sortKey": 286
+      },
+      "name": "N's Zoroark ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676098_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-286"
+      }
+    },
+    {
+      "cardId": "asc-287",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "287/217",
+        "sortKey": 287
+      },
+      "name": "Marnie's Grimmsnarl ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676099_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-287"
+      }
+    },
+    {
+      "cardId": "asc-288",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "288/217",
+        "sortKey": 288
+      },
+      "name": "Fezandipiti ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676100_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-288"
+      }
+    },
+    {
+      "cardId": "asc-289",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "289/217",
+        "sortKey": 289
+      },
+      "name": "Steven's Metagross ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676101_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-289"
+      }
+    },
+    {
+      "cardId": "asc-290",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "290/217",
+        "sortKey": 290
+      },
+      "name": "Mega Dragonite ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676102_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-290"
+      }
+    },
+    {
+      "cardId": "asc-291",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "291/217",
+        "sortKey": 291
+      },
+      "name": "Canari",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676103_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-291"
+      }
+    },
+    {
+      "cardId": "asc-292",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "292/217",
+        "sortKey": 292
+      },
+      "name": "Iris's Fighting Spirit",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676104_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-292"
+      }
+    },
+    {
+      "cardId": "asc-293",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "293/217",
+        "sortKey": 293
+      },
+      "name": "Surfer",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676105_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-293"
+      }
+    },
+    {
+      "cardId": "asc-294",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "294/217",
+        "sortKey": 294
+      },
+      "name": "Mega Charizard Y ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676106_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-294"
+      }
+    },
+    {
+      "cardId": "asc-295",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "295/217",
+        "sortKey": 295
+      },
+      "name": "Mega Dragonite ex",
+      "referenceImage": "https://tcgplayer-cdn.tcgplayer.com/product/676107_200w.jpg",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "legacyInventoryCardId": "ASC-295"
+      }
+    }
+  ]
+}
