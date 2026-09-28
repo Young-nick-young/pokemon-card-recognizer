@@ -1,0 +1,104 @@
+{
+  "stage": 4,
+  "validatedCommit": "ae4fd3c0cdcfddda2e0ed73560af8215a1bdfc9a",
+  "candidateBranch": "feature/ascended-heroes-modernization-stage4",
+  "candidateRender": {
+    "serviceId": "srv-dasvaht9fdbs73f9dqr0",
+    "deployId": "dep-dasvai59fdbs73f9dt50",
+    "finalStatus": "live"
+  },
+  "schemaInventory": {
+    "cards": 295,
+    "canonicalFirst": "asc-001",
+    "canonicalLast": "asc-295",
+    "stableInventoryFirst": "ASC-001",
+    "stableInventoryLast": "ASC-295",
+    "availability": {
+      "normal": 153,
+      "energy/reverse-holo": 178,
+      "special-reverse": 140,
+      "holo": 142,
+      "other": 0
+    },
+    "legitimateAvailabilities": 613,
+    "patterns": {
+      "Poké Ball": 34,
+      "Friend Ball": 23,
+      "Love Ball": 25,
+      "Quick Ball": 22,
+      "Dusk Ball": 26,
+      "Rocket R": 10
+    },
+    "customPlanRows": 295
+  },
+  "referenceImages": {
+    "successful": 295,
+    "failed": 0,
+    "first": "asc-001",
+    "last": "asc-295"
+  },
+  "libraryEquivalence": {
+    "oldCards": 295,
+    "sharedCards": 295,
+    "descriptorCountOld": 140694,
+    "descriptorCountShared": 140694,
+    "descriptorShape": [
+      140694,
+      128
+    ],
+    "cardNumberShape": [
+      140694
+    ],
+    "rangesEqual": true,
+    "keypointsEqual": true,
+    "descriptorsArrayEqual": true,
+    "cardNumbersArrayEqual": true,
+    "oldOnlyTopLevelFields": [
+      "set_id",
+      "set_name"
+    ],
+    "oldOnlyPerCardFields": [
+      "card_id",
+      "image_url",
+      "name"
+    ],
+    "note": "Old-only metadata is not consumed by the shared recognition engine; runtime card metadata supplies display number and reference image."
+  },
+  "recognitionEquivalence": {
+    "tested": [
+      1,
+      25,
+      50,
+      75,
+      100,
+      125,
+      150,
+      170,
+      200,
+      225,
+      250,
+      295
+    ],
+    "mismatches": 0,
+    "unloadReloadIdentical": true,
+    "cardsPrepared": 295,
+    "cardsExpected": 295,
+    "globalFeatures": 140694
+  },
+  "regression": {
+    "standardPackages": {
+      "destinedRivals": 244,
+      "perfectOrder": 124,
+      "chaosRising": 122,
+      "pitchBlack": 120
+    },
+    "schemaBuildRegistryAppendedOnly": true,
+    "standardFourVariantPlannerUnchanged": true,
+    "ascLegacyBuilderRetained": true,
+    "frontendAscDynamicVariants": true,
+    "frontendFixedVariants": false,
+    "productionRecognizerMain": "f8931d822e51e2be277fe958f7076174c9e4731f",
+    "productionRenderUntouched": true,
+    "liveWorkbookUntouchedByStage4": true
+  }
+}
