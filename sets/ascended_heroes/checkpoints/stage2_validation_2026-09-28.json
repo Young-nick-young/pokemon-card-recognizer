@@ -1,0 +1,88 @@
+{
+  "stage": 2,
+  "sourceCommit": "e7911ffc77a8384b824376bc3f7c789e7c467172",
+  "generatedPlan": {
+    "rows": 295,
+    "range": "A1:T307",
+    "columnCount": 20,
+    "availabilityCounts": {
+      "normal": 153,
+      "energy/reverse-holo": 178,
+      "special-reverse": 140,
+      "holo": 142,
+      "other": 0
+    },
+    "totalLegitimateAvailabilities": 613,
+    "unavailableCells": 862
+  },
+  "reconciliation": {
+    "expectedDifferenceEvents": 357,
+    "expectedDataStateCells": 179,
+    "expectedTypes": {
+      "kQuantity": 178,
+      "kAvailabilityFill": 178,
+      "j182Quantity": 1
+    },
+    "unexpectedDifferenceCount": 0,
+    "unexpectedDifferences": []
+  },
+  "formulas": {
+    "totalFormulasCorrect": 295,
+    "collectionValueFormulasCorrect": 295,
+    "reverseHoloDefinition": [
+      "energy/reverse-holo",
+      "special-reverse"
+    ],
+    "reverseHoloGeneratedFormula": "=SUM(H13:H307)+SUM(I13:I307)"
+  },
+  "preservation": {
+    "existingNonZeroQuantitiesUnchanged": true,
+    "pricesUnchanged": true,
+    "storageUnchanged": true,
+    "cardIdsUnchanged": true,
+    "identitiesUnchanged": true,
+    "summarySimulation": {
+      "totalBulkCopies": 787,
+      "totalBulkValueBhd": 67.219,
+      "normal": 726,
+      "holo": 0,
+      "reverseHolo": 61
+    }
+  },
+  "formatting": {
+    "rowHeights": {
+      "headerPx": 42,
+      "bodyPx": 96
+    },
+    "header": {
+      "bold": true,
+      "horizontalAlignment": "CENTER",
+      "wrap": true,
+      "preserveGreenWhite": true
+    },
+    "freezeRows": 12,
+    "columnWidthsPx": {
+      "A": 80,
+      "B": 108,
+      "C": 180,
+      "D": 110,
+      "E": 120,
+      "F": 120,
+      "G": 120,
+      "H": 130,
+      "I": 120,
+      "J": 118,
+      "K": 116,
+      "L": 100,
+      "M": 101,
+      "N": 115,
+      "O": 115,
+      "P": 100,
+      "Q": 100,
+      "R": 110,
+      "S": 100,
+      "T": 96
+    },
+    "widthBasis": "Inventory Sheet Automation v2 semantic roles, with explicit ASC widths for Special Pattern, Energy / Reverse Holo, Special Reverse, and their price columns."
+  }
+}
