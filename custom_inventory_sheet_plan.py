@@ -94,7 +94,7 @@ def build_custom_inventory_sheet_plan(catalogue_path, metadata_path, layout_path
             available=bid in enabled
             if old:
                 existing=old["quantities"].get(qcol)
-                qvalue=existing if available else None
+                qvalue=(existing if existing is not None else 0) if available else None
             else:
                 qvalue=0 if available else None
             quantityValues[bid]=qvalue
