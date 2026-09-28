@@ -116,27 +116,32 @@
     {
       "id": "normal",
       "quantityColumn": "G",
-      "priceColumn": "M"
+      "priceColumn": "M",
+      "schemaVariantId": "normal"
     },
     {
       "id": "energy/reverse-holo",
       "quantityColumn": "H",
-      "priceColumn": "N"
+      "priceColumn": "N",
+      "schemaVariantId": "energy-reverse-holo"
     },
     {
       "id": "special-reverse",
       "quantityColumn": "I",
-      "priceColumn": "O"
+      "priceColumn": "O",
+      "schemaVariantId": "special-reverse"
     },
     {
       "id": "holo",
       "quantityColumn": "J",
-      "priceColumn": "P"
+      "priceColumn": "P",
+      "schemaVariantId": "holo"
     },
     {
       "id": "other",
       "quantityColumn": "K",
-      "priceColumn": "Q"
+      "priceColumn": "Q",
+      "schemaVariantId": "other"
     }
   ],
   "total": {
@@ -241,5 +246,10 @@
       "T": 96
     },
     "widthBasis": "Inventory Sheet Automation v2 semantic roles, with explicit ASC widths for Special Pattern, Energy / Reverse Holo, Special Reverse, and their price columns."
+  },
+  "schemaPackage": {
+    "setId": "ascended-heroes",
+    "cardsPath": "sets/ascended_heroes/cards.json",
+    "metadataLinkField": "schemaCardId"
   }
 }
