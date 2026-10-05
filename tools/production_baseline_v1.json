@@ -1,0 +1,675 @@
+{
+  "baselineVersion": "1",
+  "baselineName": "Master Baseline v1",
+  "status": "LOCKED_ACCEPTED_PRODUCTION_CHECKPOINT",
+  "scope": "pokemon-inventory-scanner",
+  "diagnosticOnly": true,
+  "mutationPolicy": {
+    "allowCodeWrites": false,
+    "allowSheetWrites": false,
+    "allowAppsScriptWrites": false,
+    "allowRenderChanges": false,
+    "allowDeployments": false,
+    "allowAutomaticRepairs": false
+  },
+  "authenticationPolicy": {
+    "storeCredentialsInRepository": false,
+    "storeSecretsInBaseline": false,
+    "externalAuthenticationConfiguredSeparately": true
+  },
+  "verificationModel": {
+    "offlineExpectedConfiguration": "Stage 1 compares repository state and local artifacts against this baseline.",
+    "liveGoogleSheets": "Stage 2 only. Values in this file are expectations, not evidence of current live Sheet state.",
+    "liveAppsScript": "Future external validation only. Repository or baseline configuration must not be treated as proof of deployed Apps Script state.",
+    "liveRender": "Stage 3 only. Values in this file are expectations, not proof of current live Render state.",
+    "liveVariantSafety": "Stage 2 or later. Offline inventory-variant rules are expectations only until the live Sheet/deployed routing path is read independently."
+  },
+  "repositories": {
+    "frontend": {
+      "repository": "Young-nick-young/pokemon-card-scanner",
+      "branch": "main",
+      "acceptedCheckpointCommit": "78a68e9cf0575fe81e36d5c219ac80d9680322bb"
+    },
+    "recognizer": {
+      "repository": "Young-nick-young/pokemon-card-recognizer",
+      "branch": "main",
+      "acceptedCheckpointCommit": "139466f560690abcd27383639225ffe27387f534"
+    }
+  },
+  "render": {
+    "verificationStage": 3,
+    "expected": {
+      "serviceName": "pokemon-card-recognizer",
+      "repository": "https://github.com/Young-nick-young/pokemon-card-recognizer",
+      "branch": "main",
+      "autoDeploy": true,
+      "autoDeployTrigger": "commit",
+      "buildCommand": "pip install -r requirements.txt && python build_schema_v1_libraries.py",
+      "startCommand": "uvicorn main:app --host 0.0.0.0 --port $PORT",
+      "legacyPerSetBuilderCommandsPresent": false
+    }
+  },
+  "workbooks": {
+    "mega-evolution": {
+      "verificationStage": 2,
+      "expectedSpreadsheetId": "1EsYzX-JqWqzksqaOBrvn6xu6RnIzWhqNJhcW2UQAKsE",
+      "expectedTitle": "Pokémon Inventory - Mega Evolution"
+    },
+    "destined-rivals": {
+      "verificationStage": 2,
+      "expectedSpreadsheetId": "1Fkgs9gtgrpeeyPkaIWOKHgPnv3Zyxryq288o7cWsVvY",
+      "expectedTitle": "Pokémon Card Inventory"
+    }
+  },
+  "appsScriptDeployments": {
+    "mega-evolution-shared": {
+      "verificationStage": "future-live-external",
+      "expectedDeploymentUrl": "https://script.google.com/a/macros/ikns.edu.bh/s/AKfycbxzaDPrnUX_a8P7UXxAQ-lWCCbJ9RG_kiXzvUfERWk41cCDhdY5yIr8S1PK9CAD10vv/exec",
+      "expectedWorkbookKey": "mega-evolution",
+      "multiSetRouting": true
+    },
+    "destined-rivals": {
+      "verificationStage": "future-live-external",
+      "expectedDeploymentUrl": "https://script.google.com/a/macros/ikns.edu.bh/s/AKfycbwDF5oxhER534DF16jG94SHwJ9jS2ySAWJXIKgUsOpXjsdy26JKiu1FOIAsQnOqk_6f/exec",
+      "expectedWorkbookKey": "destined-rivals",
+      "multiSetRouting": false
+    }
+  },
+  "sharedRules": {
+    "canonicalId": {
+      "case": "lowercase",
+      "separator": "-",
+      "numericWidth": 3
+    },
+    "legacyInventoryId": {
+      "case": "uppercase-prefix",
+      "separator": "-",
+      "numericWidth": 3,
+      "stage1Meaning": "Expected legacy IDs/configuration derived from accepted repository/schema state only.",
+      "stage2Meaning": "Actual live Sheet legacy IDs must be read independently and compared against these expectations."
+    },
+    "collectorNumbering": {
+      "sortKeySequence": "contiguous-1-through-expectedCardCount",
+      "displayNumericWidth": 3
+    },
+    "inventoryAvailability": {
+      "authoritativeRule": "inventoryVariants",
+      "doNotInferFrom": "Schema cards[].variants",
+      "offlineStage1Meaning": "Validate expected inventory-availability metadata/rules only.",
+      "liveSafetyStage": 2,
+      "unavailableVariantExpectedBehavior": "Must not be offered or written as an available inventory variant."
+    },
+    "newSetIsolation": {
+      "requireExistingProductionSetsUnchangedUnlessExplicitlyDeclared": true,
+      "undeclaredExistingSetModificationSeverity": "FAIL"
+    }
+  },
+  "productionSetOrder": [
+    "ascended-heroes",
+    "destined-rivals",
+    "perfect-order",
+    "chaos-rising",
+    "pitch-black"
+  ],
+  "sets": {
+    "ascended-heroes": {
+      "displayName": "Ascended Heroes",
+      "setCode": "ASC",
+      "series": "Mega Evolution",
+      "expectedCardCount": 295,
+      "canonicalIds": {
+        "prefix": "asc-",
+        "first": "asc-001",
+        "last": "asc-295",
+        "expectedSequence": "asc-001..asc-295"
+      },
+      "legacyInventoryIdsExpectedOffline": {
+        "prefix": "ASC-",
+        "first": "ASC-001",
+        "last": "ASC-295",
+        "expectedSequence": "ASC-001..ASC-295",
+        "actualLiveSheetVerificationStage": 2
+      },
+      "identityBoundaries": {
+        "first": {
+          "sortKey": 1,
+          "collectorNumber": "001",
+          "canonicalId": "asc-001",
+          "legacyInventoryIdExpectedOffline": "ASC-001",
+          "name": "Erika's Oddish"
+        },
+        "last": {
+          "sortKey": 295,
+          "collectorNumber": "295",
+          "canonicalId": "asc-295",
+          "legacyInventoryIdExpectedOffline": "ASC-295",
+          "name": "Mega Dragonite ex"
+        }
+      },
+      "schema": {
+        "packagePath": "sets/ascended_heroes",
+        "manifestPath": "sets/ascended_heroes/manifest.json",
+        "cardsPath": "sets/ascended_heroes/cards.json",
+        "expectedSchemaVersion": "1.0",
+        "expectedAliases": [
+          "asc",
+          "ascended_heroes"
+        ],
+        "expectedDisplayDenominator": 217
+      },
+      "builder": {
+        "registrySetId": "ascended-heroes",
+        "package": "sets/ascended_heroes",
+        "expectedRecords": 295,
+        "output": "sets/ascended_heroes/card_library.pkl"
+      },
+      "recognizer": {
+        "routerSetId": "ascended-heroes",
+        "publicPackageRoute": "/api/v1/sets/ascended-heroes/package",
+        "statusRoute": "/status/ascended-heroes"
+      },
+      "frontend": {
+        "configPath": "js/sets/ascended-heroes.js",
+        "expectedId": "ascended-heroes",
+        "expectedSetCode": "ASC",
+        "expectedSeries": "Mega Evolution",
+        "expectedMaxCard": 295,
+        "expectedDenominator": 217,
+        "expectedDynamicVariants": true,
+        "expectedSchemaPackageUrlRequired": false,
+        "expectedAppsScriptDeploymentKey": "mega-evolution-shared"
+      },
+      "inventoryExpectedOffline": {
+        "workbookKey": "mega-evolution",
+        "sheetName": "Ascended Heroes",
+        "sheetId": 1126823581,
+        "headerRows": 12,
+        "startRow": 13,
+        "endRow": 307,
+        "collectorNumberColumn": 2,
+        "nameColumn": 3,
+        "cardIdColumn": 20,
+        "variantModel": "asc-custom-five-finish",
+        "variantColumns": {
+          "normal": 7,
+          "energy-reverse-holo": 8,
+          "special-reverse": 9,
+          "holo": 10,
+          "other": 11
+        },
+        "actualLiveSheetVerificationStage": 2
+      },
+      "variantRulesExpectedOffline": {
+        "dynamicVariants": true,
+        "variants": [
+          "normal",
+          "energy-reverse-holo",
+          "special-reverse",
+          "holo",
+          "other"
+        ],
+        "availabilitySource": "inventoryVariants",
+        "actualLiveVariantSafetyVerificationStage": 2
+      },
+      "acceptedExceptions": [
+        {
+          "id": "ASC_CUSTOM_FIVE_VARIANT_LAYOUT",
+          "meaning": "ASC intentionally uses five inventory finish buckets rather than the standard four."
+        },
+        {
+          "id": "ASC_DYNAMIC_VARIANTS",
+          "meaning": "ASC frontend variant buttons are card-specific/dynamic."
+        },
+        {
+          "id": "ASC_CARD_ID_COLUMN_T",
+          "meaning": "ASC legacy Sheet Card ID is expected in column 20 (T), not the standard column 17 (Q)."
+        },
+        {
+          "id": "ASC_LEGACY_EXTERNAL_ID_METADATA",
+          "meaning": "ASC manifest intentionally does not require the newer officialCode/pokemonTcgData external-ID fields."
+        },
+        {
+          "id": "ASC_SHEET_BACKED_FRONTEND_CATALOGUE",
+          "meaning": "ASC frontend does not require the standard schemaPackageUrl field and retains its accepted Sheet-backed catalogue behavior."
+        }
+      ]
+    },
+    "destined-rivals": {
+      "displayName": "Destined Rivals",
+      "setCode": "DRI",
+      "series": "Scarlet & Violet",
+      "expectedCardCount": 244,
+      "canonicalIds": {
+        "prefix": "dri-",
+        "first": "dri-001",
+        "last": "dri-244",
+        "expectedSequence": "dri-001..dri-244"
+      },
+      "legacyInventoryIdsExpectedOffline": {
+        "prefix": "DRI-",
+        "first": "DRI-001",
+        "last": "DRI-244",
+        "expectedSequence": "DRI-001..DRI-244",
+        "actualLiveSheetVerificationStage": 2
+      },
+      "identityBoundaries": {
+        "first": {
+          "sortKey": 1,
+          "collectorNumber": "001",
+          "canonicalId": "dri-001",
+          "legacyInventoryIdExpectedOffline": "DRI-001",
+          "name": "Ethan's Pinsir"
+        },
+        "last": {
+          "sortKey": 244,
+          "collectorNumber": "244",
+          "canonicalId": "dri-244",
+          "legacyInventoryIdExpectedOffline": "DRI-244",
+          "name": "Levincia"
+        }
+      },
+      "schema": {
+        "packagePath": "sets/destined_rivals",
+        "manifestPath": "sets/destined_rivals/manifest.json",
+        "cardsPath": "sets/destined_rivals/cards.json",
+        "expectedSchemaVersion": "1.0",
+        "expectedAliases": [
+          "dri",
+          "sv10",
+          "destined_rivals"
+        ],
+        "expectedDisplayDenominator": 182
+      },
+      "builder": {
+        "registrySetId": "destined-rivals",
+        "package": "sets/destined_rivals",
+        "expectedRecords": 244,
+        "output": "sets/destined_rivals/card_library.pkl"
+      },
+      "recognizer": {
+        "routerSetId": "destined-rivals",
+        "publicPackageRoute": "/api/v1/sets/destined-rivals/package",
+        "statusRoute": "/status/destined-rivals"
+      },
+      "frontend": {
+        "configPath": "js/sets/destined-rivals.js",
+        "expectedId": "destined-rivals",
+        "expectedSetCode": "DRI",
+        "expectedSeries": "Scarlet & Violet",
+        "expectedMaxCard": 244,
+        "expectedDenominator": 182,
+        "expectedDynamicVariants": false,
+        "expectedImageSet": "sv10",
+        "expectedSchemaPackageUrlRequired": true,
+        "expectedAppsScriptDeploymentKey": "destined-rivals"
+      },
+      "inventoryExpectedOffline": {
+        "workbookKey": "destined-rivals",
+        "sheetName": "Destined Rivals",
+        "sheetId": 0,
+        "headerRows": 12,
+        "startRow": 13,
+        "endRow": 256,
+        "collectorNumberColumn": 2,
+        "nameColumn": 3,
+        "cardIdColumn": 17,
+        "variantModel": "standard-four",
+        "variantColumns": {
+          "normal": 6,
+          "reverse-holo": 7,
+          "holo": 8,
+          "other": 9
+        },
+        "actualLiveSheetVerificationStage": 2
+      },
+      "variantRulesExpectedOffline": {
+        "dynamicVariants": false,
+        "variants": [
+          "normal",
+          "reverse-holo",
+          "holo",
+          "other"
+        ],
+        "availabilitySource": "inventoryVariants",
+        "actualLiveVariantSafetyVerificationStage": 2
+      },
+      "acceptedExceptions": [
+        {
+          "id": "DRI_SEPARATE_WORKBOOK_AND_APPS_SCRIPT",
+          "meaning": "DRI intentionally remains in its separate accepted production workbook and Apps Script deployment."
+        },
+        {
+          "id": "DRI_LEGACY_EXTERNAL_ID_METADATA",
+          "meaning": "DRI retains accepted historical external-ID fields such as pokemonTcgIo/tcgcsvGroup rather than the newer officialCode/pokemonTcgData pair."
+        },
+        {
+          "id": "DRI_LEGACY_IMAGE_SET",
+          "meaning": "DRI frontend intentionally uses imageSet sv10."
+        }
+      ]
+    },
+    "perfect-order": {
+      "displayName": "Perfect Order",
+      "setCode": "POR",
+      "series": "Mega Evolution",
+      "expectedCardCount": 124,
+      "canonicalIds": {
+        "prefix": "por-",
+        "first": "por-001",
+        "last": "por-124",
+        "expectedSequence": "por-001..por-124"
+      },
+      "legacyInventoryIdsExpectedOffline": {
+        "prefix": "POR-",
+        "first": "POR-001",
+        "last": "POR-124",
+        "expectedSequence": "POR-001..POR-124",
+        "actualLiveSheetVerificationStage": 2
+      },
+      "identityBoundaries": {
+        "first": {
+          "sortKey": 1,
+          "collectorNumber": "001",
+          "canonicalId": "por-001",
+          "legacyInventoryIdExpectedOffline": "POR-001",
+          "name": "Spinarak"
+        },
+        "last": {
+          "sortKey": 124,
+          "collectorNumber": "124",
+          "canonicalId": "por-124",
+          "legacyInventoryIdExpectedOffline": "POR-124",
+          "name": "Mega Zygarde ex"
+        }
+      },
+      "schema": {
+        "packagePath": "sets/perfect_order",
+        "manifestPath": "sets/perfect_order/manifest.json",
+        "cardsPath": "sets/perfect_order/cards.json",
+        "expectedSchemaVersion": "1.0",
+        "expectedAliases": [
+          "por",
+          "me3",
+          "perfect_order"
+        ],
+        "expectedOfficialCode": "ME03",
+        "expectedDatasetId": "me3",
+        "expectedDisplayDenominator": 88
+      },
+      "builder": {
+        "registrySetId": "perfect-order",
+        "package": "sets/perfect_order",
+        "expectedRecords": 124,
+        "output": "sets/perfect_order/card_library.pkl"
+      },
+      "recognizer": {
+        "routerSetId": "perfect-order",
+        "publicPackageRoute": "/api/v1/sets/perfect-order/package",
+        "statusRoute": "/status/perfect-order"
+      },
+      "frontend": {
+        "configPath": "js/sets/perfect-order.js",
+        "expectedId": "perfect-order",
+        "expectedSetCode": "POR",
+        "expectedSeries": "Mega Evolution",
+        "expectedOfficialCode": "ME03",
+        "expectedDatasetId": "me3",
+        "expectedMaxCard": 124,
+        "expectedDenominator": 88,
+        "expectedDynamicVariants": false,
+        "expectedInventorySetIdParam": true,
+        "expectedSchemaPackageUrlRequired": true,
+        "expectedAppsScriptDeploymentKey": "mega-evolution-shared"
+      },
+      "inventoryExpectedOffline": {
+        "workbookKey": "mega-evolution",
+        "sheetName": "Perfect Order",
+        "sheetId": 568158894,
+        "headerRows": 12,
+        "startRow": 13,
+        "endRow": 136,
+        "collectorNumberColumn": 2,
+        "nameColumn": 3,
+        "cardIdColumn": 17,
+        "variantModel": "standard-four",
+        "variantColumns": {
+          "normal": 6,
+          "reverse-holo": 7,
+          "holo": 8,
+          "other": 9
+        },
+        "actualLiveSheetVerificationStage": 2
+      },
+      "variantRulesExpectedOffline": {
+        "dynamicVariants": false,
+        "variants": [
+          "normal",
+          "reverse-holo",
+          "holo",
+          "other"
+        ],
+        "availabilitySource": "inventoryVariants",
+        "actualLiveVariantSafetyVerificationStage": 2
+      },
+      "acceptedExceptions": []
+    },
+    "chaos-rising": {
+      "displayName": "Chaos Rising",
+      "setCode": "CRI",
+      "series": "Mega Evolution",
+      "expectedCardCount": 122,
+      "canonicalIds": {
+        "prefix": "cri-",
+        "first": "cri-001",
+        "last": "cri-122",
+        "expectedSequence": "cri-001..cri-122"
+      },
+      "legacyInventoryIdsExpectedOffline": {
+        "prefix": "CRI-",
+        "first": "CRI-001",
+        "last": "CRI-122",
+        "expectedSequence": "CRI-001..CRI-122",
+        "actualLiveSheetVerificationStage": 2
+      },
+      "identityBoundaries": {
+        "first": {
+          "sortKey": 1,
+          "collectorNumber": "001",
+          "canonicalId": "cri-001",
+          "legacyInventoryIdExpectedOffline": "CRI-001",
+          "name": "Weedle"
+        },
+        "last": {
+          "sortKey": 122,
+          "collectorNumber": "122",
+          "canonicalId": "cri-122",
+          "legacyInventoryIdExpectedOffline": "CRI-122",
+          "name": "Mega Greninja ex"
+        }
+      },
+      "schema": {
+        "packagePath": "sets/chaos_rising",
+        "manifestPath": "sets/chaos_rising/manifest.json",
+        "cardsPath": "sets/chaos_rising/cards.json",
+        "expectedSchemaVersion": "1.0",
+        "expectedAliases": [
+          "chaos_rising",
+          "cri",
+          "me4",
+          "me04"
+        ],
+        "expectedOfficialCode": "ME04",
+        "expectedDatasetId": "me4",
+        "expectedDisplayDenominator": 86
+      },
+      "builder": {
+        "registrySetId": "chaos-rising",
+        "package": "sets/chaos_rising",
+        "expectedRecords": 122,
+        "output": "sets/chaos_rising/card_library.pkl"
+      },
+      "recognizer": {
+        "routerSetId": "chaos-rising",
+        "publicPackageRoute": "/api/v1/sets/chaos-rising/package",
+        "statusRoute": "/status/chaos-rising"
+      },
+      "frontend": {
+        "configPath": "js/sets/chaos-rising.js",
+        "expectedId": "chaos-rising",
+        "expectedSetCode": "CRI",
+        "expectedSeries": "Mega Evolution",
+        "expectedOfficialCode": "ME04",
+        "expectedDatasetId": "me4",
+        "expectedMaxCard": 122,
+        "expectedDenominator": 86,
+        "expectedDynamicVariants": false,
+        "expectedInventorySetIdParam": true,
+        "expectedSchemaPackageUrlRequired": true,
+        "expectedAppsScriptDeploymentKey": "mega-evolution-shared"
+      },
+      "inventoryExpectedOffline": {
+        "workbookKey": "mega-evolution",
+        "sheetName": "Chaos Rising",
+        "sheetId": 2090388439,
+        "headerRows": 12,
+        "startRow": 13,
+        "endRow": 134,
+        "collectorNumberColumn": 2,
+        "nameColumn": 3,
+        "cardIdColumn": 17,
+        "variantModel": "standard-four",
+        "variantColumns": {
+          "normal": 6,
+          "reverse-holo": 7,
+          "holo": 8,
+          "other": 9
+        },
+        "actualLiveSheetVerificationStage": 2
+      },
+      "variantRulesExpectedOffline": {
+        "dynamicVariants": false,
+        "variants": [
+          "normal",
+          "reverse-holo",
+          "holo",
+          "other"
+        ],
+        "availabilitySource": "inventoryVariants",
+        "actualLiveVariantSafetyVerificationStage": 2
+      },
+      "acceptedExceptions": []
+    },
+    "pitch-black": {
+      "displayName": "Pitch Black",
+      "setCode": "PBL",
+      "series": "Mega Evolution",
+      "expectedCardCount": 120,
+      "canonicalIds": {
+        "prefix": "pbl-",
+        "first": "pbl-001",
+        "last": "pbl-120",
+        "expectedSequence": "pbl-001..pbl-120"
+      },
+      "legacyInventoryIdsExpectedOffline": {
+        "prefix": "PBL-",
+        "first": "PBL-001",
+        "last": "PBL-120",
+        "expectedSequence": "PBL-001..PBL-120",
+        "actualLiveSheetVerificationStage": 2
+      },
+      "identityBoundaries": {
+        "first": {
+          "sortKey": 1,
+          "collectorNumber": "001",
+          "canonicalId": "pbl-001",
+          "legacyInventoryIdExpectedOffline": "PBL-001",
+          "name": "Tropius"
+        },
+        "last": {
+          "sortKey": 120,
+          "collectorNumber": "120",
+          "canonicalId": "pbl-120",
+          "legacyInventoryIdExpectedOffline": "PBL-120",
+          "name": "Mega Darkrai ex"
+        }
+      },
+      "schema": {
+        "packagePath": "sets/pitch_black",
+        "manifestPath": "sets/pitch_black/manifest.json",
+        "cardsPath": "sets/pitch_black/cards.json",
+        "expectedSchemaVersion": "1.0",
+        "expectedAliases": [
+          "pitch_black",
+          "pbl",
+          "me5",
+          "me05"
+        ],
+        "expectedOfficialCode": "ME05",
+        "expectedDatasetId": "me5",
+        "expectedDisplayDenominator": 84
+      },
+      "builder": {
+        "registrySetId": "pitch-black",
+        "package": "sets/pitch_black",
+        "expectedRecords": 120,
+        "output": "sets/pitch_black/card_library.pkl"
+      },
+      "recognizer": {
+        "routerSetId": "pitch-black",
+        "publicPackageRoute": "/api/v1/sets/pitch-black/package",
+        "statusRoute": "/status/pitch-black"
+      },
+      "frontend": {
+        "configPath": "js/sets/pitch-black.js",
+        "expectedId": "pitch-black",
+        "expectedSetCode": "PBL",
+        "expectedSeries": "Mega Evolution",
+        "expectedOfficialCode": "ME05",
+        "expectedDatasetId": "me5",
+        "expectedMaxCard": 120,
+        "expectedDenominator": 84,
+        "expectedDynamicVariants": false,
+        "expectedInventorySetIdParam": true,
+        "expectedSchemaPackageUrlRequired": true,
+        "expectedAppsScriptDeploymentKey": "mega-evolution-shared"
+      },
+      "inventoryExpectedOffline": {
+        "workbookKey": "mega-evolution",
+        "sheetName": "Pitch Black",
+        "sheetId": 2025224166,
+        "headerRows": 12,
+        "startRow": 13,
+        "endRow": 132,
+        "collectorNumberColumn": 2,
+        "nameColumn": 3,
+        "cardIdColumn": 17,
+        "variantModel": "standard-four",
+        "variantColumns": {
+          "normal": 6,
+          "reverse-holo": 7,
+          "holo": 8,
+          "other": 9
+        },
+        "actualLiveSheetVerificationStage": 2
+      },
+      "variantRulesExpectedOffline": {
+        "dynamicVariants": false,
+        "variants": [
+          "normal",
+          "reverse-holo",
+          "holo",
+          "other"
+        ],
+        "availabilitySource": "inventoryVariants",
+        "actualLiveVariantSafetyVerificationStage": 2
+      },
+      "acceptedExceptions": []
+    }
+  },
+  "resultSemantics": {
+    "PASS": "Observed value matches the applicable locked-baseline requirement.",
+    "WARNING": "No blocking contradiction was found, but an explicitly defined maintenance/scaling risk or accepted warning condition exists.",
+    "FAIL": "Observed state contradicts a required production invariant and blocks production acceptance.",
+    "NOT_VERIFIED": "The validator lacks an independent trustworthy observation for that check. NOT_VERIFIED must never be counted as PASS."
+  }
+}
