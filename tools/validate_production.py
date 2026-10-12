@@ -349,6 +349,34 @@ def check_manifest_and_cards(
         )
         return manifest, None
 
+    try:
+        sys.path.insert(0, str(recognizer_root))
+        from schema_v1_loader import load_schema_v1_package
+        load_schema_v1_package(recognizer_root / schema["packagePath"])
+    except Exception as error:
+        add(
+            findings,
+            FAIL,
+            "existing Schema v1 loader validation",
+            "recognizer/schema_v1_loader.py",
+            f"Existing strict Schema v1 loader rejected the package: {error}",
+            impact="scanning now / scaling",
+            blocks=True,
+            set_id=set_id,
+        )
+    else:
+        add(
+            findings,
+            PASS,
+            "existing Schema v1 loader validation",
+            "recognizer/schema_v1_loader.py",
+            "Existing strict Schema v1 loader accepted the local package.",
+            set_id=set_id,
+        )
+    finally:
+        if sys.path and sys.path[0] == str(recognizer_root):
+            sys.path.pop(0)
+
     compare(
         findings,
         check="manifest schemaVersion",
