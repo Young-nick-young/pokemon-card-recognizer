@@ -441,6 +441,25 @@ def check_manifest_and_cards(
         impact="scanning now / scaling",
     )
 
+    compare(
+        findings,
+        check="cards schemaVersion",
+        component="Schema v1 cards",
+        expected=schema["expectedSchemaVersion"],
+        actual=catalogue.get("schemaVersion") if isinstance(catalogue, dict) else None,
+        set_id=set_id,
+        impact="maintenance / scaling",
+    )
+    compare(
+        findings,
+        check="cards setId",
+        component="Schema v1 cards",
+        expected=set_id,
+        actual=catalogue.get("setId") if isinstance(catalogue, dict) else None,
+        set_id=set_id,
+        impact="scanning now / data safety",
+    )
+
     cards = catalogue.get("cards") if isinstance(catalogue, dict) else None
     if not isinstance(cards, list):
         add(
@@ -1255,9 +1274,11 @@ def render_report(baseline: dict[str, Any], findings: list[Finding]) -> None:
         print()
 
     print("LIVE / EXTERNAL SYSTEMS")
-    external = [f for f in findings if f.scope == "external" and f.set_id is None]
+    external = [f for f in findings if f.scope == "external"]
     for finding in external:
-        print(f"{finding.component} — {finding.status}: {finding.message}")
+        prefix = baseline["sets"].get(finding.set_id, {}).get("setCode")
+        label = (prefix + " / " if prefix else "") + finding.component
+        print(f"{label} — {finding.status}: {finding.message}")
     print()
 
     offline_label = overall_offline_label(findings)
