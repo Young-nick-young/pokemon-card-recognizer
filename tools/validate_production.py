@@ -155,7 +155,7 @@ def compare(
 
 def extract_js_string(text: str, key: str) -> str | None:
     match = re.search(
-        r"\\b" + re.escape(key) + r"\\s*:\\s*(['\\\"])(.*?)\\1",
+        r"\b" + re.escape(key) + r"\s*:\s*(['\"])(.*?)\1",
         text,
         flags=re.DOTALL,
     )
@@ -184,12 +184,12 @@ def extract_js_script_url(text: str) -> str | None:
 
 
 def js_has_property(text: str, key: str) -> bool:
-    return re.search(r"\\b" + re.escape(key) + r"\\s*:", text) is not None
+    return re.search(r"\b" + re.escape(key) + r"\s*:", text) is not None
 
 
 def extract_html_script_srcs(text: str) -> list[str]:
     pattern = re.compile(
-        r"<script\\b[^>]*?\\bsrc\\s*=\\s*(['\\\"])(.*?)\\1[^>]*>",
+        r"<script\b[^>]*?\bsrc\s*=\s*(['\"])(.*?)\1[^>]*>",
         flags=re.IGNORECASE | re.DOTALL,
     )
     return [match.group(2) for match in pattern.finditer(text)]
