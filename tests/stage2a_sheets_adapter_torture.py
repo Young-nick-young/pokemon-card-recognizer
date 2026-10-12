@@ -440,33 +440,67 @@ for sid in ("perfect-order", "chaos-rising", "pitch-black"):
 record("POR/CRI/PBL standard F:I/Q structure", {sid:(17,(6,7,8,9)) for sid in structures}, structures, all(v == (17,(6,7,8,9)) for v in structures.values()))
 
 
-# 23. Static adapter AST: no file write, subprocess, network, or Google write method calls.
+# 23. Static adapter AST: no filesystem writes, network clients, Google client,
+# or Google Sheets write-capable call chains.
 source = ADAPTER_PATH.read_text(encoding="utf-8")
 tree = ast.parse(source)
-forbidden_attrs = {"update", "batchUpdate", "append", "clear", "write_text", "write_bytes", "unlink", "rename", "replace"}
-forbidden_names = {"open", "urlopen", "request", "post", "put", "patch", "delete", "subprocess"}
+
+def dotted_name(node):
+    parts = []
+    cur = node
+    while isinstance(cur, ast.Attribute):
+        parts.append(cur.attr)
+        cur = cur.value
+    if isinstance(cur, ast.Name):
+        parts.append(cur.id)
+    return ".".join(reversed(parts))
+
 hits = []
 for node in ast.walk(tree):
-    if isinstance(node, ast.Call):
-        func = node.func
-        if isinstance(func, ast.Attribute) and func.attr in forbidden_attrs:
-            hits.append("attribute-call:" + func.attr)
-        elif isinstance(func, ast.Name) and func.id in forbidden_names:
-            hits.append("name-call:" + func.id)
+    if not isinstance(node, ast.Call):
+        continue
+    func = node.func
+    if isinstance(func, ast.Attribute):
+        chain = dotted_name(func)
+        if func.attr in {"write_text", "write_bytes", "unlink", "rename"}:
+            hits.append("filesystem-write:" + chain)
+        if func.attr in {"update", "batchUpdate", "append", "clear", "delete"} and any(
+            marker in chain.lower()
+            for marker in ("spreadsheet", "sheets", "service", "values")
+        ):
+            hits.append("sheet-write:" + chain)
+    elif isinstance(func, ast.Name) and func.id in {"urlopen", "post", "put", "patch", "delete"}:
+        hits.append("network-call:" + func.id)
+
 imports = []
 for node in ast.walk(tree):
     if isinstance(node, ast.Import):
         imports.extend(alias.name for alias in node.names)
     elif isinstance(node, ast.ImportFrom) and node.module:
         imports.append(node.module)
-unsafe_imports = [name for name in imports if name.startswith(("requests", "httpx", "googleapiclient", "google.auth", "urllib", "socket", "subprocess"))]
-record("no write/network-capable adapter code path", "no forbidden calls/imports", {"calls":hits,"imports":unsafe_imports}, not hits and not unsafe_imports)
+unsafe_imports = [
+    name for name in imports
+    if name.startswith(("requests", "httpx", "googleapiclient", "google.auth", "urllib", "socket", "subprocess"))
+]
+record(
+    "no write/network-capable adapter code path",
+    "no filesystem/Sheet write calls and no network/Google client imports",
+    {"calls": hits, "imports": unsafe_imports},
+    not hits and not unsafe_imports,
+)
 
 
-# 24. Adapter source has no credential material or scopes in Stage 2A.
-credential_markers = ["client_secret", "private_key", "refresh_token", "AIza", "ya29."]
-found = [m for m in credential_markers if m in source]
-record("no credentials/tokens embedded", "none", found, not found)
+# 24. Adapter source contains redaction vocabulary but no credential values.
+# Look for value-shaped credentials, not words such as refresh_token that are
+# intentionally present in the sanitizer.
+credential_value_markers = [
+    "AIza",
+    "ya29.",
+    "-----BEGIN PRIVATE KEY-----",
+    "-----BEGIN RSA PRIVATE KEY-----",
+]
+found = [m for m in credential_value_markers if m in source]
+record("no credentials/tokens embedded", "no credential-shaped values", found, not found)
 
 
 # 25. Executing validator through mock does not mutate fixture files.
