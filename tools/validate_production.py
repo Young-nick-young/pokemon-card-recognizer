@@ -524,6 +524,25 @@ def check_manifest_and_cards(
             "This is an offline expectation check only; live Sheet IDs are Stage 2."
         ),
     )
+    add(
+        findings,
+        NOT_VERIFIED,
+        "actual live Sheet rows / collector numbers / legacy IDs",
+        "Google Sheet",
+        "Stage 1B does not read the live inventory Sheet.",
+        expected={
+            "sheetName": baseline_set["inventoryExpectedOffline"]["sheetName"],
+            "startRow": baseline_set["inventoryExpectedOffline"]["startRow"],
+            "endRow": baseline_set["inventoryExpectedOffline"]["endRow"],
+            "legacyFirst": baseline_set["legacyInventoryIdsExpectedOffline"]["first"],
+            "legacyLast": baseline_set["legacyInventoryIdsExpectedOffline"]["last"],
+        },
+        actual="Not accessed in Stage 1B",
+        impact="data safety / scanning now",
+        blocks=False,
+        set_id=set_id,
+        scope="external",
+    )
 
     sort_keys = [
         (card.get("number") or {}).get("sortKey")
@@ -1020,13 +1039,27 @@ def check_accepted_exceptions(
 
     if set_id == "destined-rivals":
         deployment_key = baseline_set["frontend"]["expectedAppsScriptDeploymentKey"]
-        exception_result(
-            "DRI_SEPARATE_WORKBOOK_AND_APPS_SCRIPT",
-            (
+        expected_dri_url = (
+            baseline.get("appsScriptDeployments", {})
+            .get(deployment_key, {})
+            .get("expectedDeploymentUrl")
+        )
+        if frontend_text is None:
+            separate_target_match = None
+        else:
+            separate_target_match = (
                 baseline_set["inventoryExpectedOffline"]["workbookKey"] == "destined-rivals"
                 and deployment_key == "destined-rivals"
+                and extract_js_script_url(frontend_text) == expected_dri_url
+                and ((manifest or {}).get("inventory") or {}).get("sheetName") == "Destined Rivals"
+            )
+        exception_result(
+            "DRI_SEPARATE_WORKBOOK_AND_APPS_SCRIPT",
+            separate_target_match,
+            (
+                "DRI local configuration points to the accepted separate deployment "
+                "identifier and Destined Rivals sheet name. Live workbook state remains Stage 2."
             ),
-            "DRI remains assigned to its accepted separate workbook/deployment keys.",
         )
         external = (manifest or {}).get("externalIds") or {}
         exception_result(
