@@ -231,6 +231,10 @@
         {
           "id": "ASC_SHEET_BACKED_FRONTEND_CATALOGUE",
           "meaning": "ASC frontend does not require the standard schemaPackageUrl field and retains its accepted Sheet-backed catalogue behavior."
+        },
+        {
+          "id": "ASC_LEGACY_INVENTORY_REQUEST_CONTRACT",
+          "meaning": "ASC intentionally retains the accepted legacy inventory request contract using row + variant + change + transactionId rather than the canonical setId + cardId + variantId + quantityDelta contract."
         }
       ]
     },
@@ -671,5 +675,27 @@
     "WARNING": "No blocking contradiction was found, but an explicitly defined maintenance/scaling risk or accepted warning condition exists.",
     "FAIL": "Observed state contradicts a required production invariant and blocks production acceptance.",
     "NOT_VERIFIED": "The validator lacks an independent trustworthy observation for that check. NOT_VERIFIED must never be counted as PASS."
+  },
+  "knownWarnings": {
+    "destined-rivals": [
+      {
+        "id": "DRI_GENERIC_UNAVAILABLE_VARIANT_PROTECTION_NOT_MODERNIZED",
+        "severity": "WARNING",
+        "area": "inventory-variant-safety",
+        "meaning": "DRI generic unavailable-variant protection is not yet aligned with the shared modern blank-cell rule.",
+        "blocksProduction": false,
+        "cleanupStatus": "future-cleanup"
+      }
+    ],
+    "ascended-heroes": [
+      {
+        "id": "ASC_CANONICAL_INVENTORY_REQUEST_MODERNIZATION_PENDING",
+        "severity": "WARNING",
+        "area": "inventory-request-contract",
+        "meaning": "ASC canonical inventory-request modernization remains a future cleanup item.",
+        "blocksProduction": false,
+        "cleanupStatus": "future-cleanup"
+      }
+    ]
   }
 }
