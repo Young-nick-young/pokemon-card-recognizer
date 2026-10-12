@@ -1,3 +1,4 @@
+# Stage 2A mocked-only safety gate
 name: Stage 2A Mock Sheets Adapter Torture Test
 
 on:
