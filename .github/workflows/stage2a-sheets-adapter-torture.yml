@@ -1,0 +1,35 @@
+name: Stage 2A Mock Sheets Adapter Torture Test
+
+on:
+  push:
+    branches:
+      - feature/automatic-production-validator-v1
+    paths:
+      - tools/google_sheets_readonly.py
+      - tests/stage2a_sheets_adapter_torture.py
+      - .github/workflows/stage2a-sheets-adapter-torture.yml
+      - tools/production_baseline_v1.json
+      - sets/ascended_heroes/inventory_metadata.json
+      - sets/ascended_heroes/inventory_sheet_plan.json
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mock-sheets-torture:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+
+      - name: Confirm Python
+        run: python --version
+
+      - name: Prove no Google credentials are configured for Stage 2A
+        run: |
+          test -z "${GOOGLE_APPLICATION_CREDENTIALS:-}"
+          test -z "${GOOGLE_API_KEY:-}"
+
+      - name: Execute Stage 2A mocked torture suite
+        run: python tests/stage2a_sheets_adapter_torture.py
