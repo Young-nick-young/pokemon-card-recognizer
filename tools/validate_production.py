@@ -18,6 +18,10 @@ import json
 import re
 import sys
 from dataclasses import dataclass
+
+# Stage 1B is strictly read-only. Prevent Python imports (notably the reused
+# Schema v1 loader) from creating __pycache__ / .pyc files in inspected repos.
+sys.dont_write_bytecode = True
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -150,8 +154,12 @@ def compare(
 
 
 def extract_js_string(text: str, key: str) -> str | None:
-    match = re.search(r"\b" + re.escape(key) + r'\s*:\s*"([^"]*)"', text)
-    return match.group(1) if match else None
+    match = re.search(
+        r"\\b" + re.escape(key) + r"\\s*:\\s*(['\\\"])(.*?)\\1",
+        text,
+        flags=re.DOTALL,
+    )
+    return match.group(2) if match else None
 
 
 def extract_js_int(text: str, key: str) -> int | None:
@@ -176,7 +184,15 @@ def extract_js_script_url(text: str) -> str | None:
 
 
 def js_has_property(text: str, key: str) -> bool:
-    return re.search(r"\b" + re.escape(key) + r"\s*:", text) is not None
+    return re.search(r"\\b" + re.escape(key) + r"\\s*:", text) is not None
+
+
+def extract_html_script_srcs(text: str) -> list[str]:
+    pattern = re.compile(
+        r"<script\\b[^>]*?\\bsrc\\s*=\\s*(['\\\"])(.*?)\\1[^>]*>",
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    return [match.group(2) for match in pattern.finditer(text)]
 
 
 def discover_manifest_set_ids(recognizer_root: Path) -> tuple[set[str], list[str]]:
@@ -930,13 +946,14 @@ def check_frontend_set(
         )
         return True
 
-    include = f'<script src="./{expected_frontend["configPath"]}"></script>'
+    expected_src = "./" + expected_frontend["configPath"]
+    script_srcs = extract_html_script_srcs(index)
     compare(
         findings,
         check="frontend index includes set exactly once",
         component=str(index_path),
         expected=1,
-        actual=index.count(include),
+        actual=script_srcs.count(expected_src),
         set_id=set_id,
         impact="scanning now",
     )
@@ -1135,8 +1152,12 @@ def frontend_universe(frontend_root: Path | None, baseline: dict[str, Any]) -> t
         return None, f"Could not read frontend index: {error}"
 
     result: set[str] = set()
-    pattern = re.compile(r'<script\s+src="\./js/sets/([^"]+)\.js"></script>')
-    included_files = set(pattern.findall(index))
+    script_srcs = extract_html_script_srcs(index)
+    included_files = {
+        Path(src).stem
+        for src in script_srcs
+        if src.startswith("./js/sets/") and src.endswith(".js")
+    }
     for set_id, set_data in baseline["sets"].items():
         expected_file = Path(set_data["frontend"]["configPath"]).stem
         if expected_file in included_files:
