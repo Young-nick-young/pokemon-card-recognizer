@@ -1,0 +1,35 @@
+name: Stage 1C Validator Torture Test
+
+on:
+  push:
+    branches:
+      - feature/automatic-production-validator-v1
+    paths:
+      - tools/validate_production.py
+      - tools/production_baseline_v1.json
+      - tests/stage1c_validator_torture.py
+      - .github/workflows/stage1c-validator-torture.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  torture-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout recognizer feature branch
+        uses: actions/checkout@v4
+
+      - name: Checkout frontend main as controlled source copy
+        uses: actions/checkout@v4
+        with:
+          repository: Young-nick-young/pokemon-card-scanner
+          ref: main
+          path: frontend-source
+
+      - name: Confirm Python
+        run: python --version
+
+      - name: Execute Stage 1C torture suite
+        run: python tests/stage1c_validator_torture.py
