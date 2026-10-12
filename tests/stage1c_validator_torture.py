@@ -131,6 +131,22 @@ def mutate_builder_extra(recognizer: Path, frontend: Path):
     dump(path, data)
 
 
+def mutate_router_missing(recognizer: Path, frontend: Path):
+    replace_once(
+        recognizer / "main.py",
+        '    "chaos-rising": chaos_rising,\n',
+        "",
+    )
+
+
+def mutate_router_extra(recognizer: Path, frontend: Path):
+    replace_once(
+        recognizer / "main.py",
+        '    "pitch-black": pitch_black\n}',
+        '    "pitch-black": pitch_black,\n    "fake-set": fake_set\n}',
+    )
+
+
 def mutate_frontend_extra(recognizer: Path, frontend: Path):
     extra = frontend / "js" / "sets" / "fake-set.js"
     extra.write_text(
@@ -289,6 +305,8 @@ def main() -> int:
         ("missing builder registration", mutate_builder_missing, "shared builder registration", "pitch-black"),
         ("duplicate builder registration", mutate_builder_duplicate, "shared builder registration", "perfect-order"),
         ("extra builder registration", mutate_builder_extra, "set universe: shared builder", None),
+        ("missing recognizer router registration", mutate_router_missing, "recognizer router registration", "chaos-rising"),
+        ("extra recognizer router registration", mutate_router_extra, "set universe: recognizer router", None),
         ("extra frontend set registration", mutate_frontend_extra, "set universe: frontend", None),
         ("duplicate frontend include", mutate_frontend_duplicate_include, "frontend index includes set exactly once", "pitch-black"),
         ("canonical ID duplicate", mutate_canonical_duplicate, "canonical ID sequence", "pitch-black"),
