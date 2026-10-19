@@ -1,0 +1,45 @@
+name: Stage 2A.6 Authority Promotion
+
+on:
+  push:
+    branches:
+      - feature/automatic-production-validator-v1
+    paths:
+      - tests/stage2a6_authority_promotion.py
+      - .github/workflows/stage2a6-authority-promotion.yml
+
+permissions:
+  contents: write
+
+jobs:
+  promote-authority:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout validator feature branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch accepted historical authority refs
+        run: |
+          git fetch origin feature/inventory-sheet-automation-v1:refs/remotes/origin/feature/inventory-sheet-automation-v1
+          git fetch origin candidate/chaos-rising:refs/remotes/origin/candidate/chaos-rising
+          git fetch origin candidate/pitch-black:refs/remotes/origin/candidate/pitch-black
+
+      - name: Regenerate and validate authority artifacts
+        run: python tests/stage2a6_authority_promotion.py
+
+      - name: Confirm DRI remains untouched
+        run: |
+          test ! -e sets/destined_rivals/inventory_metadata.json
+          test ! -e sets/destined_rivals/inventory_sheet_plan.json
+
+      - name: Commit authority artifacts only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             sets/perfect_order/inventory_metadata.json             sets/perfect_order/inventory_sheet_plan.json             sets/chaos_rising/inventory_metadata.json             sets/chaos_rising/inventory_sheet_plan.json             sets/pitch_black/inventory_metadata.json             sets/pitch_black/inventory_sheet_plan.json
+          git diff --cached --name-only
+          test "$(git diff --cached --name-only | wc -l)" -eq 6
+          git commit -m "Promote Stage 2A.6 inventory authorities"
+          git push origin HEAD:feature/automatic-production-validator-v1
