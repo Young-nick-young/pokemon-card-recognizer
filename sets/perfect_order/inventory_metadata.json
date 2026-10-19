@@ -1,0 +1,1329 @@
+{
+  "inventoryMetadataVersion": 1,
+  "setId": "perfect-order",
+  "source": {
+    "kind": "golden-reference-calibration",
+    "note": "Seeded read-only from the live Perfect Order inventory tab on 2026-09-20. Future sets must generate equivalent explicit metadata from normalized source data/rules before any Sheet write."
+  },
+  "cards": [
+    {
+      "cardId": "por-001",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-002",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-003",
+      "rarity": "Uncommon",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-004",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-005",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-006",
+      "rarity": "Rare",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-007",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-008",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-009",
+      "rarity": "Uncommon",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-010",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-011",
+      "rarity": "Common",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-012",
+      "rarity": "Double Rare",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-013",
+      "rarity": "Common",
+      "cardType": "Fire",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-014",
+      "rarity": "Uncommon",
+      "cardType": "Fire",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-015",
+      "rarity": "Common",
+      "cardType": "Fire",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-016",
+      "rarity": "Double Rare",
+      "cardType": "Fire",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-017",
+      "rarity": "Uncommon",
+      "cardType": "Fire",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-018",
+      "rarity": "Common",
+      "cardType": "Water",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-019",
+      "rarity": "Rare",
+      "cardType": "Water",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-020",
+      "rarity": "Common",
+      "cardType": "Water",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-021",
+      "rarity": "Double Rare",
+      "cardType": "Water",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-022",
+      "rarity": "Double Rare",
+      "cardType": "Water",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-023",
+      "rarity": "Common",
+      "cardType": "Water",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-024",
+      "rarity": "Rare",
+      "cardType": "Water",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-025",
+      "rarity": "Uncommon",
+      "cardType": "Water",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-026",
+      "rarity": "Common",
+      "cardType": "Lightning",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-027",
+      "rarity": "Uncommon",
+      "cardType": "Lightning",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-028",
+      "rarity": "Rare",
+      "cardType": "Lightning",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-029",
+      "rarity": "Common",
+      "cardType": "Lightning",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-030",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-031",
+      "rarity": "Double Rare",
+      "cardType": "Psychic",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-032",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-033",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-034",
+      "rarity": "Uncommon",
+      "cardType": "Psychic",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-035",
+      "rarity": "Common",
+      "cardType": "Psychic",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-036",
+      "rarity": "Uncommon",
+      "cardType": "Psychic",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-037",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-038",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-039",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-040",
+      "rarity": "Uncommon",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-041",
+      "rarity": "Rare",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-042",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-043",
+      "rarity": "Uncommon",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-044",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-045",
+      "rarity": "Rare",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-046",
+      "rarity": "Common",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-047",
+      "rarity": "Double Rare",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-048",
+      "rarity": "Common",
+      "cardType": "Darkness",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-049",
+      "rarity": "Common",
+      "cardType": "Darkness",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-050",
+      "rarity": "Rare",
+      "cardType": "Darkness",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-051",
+      "rarity": "Common",
+      "cardType": "Darkness",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-052",
+      "rarity": "Uncommon",
+      "cardType": "Darkness",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-053",
+      "rarity": "Double Rare",
+      "cardType": "Darkness",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-054",
+      "rarity": "Rare",
+      "cardType": "Darkness",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-055",
+      "rarity": "Double Rare",
+      "cardType": "Metal",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-056",
+      "rarity": "Common",
+      "cardType": "Metal",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-057",
+      "rarity": "Common",
+      "cardType": "Metal",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-058",
+      "rarity": "Uncommon",
+      "cardType": "Metal",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-059",
+      "rarity": "Common",
+      "cardType": "Metal",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-060",
+      "rarity": "Common",
+      "cardType": "Colorless",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-061",
+      "rarity": "Uncommon",
+      "cardType": "Colorless",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-062",
+      "rarity": "Double Rare",
+      "cardType": "Colorless",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-063",
+      "rarity": "Common",
+      "cardType": "Colorless",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-064",
+      "rarity": "Common",
+      "cardType": "Colorless",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-065",
+      "rarity": "Uncommon",
+      "cardType": "Colorless",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-066",
+      "rarity": "Common",
+      "cardType": "Colorless",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-067",
+      "rarity": "Common",
+      "cardType": "Colorless",
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-068",
+      "rarity": "Common",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-069",
+      "rarity": "Common",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-070",
+      "rarity": "Uncommon",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-071",
+      "rarity": "Common",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-072",
+      "rarity": "Common",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-073",
+      "rarity": "Uncommon",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-074",
+      "rarity": "Common",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-075",
+      "rarity": "Uncommon",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-076",
+      "rarity": "Uncommon",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-077",
+      "rarity": "Uncommon",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-078",
+      "rarity": "Uncommon",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-079",
+      "rarity": "Uncommon",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-080",
+      "rarity": "Common",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-081",
+      "rarity": "Uncommon",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-082",
+      "rarity": "Common",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-083",
+      "rarity": "Common",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-084",
+      "rarity": "Uncommon",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-085",
+      "rarity": "Uncommon",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-086",
+      "rarity": "Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-087",
+      "rarity": "Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-088",
+      "rarity": "Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-089",
+      "rarity": "Illustration Rare",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-090",
+      "rarity": "Illustration Rare",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-091",
+      "rarity": "Illustration Rare",
+      "cardType": "Fire",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-092",
+      "rarity": "Illustration Rare",
+      "cardType": "Water",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-093",
+      "rarity": "Illustration Rare",
+      "cardType": "Lightning",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-094",
+      "rarity": "Illustration Rare",
+      "cardType": "Psychic",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-095",
+      "rarity": "Illustration Rare",
+      "cardType": "Psychic",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-096",
+      "rarity": "Illustration Rare",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-097",
+      "rarity": "Illustration Rare",
+      "cardType": "Darkness",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-098",
+      "rarity": "Illustration Rare",
+      "cardType": "Metal",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-099",
+      "rarity": "Illustration Rare",
+      "cardType": "Colorless",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-100",
+      "rarity": "Ultra Rare",
+      "cardType": "Grass",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-101",
+      "rarity": "Ultra Rare",
+      "cardType": "Fire",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-102",
+      "rarity": "Ultra Rare",
+      "cardType": "Water",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-103",
+      "rarity": "Ultra Rare",
+      "cardType": "Psychic",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-104",
+      "rarity": "Ultra Rare",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-105",
+      "rarity": "Ultra Rare",
+      "cardType": "Darkness",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-106",
+      "rarity": "Ultra Rare",
+      "cardType": "Metal",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-107",
+      "rarity": "Ultra Rare",
+      "cardType": "Colorless",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-108",
+      "rarity": "Ultra Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-109",
+      "rarity": "Ultra Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-110",
+      "rarity": "Ultra Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-111",
+      "rarity": "Ultra Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-112",
+      "rarity": "Ultra Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-113",
+      "rarity": "Ultra Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-114",
+      "rarity": "Ultra Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-115",
+      "rarity": "Ultra Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-116",
+      "rarity": "Ultra Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-117",
+      "rarity": "Ultra Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-118",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Water",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-119",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Psychic",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-120",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-121",
+      "rarity": "Special Illustration Rare",
+      "cardType": "Colorless",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-122",
+      "rarity": "Special Illustration Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-123",
+      "rarity": "Special Illustration Rare",
+      "cardType": null,
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    },
+    {
+      "cardId": "por-124",
+      "rarity": "Mega Hyper Rare",
+      "cardType": "Fighting",
+      "inventoryVariants": [
+        "normal",
+        "holo",
+        "other"
+      ]
+    }
+  ]
+}
