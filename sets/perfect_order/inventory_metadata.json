@@ -2,8 +2,8 @@
   "inventoryMetadataVersion": 1,
   "setId": "perfect-order",
   "source": {
-    "kind": "golden-reference-calibration",
-    "note": "Seeded read-only from the live Perfect Order inventory tab on 2026-09-20. Future sets must generate equivalent explicit metadata from normalized source data/rules before any Sheet write."
+    "kind": "reconciled-authority",
+    "note": "Reconciled on 2026-11-18 after read-only comparison against the live Perfect Order inventory tab and Inventory Sheet Automation v2 holo-only rules. The prior golden-reference calibration incorrectly marked 45 holo-only cards as Normal + Holo + Other."
   },
   "cards": [
     {
@@ -132,9 +132,7 @@
       "rarity": "Double Rare",
       "cardType": "Grass",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -175,9 +173,7 @@
       "rarity": "Double Rare",
       "cardType": "Fire",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -229,9 +225,7 @@
       "rarity": "Double Rare",
       "cardType": "Water",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -239,9 +233,7 @@
       "rarity": "Double Rare",
       "cardType": "Water",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -337,9 +329,7 @@
       "rarity": "Double Rare",
       "cardType": "Psychic",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -512,9 +502,7 @@
       "rarity": "Double Rare",
       "cardType": "Fighting",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -577,9 +565,7 @@
       "rarity": "Double Rare",
       "cardType": "Darkness",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -598,9 +584,7 @@
       "rarity": "Double Rare",
       "cardType": "Metal",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -674,9 +658,7 @@
       "rarity": "Double Rare",
       "cardType": "Colorless",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -970,9 +952,7 @@
       "rarity": "Illustration Rare",
       "cardType": "Grass",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -980,9 +960,7 @@
       "rarity": "Illustration Rare",
       "cardType": "Grass",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -990,9 +968,7 @@
       "rarity": "Illustration Rare",
       "cardType": "Fire",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1000,9 +976,7 @@
       "rarity": "Illustration Rare",
       "cardType": "Water",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1010,9 +984,7 @@
       "rarity": "Illustration Rare",
       "cardType": "Lightning",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1020,9 +992,7 @@
       "rarity": "Illustration Rare",
       "cardType": "Psychic",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1030,9 +1000,7 @@
       "rarity": "Illustration Rare",
       "cardType": "Psychic",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1040,9 +1008,7 @@
       "rarity": "Illustration Rare",
       "cardType": "Fighting",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1050,9 +1016,7 @@
       "rarity": "Illustration Rare",
       "cardType": "Darkness",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1060,9 +1024,7 @@
       "rarity": "Illustration Rare",
       "cardType": "Metal",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1070,9 +1032,7 @@
       "rarity": "Illustration Rare",
       "cardType": "Colorless",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1080,9 +1040,7 @@
       "rarity": "Ultra Rare",
       "cardType": "Grass",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1090,9 +1048,7 @@
       "rarity": "Ultra Rare",
       "cardType": "Fire",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1100,9 +1056,7 @@
       "rarity": "Ultra Rare",
       "cardType": "Water",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1110,9 +1064,7 @@
       "rarity": "Ultra Rare",
       "cardType": "Psychic",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1120,9 +1072,7 @@
       "rarity": "Ultra Rare",
       "cardType": "Fighting",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1130,9 +1080,7 @@
       "rarity": "Ultra Rare",
       "cardType": "Darkness",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1140,9 +1088,7 @@
       "rarity": "Ultra Rare",
       "cardType": "Metal",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1150,9 +1096,7 @@
       "rarity": "Ultra Rare",
       "cardType": "Colorless",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1160,9 +1104,7 @@
       "rarity": "Ultra Rare",
       "cardType": null,
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1170,9 +1112,7 @@
       "rarity": "Ultra Rare",
       "cardType": null,
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1180,9 +1120,7 @@
       "rarity": "Ultra Rare",
       "cardType": null,
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1190,9 +1128,7 @@
       "rarity": "Ultra Rare",
       "cardType": null,
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1200,9 +1136,7 @@
       "rarity": "Ultra Rare",
       "cardType": null,
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1210,9 +1144,7 @@
       "rarity": "Ultra Rare",
       "cardType": null,
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1220,9 +1152,7 @@
       "rarity": "Ultra Rare",
       "cardType": null,
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1230,9 +1160,7 @@
       "rarity": "Ultra Rare",
       "cardType": null,
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1240,9 +1168,7 @@
       "rarity": "Ultra Rare",
       "cardType": null,
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1250,9 +1176,7 @@
       "rarity": "Ultra Rare",
       "cardType": null,
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1260,9 +1184,7 @@
       "rarity": "Special Illustration Rare",
       "cardType": "Water",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1270,9 +1192,7 @@
       "rarity": "Special Illustration Rare",
       "cardType": "Psychic",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1280,9 +1200,7 @@
       "rarity": "Special Illustration Rare",
       "cardType": "Fighting",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1290,9 +1208,7 @@
       "rarity": "Special Illustration Rare",
       "cardType": "Colorless",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1300,9 +1216,7 @@
       "rarity": "Special Illustration Rare",
       "cardType": null,
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1310,9 +1224,7 @@
       "rarity": "Special Illustration Rare",
       "cardType": null,
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1320,9 +1232,7 @@
       "rarity": "Mega Hyper Rare",
       "cardType": "Fighting",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ]
     }
   ]
