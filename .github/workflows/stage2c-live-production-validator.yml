@@ -1,0 +1,56 @@
+name: Stage 2C Live Production Validator
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  torture:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout recognizer candidate
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run Stage 2A adapter torture suite
+        run: python tests/stage2a_sheets_adapter_torture.py
+
+      - name: Run Stage 2C torture suite
+        run: python tests/stage2c_live_validator_torture.py
+
+  live-readonly:
+    needs: torture
+    if: ${{ secrets.GOOGLE_SHEETS_READONLY_CREDENTIALS_JSON != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout recognizer candidate
+        uses: actions/checkout@v4
+        with:
+          path: recognizer
+
+      - name: Checkout production frontend read-only
+        uses: actions/checkout@v4
+        with:
+          repository: Young-nick-young/pokemon-card-scanner
+          ref: 78a68e9cf0575fe81e36d5c219ac80d9680322bb
+          path: frontend
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install read-only transport dependencies
+        run: python -m pip install google-auth requests
+
+      - name: Run integrated Stage 2C validator
+        working-directory: recognizer
+        env:
+          GOOGLE_SHEETS_READONLY_CREDENTIALS_JSON: ${{ secrets.GOOGLE_SHEETS_READONLY_CREDENTIALS_JSON }}
+        run: python tools/validate_production_live.py --frontend-root ../frontend --json
