@@ -417,6 +417,9 @@ def read_snapshot(
     values = reader.batch_get_values(plan.spreadsheet_id, plan.ranges)
     if not isinstance(metadata, dict) or not isinstance(values, dict):
         raise ReadEvidenceUnavailable("Sheet reader returned malformed read evidence.")
+    required_meta = ("spreadsheetId", "title", "sheet")
+    if any(key not in metadata for key in required_meta):
+        raise ReadEvidenceUnavailable("Sheet reader returned incomplete metadata evidence.")
     return metadata, values
 
 
