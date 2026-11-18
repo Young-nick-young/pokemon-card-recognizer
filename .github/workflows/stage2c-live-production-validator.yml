@@ -2,6 +2,9 @@ name: Stage 2C Live Production Validator
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feature/automatic-production-validator-v1
 
 permissions:
   contents: read
