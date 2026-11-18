@@ -29,7 +29,6 @@ jobs:
 
   live-readonly:
     needs: torture
-    if: ${{ secrets.GOOGLE_SHEETS_READONLY_CREDENTIALS_JSON != '' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout recognizer candidate
@@ -52,8 +51,14 @@ jobs:
       - name: Install read-only transport dependencies
         run: python -m pip install google-auth requests
 
-      - name: Run integrated Stage 2C validator
+      - name: Run integrated Stage 2C validator when read-only credentials exist
         working-directory: recognizer
         env:
           GOOGLE_SHEETS_READONLY_CREDENTIALS_JSON: ${{ secrets.GOOGLE_SHEETS_READONLY_CREDENTIALS_JSON }}
-        run: python tools/validate_production_live.py --frontend-root ../frontend --json
+        shell: bash
+        run: |
+          if [ -z "$GOOGLE_SHEETS_READONLY_CREDENTIALS_JSON" ]; then
+            echo "Read-only Google Sheets credential secret is not configured; live validation skipped."
+            exit 0
+          fi
+          python tools/validate_production_live.py --frontend-root ../frontend --json
