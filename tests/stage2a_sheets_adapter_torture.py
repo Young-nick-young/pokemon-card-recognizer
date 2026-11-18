@@ -75,6 +75,11 @@ def make_mock_authority(root: Path, set_id: str, per_card=None):
         ],
     }
     package = root / set_data["schema"]["packagePath"]
+    # Tests that explicitly construct mock metadata must not be shadowed by a
+    # promoted Sheet Plan in the copied fixture repository.
+    plan_path = package / "inventory_sheet_plan.json"
+    if plan_path.exists():
+        plan_path.unlink()
     dump(package / "inventory_metadata.json", data)
     return package / "inventory_metadata.json"
 
