@@ -20,6 +20,7 @@ from pathlib import Path
 from typing import Any, Protocol, Sequence
 
 PASS = "PASS"
+WARNING = "WARNING"
 FAIL = "FAIL"
 NOT_VERIFIED = "NOT VERIFIED"
 
@@ -421,10 +422,11 @@ def read_snapshot(
 
 def compare_snapshot(
     plan: SheetReadPlan,
-    authority: InventoryAuthority,
+    authority: InventoryAuthority | None,
     identities: Sequence[ExpectedIdentity],
     metadata: dict[str, Any],
     values_by_range: dict[str, list[list[Any]]],
+    accepted_live_names: dict[str, Sequence[str]] | None = None,
 ) -> list[SheetFinding]:
     findings: list[SheetFinding] = []
 
@@ -497,16 +499,30 @@ def compare_snapshot(
                 actual=identity[0],
                 blocks=True,
             ))
-        if str(identity[1] or "") != expected_identity.name:
-            findings.append(_finding(
-                FAIL,
-                f"row {sheet_row} card name",
-                plan.identity_range,
-                "Card name does not match the accepted identity at this row.",
-                expected=expected_identity.name,
-                actual=identity[1],
-                blocks=True,
-            ))
+        actual_name = str(identity[1] or "")
+        accepted_names = set((accepted_live_names or {}).get(expected_identity.canonical_id, ()))
+        if actual_name != expected_identity.name:
+            if actual_name in accepted_names and expected_identity.name in accepted_names:
+                findings.append(_finding(
+                    WARNING,
+                    f"row {sheet_row} card name",
+                    plan.identity_range,
+                    "Live card name uses an explicitly accepted alternate representation.",
+                    expected=expected_identity.name,
+                    actual=actual_name,
+                    impact="maintenance",
+                    blocks=False,
+                ))
+            else:
+                findings.append(_finding(
+                    FAIL,
+                    f"row {sheet_row} card name",
+                    plan.identity_range,
+                    "Card name does not match the accepted identity at this row.",
+                    expected=expected_identity.name,
+                    actual=identity[1],
+                    blocks=True,
+                ))
         if actual_id != expected_identity.legacy_id:
             findings.append(_finding(
                 FAIL,
@@ -518,6 +534,8 @@ def compare_snapshot(
                 blocks=True,
             ))
 
+        if authority is None:
+            continue
         available = authority.variants_by_index[index]
         row_values = variant_rows[index]
         for variant, offset in variant_offsets.items():
@@ -619,7 +637,18 @@ def compare_snapshot(
             },
         )
 
-    if not any(f.status == FAIL for f in findings):
+    if authority is None:
+        findings.append(_finding(
+            NOT_VERIFIED,
+            "inventory availability authority",
+            "inventory metadata / Sheet Plan",
+            "Accepted per-card inventory availability evidence is unavailable; identity and Card ID checks were still performed.",
+            expected="independent explicit per-card inventory authority",
+            actual="authority unavailable",
+            impact="data safety",
+            blocks=False,
+        ))
+    elif not any(f.status == FAIL and "variant" in f.check for f in findings):
         findings.append(_finding(
             PASS,
             "variant availability representation",
@@ -642,21 +671,14 @@ def validate_with_reader(
     """Read and compare one set. Read/auth absence becomes NOT VERIFIED."""
     try:
         plan = build_read_plan(baseline, set_id)
-        authority = load_inventory_authority(recognizer_root, baseline, set_id)
         identities = load_expected_identities(recognizer_root, baseline, set_id)
+        try:
+            authority = load_inventory_authority(recognizer_root, baseline, set_id)
+        except AuthorityUnavailable:
+            authority = None
         metadata, values = read_snapshot(reader, plan)
-        return compare_snapshot(plan, authority, identities, metadata, values)
-    except AuthorityUnavailable as error:
-        return [_finding(
-            NOT_VERIFIED,
-            "inventory availability authority",
-            "inventory metadata / Sheet Plan",
-            "Accepted per-card inventory availability evidence is unavailable.",
-            expected="inventory_sheet_plan.json or inventory_metadata.json",
-            actual=sanitize_for_report(str(error)),
-            impact="data safety",
-            blocks=False,
-        )]
+        aliases = (baseline["sets"][set_id].get("acceptedLiveIdentityAliases") or {})
+        return compare_snapshot(plan, authority, identities, metadata, values, aliases)
     except AuthenticationUnavailable:
         return [_finding(
             NOT_VERIFIED,
@@ -686,4 +708,6 @@ def overall_status(findings: Sequence[SheetFinding]) -> str:
         return FAIL
     if any(f.status == NOT_VERIFIED for f in findings):
         return NOT_VERIFIED
+    if any(f.status == WARNING for f in findings):
+        return WARNING
     return PASS
