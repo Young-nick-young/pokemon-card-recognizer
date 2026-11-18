@@ -689,9 +689,7 @@
       "cardType": "Grass",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-12/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-12/large\",4,90,65)",
@@ -700,10 +698,10 @@
         "name": "Decidueye ex",
         "rarity": "Double Rare",
         "cardType": "Grass",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F24:I24)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -832,9 +830,7 @@
       "cardType": "Fire",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-16/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-16/large\",4,90,65)",
@@ -843,10 +839,10 @@
         "name": "Salazzle ex",
         "rarity": "Double Rare",
         "cardType": "Fire",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F28:I28)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -1011,9 +1007,7 @@
       "cardType": "Water",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-21/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-21/large\",4,90,65)",
@@ -1022,10 +1016,10 @@
         "name": "Mega Starmie ex",
         "rarity": "Double Rare",
         "cardType": "Water",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F33:I33)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -1046,9 +1040,7 @@
       "cardType": "Water",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-22/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-22/large\",4,90,65)",
@@ -1057,10 +1049,10 @@
         "name": "Lapras ex",
         "rarity": "Double Rare",
         "cardType": "Water",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F34:I34)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -1369,9 +1361,7 @@
       "cardType": "Psychic",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-31/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-31/large\",4,90,65)",
@@ -1380,10 +1370,10 @@
         "name": "Mega Clefable ex",
         "rarity": "Double Rare",
         "cardType": "Psychic",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F43:I43)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -1944,9 +1934,7 @@
       "cardType": "Fighting",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-47/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-47/large\",4,90,65)",
@@ -1955,10 +1943,10 @@
         "name": "Mega Zygarde ex",
         "rarity": "Double Rare",
         "cardType": "Fighting",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F59:I59)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -2159,9 +2147,7 @@
       "cardType": "Darkness",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-53/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-53/large\",4,90,65)",
@@ -2170,10 +2156,10 @@
         "name": "Yveltal ex",
         "rarity": "Double Rare",
         "cardType": "Darkness",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F65:I65)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -2230,9 +2216,7 @@
       "cardType": "Metal",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-55/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-55/large\",4,90,65)",
@@ -2241,10 +2225,10 @@
         "name": "Mega Skarmory ex",
         "rarity": "Double Rare",
         "cardType": "Metal",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F67:I67)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -2481,9 +2465,7 @@
       "cardType": "Colorless",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-62/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-62/large\",4,90,65)",
@@ -2492,10 +2474,10 @@
         "name": "Meowth ex",
         "rarity": "Double Rare",
         "cardType": "Colorless",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F74:I74)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3452,9 +3434,7 @@
       "cardType": "Grass",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-89/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-89/large\",4,90,65)",
@@ -3463,10 +3443,10 @@
         "name": "Spewpa",
         "rarity": "Illustration Rare",
         "cardType": "Grass",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F101:I101)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3487,9 +3467,7 @@
       "cardType": "Grass",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-90/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-90/large\",4,90,65)",
@@ -3498,10 +3476,10 @@
         "name": "Rowlet",
         "rarity": "Illustration Rare",
         "cardType": "Grass",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F102:I102)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3522,9 +3500,7 @@
       "cardType": "Fire",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-91/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-91/large\",4,90,65)",
@@ -3533,10 +3509,10 @@
         "name": "Talonflame",
         "rarity": "Illustration Rare",
         "cardType": "Fire",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F103:I103)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3557,9 +3533,7 @@
       "cardType": "Water",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-92/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-92/large\",4,90,65)",
@@ -3568,10 +3542,10 @@
         "name": "Aurorus",
         "rarity": "Illustration Rare",
         "cardType": "Water",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F104:I104)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3592,9 +3566,7 @@
       "cardType": "Lightning",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-93/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-93/large\",4,90,65)",
@@ -3603,10 +3575,10 @@
         "name": "Dedenne",
         "rarity": "Illustration Rare",
         "cardType": "Lightning",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F105:I105)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3627,9 +3599,7 @@
       "cardType": "Psychic",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-94/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-94/large\",4,90,65)",
@@ -3638,10 +3608,10 @@
         "name": "Clefairy",
         "rarity": "Illustration Rare",
         "cardType": "Psychic",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F106:I106)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3662,9 +3632,7 @@
       "cardType": "Psychic",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-95/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-95/large\",4,90,65)",
@@ -3673,10 +3641,10 @@
         "name": "Espurr",
         "rarity": "Illustration Rare",
         "cardType": "Psychic",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F107:I107)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3697,9 +3665,7 @@
       "cardType": "Fighting",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-96/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-96/large\",4,90,65)",
@@ -3708,10 +3674,10 @@
         "name": "Probopass",
         "rarity": "Illustration Rare",
         "cardType": "Fighting",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F108:I108)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3732,9 +3698,7 @@
       "cardType": "Darkness",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-97/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-97/large\",4,90,65)",
@@ -3743,10 +3707,10 @@
         "name": "Drapion",
         "rarity": "Illustration Rare",
         "cardType": "Darkness",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F109:I109)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3767,9 +3731,7 @@
       "cardType": "Metal",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-98/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-98/large\",4,90,65)",
@@ -3778,10 +3740,10 @@
         "name": "Doublade",
         "rarity": "Illustration Rare",
         "cardType": "Metal",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F110:I110)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3802,9 +3764,7 @@
       "cardType": "Colorless",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-99/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-99/large\",4,90,65)",
@@ -3813,10 +3773,10 @@
         "name": "Raticate",
         "rarity": "Illustration Rare",
         "cardType": "Colorless",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F111:I111)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3837,9 +3797,7 @@
       "cardType": "Grass",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-100/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-100/large\",4,90,65)",
@@ -3848,10 +3806,10 @@
         "name": "Decidueye ex",
         "rarity": "Ultra Rare",
         "cardType": "Grass",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F112:I112)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3872,9 +3830,7 @@
       "cardType": "Fire",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-101/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-101/large\",4,90,65)",
@@ -3883,10 +3839,10 @@
         "name": "Salazzle ex",
         "rarity": "Ultra Rare",
         "cardType": "Fire",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F113:I113)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3907,9 +3863,7 @@
       "cardType": "Water",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-102/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-102/large\",4,90,65)",
@@ -3918,10 +3872,10 @@
         "name": "Mega Starmie ex",
         "rarity": "Ultra Rare",
         "cardType": "Water",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F114:I114)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3942,9 +3896,7 @@
       "cardType": "Psychic",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-103/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-103/large\",4,90,65)",
@@ -3953,10 +3905,10 @@
         "name": "Mega Clefable ex",
         "rarity": "Ultra Rare",
         "cardType": "Psychic",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F115:I115)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -3977,9 +3929,7 @@
       "cardType": "Fighting",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-104/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-104/large\",4,90,65)",
@@ -3988,10 +3938,10 @@
         "name": "Mega Zygarde ex",
         "rarity": "Ultra Rare",
         "cardType": "Fighting",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F116:I116)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4012,9 +3962,7 @@
       "cardType": "Darkness",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-105/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-105/large\",4,90,65)",
@@ -4023,10 +3971,10 @@
         "name": "Yveltal ex",
         "rarity": "Ultra Rare",
         "cardType": "Darkness",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F117:I117)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4047,9 +3995,7 @@
       "cardType": "Metal",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-106/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-106/large\",4,90,65)",
@@ -4058,10 +4004,10 @@
         "name": "Mega Skarmory ex",
         "rarity": "Ultra Rare",
         "cardType": "Metal",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F118:I118)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4082,9 +4028,7 @@
       "cardType": "Colorless",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-107/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-107/large\",4,90,65)",
@@ -4093,10 +4037,10 @@
         "name": "Meowth ex",
         "rarity": "Ultra Rare",
         "cardType": "Colorless",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F119:I119)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4117,9 +4061,7 @@
       "cardType": null,
       "imageUrl": "https://images.scrydex.com/pokemon/me3-108/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-108/large\",4,90,65)",
@@ -4128,10 +4070,10 @@
         "name": "Energy Recycler",
         "rarity": "Ultra Rare",
         "cardType": null,
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F120:I120)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4152,9 +4094,7 @@
       "cardType": null,
       "imageUrl": "https://images.scrydex.com/pokemon/me3-109/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-109/large\",4,90,65)",
@@ -4163,10 +4103,10 @@
         "name": "Forest of Vitality",
         "rarity": "Ultra Rare",
         "cardType": null,
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F121:I121)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4187,9 +4127,7 @@
       "cardType": null,
       "imageUrl": "https://images.scrydex.com/pokemon/me3-110/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-110/large\",4,90,65)",
@@ -4198,10 +4136,10 @@
         "name": "Jacinthe",
         "rarity": "Ultra Rare",
         "cardType": null,
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F122:I122)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4222,9 +4160,7 @@
       "cardType": null,
       "imageUrl": "https://images.scrydex.com/pokemon/me3-111/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-111/large\",4,90,65)",
@@ -4233,10 +4169,10 @@
         "name": "Lumiose City",
         "rarity": "Ultra Rare",
         "cardType": null,
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F123:I123)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4257,9 +4193,7 @@
       "cardType": null,
       "imageUrl": "https://images.scrydex.com/pokemon/me3-112/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-112/large\",4,90,65)",
@@ -4268,10 +4202,10 @@
         "name": "Naveen",
         "rarity": "Ultra Rare",
         "cardType": null,
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F124:I124)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4292,9 +4226,7 @@
       "cardType": null,
       "imageUrl": "https://images.scrydex.com/pokemon/me3-113/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-113/large\",4,90,65)",
@@ -4303,10 +4235,10 @@
         "name": "Poké Pad",
         "rarity": "Ultra Rare",
         "cardType": null,
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F125:I125)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4327,9 +4259,7 @@
       "cardType": null,
       "imageUrl": "https://images.scrydex.com/pokemon/me3-114/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-114/large\",4,90,65)",
@@ -4338,10 +4268,10 @@
         "name": "Rosa's Encouragement",
         "rarity": "Ultra Rare",
         "cardType": null,
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F126:I126)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4362,9 +4292,7 @@
       "cardType": null,
       "imageUrl": "https://images.scrydex.com/pokemon/me3-115/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-115/large\",4,90,65)",
@@ -4373,10 +4301,10 @@
         "name": "Sacred Ash",
         "rarity": "Ultra Rare",
         "cardType": null,
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F127:I127)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4397,9 +4325,7 @@
       "cardType": null,
       "imageUrl": "https://images.scrydex.com/pokemon/me3-116/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-116/large\",4,90,65)",
@@ -4408,10 +4334,10 @@
         "name": "Tarragon",
         "rarity": "Ultra Rare",
         "cardType": null,
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F128:I128)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4432,9 +4358,7 @@
       "cardType": null,
       "imageUrl": "https://images.scrydex.com/pokemon/me3-117/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-117/large\",4,90,65)",
@@ -4443,10 +4367,10 @@
         "name": "Wondrous Patch",
         "rarity": "Ultra Rare",
         "cardType": null,
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F129:I129)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4467,9 +4391,7 @@
       "cardType": "Water",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-118/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-118/large\",4,90,65)",
@@ -4478,10 +4400,10 @@
         "name": "Mega Starmie ex",
         "rarity": "Special Illustration Rare",
         "cardType": "Water",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F130:I130)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4502,9 +4424,7 @@
       "cardType": "Psychic",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-119/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-119/large\",4,90,65)",
@@ -4513,10 +4433,10 @@
         "name": "Mega Clefable ex",
         "rarity": "Special Illustration Rare",
         "cardType": "Psychic",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F131:I131)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4537,9 +4457,7 @@
       "cardType": "Fighting",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-120/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-120/large\",4,90,65)",
@@ -4548,10 +4466,10 @@
         "name": "Mega Zygarde ex",
         "rarity": "Special Illustration Rare",
         "cardType": "Fighting",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F132:I132)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4572,9 +4490,7 @@
       "cardType": "Colorless",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-121/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-121/large\",4,90,65)",
@@ -4583,10 +4499,10 @@
         "name": "Meowth ex",
         "rarity": "Special Illustration Rare",
         "cardType": "Colorless",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F133:I133)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4607,9 +4523,7 @@
       "cardType": null,
       "imageUrl": "https://images.scrydex.com/pokemon/me3-122/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-122/large\",4,90,65)",
@@ -4618,10 +4532,10 @@
         "name": "Jacinthe",
         "rarity": "Special Illustration Rare",
         "cardType": null,
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F134:I134)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4642,9 +4556,7 @@
       "cardType": null,
       "imageUrl": "https://images.scrydex.com/pokemon/me3-123/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-123/large\",4,90,65)",
@@ -4653,10 +4565,10 @@
         "name": "Rosa's Encouragement",
         "rarity": "Special Illustration Rare",
         "cardType": null,
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F135:I135)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
@@ -4677,9 +4589,7 @@
       "cardType": "Fighting",
       "imageUrl": "https://images.scrydex.com/pokemon/me3-124/large",
       "inventoryVariants": [
-        "normal",
-        "holo",
-        "other"
+        "holo"
       ],
       "values": {
         "imageFormula": "=IMAGE(\"https://images.scrydex.com/pokemon/me3-124/large\",4,90,65)",
@@ -4688,10 +4598,10 @@
         "name": "Mega Zygarde ex",
         "rarity": "Mega Hyper Rare",
         "cardType": "Fighting",
-        "normalQty": 0,
+        "normalQty": null,
         "reverseHoloQty": null,
         "holoQty": 0,
-        "otherQty": 0,
+        "otherQty": null,
         "totalFormula": "=SUM(F136:I136)",
         "normalPriceBhd": null,
         "reversePriceBhd": null,
