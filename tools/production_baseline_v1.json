@@ -350,7 +350,17 @@
           "id": "DRI_LEGACY_IMAGE_SET",
           "meaning": "DRI frontend intentionally uses imageSet sv10."
         }
-      ]
+      ],
+      "acceptedLiveIdentityAliases": {
+        "dri-114": [
+          "Team Rocket's Nidoran F",
+          "Team Rocket's Nidoran♀"
+        ],
+        "dri-117": [
+          "Team Rocket's Nidoran M",
+          "Team Rocket's Nidoran♂"
+        ]
+      }
     },
     "perfect-order": {
       "displayName": "Perfect Order",
