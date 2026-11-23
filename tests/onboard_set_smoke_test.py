@@ -29,7 +29,7 @@ class OnboardSetSmokeTest(unittest.TestCase):
         }), encoding="utf-8")
         return path
 
-    def test_success_runs_generate_then_validate_and_writes_linking_report(self):
+    def test_candidate_without_full_links_is_not_ready(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             definition = self.make_definition(root)
@@ -42,7 +42,7 @@ class OnboardSetSmokeTest(unittest.TestCase):
                     candidate_output_root=out,
                 )
 
-            self.assertTrue(ok)
+            self.assertFalse(ok)
             generate.assert_called_once()
             validate.assert_called_once()
             self.assertEqual(validate.call_args.args[0], "example-set")
@@ -66,6 +66,13 @@ class OnboardSetSmokeTest(unittest.TestCase):
                 "sets/example_set/inventory_sheet_plan.json"
             )
 
+            readiness = json.loads(
+                (out / "onboarding_readiness_report.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(readiness["status"], "NOT READY")
+            self.assertIn("frontend link not verified", readiness["blockingReasons"])
+            self.assertIn("test Sheet has not passed", readiness["blockingReasons"])
+
     def test_validation_failure_blocks_readiness(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -75,6 +82,72 @@ class OnboardSetSmokeTest(unittest.TestCase):
                 ok = onboard_set.onboard(definition, recognizer_root=root)
 
             self.assertFalse(ok)
+
+    def test_full_verified_candidate_is_ready(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            frontend = root / "frontend"
+            apps = root / "apps"
+            frontend.mkdir()
+            apps.mkdir()
+            definition = self.make_definition(root)
+            out = root / "candidate"
+            result_path = root / "test-sheet-result.json"
+            result_path.write_text(
+                json.dumps({"status": "PASS", "productionTouched": False}),
+                encoding="utf-8",
+            )
+
+            with patch.object(onboard_set, "generate", return_value={"set_id": "example-set"}), \
+                 patch.object(onboard_set, "validate", return_value=True):
+                ok = onboard_set.onboard(
+                    definition,
+                    recognizer_root=root,
+                    frontend_root=frontend,
+                    apps_script_root=apps,
+                    candidate_output_root=out,
+                    test_sheet_result_path=result_path,
+                )
+
+            self.assertTrue(ok)
+            readiness = json.loads(
+                (out / "onboarding_readiness_report.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(readiness["status"], "READY")
+            self.assertEqual(readiness["blockingReasons"], [])
+
+    def test_failed_test_sheet_blocks_readiness(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            frontend = root / "frontend"
+            apps = root / "apps"
+            frontend.mkdir()
+            apps.mkdir()
+            definition = self.make_definition(root)
+            out = root / "candidate"
+            result_path = root / "test-sheet-result.json"
+            result_path.write_text(
+                json.dumps({"status": "FAIL", "productionTouched": False}),
+                encoding="utf-8",
+            )
+
+            with patch.object(onboard_set, "generate", return_value={"set_id": "example-set"}), \
+                 patch.object(onboard_set, "validate", return_value=True):
+                ok = onboard_set.onboard(
+                    definition,
+                    recognizer_root=root,
+                    frontend_root=frontend,
+                    apps_script_root=apps,
+                    candidate_output_root=out,
+                    test_sheet_result_path=result_path,
+                )
+
+            self.assertFalse(ok)
+            readiness = json.loads(
+                (out / "onboarding_readiness_report.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(readiness["status"], "NOT READY")
+            self.assertIn("test Sheet has not passed", readiness["blockingReasons"])
 
     def test_generated_set_id_mismatch_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
