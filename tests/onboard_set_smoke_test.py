@@ -29,18 +29,32 @@ class OnboardSetSmokeTest(unittest.TestCase):
         }), encoding="utf-8")
         return path
 
-    def test_success_runs_generate_then_validate(self):
+    def test_success_runs_generate_then_validate_and_writes_linking_report(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             definition = self.make_definition(root)
+            out = root / "candidate"
             with patch.object(onboard_set, "generate", return_value={"set_id": "example-set"}) as generate, \
                  patch.object(onboard_set, "validate", return_value=True) as validate:
-                ok = onboard_set.onboard(definition, recognizer_root=root)
+                ok = onboard_set.onboard(
+                    definition,
+                    recognizer_root=root,
+                    candidate_output_root=out,
+                )
 
             self.assertTrue(ok)
             generate.assert_called_once()
             validate.assert_called_once()
             self.assertEqual(validate.call_args.args[0], "example-set")
+
+            report = json.loads(
+                (out / "onboarding_linking_report.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(report["candidateValidation"], "PASS")
+            self.assertFalse(report["productionTouched"])
+            self.assertEqual(report["links"]["recognizerRouter"], "prepared")
+            self.assertEqual(report["links"]["frontend"], "candidate-file-prepared-only")
+            self.assertEqual(report["links"]["googleSheet"], "not-created-or-modified")
 
     def test_validation_failure_blocks_readiness(self):
         with tempfile.TemporaryDirectory() as tmp:
