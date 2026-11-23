@@ -1,0 +1,77 @@
+name: 30th Celebration Apps Script Read-Only Probe
+
+on:
+  push:
+    branches:
+      - candidate/30th-celebration-base
+    paths:
+      - ".github/workflows/30th-apps-script-probe.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe existing and new set routes
+        env:
+          SCRIPT_URL: "https://script.google.com/a/macros/ikns.edu.bh/s/AKfycbxzaDPrnUX_a8P7UXxAQ-lWCCbJ9RG_kiXzvUfERWk41cCDhdY5yIr8S1PK9CAD10vv/exec"
+        run: |
+          python - <<'PY'
+          import json, re, urllib.parse, urllib.request, os
+
+          base = os.environ["SCRIPT_URL"]
+
+          def probe(set_id):
+              params = urllib.parse.urlencode({
+                  "api": "cards",
+                  "callback": "probe",
+                  "setId": set_id,
+                  "_": "30c-promotion-check",
+              })
+              url = base + "?" + params
+              with urllib.request.urlopen(url, timeout=30) as response:
+                  body = response.read().decode("utf-8", errors="replace")
+                  print(f"{set_id}: HTTP {response.status}, bytes={len(body)}")
+                  print(body[:1200])
+                  match = re.fullmatch(r"\s*probe\((.*)\)\s*;?\s*", body, re.S)
+                  if not match:
+                      return {"ok": False, "reason": "not-jsonp", "body": body}
+                  try:
+                      data = json.loads(match.group(1))
+                  except Exception as error:
+                      return {"ok": False, "reason": f"invalid-json: {error}", "body": body}
+                  return {"ok": True, "data": data}
+
+          existing = probe("perfect-order")
+          if not existing["ok"]:
+              raise SystemExit("Existing Perfect Order route probe failed: " + existing["reason"])
+
+          candidate = probe("30th-celebration")
+          if not candidate["ok"]:
+              raise SystemExit("30th Celebration route probe failed: " + candidate["reason"])
+
+          data = candidate["data"]
+          if isinstance(data, dict) and data.get("success") is False:
+              raise SystemExit("30th Celebration backend returned error: " + str(data))
+          if not isinstance(data, list):
+              raise SystemExit("30th Celebration cards response is not an array: " + repr(data)[:500])
+
+          ids = []
+          for card in data:
+              if isinstance(card, dict):
+                  ids.append(str(card.get("cardId") or card.get("Card ID") or ""))
+
+          print("30th Celebration cards:", len(data))
+          print("first card:", data[0] if data else None)
+          print("last card:", data[-1] if data else None)
+
+          if len(data) != 161:
+              raise SystemExit(f"Expected 161 cards, got {len(data)}")
+          if "30C-001" not in ids or "30C-161" not in ids:
+              raise SystemExit("Expected production card IDs were not returned.")
+
+          print("PASS: live Apps Script already routes 30th-celebration correctly.")
+          PY
