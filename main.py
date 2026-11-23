@@ -38,6 +38,11 @@ from sets.mega_evolution.public_package import (
     build_public_package as build_mega_evolution_public_package
 )
 
+from sets.phantasmal_flames import recognizer as phantasmal_flames
+from sets.phantasmal_flames.public_package import (
+    build_public_package as build_phantasmal_flames_public_package
+)
+
 
 # =========================================================
 # SCHEMA V1 SHADOW LOAD
@@ -100,7 +105,8 @@ RECOGNIZERS = {
     "chaos-rising": chaos_rising,
     "pitch-black": pitch_black,
     "30th-celebration": set_30th_celebration,
-    "mega-evolution": mega_evolution
+    "mega-evolution": mega_evolution,
+    "phantasmal-flames": phantasmal_flames
 }
 
 
@@ -137,7 +143,13 @@ SET_ALIASES = {
     "mega_evolution": "mega-evolution",
     "meg": "mega-evolution",
     "me1": "mega-evolution",
-    "me01": "mega-evolution"
+    "me01": "mega-evolution",
+
+    "phantasmal-flames": "phantasmal-flames",
+    "phantasmal_flames": "phantasmal-flames",
+    "pfl": "phantasmal-flames",
+    "me2": "phantasmal-flames",
+    "me02": "phantasmal-flames"
 }
 
 
@@ -374,7 +386,10 @@ def root():
                 set_30th_celebration.get_status(),
 
             "mega-evolution":
-                mega_evolution.get_status()
+                mega_evolution.get_status(),
+
+            "phantasmal-flames":
+                phantasmal_flames.get_status()
         }
     }
 
@@ -471,6 +486,15 @@ def mega_evolution_public_package():
     except Exception as error:
         print("Mega Evolution public package unavailable:", error)
         raise HTTPException(status_code=503, detail={"error": "Public set package unavailable", "set": "mega-evolution"}) from error
+
+
+@app.get("/api/v1/sets/phantasmal-flames/package")
+def phantasmal_flames_public_package():
+    try:
+        return build_phantasmal_flames_public_package()
+    except Exception as error:
+        print("Phantasmal Flames public package unavailable:", error)
+        raise HTTPException(status_code=503, detail={"error": "Public set package unavailable", "set": "phantasmal-flames"}) from error
 
 
 # =========================================================
