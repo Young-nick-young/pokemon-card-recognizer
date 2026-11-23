@@ -50,12 +50,15 @@ jobs:
           python tools/create_set.py candidate_sources/30th_celebration_base/definition.json \
             --candidate-output-root generated/30th-celebration
           python tools/validate_set.py --set 30th-celebration
+          python -m py_compile sets/set_30th_celebration/runtime_metadata.py sets/set_30th_celebration/recognizer.py sets/set_30th_celebration/public_package.py main.py
+          node --check generated/30th-celebration/apps_script/set_30th_celebration_config.gs
+          node --check generated/30th-celebration/frontend/js/sets/30th-celebration.js
           python - <<'PY'
           import json
           from pathlib import Path
-          cards = json.loads(Path("sets/30th_celebration/cards.json").read_text())["cards"]
-          meta = json.loads(Path("sets/30th_celebration/inventory_metadata.json").read_text())["cards"]
-          plan = json.loads(Path("sets/30th_celebration/inventory_sheet_plan.json").read_text())
+          cards = json.loads(Path("sets/set_30th_celebration/cards.json").read_text())["cards"]
+          meta = json.loads(Path("sets/set_30th_celebration/inventory_metadata.json").read_text())["cards"]
+          plan = json.loads(Path("sets/set_30th_celebration/inventory_sheet_plan.json").read_text())
           assert len(cards) == len(meta) == len(plan["rows"]) == 161
           assert [c["number"]["display"] for c in cards[-3:]] == ["R/128","G/128","B/128"]
           assert [r["values"]["collectorNumber"] for r in plan["rows"][-3:]] == ["R","G","B"]
