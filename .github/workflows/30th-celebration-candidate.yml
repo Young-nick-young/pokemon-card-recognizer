@@ -39,15 +39,19 @@ jobs:
             --candidate-output-root generated/30th-celebration
 
       - name: Validate generated recognizer candidate
-        run: python tools/validate_set.py --set 30th-celebration
+        run: |
+          python tools/validate_set.py --set 30th-celebration
+          python -m py_compile sets/set_30th_celebration/runtime_metadata.py sets/set_30th_celebration/recognizer.py sets/set_30th_celebration/public_package.py main.py
+          node --check generated/30th-celebration/apps_script/set_30th_celebration_config.gs
+          node --check generated/30th-celebration/frontend/js/sets/30th-celebration.js
 
       - name: Build 30th Celebration recognition library
         run: |
           python schema_v1_library_builder.py \
             --set-id 30th-celebration \
-            --package sets/30th_celebration \
+            --package sets/set_30th_celebration \
             --expected-records 161 \
-            --output sets/30th_celebration/card_library.pkl
+            --output sets/set_30th_celebration/card_library.pkl
           python tools/validate_set.py --set 30th-celebration --require-library
 
       - name: Upload generated candidate artifact
@@ -55,7 +59,7 @@ jobs:
         with:
           name: 30th-celebration-candidate
           path: |
-            sets/30th_celebration
+            sets/set_30th_celebration
             generated/30th-celebration
           if-no-files-found: error
 
@@ -65,9 +69,9 @@ jobs:
           import json
           from pathlib import Path
 
-          cards = json.loads(Path("sets/30th_celebration/cards.json").read_text())["cards"]
-          meta = json.loads(Path("sets/30th_celebration/inventory_metadata.json").read_text())["cards"]
-          plan = json.loads(Path("sets/30th_celebration/inventory_sheet_plan.json").read_text())
+          cards = json.loads(Path("sets/set_30th_celebration/cards.json").read_text())["cards"]
+          meta = json.loads(Path("sets/set_30th_celebration/inventory_metadata.json").read_text())["cards"]
+          plan = json.loads(Path("sets/set_30th_celebration/inventory_sheet_plan.json").read_text())
 
           assert len(cards) == 161
           assert len(meta) == 161
@@ -134,10 +138,10 @@ jobs:
       - name: Commit validated generated candidate
         if: success()
         run: |
-          rm -f sets/30th_celebration/card_library.pkl
+          rm -f sets/set_30th_celebration/card_library.pkl
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sets/30th_celebration schema_v1_builds.json main.py generated/30th-celebration
+          git add sets/set_30th_celebration schema_v1_builds.json main.py generated/30th-celebration
           if git diff --cached --quiet; then
             echo "No generated candidate changes to commit."
           else
