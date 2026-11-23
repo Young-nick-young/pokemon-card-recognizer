@@ -143,9 +143,10 @@ def build_inventory_sheet_plan(package_directory):
             raise InventoryPlanError(f"{card_id}: legacyInventoryCardId is required.")
         sort_key=card["number"]["sortKey"]
         display=str(card["number"]["display"]).split("/",1)[0]
+        collector_value=int(display) if display.isdigit() else display
         values={
             "imageFormula": '=IMAGE(' + json.dumps(card["referenceImage"]) + ',4,90,65)',
-            "collectorNumber": int(sort_key),
+            "collectorNumber": collector_value,
             "collectorDisplay": display,
             "name": card["name"],
             "rarity": m["rarity"],
