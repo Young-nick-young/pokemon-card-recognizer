@@ -10,10 +10,14 @@ TOOLS = ROOT / "tools"
 sys.path.insert(0, str(TOOLS))
 sys.path.insert(0, str(ROOT))
 
-from create_set import normalize_definition, build_schema_files
+from create_set import normalize_definition, build_schema_files, python_name, js_constant
 from schema_v1_inventory_sheet_plan import build_inventory_sheet_plan
 
 class LetteredCollectorNumberTest(unittest.TestCase):
+    def test_numbered_set_names_generate_valid_code_identifiers(self):
+        self.assertEqual(python_name("30th-celebration"), "set_30th_celebration")
+        self.assertEqual(js_constant("30th Celebration"), "SET_30TH_CELEBRATION")
+
     def test_lettered_collector_number_keeps_sequential_internal_identity(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
