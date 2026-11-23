@@ -1,0 +1,23 @@
+{
+  "name": "NEW SET NAME",
+  "set_id": "new-set-name",
+  "series": "SERIES / ERA NAME",
+  "display_code": "ABC",
+  "official_code": "OFFICIAL CODE",
+  "dataset_id": "SOURCE DATASET ID",
+  "expected_cards": 100,
+  "denominator": 100,
+
+  "cards_file": "cards_source.json",
+
+  "spreadsheet_id": "GOOGLE SHEET ID",
+  "sheet_name": "NEW SET NAME",
+  "script_url": "APPS SCRIPT WEB APP URL",
+
+  "inventory_variant_rules": {
+    "Common": ["normal", "reverse-holo"],
+    "Uncommon": ["normal", "reverse-holo"],
+    "Rare": ["normal", "reverse-holo"],
+    "Double Rare": ["holo"]
+  }
+}
