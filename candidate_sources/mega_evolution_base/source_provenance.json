@@ -39,7 +39,9 @@
       "Ultra Rare": 22,
       "Special Illustration Rare": 10,
       "Mega Hyper Rare": 2
-    }
+    },
+    "requestedAt": "2026-11-23",
+    "requestedGate": "scaffold-structure"
   },
   "productionImpact": "none"
 }
