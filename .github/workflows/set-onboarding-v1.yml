@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - feature/set-onboarding-v1
+      - candidate/30th-celebration-base
     paths:
       - "tools/onboard_set.py"
       - "tools/create_set.py"
@@ -13,6 +14,7 @@ on:
       - "tests/onboard_set_smoke_test.py"
       - "tests/lettered_collector_number_test.py"
       - "tests/google_sheets_test_harness_safety_test.py"
+      - "candidate_sources/30th_celebration_base/**"
       - ".github/workflows/set-onboarding-v1.yml"
   workflow_dispatch:
 
@@ -34,3 +36,24 @@ jobs:
         run: python tests/google_sheets_test_harness_safety_test.py
       - name: Lettered collector-number tests
         run: python tests/lettered_collector_number_test.py
+
+      - name: Generate and validate 30th Celebration candidate
+        if: github.ref == 'refs/heads/candidate/30th-celebration-base'
+        run: |
+          python tools/create_set.py candidate_sources/30th_celebration_base/definition.json \
+            --candidate-output-root generated/30th-celebration
+          python tools/validate_set.py --set 30th-celebration
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          cards = json.loads(Path("sets/30th_celebration/cards.json").read_text())["cards"]
+          meta = json.loads(Path("sets/30th_celebration/inventory_metadata.json").read_text())["cards"]
+          plan = json.loads(Path("sets/30th_celebration/inventory_sheet_plan.json").read_text())
+          assert len(cards) == len(meta) == len(plan["rows"]) == 161
+          assert [c["number"]["display"] for c in cards[-3:]] == ["R/128","G/128","B/128"]
+          assert [r["values"]["collectorNumber"] for r in plan["rows"][-3:]] == ["R","G","B"]
+          assert sum("holo" in x["inventoryVariants"] for x in meta) == 161
+          assert sum("reverse-holo" in x["inventoryVariants"] for x in meta) == 7
+          assert sum("other" in x["inventoryVariants"] for x in meta) == 2
+          print("PASS: 30th Celebration candidate structure")
+          PY
