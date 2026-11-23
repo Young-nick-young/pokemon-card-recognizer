@@ -68,6 +68,45 @@ def read_set_id(definition: Path) -> str:
         raise ScaffoldError("Definition must contain a non-empty set_id.")
     return set_id.strip().lower()
 
+def write_linking_report(
+    set_id: str,
+    ok: bool,
+    recognizer_root: Path,
+    frontend_root: Path | None,
+    apps_script_root: Path | None,
+    candidate_output_root: Path | None,
+) -> Path:
+    output_root = (
+        Path(candidate_output_root).resolve()
+        if candidate_output_root is not None
+        else recognizer_root / "generated" / set_id
+    )
+    output_root.mkdir(parents=True, exist_ok=True)
+
+    report = {
+        "setId": set_id,
+        "candidateValidation": "PASS" if ok else "FAIL",
+        "productionTouched": False,
+        "links": {
+            "recognizerRouter": "prepared",
+            "recognitionBuildRegistry": "prepared",
+            "frontend": (
+                "prepared-and-registered-in-provided-frontend"
+                if frontend_root is not None
+                else "candidate-file-prepared-only"
+            ),
+            "appsScript": (
+                "config-file-prepared-in-provided-apps-script-root"
+                if apps_script_root is not None
+                else "candidate-config-prepared-only"
+            ),
+            "googleSheet": "not-created-or-modified",
+        },
+    }
+    path = output_root / "onboarding_linking_report.json"
+    path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    return path
+
 def onboard(
     definition: Path,
     recognizer_root: Path = ROOT,
@@ -89,7 +128,7 @@ def onboard(
     print("Production deployment: DISABLED")
     print()
 
-    print("[1/2] Generating candidate files...")
+    print("[1/2] Generating candidate files and links...")
     generated = generate(
         definition,
         recognizer_root=recognizer_root,
@@ -105,7 +144,7 @@ def onboard(
         )
 
     print()
-    print("[2/2] Running recognizer-side validation...")
+    print("[2/2] Running candidate validation...")
     ok = validate(
         set_id,
         recognizer_root=recognizer_root,
@@ -115,7 +154,17 @@ def onboard(
         integration=(frontend_root is not None and apps_script_root is not None),
     )
 
+    report_path = write_linking_report(
+        set_id,
+        ok,
+        recognizer_root,
+        frontend_root,
+        apps_script_root,
+        candidate_output_root,
+    )
+
     print()
+    print("Linking report:", report_path)
     print("=" * 68)
     if ok:
         print("RESULT: CANDIDATE READY FOR REVIEW")
@@ -129,7 +178,7 @@ def onboard(
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(
         description=(
-            "Generate and validate a new Pokémon scanner set candidate in one command. "
+            "Generate, link, and validate a new Pokémon scanner set candidate in one command. "
             "This tool never deploys production."
         )
     )
