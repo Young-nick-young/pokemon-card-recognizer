@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "status": "candidate-only",
+  "setId": "mega-evolution-promos",
+  "problem": "The standard Inventory Sheet Automation v2 is fixed to Normal / Reverse Holo / Holo / Other. MEP contains multiple independently collectible physical printings for the same collector number, so a single Other bucket would merge distinct cards.",
+  "confirmedArchitecture": {
+    "schemaRecognizer": "supports arbitrary declared variant IDs and arbitrary inventory quantity columns",
+    "appsScript": "shared SchemaV1 inventory config can map arbitrary variant IDs to quantity columns",
+    "standardSheetAutomation": "does not support arbitrary variants; hard-coded to four quantity columns and 17-column A:Q layout",
+    "productionSetsImpact": "none; do not modify the standard modern-set v2 path"
+  },
+  "proposedApproach": {
+    "type": "promo-specific inventory Sheet Plan + renderer/validator",
+    "preserveExistingV2": true,
+    "requirements": [
+      "one quantity column per independently collectible MEP physical printing class",
+      "one price column per quantity column",
+      "explicit per-card inventoryVariants only",
+      "unavailable printings remain blank/grey",
+      "scanner variant buttons derive from the explicit public package",
+      "Apps Script routes only to exact declared variant columns",
+      "dated source snapshot because MEP is an ongoing promo series"
+    ]
+  },
+  "evidenceState": {
+    "catalogIdentities": 121,
+    "masterSlotCountsObserved": [
+      168,
+      169
+    ],
+    "gate": "OPEN",
+    "reason": "Sources currently disagree by one physical slot; exact alternate-printing matrix must be reconciled before Sheet generation."
+  }
+}
