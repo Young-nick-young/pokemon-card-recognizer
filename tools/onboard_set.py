@@ -134,6 +134,78 @@ def write_test_sheet_request(
     path.write_text(json.dumps(request, indent=2) + "\n", encoding="utf-8")
     return path
 
+def load_test_sheet_result(path: Path | None) -> dict | None:
+    if path is None:
+        return None
+    path = Path(path).resolve()
+    try:
+        result = json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError as error:
+        raise ScaffoldError(f"Test Sheet result not found: {path}") from error
+    except (OSError, json.JSONDecodeError) as error:
+        raise ScaffoldError(f"Test Sheet result is unreadable or invalid JSON: {error}") from error
+    if not isinstance(result, dict):
+        raise ScaffoldError("Test Sheet result must be a JSON object.")
+    return result
+
+def write_readiness_report(
+    set_id: str,
+    candidate_ok: bool,
+    frontend_root: Path | None,
+    apps_script_root: Path | None,
+    test_sheet_result: dict | None,
+    recognizer_root: Path,
+    candidate_output_root: Path | None,
+) -> tuple[str, Path]:
+    output_root = (
+        Path(candidate_output_root).resolve()
+        if candidate_output_root is not None
+        else recognizer_root / "generated" / set_id
+    )
+    output_root.mkdir(parents=True, exist_ok=True)
+
+    checks = {
+        "candidateValidation": "PASS" if candidate_ok else "FAIL",
+        "recognizerLink": "PASS" if candidate_ok else "FAIL",
+        "frontendLink": "PASS" if frontend_root is not None and candidate_ok else "NOT VERIFIED",
+        "appsScriptConfig": "PASS" if apps_script_root is not None and candidate_ok else "NOT VERIFIED",
+        "testSheet": (
+            "PASS"
+            if isinstance(test_sheet_result, dict) and test_sheet_result.get("status") == "PASS"
+            else "FAIL"
+            if isinstance(test_sheet_result, dict) and test_sheet_result.get("status") == "FAIL"
+            else "NOT VERIFIED"
+        ),
+    }
+
+    blocking = []
+    warnings = []
+    if checks["candidateValidation"] == "FAIL":
+        blocking.append("candidate validation failed")
+    if checks["frontendLink"] != "PASS":
+        blocking.append("frontend link not verified")
+    if checks["appsScriptConfig"] != "PASS":
+        blocking.append("Apps Script configuration not verified")
+    if checks["testSheet"] != "PASS":
+        blocking.append("test Sheet has not passed")
+
+    if isinstance(test_sheet_result, dict) and test_sheet_result.get("productionTouched") is not False:
+        blocking.append("test Sheet evidence does not confirm production remained untouched")
+
+    status = "READY" if not blocking and not warnings else "READY WITH WARNING" if not blocking else "NOT READY"
+
+    report = {
+        "setId": set_id,
+        "status": status,
+        "productionTouched": False,
+        "checks": checks,
+        "warnings": warnings,
+        "blockingReasons": blocking,
+    }
+    path = output_root / "onboarding_readiness_report.json"
+    path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    return status, path
+
 def onboard(
     definition: Path,
     recognizer_root: Path = ROOT,
@@ -141,6 +213,7 @@ def onboard(
     apps_script_root: Path | None = None,
     candidate_output_root: Path | None = None,
     require_library: bool = False,
+    test_sheet_result_path: Path | None = None,
 ) -> bool:
     definition = Path(definition).resolve()
     recognizer_root = Path(recognizer_root).resolve()
@@ -195,19 +268,32 @@ def onboard(
         recognizer_root,
         candidate_output_root,
     )
+    test_sheet_result = load_test_sheet_result(test_sheet_result_path)
+    readiness, readiness_path = write_readiness_report(
+        set_id,
+        ok,
+        frontend_root,
+        apps_script_root,
+        test_sheet_result,
+        recognizer_root,
+        candidate_output_root,
+    )
 
     print()
     print("Linking report:", report_path)
     print("Test Sheet request:", test_request_path)
+    print("Readiness report:", readiness_path)
     print("=" * 68)
-    if ok:
-        print("RESULT: CANDIDATE READY FOR REVIEW")
-        print("Nothing has been deployed to production.")
+    print("FINAL READINESS:", readiness)
+    if readiness == "READY":
+        print("All required onboarding evidence has passed.")
+    elif readiness == "READY WITH WARNING":
+        print("Required checks passed, but review the warnings before promotion.")
     else:
-        print("RESULT: CANDIDATE NOT READY")
-        print("Fix the reported failures before any production promotion.")
+        print("One or more required checks are missing or failed.")
+    print("Nothing has been deployed to production.")
     print("=" * 68)
-    return ok
+    return readiness == "READY" or readiness == "READY WITH WARNING"
 
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(
@@ -226,6 +312,11 @@ def parse_args(argv=None):
         action="store_true",
         help="Also require the built recognition library during validation.",
     )
+    parser.add_argument(
+        "--test-sheet-result",
+        type=Path,
+        help="JSON result produced by the safe test-Sheet harness.",
+    )
     return parser.parse_args(argv)
 
 def main(argv=None) -> int:
@@ -238,6 +329,7 @@ def main(argv=None) -> int:
             apps_script_root=args.apps_script_root,
             candidate_output_root=args.candidate_output_root,
             require_library=args.require_library,
+            test_sheet_result_path=args.test_sheet_result,
         )
     except (OSError, ValueError, json.JSONDecodeError, ScaffoldError) as error:
         print(f"FAIL: {error}", file=sys.stderr)
