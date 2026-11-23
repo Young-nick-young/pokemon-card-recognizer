@@ -11,11 +11,22 @@ sys.path.insert(0, str(TOOLS))
 
 import onboard_set
 
-
 class OnboardSetSmokeTest(unittest.TestCase):
     def make_definition(self, root: Path, set_id: str = "example-set") -> Path:
         path = root / "definition.json"
-        path.write_text(json.dumps({"set_id": set_id}), encoding="utf-8")
+        path.write_text(json.dumps({
+            "name": "Example Set",
+            "set_id": set_id,
+            "series": "Example Series",
+            "display_code": "EXM",
+            "official_code": "EX01",
+            "dataset_id": "ex1",
+            "expected_cards": 1,
+            "denominator": 1,
+            "spreadsheet_id": "sheet-id",
+            "script_url": "https://example.com/script",
+            "cards": [{"number": 1}]
+        }), encoding="utf-8")
         return path
 
     def test_success_runs_generate_then_validate(self):
@@ -49,6 +60,18 @@ class OnboardSetSmokeTest(unittest.TestCase):
                 with self.assertRaises(onboard_set.ScaffoldError):
                     onboard_set.onboard(definition, recognizer_root=root)
 
+    def test_missing_setup_information_is_rejected_before_generation(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            definition = root / "definition.json"
+            definition.write_text(json.dumps({"set_id": "example-set"}), encoding="utf-8")
+            with patch.object(onboard_set, "generate") as generate:
+                with self.assertRaises(onboard_set.ScaffoldError) as caught:
+                    onboard_set.onboard(definition, recognizer_root=root)
+
+            self.assertIn("Missing:", str(caught.exception))
+            self.assertIn("name", str(caught.exception))
+            generate.assert_not_called()
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
