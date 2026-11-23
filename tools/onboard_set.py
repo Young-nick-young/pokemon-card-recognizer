@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+"""One-command candidate onboarding for a new scanner set.
+
+This wrapper reuses the existing create_set.py generator and validate_set.py
+validator. It does not deploy, merge, publish, or write to live Google Sheets.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+from create_set import ScaffoldError, generate
+from validate_set import validate
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def read_set_id(definition: Path) -> str:
+    try:
+        raw = json.loads(definition.read_text(encoding="utf-8"))
+    except FileNotFoundError as error:
+        raise ScaffoldError(f"Definition file not found: {definition}") from error
+    except (OSError, json.JSONDecodeError) as error:
+        raise ScaffoldError(f"Definition file is unreadable or invalid JSON: {error}") from error
+
+    set_id = raw.get("set_id") if isinstance(raw, dict) else None
+    if not isinstance(set_id, str) or not set_id.strip():
+        raise ScaffoldError("Definition must contain a non-empty set_id.")
+    return set_id.strip().lower()
+
+
+def onboard(
+    definition: Path,
+    recognizer_root: Path = ROOT,
+    frontend_root: Path | None = None,
+    apps_script_root: Path | None = None,
+    candidate_output_root: Path | None = None,
+    require_library: bool = False,
+) -> bool:
+    definition = Path(definition).resolve()
+    recognizer_root = Path(recognizer_root).resolve()
+    set_id = read_set_id(definition)
+
+    print("=" * 68)
+    print("NEW SET ONBOARDING — CANDIDATE ONLY")
+    print("=" * 68)
+    print("Set:", set_id)
+    print("Production deployment: DISABLED")
+    print()
+
+    print("[1/2] Generating candidate files...")
+    generated = generate(
+        definition,
+        recognizer_root=recognizer_root,
+        frontend_root=frontend_root,
+        apps_script_root=apps_script_root,
+        candidate_output_root=candidate_output_root,
+    )
+
+    generated_set_id = generated["set_id"]
+    if generated_set_id != set_id:
+        raise ScaffoldError(
+            f"Generated set ID {generated_set_id!r} does not match definition {set_id!r}."
+        )
+
+    print()
+    print("[2/2] Running recognizer-side validation...")
+    ok = validate(
+        set_id,
+        recognizer_root=recognizer_root,
+        frontend_root=frontend_root,
+        apps_script_root=apps_script_root,
+        require_library=require_library,
+        integration=(frontend_root is not None and apps_script_root is not None),
+    )
+
+    print()
+    print("=" * 68)
+    if ok:
+        print("RESULT: CANDIDATE READY FOR REVIEW")
+        print("Nothing has been deployed to production.")
+    else:
+        print("RESULT: CANDIDATE NOT READY")
+        print("Fix the reported failures before any production promotion.")
+    print("=" * 68)
+    return ok
+
+
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(
+        description=(
+            "Generate and validate a new Pokémon scanner set candidate in one command. "
+            "This tool never deploys production."
+        )
+    )
+    parser.add_argument("definition", type=Path, help="Normalized set definition JSON")
+    parser.add_argument("--recognizer-root", type=Path, default=ROOT)
+    parser.add_argument("--frontend-root", type=Path)
+    parser.add_argument("--apps-script-root", type=Path)
+    parser.add_argument("--candidate-output-root", type=Path)
+    parser.add_argument(
+        "--require-library",
+        action="store_true",
+        help="Also require the built recognition library during validation.",
+    )
+    return parser.parse_args(argv)
+
+
+def main(argv=None) -> int:
+    args = parse_args(argv)
+    try:
+        ok = onboard(
+            args.definition,
+            recognizer_root=args.recognizer_root,
+            frontend_root=args.frontend_root,
+            apps_script_root=args.apps_script_root,
+            candidate_output_root=args.candidate_output_root,
+            require_library=args.require_library,
+        )
+    except (OSError, ValueError, json.JSONDecodeError, ScaffoldError) as error:
+        print(f"FAIL: {error}", file=sys.stderr)
+        return 1
+    return 0 if ok else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
