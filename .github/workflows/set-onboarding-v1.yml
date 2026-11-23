@@ -106,3 +106,15 @@ jobs:
           print("PASS: inventory combinations", combos)
           print("PASS: Sheet Plan rows 13-200")
           PY
+
+      - name: Upload ME1 candidate artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: mega-evolution-base-candidate
+          path: |
+            sets/mega_evolution/manifest.json
+            sets/mega_evolution/cards.json
+            sets/mega_evolution/inventory_metadata.json
+            sets/mega_evolution/inventory_sheet_plan.json
+            generated/mega-evolution/apps_script/mega_evolution_config.gs
+            generated/mega-evolution/frontend/js/sets/mega-evolution.js
