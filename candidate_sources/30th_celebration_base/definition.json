@@ -693,7 +693,6 @@
       "card_type": "Pokémon",
       "reference_image": "https://images.scrydex.com/pokemon/me55-57/large",
       "inventory_variants": [
-        "reverse-holo",
         "holo"
       ]
     },
@@ -766,8 +765,7 @@
       "card_type": "Pokémon",
       "reference_image": "https://images.scrydex.com/pokemon/me55-63/large",
       "inventory_variants": [
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1379,7 +1377,6 @@
       "card_type": "Pokémon",
       "reference_image": "https://images.scrydex.com/pokemon/me55-114/large",
       "inventory_variants": [
-        "reverse-holo",
         "holo"
       ]
     },
@@ -1404,8 +1401,7 @@
       "card_type": "Pokémon",
       "reference_image": "https://images.scrydex.com/pokemon/me55-116/large",
       "inventory_variants": [
-        "holo",
-        "other"
+        "holo"
       ]
     },
     {
@@ -1417,7 +1413,6 @@
       "card_type": "Pokémon",
       "reference_image": "https://images.scrydex.com/pokemon/me55-117/large",
       "inventory_variants": [
-        "reverse-holo",
         "holo"
       ]
     },
@@ -1430,7 +1425,6 @@
       "card_type": "Pokémon",
       "reference_image": "https://images.scrydex.com/pokemon/me55-118/large",
       "inventory_variants": [
-        "reverse-holo",
         "holo"
       ]
     },
@@ -1527,7 +1521,6 @@
       "card_type": "Trainer",
       "reference_image": "https://images.scrydex.com/pokemon/me55-126/large",
       "inventory_variants": [
-        "reverse-holo",
         "holo"
       ]
     },
@@ -1540,7 +1533,6 @@
       "card_type": "Trainer",
       "reference_image": "https://images.scrydex.com/pokemon/me55-127/large",
       "inventory_variants": [
-        "reverse-holo",
         "holo"
       ]
     },
@@ -1553,7 +1545,6 @@
       "card_type": "Trainer",
       "reference_image": "https://images.scrydex.com/pokemon/me55-128/large",
       "inventory_variants": [
-        "reverse-holo",
         "holo"
       ]
     },
