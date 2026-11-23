@@ -1,0 +1,1516 @@
+[
+  {
+    "number": 1,
+    "external_id": "me2-1",
+    "name": "Oddish",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-1/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 2,
+    "external_id": "me2-2",
+    "name": "Gloom",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-2/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 3,
+    "external_id": "me2-3",
+    "name": "Vileplume",
+    "rarity": "Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-3/large",
+    "inventory_variants": [
+      "reverse-holo",
+      "holo"
+    ]
+  },
+  {
+    "number": 4,
+    "external_id": "me2-4",
+    "name": "Mega Heracross ex",
+    "rarity": "Double Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-4/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 5,
+    "external_id": "me2-5",
+    "name": "Lotad",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-5/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 6,
+    "external_id": "me2-6",
+    "name": "Lombre",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-6/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 7,
+    "external_id": "me2-7",
+    "name": "Ludicolo",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-7/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 8,
+    "external_id": "me2-8",
+    "name": "Genesect",
+    "rarity": "Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-8/large",
+    "inventory_variants": [
+      "reverse-holo",
+      "holo"
+    ]
+  },
+  {
+    "number": 9,
+    "external_id": "me2-9",
+    "name": "Nymble",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-9/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 10,
+    "external_id": "me2-10",
+    "name": "Lokix",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-10/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 11,
+    "external_id": "me2-11",
+    "name": "Charmander",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-11/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 12,
+    "external_id": "me2-12",
+    "name": "Charmeleon",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-12/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 13,
+    "external_id": "me2-13",
+    "name": "Mega Charizard X ex",
+    "rarity": "Double Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-13/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 14,
+    "external_id": "me2-14",
+    "name": "Moltres",
+    "rarity": "Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-14/large",
+    "inventory_variants": [
+      "reverse-holo",
+      "holo"
+    ]
+  },
+  {
+    "number": 15,
+    "external_id": "me2-15",
+    "name": "Darumaka",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-15/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 16,
+    "external_id": "me2-16",
+    "name": "Darmanitan",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-16/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 17,
+    "external_id": "me2-17",
+    "name": "Reshiram",
+    "rarity": "Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-17/large",
+    "inventory_variants": [
+      "reverse-holo",
+      "holo"
+    ]
+  },
+  {
+    "number": 18,
+    "external_id": "me2-18",
+    "name": "Oricorio ex",
+    "rarity": "Double Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-18/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 19,
+    "external_id": "me2-19",
+    "name": "Charcadet",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-19/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 20,
+    "external_id": "me2-20",
+    "name": "Ceruledge",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-20/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 21,
+    "external_id": "me2-21",
+    "name": "Seel",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-21/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 22,
+    "external_id": "me2-22",
+    "name": "Dewgong",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-22/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 23,
+    "external_id": "me2-23",
+    "name": "Swinub",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-23/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 24,
+    "external_id": "me2-24",
+    "name": "Piloswine",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-24/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 25,
+    "external_id": "me2-25",
+    "name": "Mamoswine",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-25/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 26,
+    "external_id": "me2-26",
+    "name": "Suicune",
+    "rarity": "Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-26/large",
+    "inventory_variants": [
+      "reverse-holo",
+      "holo"
+    ]
+  },
+  {
+    "number": 27,
+    "external_id": "me2-27",
+    "name": "Piplup",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-27/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 28,
+    "external_id": "me2-28",
+    "name": "Prinplup",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-28/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 29,
+    "external_id": "me2-29",
+    "name": "Rotom ex",
+    "rarity": "Double Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-29/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 30,
+    "external_id": "me2-30",
+    "name": "Yamper",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-30/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 31,
+    "external_id": "me2-31",
+    "name": "Boltund",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-31/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 32,
+    "external_id": "me2-32",
+    "name": "Pawmi",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-32/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 33,
+    "external_id": "me2-33",
+    "name": "Pawmo",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-33/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 34,
+    "external_id": "me2-34",
+    "name": "Pawmot",
+    "rarity": "Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-34/large",
+    "inventory_variants": [
+      "reverse-holo",
+      "holo"
+    ]
+  },
+  {
+    "number": 35,
+    "external_id": "me2-35",
+    "name": "Misdreavus",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-35/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 36,
+    "external_id": "me2-36",
+    "name": "Mismagius ex",
+    "rarity": "Double Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-36/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 37,
+    "external_id": "me2-37",
+    "name": "Snubbull",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-37/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 38,
+    "external_id": "me2-38",
+    "name": "Granbull",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-38/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 39,
+    "external_id": "me2-39",
+    "name": "Cresselia",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-39/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 40,
+    "external_id": "me2-40",
+    "name": "Meloetta",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-40/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 41,
+    "external_id": "me2-41",
+    "name": "Mega Diancie ex",
+    "rarity": "Double Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-41/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 42,
+    "external_id": "me2-42",
+    "name": "Mimikyu",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-42/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 43,
+    "external_id": "me2-43",
+    "name": "Milcery",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-43/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 44,
+    "external_id": "me2-44",
+    "name": "Alcremie",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-44/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 45,
+    "external_id": "me2-45",
+    "name": "Zacian",
+    "rarity": "Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-45/large",
+    "inventory_variants": [
+      "reverse-holo",
+      "holo"
+    ]
+  },
+  {
+    "number": 46,
+    "external_id": "me2-46",
+    "name": "Bramblin",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-46/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 47,
+    "external_id": "me2-47",
+    "name": "Brambleghast",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-47/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 48,
+    "external_id": "me2-48",
+    "name": "Paldean Tauros",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-48/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 49,
+    "external_id": "me2-49",
+    "name": "Gligar",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-49/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 50,
+    "external_id": "me2-50",
+    "name": "Gliscor",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-50/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 51,
+    "external_id": "me2-51",
+    "name": "Trapinch",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-51/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 52,
+    "external_id": "me2-52",
+    "name": "Vibrava",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-52/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 53,
+    "external_id": "me2-53",
+    "name": "Flygon",
+    "rarity": "Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-53/large",
+    "inventory_variants": [
+      "reverse-holo",
+      "holo"
+    ]
+  },
+  {
+    "number": 54,
+    "external_id": "me2-54",
+    "name": "Gastly",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-54/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 55,
+    "external_id": "me2-55",
+    "name": "Haunter",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-55/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 56,
+    "external_id": "me2-56",
+    "name": "Mega Gengar ex",
+    "rarity": "Double Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-56/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 57,
+    "external_id": "me2-57",
+    "name": "Murkrow",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-57/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 58,
+    "external_id": "me2-58",
+    "name": "Honchkrow",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-58/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 59,
+    "external_id": "me2-59",
+    "name": "Sableye",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-59/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 60,
+    "external_id": "me2-60",
+    "name": "Carvanha",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-60/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 61,
+    "external_id": "me2-61",
+    "name": "Mega Sharpedo ex",
+    "rarity": "Double Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-61/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 62,
+    "external_id": "me2-62",
+    "name": "Seviper",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-62/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 63,
+    "external_id": "me2-63",
+    "name": "Absol",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-63/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 64,
+    "external_id": "me2-64",
+    "name": "Sandile",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-64/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 65,
+    "external_id": "me2-65",
+    "name": "Krokorok",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-65/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 66,
+    "external_id": "me2-66",
+    "name": "Krookodile",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-66/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 67,
+    "external_id": "me2-67",
+    "name": "Toxel",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-67/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 68,
+    "external_id": "me2-68",
+    "name": "Toxtricity",
+    "rarity": "Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-68/large",
+    "inventory_variants": [
+      "reverse-holo",
+      "holo"
+    ]
+  },
+  {
+    "number": 69,
+    "external_id": "me2-69",
+    "name": "Eternatus",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-69/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 70,
+    "external_id": "me2-70",
+    "name": "Empoleon ex",
+    "rarity": "Double Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-70/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 71,
+    "external_id": "me2-71",
+    "name": "Bronzor",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-71/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 72,
+    "external_id": "me2-72",
+    "name": "Bronzong",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-72/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 73,
+    "external_id": "me2-73",
+    "name": "Togedemaru",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-73/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 74,
+    "external_id": "me2-74",
+    "name": "Duraludon",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-74/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 75,
+    "external_id": "me2-75",
+    "name": "Archaludon",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-75/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 76,
+    "external_id": "me2-76",
+    "name": "Jigglypuff",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-76/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 77,
+    "external_id": "me2-77",
+    "name": "Wigglytuff",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-77/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 78,
+    "external_id": "me2-78",
+    "name": "Aipom",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-78/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 79,
+    "external_id": "me2-79",
+    "name": "Ambipom",
+    "rarity": "Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-79/large",
+    "inventory_variants": [
+      "reverse-holo",
+      "holo"
+    ]
+  },
+  {
+    "number": 80,
+    "external_id": "me2-80",
+    "name": "Smeargle",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-80/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 81,
+    "external_id": "me2-81",
+    "name": "Zigzagoon",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-81/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 82,
+    "external_id": "me2-82",
+    "name": "Linoone",
+    "rarity": "Uncommon",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-82/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 83,
+    "external_id": "me2-83",
+    "name": "Buneary",
+    "rarity": "Common",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-83/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 84,
+    "external_id": "me2-84",
+    "name": "Mega Lopunny ex",
+    "rarity": "Double Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-84/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 85,
+    "external_id": "me2-85",
+    "name": "Battle Cage",
+    "rarity": "Uncommon",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-85/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 86,
+    "external_id": "me2-86",
+    "name": "Blowtorch",
+    "rarity": "Uncommon",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-86/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 87,
+    "external_id": "me2-87",
+    "name": "Dawn",
+    "rarity": "Uncommon",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-87/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 88,
+    "external_id": "me2-88",
+    "name": "Dizzying Valley",
+    "rarity": "Uncommon",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-88/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 89,
+    "external_id": "me2-89",
+    "name": "Firebreather",
+    "rarity": "Uncommon",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-89/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 90,
+    "external_id": "me2-90",
+    "name": "Grimsley's Move",
+    "rarity": "Uncommon",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-90/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 91,
+    "external_id": "me2-91",
+    "name": "Jumbo Ice Cream",
+    "rarity": "Uncommon",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-91/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 92,
+    "external_id": "me2-92",
+    "name": "Punk Helmet",
+    "rarity": "Uncommon",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-92/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 93,
+    "external_id": "me2-93",
+    "name": "Sacred Charm",
+    "rarity": "Uncommon",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-93/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 94,
+    "external_id": "me2-94",
+    "name": "Wondrous Patch",
+    "rarity": "Uncommon",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-94/large",
+    "inventory_variants": [
+      "normal",
+      "reverse-holo"
+    ]
+  },
+  {
+    "number": 95,
+    "external_id": "me2-95",
+    "name": "Ludicolo",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-95/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 96,
+    "external_id": "me2-96",
+    "name": "Nymble",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-96/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 97,
+    "external_id": "me2-97",
+    "name": "Dewgong",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-97/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 98,
+    "external_id": "me2-98",
+    "name": "Piplup",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-98/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 99,
+    "external_id": "me2-99",
+    "name": "Yamper",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-99/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 100,
+    "external_id": "me2-100",
+    "name": "Zacian",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-100/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 101,
+    "external_id": "me2-101",
+    "name": "Flygon",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-101/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 102,
+    "external_id": "me2-102",
+    "name": "Paldean Wooper",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-102/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 103,
+    "external_id": "me2-103",
+    "name": "Toxtricity",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-103/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 104,
+    "external_id": "me2-104",
+    "name": "Togedemaru",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-104/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 105,
+    "external_id": "me2-105",
+    "name": "Wigglytuff",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-105/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 106,
+    "external_id": "me2-106",
+    "name": "Meowth",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-106/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 107,
+    "external_id": "me2-107",
+    "name": "Ambipom",
+    "rarity": "Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-107/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 108,
+    "external_id": "me2-108",
+    "name": "Mega Heracross ex",
+    "rarity": "Ultra Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-108/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 109,
+    "external_id": "me2-109",
+    "name": "Mega Charizard X ex",
+    "rarity": "Ultra Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-109/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 110,
+    "external_id": "me2-110",
+    "name": "Oricorio ex",
+    "rarity": "Ultra Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-110/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 111,
+    "external_id": "me2-111",
+    "name": "Rotom ex",
+    "rarity": "Ultra Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-111/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 112,
+    "external_id": "me2-112",
+    "name": "Mismagius ex",
+    "rarity": "Ultra Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-112/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 113,
+    "external_id": "me2-113",
+    "name": "Mega Sharpedo ex",
+    "rarity": "Ultra Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-113/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 114,
+    "external_id": "me2-114",
+    "name": "Empoleon ex",
+    "rarity": "Ultra Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-114/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 115,
+    "external_id": "me2-115",
+    "name": "Mega Lopunny ex",
+    "rarity": "Ultra Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-115/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 116,
+    "external_id": "me2-116",
+    "name": "Battle Cage",
+    "rarity": "Ultra Rare",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-116/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 117,
+    "external_id": "me2-117",
+    "name": "Blowtorch",
+    "rarity": "Ultra Rare",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-117/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 118,
+    "external_id": "me2-118",
+    "name": "Dawn",
+    "rarity": "Ultra Rare",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-118/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 119,
+    "external_id": "me2-119",
+    "name": "Firebreather",
+    "rarity": "Ultra Rare",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-119/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 120,
+    "external_id": "me2-120",
+    "name": "Grimsley's Move",
+    "rarity": "Ultra Rare",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-120/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 121,
+    "external_id": "me2-121",
+    "name": "Punk Helmet",
+    "rarity": "Ultra Rare",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-121/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 122,
+    "external_id": "me2-122",
+    "name": "Sacred Charm",
+    "rarity": "Ultra Rare",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-122/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 123,
+    "external_id": "me2-123",
+    "name": "Switch",
+    "rarity": "Ultra Rare",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-123/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 124,
+    "external_id": "me2-124",
+    "name": "Ignition Energy",
+    "rarity": "Ultra Rare",
+    "card_type": "Energy",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-124/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 125,
+    "external_id": "me2-125",
+    "name": "Mega Charizard X ex",
+    "rarity": "Special Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-125/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 126,
+    "external_id": "me2-126",
+    "name": "Rotom ex",
+    "rarity": "Special Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-126/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 127,
+    "external_id": "me2-127",
+    "name": "Mega Sharpedo ex",
+    "rarity": "Special Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-127/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 128,
+    "external_id": "me2-128",
+    "name": "Mega Lopunny ex",
+    "rarity": "Special Illustration Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-128/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 129,
+    "external_id": "me2-129",
+    "name": "Dawn",
+    "rarity": "Special Illustration Rare",
+    "card_type": "Trainer",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-129/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  },
+  {
+    "number": 130,
+    "external_id": "me2-130",
+    "name": "Mega Charizard X ex",
+    "rarity": "Mega Hyper Rare",
+    "card_type": "Pokémon",
+    "reference_image": "https://images.scrydex.com/pokemon/me2-130/large",
+    "inventory_variants": [
+      "holo"
+    ]
+  }
+]
