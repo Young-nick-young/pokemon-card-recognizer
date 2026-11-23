@@ -35,6 +35,12 @@
       "package": "sets/set_30th_celebration",
       "expectedRecords": 161,
       "output": "sets/set_30th_celebration/card_library.pkl"
+    },
+    {
+      "setId": "mega-evolution",
+      "package": "sets/mega_evolution",
+      "expectedRecords": 188,
+      "output": "sets/mega_evolution/card_library.pkl"
     }
   ]
 }
