@@ -27,5 +27,66 @@
     "reason": "MEP has multiple physical printings sharing collector numbers, including Staff, Pokemon Center, prerelease/stamped, Cosmos Holo, Winner, World Championships and other event/product releases.",
     "rule": "Do not infer inventory availability from schema variants or rarity. Build explicit per-card inventoryVariants from independently verified physical-printing evidence."
   },
-  "productionImpact": "none"
+  "productionImpact": "none",
+  "evidence": {
+    "catalog": {
+      "identityCount": 121,
+      "currentAsOf": "2026-11-23",
+      "sources": [
+        {
+          "name": "Charpulls TCG",
+          "url": "https://app.charpullstcg.com/sets/pokemon-mep",
+          "note": "121 cards; current collector-number list including 001-118, 120, 131 and Pikachu at the Museum."
+        },
+        {
+          "name": "ShinyBeak",
+          "url": "https://shinybeak.com/sets/mep",
+          "note": "121 catalog cards; 168 master-set slots when alternate physical printings are counted."
+        },
+        {
+          "name": "Pokemon.com promo legality",
+          "url": "https://www.pokemon.com/us/pokemon-tcg-promo-card-legality-status",
+          "note": "Official MEP numbering/name confirmation for currently legal and upcoming promos."
+        }
+      ]
+    },
+    "physicalPrintingTaxonomy": {
+      "currentObservedPrintings": [
+        "Holo",
+        "Holo + Set Logo Stamp",
+        "Holo + Set Logo Stamp + Staff Stamp",
+        "Holo (Cosmos)",
+        "Holo + Pokemon Center Stamp",
+        "Lenticular + Jumbo",
+        "Holo + Jumbo",
+        "Holo + Staff Stamp",
+        "Holo + Ace Trainer Stamp",
+        "Holo + Winner Stamp",
+        "Normal + Jumbo"
+      ],
+      "supportingSources": [
+        {
+          "name": "PokeBase MEP set",
+          "url": "https://pokebase.app/pokemon-tcg/sets/mep-black-star-promos",
+          "note": "Printing taxonomy and per-card printings; snapshot is behind current identity count."
+        },
+        {
+          "name": "Pikachu MEP 093 Bulbapedia",
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Pikachu_%28MEP_Promo_93%29",
+          "note": "Confirms distinct Winner-stamp MEP 093 printing."
+        },
+        {
+          "name": "Paradise Resort MEP 092 PokeBase",
+          "url": "https://pokebase.app/pokemon-tcg/cards/paradise-resort-mep-black-star-promos-092",
+          "note": "Confirms Holo and Holo + Staff Stamp printings."
+        }
+      ]
+    }
+  },
+  "variantGate": {
+    "status": "OPEN",
+    "reason": "Current sources agree MEP has many alternate physical printings but differ in coverage. Identity count is stable at 121; exact per-card alternate-printing matrix is still being reconciled.",
+    "sheetGenerationAllowed": false,
+    "productionAllowed": false
+  }
 }
