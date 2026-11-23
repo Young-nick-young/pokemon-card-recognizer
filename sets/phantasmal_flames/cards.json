@@ -1,0 +1,2736 @@
+{
+  "schemaVersion": "1.0",
+  "setId": "phantasmal-flames",
+  "cards": [
+    {
+      "cardId": "pfl-001",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "001/094",
+        "sortKey": 1
+      },
+      "name": "Oddish",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-1/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-1",
+        "legacyInventoryCardId": "PFL-001"
+      }
+    },
+    {
+      "cardId": "pfl-002",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "002/094",
+        "sortKey": 2
+      },
+      "name": "Gloom",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-2/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-2",
+        "legacyInventoryCardId": "PFL-002"
+      }
+    },
+    {
+      "cardId": "pfl-003",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "003/094",
+        "sortKey": 3
+      },
+      "name": "Vileplume",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-3/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-3",
+        "legacyInventoryCardId": "PFL-003"
+      }
+    },
+    {
+      "cardId": "pfl-004",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "004/094",
+        "sortKey": 4
+      },
+      "name": "Mega Heracross ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-4/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-4",
+        "legacyInventoryCardId": "PFL-004"
+      }
+    },
+    {
+      "cardId": "pfl-005",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "005/094",
+        "sortKey": 5
+      },
+      "name": "Lotad",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-5/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-5",
+        "legacyInventoryCardId": "PFL-005"
+      }
+    },
+    {
+      "cardId": "pfl-006",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "006/094",
+        "sortKey": 6
+      },
+      "name": "Lombre",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-6/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-6",
+        "legacyInventoryCardId": "PFL-006"
+      }
+    },
+    {
+      "cardId": "pfl-007",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "007/094",
+        "sortKey": 7
+      },
+      "name": "Ludicolo",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-7/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-7",
+        "legacyInventoryCardId": "PFL-007"
+      }
+    },
+    {
+      "cardId": "pfl-008",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "008/094",
+        "sortKey": 8
+      },
+      "name": "Genesect",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-8/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-8",
+        "legacyInventoryCardId": "PFL-008"
+      }
+    },
+    {
+      "cardId": "pfl-009",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "009/094",
+        "sortKey": 9
+      },
+      "name": "Nymble",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-9/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-9",
+        "legacyInventoryCardId": "PFL-009"
+      }
+    },
+    {
+      "cardId": "pfl-010",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "010/094",
+        "sortKey": 10
+      },
+      "name": "Lokix",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-10/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-10",
+        "legacyInventoryCardId": "PFL-010"
+      }
+    },
+    {
+      "cardId": "pfl-011",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "011/094",
+        "sortKey": 11
+      },
+      "name": "Charmander",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-11/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-11",
+        "legacyInventoryCardId": "PFL-011"
+      }
+    },
+    {
+      "cardId": "pfl-012",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "012/094",
+        "sortKey": 12
+      },
+      "name": "Charmeleon",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-12/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-12",
+        "legacyInventoryCardId": "PFL-012"
+      }
+    },
+    {
+      "cardId": "pfl-013",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "013/094",
+        "sortKey": 13
+      },
+      "name": "Mega Charizard X ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-13/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-13",
+        "legacyInventoryCardId": "PFL-013"
+      }
+    },
+    {
+      "cardId": "pfl-014",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "014/094",
+        "sortKey": 14
+      },
+      "name": "Moltres",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-14/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-14",
+        "legacyInventoryCardId": "PFL-014"
+      }
+    },
+    {
+      "cardId": "pfl-015",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "015/094",
+        "sortKey": 15
+      },
+      "name": "Darumaka",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-15/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-15",
+        "legacyInventoryCardId": "PFL-015"
+      }
+    },
+    {
+      "cardId": "pfl-016",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "016/094",
+        "sortKey": 16
+      },
+      "name": "Darmanitan",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-16/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-16",
+        "legacyInventoryCardId": "PFL-016"
+      }
+    },
+    {
+      "cardId": "pfl-017",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "017/094",
+        "sortKey": 17
+      },
+      "name": "Reshiram",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-17/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-17",
+        "legacyInventoryCardId": "PFL-017"
+      }
+    },
+    {
+      "cardId": "pfl-018",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "018/094",
+        "sortKey": 18
+      },
+      "name": "Oricorio ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-18/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-18",
+        "legacyInventoryCardId": "PFL-018"
+      }
+    },
+    {
+      "cardId": "pfl-019",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "019/094",
+        "sortKey": 19
+      },
+      "name": "Charcadet",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-19/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-19",
+        "legacyInventoryCardId": "PFL-019"
+      }
+    },
+    {
+      "cardId": "pfl-020",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "020/094",
+        "sortKey": 20
+      },
+      "name": "Ceruledge",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-20/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-20",
+        "legacyInventoryCardId": "PFL-020"
+      }
+    },
+    {
+      "cardId": "pfl-021",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "021/094",
+        "sortKey": 21
+      },
+      "name": "Seel",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-21/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-21",
+        "legacyInventoryCardId": "PFL-021"
+      }
+    },
+    {
+      "cardId": "pfl-022",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "022/094",
+        "sortKey": 22
+      },
+      "name": "Dewgong",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-22/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-22",
+        "legacyInventoryCardId": "PFL-022"
+      }
+    },
+    {
+      "cardId": "pfl-023",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "023/094",
+        "sortKey": 23
+      },
+      "name": "Swinub",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-23/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-23",
+        "legacyInventoryCardId": "PFL-023"
+      }
+    },
+    {
+      "cardId": "pfl-024",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "024/094",
+        "sortKey": 24
+      },
+      "name": "Piloswine",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-24/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-24",
+        "legacyInventoryCardId": "PFL-024"
+      }
+    },
+    {
+      "cardId": "pfl-025",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "025/094",
+        "sortKey": 25
+      },
+      "name": "Mamoswine",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-25/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-25",
+        "legacyInventoryCardId": "PFL-025"
+      }
+    },
+    {
+      "cardId": "pfl-026",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "026/094",
+        "sortKey": 26
+      },
+      "name": "Suicune",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-26/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-26",
+        "legacyInventoryCardId": "PFL-026"
+      }
+    },
+    {
+      "cardId": "pfl-027",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "027/094",
+        "sortKey": 27
+      },
+      "name": "Piplup",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-27/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-27",
+        "legacyInventoryCardId": "PFL-027"
+      }
+    },
+    {
+      "cardId": "pfl-028",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "028/094",
+        "sortKey": 28
+      },
+      "name": "Prinplup",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-28/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-28",
+        "legacyInventoryCardId": "PFL-028"
+      }
+    },
+    {
+      "cardId": "pfl-029",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "029/094",
+        "sortKey": 29
+      },
+      "name": "Rotom ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-29/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-29",
+        "legacyInventoryCardId": "PFL-029"
+      }
+    },
+    {
+      "cardId": "pfl-030",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "030/094",
+        "sortKey": 30
+      },
+      "name": "Yamper",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-30/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-30",
+        "legacyInventoryCardId": "PFL-030"
+      }
+    },
+    {
+      "cardId": "pfl-031",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "031/094",
+        "sortKey": 31
+      },
+      "name": "Boltund",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-31/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-31",
+        "legacyInventoryCardId": "PFL-031"
+      }
+    },
+    {
+      "cardId": "pfl-032",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "032/094",
+        "sortKey": 32
+      },
+      "name": "Pawmi",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-32/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-32",
+        "legacyInventoryCardId": "PFL-032"
+      }
+    },
+    {
+      "cardId": "pfl-033",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "033/094",
+        "sortKey": 33
+      },
+      "name": "Pawmo",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-33/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-33",
+        "legacyInventoryCardId": "PFL-033"
+      }
+    },
+    {
+      "cardId": "pfl-034",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "034/094",
+        "sortKey": 34
+      },
+      "name": "Pawmot",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-34/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-34",
+        "legacyInventoryCardId": "PFL-034"
+      }
+    },
+    {
+      "cardId": "pfl-035",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "035/094",
+        "sortKey": 35
+      },
+      "name": "Misdreavus",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-35/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-35",
+        "legacyInventoryCardId": "PFL-035"
+      }
+    },
+    {
+      "cardId": "pfl-036",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "036/094",
+        "sortKey": 36
+      },
+      "name": "Mismagius ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-36/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-36",
+        "legacyInventoryCardId": "PFL-036"
+      }
+    },
+    {
+      "cardId": "pfl-037",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "037/094",
+        "sortKey": 37
+      },
+      "name": "Snubbull",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-37/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-37",
+        "legacyInventoryCardId": "PFL-037"
+      }
+    },
+    {
+      "cardId": "pfl-038",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "038/094",
+        "sortKey": 38
+      },
+      "name": "Granbull",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-38/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-38",
+        "legacyInventoryCardId": "PFL-038"
+      }
+    },
+    {
+      "cardId": "pfl-039",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "039/094",
+        "sortKey": 39
+      },
+      "name": "Cresselia",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-39/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-39",
+        "legacyInventoryCardId": "PFL-039"
+      }
+    },
+    {
+      "cardId": "pfl-040",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "040/094",
+        "sortKey": 40
+      },
+      "name": "Meloetta",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-40/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-40",
+        "legacyInventoryCardId": "PFL-040"
+      }
+    },
+    {
+      "cardId": "pfl-041",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "041/094",
+        "sortKey": 41
+      },
+      "name": "Mega Diancie ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-41/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-41",
+        "legacyInventoryCardId": "PFL-041"
+      }
+    },
+    {
+      "cardId": "pfl-042",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "042/094",
+        "sortKey": 42
+      },
+      "name": "Mimikyu",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-42/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-42",
+        "legacyInventoryCardId": "PFL-042"
+      }
+    },
+    {
+      "cardId": "pfl-043",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "043/094",
+        "sortKey": 43
+      },
+      "name": "Milcery",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-43/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-43",
+        "legacyInventoryCardId": "PFL-043"
+      }
+    },
+    {
+      "cardId": "pfl-044",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "044/094",
+        "sortKey": 44
+      },
+      "name": "Alcremie",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-44/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-44",
+        "legacyInventoryCardId": "PFL-044"
+      }
+    },
+    {
+      "cardId": "pfl-045",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "045/094",
+        "sortKey": 45
+      },
+      "name": "Zacian",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-45/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-45",
+        "legacyInventoryCardId": "PFL-045"
+      }
+    },
+    {
+      "cardId": "pfl-046",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "046/094",
+        "sortKey": 46
+      },
+      "name": "Bramblin",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-46/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-46",
+        "legacyInventoryCardId": "PFL-046"
+      }
+    },
+    {
+      "cardId": "pfl-047",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "047/094",
+        "sortKey": 47
+      },
+      "name": "Brambleghast",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-47/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-47",
+        "legacyInventoryCardId": "PFL-047"
+      }
+    },
+    {
+      "cardId": "pfl-048",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "048/094",
+        "sortKey": 48
+      },
+      "name": "Paldean Tauros",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-48/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-48",
+        "legacyInventoryCardId": "PFL-048"
+      }
+    },
+    {
+      "cardId": "pfl-049",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "049/094",
+        "sortKey": 49
+      },
+      "name": "Gligar",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-49/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-49",
+        "legacyInventoryCardId": "PFL-049"
+      }
+    },
+    {
+      "cardId": "pfl-050",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "050/094",
+        "sortKey": 50
+      },
+      "name": "Gliscor",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-50/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-50",
+        "legacyInventoryCardId": "PFL-050"
+      }
+    },
+    {
+      "cardId": "pfl-051",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "051/094",
+        "sortKey": 51
+      },
+      "name": "Trapinch",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-51/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-51",
+        "legacyInventoryCardId": "PFL-051"
+      }
+    },
+    {
+      "cardId": "pfl-052",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "052/094",
+        "sortKey": 52
+      },
+      "name": "Vibrava",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-52/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-52",
+        "legacyInventoryCardId": "PFL-052"
+      }
+    },
+    {
+      "cardId": "pfl-053",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "053/094",
+        "sortKey": 53
+      },
+      "name": "Flygon",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-53/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-53",
+        "legacyInventoryCardId": "PFL-053"
+      }
+    },
+    {
+      "cardId": "pfl-054",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "054/094",
+        "sortKey": 54
+      },
+      "name": "Gastly",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-54/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-54",
+        "legacyInventoryCardId": "PFL-054"
+      }
+    },
+    {
+      "cardId": "pfl-055",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "055/094",
+        "sortKey": 55
+      },
+      "name": "Haunter",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-55/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-55",
+        "legacyInventoryCardId": "PFL-055"
+      }
+    },
+    {
+      "cardId": "pfl-056",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "056/094",
+        "sortKey": 56
+      },
+      "name": "Mega Gengar ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-56/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-56",
+        "legacyInventoryCardId": "PFL-056"
+      }
+    },
+    {
+      "cardId": "pfl-057",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "057/094",
+        "sortKey": 57
+      },
+      "name": "Murkrow",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-57/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-57",
+        "legacyInventoryCardId": "PFL-057"
+      }
+    },
+    {
+      "cardId": "pfl-058",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "058/094",
+        "sortKey": 58
+      },
+      "name": "Honchkrow",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-58/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-58",
+        "legacyInventoryCardId": "PFL-058"
+      }
+    },
+    {
+      "cardId": "pfl-059",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "059/094",
+        "sortKey": 59
+      },
+      "name": "Sableye",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-59/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-59",
+        "legacyInventoryCardId": "PFL-059"
+      }
+    },
+    {
+      "cardId": "pfl-060",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "060/094",
+        "sortKey": 60
+      },
+      "name": "Carvanha",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-60/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-60",
+        "legacyInventoryCardId": "PFL-060"
+      }
+    },
+    {
+      "cardId": "pfl-061",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "061/094",
+        "sortKey": 61
+      },
+      "name": "Mega Sharpedo ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-61/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-61",
+        "legacyInventoryCardId": "PFL-061"
+      }
+    },
+    {
+      "cardId": "pfl-062",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "062/094",
+        "sortKey": 62
+      },
+      "name": "Seviper",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-62/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-62",
+        "legacyInventoryCardId": "PFL-062"
+      }
+    },
+    {
+      "cardId": "pfl-063",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "063/094",
+        "sortKey": 63
+      },
+      "name": "Absol",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-63/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-63",
+        "legacyInventoryCardId": "PFL-063"
+      }
+    },
+    {
+      "cardId": "pfl-064",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "064/094",
+        "sortKey": 64
+      },
+      "name": "Sandile",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-64/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-64",
+        "legacyInventoryCardId": "PFL-064"
+      }
+    },
+    {
+      "cardId": "pfl-065",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "065/094",
+        "sortKey": 65
+      },
+      "name": "Krokorok",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-65/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-65",
+        "legacyInventoryCardId": "PFL-065"
+      }
+    },
+    {
+      "cardId": "pfl-066",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "066/094",
+        "sortKey": 66
+      },
+      "name": "Krookodile",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-66/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-66",
+        "legacyInventoryCardId": "PFL-066"
+      }
+    },
+    {
+      "cardId": "pfl-067",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "067/094",
+        "sortKey": 67
+      },
+      "name": "Toxel",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-67/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-67",
+        "legacyInventoryCardId": "PFL-067"
+      }
+    },
+    {
+      "cardId": "pfl-068",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "068/094",
+        "sortKey": 68
+      },
+      "name": "Toxtricity",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-68/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-68",
+        "legacyInventoryCardId": "PFL-068"
+      }
+    },
+    {
+      "cardId": "pfl-069",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "069/094",
+        "sortKey": 69
+      },
+      "name": "Eternatus",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-69/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-69",
+        "legacyInventoryCardId": "PFL-069"
+      }
+    },
+    {
+      "cardId": "pfl-070",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "070/094",
+        "sortKey": 70
+      },
+      "name": "Empoleon ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-70/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-70",
+        "legacyInventoryCardId": "PFL-070"
+      }
+    },
+    {
+      "cardId": "pfl-071",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "071/094",
+        "sortKey": 71
+      },
+      "name": "Bronzor",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-71/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-71",
+        "legacyInventoryCardId": "PFL-071"
+      }
+    },
+    {
+      "cardId": "pfl-072",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "072/094",
+        "sortKey": 72
+      },
+      "name": "Bronzong",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-72/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-72",
+        "legacyInventoryCardId": "PFL-072"
+      }
+    },
+    {
+      "cardId": "pfl-073",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "073/094",
+        "sortKey": 73
+      },
+      "name": "Togedemaru",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-73/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-73",
+        "legacyInventoryCardId": "PFL-073"
+      }
+    },
+    {
+      "cardId": "pfl-074",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "074/094",
+        "sortKey": 74
+      },
+      "name": "Duraludon",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-74/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-74",
+        "legacyInventoryCardId": "PFL-074"
+      }
+    },
+    {
+      "cardId": "pfl-075",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "075/094",
+        "sortKey": 75
+      },
+      "name": "Archaludon",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-75/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-75",
+        "legacyInventoryCardId": "PFL-075"
+      }
+    },
+    {
+      "cardId": "pfl-076",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "076/094",
+        "sortKey": 76
+      },
+      "name": "Jigglypuff",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-76/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-76",
+        "legacyInventoryCardId": "PFL-076"
+      }
+    },
+    {
+      "cardId": "pfl-077",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "077/094",
+        "sortKey": 77
+      },
+      "name": "Wigglytuff",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-77/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-77",
+        "legacyInventoryCardId": "PFL-077"
+      }
+    },
+    {
+      "cardId": "pfl-078",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "078/094",
+        "sortKey": 78
+      },
+      "name": "Aipom",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-78/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-78",
+        "legacyInventoryCardId": "PFL-078"
+      }
+    },
+    {
+      "cardId": "pfl-079",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "079/094",
+        "sortKey": 79
+      },
+      "name": "Ambipom",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-79/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-79",
+        "legacyInventoryCardId": "PFL-079"
+      }
+    },
+    {
+      "cardId": "pfl-080",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "080/094",
+        "sortKey": 80
+      },
+      "name": "Smeargle",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-80/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-80",
+        "legacyInventoryCardId": "PFL-080"
+      }
+    },
+    {
+      "cardId": "pfl-081",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "081/094",
+        "sortKey": 81
+      },
+      "name": "Zigzagoon",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-81/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-81",
+        "legacyInventoryCardId": "PFL-081"
+      }
+    },
+    {
+      "cardId": "pfl-082",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "082/094",
+        "sortKey": 82
+      },
+      "name": "Linoone",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-82/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-82",
+        "legacyInventoryCardId": "PFL-082"
+      }
+    },
+    {
+      "cardId": "pfl-083",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "083/094",
+        "sortKey": 83
+      },
+      "name": "Buneary",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-83/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-83",
+        "legacyInventoryCardId": "PFL-083"
+      }
+    },
+    {
+      "cardId": "pfl-084",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "084/094",
+        "sortKey": 84
+      },
+      "name": "Mega Lopunny ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-84/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-84",
+        "legacyInventoryCardId": "PFL-084"
+      }
+    },
+    {
+      "cardId": "pfl-085",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "085/094",
+        "sortKey": 85
+      },
+      "name": "Battle Cage",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-85/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-85",
+        "legacyInventoryCardId": "PFL-085"
+      }
+    },
+    {
+      "cardId": "pfl-086",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "086/094",
+        "sortKey": 86
+      },
+      "name": "Blowtorch",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-86/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-86",
+        "legacyInventoryCardId": "PFL-086"
+      }
+    },
+    {
+      "cardId": "pfl-087",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "087/094",
+        "sortKey": 87
+      },
+      "name": "Dawn",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-87/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-87",
+        "legacyInventoryCardId": "PFL-087"
+      }
+    },
+    {
+      "cardId": "pfl-088",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "088/094",
+        "sortKey": 88
+      },
+      "name": "Dizzying Valley",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-88/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-88",
+        "legacyInventoryCardId": "PFL-088"
+      }
+    },
+    {
+      "cardId": "pfl-089",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "089/094",
+        "sortKey": 89
+      },
+      "name": "Firebreather",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-89/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-89",
+        "legacyInventoryCardId": "PFL-089"
+      }
+    },
+    {
+      "cardId": "pfl-090",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "090/094",
+        "sortKey": 90
+      },
+      "name": "Grimsley's Move",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-90/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-90",
+        "legacyInventoryCardId": "PFL-090"
+      }
+    },
+    {
+      "cardId": "pfl-091",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "091/094",
+        "sortKey": 91
+      },
+      "name": "Jumbo Ice Cream",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-91/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-91",
+        "legacyInventoryCardId": "PFL-091"
+      }
+    },
+    {
+      "cardId": "pfl-092",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "092/094",
+        "sortKey": 92
+      },
+      "name": "Punk Helmet",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-92/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-92",
+        "legacyInventoryCardId": "PFL-092"
+      }
+    },
+    {
+      "cardId": "pfl-093",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "093/094",
+        "sortKey": 93
+      },
+      "name": "Sacred Charm",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-93/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-93",
+        "legacyInventoryCardId": "PFL-093"
+      }
+    },
+    {
+      "cardId": "pfl-094",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "094/094",
+        "sortKey": 94
+      },
+      "name": "Wondrous Patch",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-94/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-94",
+        "legacyInventoryCardId": "PFL-094"
+      }
+    },
+    {
+      "cardId": "pfl-095",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "095/094",
+        "sortKey": 95
+      },
+      "name": "Ludicolo",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-95/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-95",
+        "legacyInventoryCardId": "PFL-095"
+      }
+    },
+    {
+      "cardId": "pfl-096",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "096/094",
+        "sortKey": 96
+      },
+      "name": "Nymble",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-96/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-96",
+        "legacyInventoryCardId": "PFL-096"
+      }
+    },
+    {
+      "cardId": "pfl-097",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "097/094",
+        "sortKey": 97
+      },
+      "name": "Dewgong",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-97/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-97",
+        "legacyInventoryCardId": "PFL-097"
+      }
+    },
+    {
+      "cardId": "pfl-098",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "098/094",
+        "sortKey": 98
+      },
+      "name": "Piplup",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-98/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-98",
+        "legacyInventoryCardId": "PFL-098"
+      }
+    },
+    {
+      "cardId": "pfl-099",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "099/094",
+        "sortKey": 99
+      },
+      "name": "Yamper",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-99/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-99",
+        "legacyInventoryCardId": "PFL-099"
+      }
+    },
+    {
+      "cardId": "pfl-100",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "100/094",
+        "sortKey": 100
+      },
+      "name": "Zacian",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-100/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-100",
+        "legacyInventoryCardId": "PFL-100"
+      }
+    },
+    {
+      "cardId": "pfl-101",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "101/094",
+        "sortKey": 101
+      },
+      "name": "Flygon",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-101/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-101",
+        "legacyInventoryCardId": "PFL-101"
+      }
+    },
+    {
+      "cardId": "pfl-102",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "102/094",
+        "sortKey": 102
+      },
+      "name": "Paldean Wooper",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-102/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-102",
+        "legacyInventoryCardId": "PFL-102"
+      }
+    },
+    {
+      "cardId": "pfl-103",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "103/094",
+        "sortKey": 103
+      },
+      "name": "Toxtricity",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-103/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-103",
+        "legacyInventoryCardId": "PFL-103"
+      }
+    },
+    {
+      "cardId": "pfl-104",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "104/094",
+        "sortKey": 104
+      },
+      "name": "Togedemaru",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-104/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-104",
+        "legacyInventoryCardId": "PFL-104"
+      }
+    },
+    {
+      "cardId": "pfl-105",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "105/094",
+        "sortKey": 105
+      },
+      "name": "Wigglytuff",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-105/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-105",
+        "legacyInventoryCardId": "PFL-105"
+      }
+    },
+    {
+      "cardId": "pfl-106",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "106/094",
+        "sortKey": 106
+      },
+      "name": "Meowth",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-106/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-106",
+        "legacyInventoryCardId": "PFL-106"
+      }
+    },
+    {
+      "cardId": "pfl-107",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "107/094",
+        "sortKey": 107
+      },
+      "name": "Ambipom",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-107/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-107",
+        "legacyInventoryCardId": "PFL-107"
+      }
+    },
+    {
+      "cardId": "pfl-108",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "108/094",
+        "sortKey": 108
+      },
+      "name": "Mega Heracross ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-108/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-108",
+        "legacyInventoryCardId": "PFL-108"
+      }
+    },
+    {
+      "cardId": "pfl-109",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "109/094",
+        "sortKey": 109
+      },
+      "name": "Mega Charizard X ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-109/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-109",
+        "legacyInventoryCardId": "PFL-109"
+      }
+    },
+    {
+      "cardId": "pfl-110",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "110/094",
+        "sortKey": 110
+      },
+      "name": "Oricorio ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-110/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-110",
+        "legacyInventoryCardId": "PFL-110"
+      }
+    },
+    {
+      "cardId": "pfl-111",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "111/094",
+        "sortKey": 111
+      },
+      "name": "Rotom ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-111/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-111",
+        "legacyInventoryCardId": "PFL-111"
+      }
+    },
+    {
+      "cardId": "pfl-112",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "112/094",
+        "sortKey": 112
+      },
+      "name": "Mismagius ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-112/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-112",
+        "legacyInventoryCardId": "PFL-112"
+      }
+    },
+    {
+      "cardId": "pfl-113",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "113/094",
+        "sortKey": 113
+      },
+      "name": "Mega Sharpedo ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-113/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-113",
+        "legacyInventoryCardId": "PFL-113"
+      }
+    },
+    {
+      "cardId": "pfl-114",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "114/094",
+        "sortKey": 114
+      },
+      "name": "Empoleon ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-114/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-114",
+        "legacyInventoryCardId": "PFL-114"
+      }
+    },
+    {
+      "cardId": "pfl-115",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "115/094",
+        "sortKey": 115
+      },
+      "name": "Mega Lopunny ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-115/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-115",
+        "legacyInventoryCardId": "PFL-115"
+      }
+    },
+    {
+      "cardId": "pfl-116",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "116/094",
+        "sortKey": 116
+      },
+      "name": "Battle Cage",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-116/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-116",
+        "legacyInventoryCardId": "PFL-116"
+      }
+    },
+    {
+      "cardId": "pfl-117",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "117/094",
+        "sortKey": 117
+      },
+      "name": "Blowtorch",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-117/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-117",
+        "legacyInventoryCardId": "PFL-117"
+      }
+    },
+    {
+      "cardId": "pfl-118",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "118/094",
+        "sortKey": 118
+      },
+      "name": "Dawn",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-118/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-118",
+        "legacyInventoryCardId": "PFL-118"
+      }
+    },
+    {
+      "cardId": "pfl-119",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "119/094",
+        "sortKey": 119
+      },
+      "name": "Firebreather",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-119/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-119",
+        "legacyInventoryCardId": "PFL-119"
+      }
+    },
+    {
+      "cardId": "pfl-120",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "120/094",
+        "sortKey": 120
+      },
+      "name": "Grimsley's Move",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-120/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-120",
+        "legacyInventoryCardId": "PFL-120"
+      }
+    },
+    {
+      "cardId": "pfl-121",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "121/094",
+        "sortKey": 121
+      },
+      "name": "Punk Helmet",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-121/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-121",
+        "legacyInventoryCardId": "PFL-121"
+      }
+    },
+    {
+      "cardId": "pfl-122",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "122/094",
+        "sortKey": 122
+      },
+      "name": "Sacred Charm",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-122/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-122",
+        "legacyInventoryCardId": "PFL-122"
+      }
+    },
+    {
+      "cardId": "pfl-123",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "123/094",
+        "sortKey": 123
+      },
+      "name": "Switch",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-123/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-123",
+        "legacyInventoryCardId": "PFL-123"
+      }
+    },
+    {
+      "cardId": "pfl-124",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "124/094",
+        "sortKey": 124
+      },
+      "name": "Ignition Energy",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-124/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-124",
+        "legacyInventoryCardId": "PFL-124"
+      }
+    },
+    {
+      "cardId": "pfl-125",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "125/094",
+        "sortKey": 125
+      },
+      "name": "Mega Charizard X ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-125/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-125",
+        "legacyInventoryCardId": "PFL-125"
+      }
+    },
+    {
+      "cardId": "pfl-126",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "126/094",
+        "sortKey": 126
+      },
+      "name": "Rotom ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-126/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-126",
+        "legacyInventoryCardId": "PFL-126"
+      }
+    },
+    {
+      "cardId": "pfl-127",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "127/094",
+        "sortKey": 127
+      },
+      "name": "Mega Sharpedo ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-127/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-127",
+        "legacyInventoryCardId": "PFL-127"
+      }
+    },
+    {
+      "cardId": "pfl-128",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "128/094",
+        "sortKey": 128
+      },
+      "name": "Mega Lopunny ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-128/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-128",
+        "legacyInventoryCardId": "PFL-128"
+      }
+    },
+    {
+      "cardId": "pfl-129",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "129/094",
+        "sortKey": 129
+      },
+      "name": "Dawn",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-129/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-129",
+        "legacyInventoryCardId": "PFL-129"
+      }
+    },
+    {
+      "cardId": "pfl-130",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "130/094",
+        "sortKey": 130
+      },
+      "name": "Mega Charizard X ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me2-130/large",
+      "variants": [
+        "normal",
+        "reverse-holo",
+        "holo",
+        "other"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me2-130",
+        "legacyInventoryCardId": "PFL-130"
+      }
+    }
+  ]
+}
