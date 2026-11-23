@@ -19,20 +19,13 @@
   },
   "inventoryVariantAuthority": {
     "basePrinting": "holo",
-    "reverseHoloCollectorNumbers": [
-      "57",
-      "114",
-      "117",
-      "118",
-      "126",
-      "127",
-      "128"
+    "scope": "30th Celebration base set only",
+    "excludedSpecialProductVariants": [
+      "Battle Deck Reverse Holo printings",
+      "Mewtwo 063 special stamped/cosmos printing",
+      "Eevee 116 Cosmos Holo printing"
     ],
-    "otherCollectorNumbers": {
-      "63": "Mewtwo — special What's Your Favorite? stamped/cosmos printing",
-      "116": "Eevee — Cosmos Holo printing"
-    },
-    "note": "Explicit candidate mapping. Do not infer availability from rarity or Schema cards[].variants."
+    "note": "All 161 base-set inventory identities are Holo-only. Special product/deck printings are excluded from this base-set inventory."
   },
   "productionTouched": false
 }
