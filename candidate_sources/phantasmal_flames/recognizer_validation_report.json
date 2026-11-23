@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-11-23",
+  "setId": "phantasmal-flames",
+  "cards": 130,
+  "descriptors": 65055,
+  "descriptorDtype": "float32",
+  "cardNumberDtype": "uint16",
+  "first": 1,
+  "last": 130,
+  "recognition": [
+    {
+      "input": 1,
+      "best": 1,
+      "status": "matched",
+      "confident": true
+    },
+    {
+      "input": 25,
+      "best": 25,
+      "status": "matched",
+      "confident": true
+    },
+    {
+      "input": 50,
+      "best": 50,
+      "status": "matched",
+      "confident": true
+    },
+    {
+      "input": 75,
+      "best": 75,
+      "status": "matched",
+      "confident": true
+    },
+    {
+      "input": 100,
+      "best": 100,
+      "status": "matched",
+      "confident": true
+    },
+    {
+      "input": 130,
+      "best": 130,
+      "status": "matched",
+      "confident": true
+    }
+  ],
+  "unloadReload": "PASS",
+  "notes": [
+    "Initial smoke attempt failed only because a bare test download was blocked by Scrydex HTTP 403.",
+    "Second smoke attempt advertised AVIF/WebP and received an image format OpenCV 4.8 could not decode.",
+    "Final accepted smoke used the exact builder download behavior (User-Agent only) and passed."
+  ],
+  "productionImpact": "none"
+}
