@@ -33,8 +33,13 @@ def required_int(data, key, minimum=1):
     if isinstance(value, bool) or not isinstance(value, int) or value < minimum: raise ScaffoldError(key + " must be an integer >= " + str(minimum) + ".")
     return value
 
-def python_name(set_id): return set_id.replace("-","_").replace(".","_")
-def js_constant(name): return re.sub(r"[^A-Za-z0-9]+","_",name).strip("_").upper() or "SCANNER_SET"
+def python_name(set_id):
+    value=set_id.replace("-","_").replace(".","_")
+    return ("set_"+value) if value[:1].isdigit() else value
+
+def js_constant(name):
+    value=re.sub(r"[^A-Za-z0-9]+","_",name).strip("_").upper() or "SCANNER_SET"
+    return ("SET_"+value) if value[:1].isdigit() else value
 def pascal_name(name): return "".join(p[:1].upper()+p[1:] for p in re.split(r"[^A-Za-z0-9]+",name) if p)
 def render_template(name, values): return (TEMPLATES/name).read_text(encoding="utf-8").format_map(values)
 
