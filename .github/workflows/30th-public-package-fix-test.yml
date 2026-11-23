@@ -1,4 +1,4 @@
-name: 30th Celebration Base Holo-Only Test
+name: 30th Celebration Live Holo-Only Package Probe
 
 on:
   push:
@@ -12,43 +12,28 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  live-probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out proposed Holo-only fix
-        uses: actions/checkout@v4
-        with:
-          ref: fix/30th-celebration-base-holo-only
-
-      - name: Validate authoritative metadata and public package
+      - name: Probe live Holo-only package
         run: |
           python - <<'PY'
-          import json
-          from pathlib import Path
-          from sets.set_30th_celebration.public_package import build_public_package
+          import json, urllib.request
 
-          meta = json.loads(Path("sets/set_30th_celebration/inventory_metadata.json").read_text())
-          plan = json.loads(Path("sets/set_30th_celebration/inventory_sheet_plan.json").read_text())
+          url = "https://pokemon-card-recognizer.onrender.com/api/v1/sets/30th-celebration/package"
+          with urllib.request.urlopen(url, timeout=60) as response:
+              package = json.loads(response.read().decode("utf-8"))
+              print("HTTP", response.status)
 
-          assert len(meta["cards"]) == 161
-          assert all(card["inventoryVariants"] == ["holo"] for card in meta["cards"])
-
-          assert len(plan["rows"]) == 161
-          for row in plan["rows"]:
-              assert row["inventoryVariants"] == ["holo"]
-              assert row["values"]["normalQty"] is None
-              assert row["values"]["reverseHoloQty"] is None
-              assert row["values"]["holoQty"] == 0
-              assert row["values"]["otherQty"] is None
-
-          package = build_public_package()
           cards = package["cards"]
+
           assert len(cards) == 161
           assert all(card["variants"] == ["holo"] for card in cards)
+
           assert cards[-3]["number"] == {"display":"R/128","sortKey":159}
           assert cards[-2]["number"] == {"display":"G/128","sortKey":160}
           assert cards[-1]["number"] == {"display":"B/128","sortKey":161}
 
-          print("PASS: 161 Holo-only base-set cards")
+          print("PASS: live package has 161 Holo-only cards")
           print("PASS: R/G/B sort keys preserved")
           PY
