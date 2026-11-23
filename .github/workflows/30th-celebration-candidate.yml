@@ -20,6 +20,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check out scanner candidate
+        uses: actions/checkout@v4
+        with:
+          repository: Young-nick-young/pokemon-card-scanner
+          ref: candidate/30th-celebration-base
+          path: scanner
+
       - name: Python syntax check
         run: python -m py_compile tools/create_set.py tools/validate_set.py schema_v1_inventory_sheet_plan.py
 
@@ -90,6 +97,38 @@ jobs:
           print("PASS: 161 identities")
           print("PASS: R/G/B collector numbers preserved")
           print("PASS: holo=161 reverse=7 other=2")
+          PY
+
+      - name: Final integration readiness check
+        run: |
+          python tools/validate_set.py \
+            --set 30th-celebration \
+            --frontend-root scanner \
+            --apps-script-root generated/30th-celebration/apps_script \
+            --require-library \
+            --integration
+          python - <<'PY'
+          import json, sys
+          from pathlib import Path
+          sys.path.insert(0, "tools")
+          from onboard_set import write_readiness_report
+
+          test_result = json.loads(
+              Path("candidate_sources/30th_celebration_base/test_sheet_result.json").read_text()
+          )
+          status, path = write_readiness_report(
+              "30th-celebration",
+              True,
+              Path("scanner"),
+              Path("generated/30th-celebration/apps_script"),
+              test_result,
+              Path(".").resolve(),
+              Path("generated/30th-celebration"),
+          )
+          print("FINAL READINESS:", status)
+          print("REPORT:", path)
+          if status != "READY":
+              raise SystemExit("30th Celebration is not READY")
           PY
 
       - name: Commit validated generated candidate
