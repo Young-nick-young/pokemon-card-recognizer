@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-11-23",
+  "setId": "phantasmal-flames",
+  "identityCount": 130,
+  "first": {
+    "cardId": "pfl-001",
+    "name": "Oddish",
+    "display": "001/094"
+  },
+  "last": {
+    "cardId": "pfl-130",
+    "name": "Mega Charizard X ex",
+    "display": "130/094"
+  },
+  "comboCounts": {
+    "normal+reverse-holo": 74,
+    "holo": 46,
+    "reverse-holo+holo": 10
+  },
+  "rarityCounts": {
+    "Common": 43,
+    "Rare": 10,
+    "Double Rare": 10,
+    "Uncommon": 31,
+    "Illustration Rare": 13,
+    "Ultra Rare": 17,
+    "Special Illustration Rare": 5,
+    "Mega Hyper Rare": 1
+  },
+  "sheetPlan": {
+    "startRow": 13,
+    "endRow": 142,
+    "rowCount": 130,
+    "range": "A1:Q142"
+  },
+  "errors": []
+}
