@@ -27,13 +27,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check out scanner candidate
-        if: github.ref == 'refs/heads/candidate/mega-evolution-base'
-        uses: actions/checkout@v4
-        with:
-          repository: Young-nick-young/pokemon-card-scanner
-          ref: candidate/mega-evolution-base
-          path: scanner
       - name: Python syntax check
         run: python -m py_compile tools/onboard_set.py tools/create_set.py tools/validate_set.py
       - name: Check new-set template is valid JSON
