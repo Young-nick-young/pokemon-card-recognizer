@@ -43,6 +43,15 @@ jobs:
             --output sets/30th_celebration/card_library.pkl
           python tools/validate_set.py --set 30th-celebration --require-library
 
+      - name: Upload generated candidate artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 30th-celebration-candidate
+          path: |
+            sets/30th_celebration
+            generated/30th-celebration
+          if-no-files-found: error
+
       - name: Verify special collector numbers and variant authority
         run: |
           python - <<'PY'
