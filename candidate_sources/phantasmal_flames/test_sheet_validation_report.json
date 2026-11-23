@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-11-23",
+  "setId": "phantasmal-flames",
+  "workbookId": "1EsYzX-JqWqzksqaOBrvn6xu6RnIzWhqNJhcW2UQAKsE",
+  "stagingSheet": "PFL_phantasmal-flames",
+  "stagingSheetId": 1738106249,
+  "expectedRange": "A1:Q142",
+  "expectedCells": 2414,
+  "mismatches": 0,
+  "frozenRows": 12,
+  "first": {
+    "row": 13,
+    "cardId": "PFL-001",
+    "name": "Oddish"
+  },
+  "last": {
+    "row": 142,
+    "cardId": "PFL-130",
+    "name": "Mega Charizard X ex"
+  },
+  "productionImpact": "none"
+}
