@@ -1,0 +1,31 @@
+{
+  "setId": "mega-evolution-promos",
+  "displayName": "Mega Evolution Black Star Promos",
+  "code": "MEP",
+  "language": "English",
+  "series": "Mega Evolution",
+  "sourceSnapshotDate": "2026-11-23",
+  "status": "discovery",
+  "scope": {
+    "include": "English Mega Evolution Black Star Promo identities",
+    "exclude": [
+      "Japanese-language promo printings",
+      "sealed products",
+      "non-MEP cards"
+    ]
+  },
+  "currentSnapshot": {
+    "canonicalIdentityModel": "one collector-number identity per base MEP promo record; physical alternate printings are inventory variants",
+    "currentCatalogEvidence": {
+      "recordCount": 121,
+      "numberingSummary": "1-118, 120, 131, plus unnumbered Pikachu at the Museum",
+      "note": "Promo series is ongoing; this is a dated snapshot, not a permanently closed set."
+    }
+  },
+  "inventoryVariantRisk": {
+    "status": "open",
+    "reason": "MEP has multiple physical printings sharing collector numbers, including Staff, Pokemon Center, prerelease/stamped, Cosmos Holo, Winner, World Championships and other event/product releases.",
+    "rule": "Do not infer inventory availability from schema variants or rarity. Build explicit per-card inventoryVariants from independently verified physical-printing evidence."
+  },
+  "productionImpact": "none"
+}
