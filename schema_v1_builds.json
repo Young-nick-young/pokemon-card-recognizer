@@ -41,6 +41,12 @@
       "package": "sets/mega_evolution",
       "expectedRecords": 188,
       "output": "sets/mega_evolution/card_library.pkl"
+    },
+    {
+      "setId": "phantasmal-flames",
+      "package": "sets/phantasmal_flames",
+      "expectedRecords": 130,
+      "output": "sets/phantasmal_flames/card_library.pkl"
     }
   ]
 }
