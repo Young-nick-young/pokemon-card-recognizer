@@ -69,6 +69,31 @@ jobs:
           print("PASS: 30th Celebration candidate structure")
           PY
 
+      - name: Validate proposed 30th Celebration public-package fix
+        if: github.ref == 'refs/heads/candidate/30th-celebration-base'
+        run: |
+          git fetch origin fix/30th-celebration-public-package
+          git checkout -f origin/fix/30th-celebration-public-package
+          python - <<'PY'
+          from sets.set_30th_celebration.public_package import build_public_package
+          package = build_public_package()
+          cards = package["cards"]
+          assert len(cards) == 161
+          assert cards[-3]["number"] == {"display":"R/128","sortKey":159}
+          assert cards[-2]["number"] == {"display":"G/128","sortKey":160}
+          assert cards[-1]["number"] == {"display":"B/128","sortKey":161}
+          counts = {v: sum(v in card["variants"] for card in cards) for v in ("normal","reverse-holo","holo","other")}
+          assert counts == {"normal":0,"reverse-holo":7,"holo":161,"other":2}, counts
+          by_id = {card["cardId"]: card for card in cards}
+          assert by_id["30c-001"]["variants"] == ["holo"]
+          assert by_id["30c-057"]["variants"] == ["reverse-holo","holo"]
+          assert by_id["30c-063"]["variants"] == ["holo","other"]
+          assert by_id["30c-116"]["variants"] == ["holo","other"]
+          assert by_id["30c-159"]["variants"] == ["holo"]
+          print("PASS: proposed public package fix")
+          print("PASS:", counts)
+          PY
+
       - name: Final lightweight integration readiness
         if: github.ref == 'refs/heads/candidate/30th-celebration-base'
         run: |
