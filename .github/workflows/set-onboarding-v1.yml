@@ -1,0 +1,24 @@
+name: Set Onboarding v1 Candidate Test
+
+on:
+  push:
+    branches:
+      - feature/set-onboarding-v1
+    paths:
+      - "tools/onboard_set.py"
+      - "tests/onboard_set_smoke_test.py"
+      - ".github/workflows/set-onboarding-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  candidate-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python syntax check
+        run: python -m py_compile tools/onboard_set.py tools/create_set.py tools/validate_set.py
+      - name: Onboarding wrapper smoke tests
+        run: python tests/onboard_set_smoke_test.py
