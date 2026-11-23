@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "manifestVersion": 1,
+  "setId": "phantasmal-flames",
+  "displayName": "Phantasmal Flames",
+  "language": "en",
+  "market": "international",
+  "aliases": [
+    "phantasmal_flames",
+    "pfl",
+    "me2",
+    "me02"
+  ],
+  "externalIds": {
+    "displayCode": "PFL",
+    "officialCode": "ME02",
+    "pokemonTcgData": "me2"
+  },
+  "collections": [
+    {
+      "collectionId": "main",
+      "label": "Main Set"
+    }
+  ],
+  "numberingNamespaces": [
+    {
+      "namespaceId": "main",
+      "label": "Main and Secret Cards",
+      "denominator": "94"
+    }
+  ],
+  "variants": [
+    {
+      "variantId": "normal",
+      "label": "Normal",
+      "inventoryKey": "normal"
+    },
+    {
+      "variantId": "reverse-holo",
+      "label": "Reverse Holo",
+      "inventoryKey": "reverse"
+    },
+    {
+      "variantId": "holo",
+      "label": "Holo",
+      "inventoryKey": "holo"
+    },
+    {
+      "variantId": "other",
+      "label": "Other",
+      "inventoryKey": "other"
+    }
+  ],
+  "catalogue": {
+    "path": "cards.json",
+    "expectedRecords": 130
+  },
+  "inventory": {
+    "destinationKey": "phantasmal-flames-inventory",
+    "sheetName": "Phantasmal Flames",
+    "startRow": 13,
+    "cardIdColumn": 17,
+    "quantityColumns": {
+      "normal": 6,
+      "reverse": 7,
+      "holo": 8,
+      "other": 9
+    }
+  }
+}
