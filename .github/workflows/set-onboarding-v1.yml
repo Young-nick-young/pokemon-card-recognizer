@@ -6,9 +6,12 @@ on:
       - feature/set-onboarding-v1
     paths:
       - "tools/onboard_set.py"
+      - "tools/create_set.py"
+      - "schema_v1_inventory_sheet_plan.py"
       - "tools/google_sheets_test_harness_v2.gs"
       - "tools/set_templates/new_set_definition.example.json"
       - "tests/onboard_set_smoke_test.py"
+      - "tests/lettered_collector_number_test.py"
       - "tests/google_sheets_test_harness_safety_test.py"
       - ".github/workflows/set-onboarding-v1.yml"
   workflow_dispatch:
@@ -29,3 +32,5 @@ jobs:
         run: python tests/onboard_set_smoke_test.py
       - name: Test Sheet harness safety tests
         run: python tests/google_sheets_test_harness_safety_test.py
+      - name: Lettered collector-number tests
+        run: python tests/lettered_collector_number_test.py
