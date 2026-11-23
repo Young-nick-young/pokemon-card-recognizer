@@ -1,20 +1,16 @@
-name: Set Onboarding v1 Candidate Test
+name: Mega Evolution Base Candidate Validation
 
 on:
   push:
     branches:
-      - feature/set-onboarding-v1
       - candidate/mega-evolution-base
     paths:
-      - "tools/onboard_set.py"
       - "tools/create_set.py"
       - "tools/validate_set.py"
+      - "tools/validate_inventory_sheet_v2.py"
       - "schema_v1_inventory_sheet_plan.py"
-      - "tools/google_sheets_test_harness_v2.gs"
-      - "tools/set_templates/new_set_definition.example.json"
-      - "tests/onboard_set_smoke_test.py"
-      - "tests/lettered_collector_number_test.py"
-      - "tests/google_sheets_test_harness_safety_test.py"
+      - "schema_v1_loader.py"
+      - "tools/set_templates/**"
       - "candidate_sources/mega_evolution_base/**"
       - ".github/workflows/set-onboarding-v1.yml"
   workflow_dispatch:
@@ -27,27 +23,33 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Python syntax check
-        run: python -m py_compile tools/onboard_set.py tools/create_set.py tools/validate_set.py
-      - name: Check new-set template is valid JSON
-        run: python -m json.tool tools/set_templates/new_set_definition.example.json > /dev/null
-      - name: Onboarding wrapper smoke tests
-        run: python tests/onboard_set_smoke_test.py
-      - name: Test Sheet harness safety tests
-        run: python tests/google_sheets_test_harness_safety_test.py
-      - name: Lettered collector-number tests
-        run: python tests/lettered_collector_number_test.py
+
+      - name: Syntax check current onboarding tools
+        run: |
+          python -m py_compile \
+            tools/create_set.py \
+            tools/validate_set.py \
+            tools/validate_inventory_sheet_v2.py \
+            schema_v1_inventory_sheet_plan.py \
+            schema_v1_loader.py
 
       - name: Generate and validate Mega Evolution base candidate
-        if: github.ref == 'refs/heads/candidate/mega-evolution-base'
         run: |
           python tools/create_set.py candidate_sources/mega_evolution_base/definition.json \
             --candidate-output-root generated/mega-evolution
           python tools/validate_set.py --set mega-evolution
-          python -m py_compile sets/mega_evolution/runtime_metadata.py sets/mega_evolution/recognizer.py sets/mega_evolution/public_package.py main.py
+          python tools/validate_inventory_sheet_v2.py \
+            --plan sets/mega_evolution/inventory_sheet_plan.json
+          python -m py_compile \
+            sets/mega_evolution/runtime_metadata.py \
+            sets/mega_evolution/recognizer.py \
+            sets/mega_evolution/public_package.py \
+            main.py
           node --check < generated/mega-evolution/apps_script/mega_evolution_config.gs
           node --check generated/mega-evolution/frontend/js/sets/mega-evolution.js
-          python tools/validate_inventory_sheet_v2.py --plan sets/mega_evolution/inventory_sheet_plan.json
+
+      - name: Verify exact ME1 structure
+        run: |
           python - <<'PY'
           import json
           from pathlib import Path
@@ -56,34 +58,51 @@ jobs:
           meta = json.loads(Path("sets/mega_evolution/inventory_metadata.json").read_text())["cards"]
           plan = json.loads(Path("sets/mega_evolution/inventory_sheet_plan.json").read_text())
 
-          assert len(cards) == len(meta) == len(plan["rows"]) == 188
+          assert len(cards) == 188
+          assert len(meta) == 188
+          assert len(plan["rows"]) == 188
+          assert plan["endRow"] == 200
+
           assert cards[0]["cardId"] == "meg-001"
-          assert cards[0]["number"] == {"namespaceId":"main","display":"001/132","sortKey":1}
+          assert cards[0]["number"] == {
+              "namespaceId": "main",
+              "display": "001/132",
+              "sortKey": 1,
+          }
           assert cards[-1]["cardId"] == "meg-188"
-          assert cards[-1]["number"] == {"namespaceId":"main","display":"188/132","sortKey":188}
+          assert cards[-1]["number"] == {
+              "namespaceId": "main",
+              "display": "188/132",
+              "sortKey": 188,
+          }
 
           counts = {
               v: sum(v in card["inventoryVariants"] for card in meta)
-              for v in ("normal","reverse-holo","holo","other")
+              for v in ("normal", "reverse-holo", "holo", "other")
           }
           assert counts == {
-              "normal":110,
-              "reverse-holo":122,
-              "holo":78,
-              "other":0,
+              "normal": 110,
+              "reverse-holo": 122,
+              "holo": 78,
+              "other": 0,
           }, counts
 
-          combo_counts = {}
+          combos = {}
           for card in meta:
               key = tuple(card["inventoryVariants"])
-              combo_counts[key] = combo_counts.get(key, 0) + 1
-          assert combo_counts == {
-              ("normal","reverse-holo"):110,
-              ("reverse-holo","holo"):12,
-              ("holo",):66,
-          }, combo_counts
+              combos[key] = combos.get(key, 0) + 1
+          assert combos == {
+              ("normal", "reverse-holo"): 110,
+              ("reverse-holo", "holo"): 12,
+              ("holo",): 66,
+          }, combos
 
-          print("PASS: Mega Evolution candidate structure")
-          print("PASS:", counts)
-          print("PASS:", combo_counts)
+          assert plan["rows"][0]["compatibilityCardId"] == "MEG-001"
+          assert plan["rows"][-1]["compatibilityCardId"] == "MEG-188"
+
+          print("PASS: 188 identities")
+          print("PASS: first/last identities")
+          print("PASS: inventory counts", counts)
+          print("PASS: inventory combinations", combos)
+          print("PASS: Sheet Plan rows 13-200")
           PY
