@@ -1,0 +1,48 @@
+{
+  "setId": "phantasmal-flames",
+  "sourceSnapshotDate": "2026-11-23",
+  "primaryDataset": {
+    "repository": "PokemonTCG/pokemon-tcg-data",
+    "path": "cards/en/me2.json",
+    "recordCount": 130,
+    "note": "Legacy compatibility dataset used for the normalized identity list; actively maintained source preference remains Scrydex."
+  },
+  "setFacts": {
+    "setNumber": "ME2",
+    "abbreviation": "PFL",
+    "officialCode": "ME02",
+    "printedTotal": 94,
+    "total": 130,
+    "releaseDate": "2025-11-14"
+  },
+  "baseInventoryScope": {
+    "include": "pack-distributed English Phantasmal Flames base-set printings",
+    "exclude": "later product/event/promotional reprints such as Cosmos Holo, stamped, Build & Battle non-holo, Prize Pack, League/event and other additional-card printings",
+    "rules": [
+      "Common and Uncommon: Normal + Reverse Holo",
+      "Rare: Holo + Reverse Holo",
+      "Double Rare and secret-rarity cards: Holo only"
+    ]
+  },
+  "validation": {
+    "identityCount": 130,
+    "inventoryVariantCounts": {
+      "normal+reverse-holo": 74,
+      "holo": 46,
+      "reverse-holo+holo": 10
+    },
+    "rarityCounts": {
+      "Common": 43,
+      "Rare": 10,
+      "Double Rare": 10,
+      "Uncommon": 31,
+      "Illustration Rare": 13,
+      "Ultra Rare": 17,
+      "Special Illustration Rare": 5,
+      "Mega Hyper Rare": 1
+    },
+    "requestedAt": "2026-11-23",
+    "requestedGate": "scaffold-structure"
+  },
+  "productionImpact": "none"
+}
