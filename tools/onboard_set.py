@@ -17,20 +17,56 @@ from validate_set import validate
 
 ROOT = Path(__file__).resolve().parents[1]
 
+REQUIRED_SETUP_FIELDS = (
+    "name",
+    "set_id",
+    "series",
+    "display_code",
+    "official_code",
+    "dataset_id",
+    "expected_cards",
+    "denominator",
+    "spreadsheet_id",
+    "script_url",
+)
 
-def read_set_id(definition: Path) -> str:
+def load_definition(definition: Path) -> dict:
     try:
         raw = json.loads(definition.read_text(encoding="utf-8"))
     except FileNotFoundError as error:
         raise ScaffoldError(f"Definition file not found: {definition}") from error
     except (OSError, json.JSONDecodeError) as error:
         raise ScaffoldError(f"Definition file is unreadable or invalid JSON: {error}") from error
+    if not isinstance(raw, dict):
+        raise ScaffoldError("Definition root must be a JSON object.")
+    return raw
 
-    set_id = raw.get("set_id") if isinstance(raw, dict) else None
+def preflight_definition(definition: Path) -> dict:
+    raw = load_definition(definition)
+    missing = []
+    for key in REQUIRED_SETUP_FIELDS:
+        value = raw.get(key)
+        if value is None or value == "" or (isinstance(value, str) and not value.strip()):
+            missing.append(key)
+
+    has_cards = isinstance(raw.get("cards"), list) and bool(raw.get("cards"))
+    cards_file = raw.get("cards_file")
+    has_cards_file = isinstance(cards_file, str) and bool(cards_file.strip())
+    if not has_cards and not has_cards_file:
+        missing.append("cards or cards_file")
+
+    if missing:
+        raise ScaffoldError(
+            "New-set setup is incomplete. Missing: " + ", ".join(missing)
+        )
+    return raw
+
+def read_set_id(definition: Path) -> str:
+    raw = preflight_definition(definition)
+    set_id = raw.get("set_id")
     if not isinstance(set_id, str) or not set_id.strip():
         raise ScaffoldError("Definition must contain a non-empty set_id.")
     return set_id.strip().lower()
-
 
 def onboard(
     definition: Path,
@@ -42,11 +78,13 @@ def onboard(
 ) -> bool:
     definition = Path(definition).resolve()
     recognizer_root = Path(recognizer_root).resolve()
-    set_id = read_set_id(definition)
 
     print("=" * 68)
     print("NEW SET ONBOARDING — CANDIDATE ONLY")
     print("=" * 68)
+    print("[0/2] Checking setup information...")
+    set_id = read_set_id(definition)
+    print("Setup information: COMPLETE")
     print("Set:", set_id)
     print("Production deployment: DISABLED")
     print()
@@ -88,7 +126,6 @@ def onboard(
     print("=" * 68)
     return ok
 
-
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(
         description=(
@@ -96,7 +133,7 @@ def parse_args(argv=None):
             "This tool never deploys production."
         )
     )
-    parser.add_argument("definition", type=Path, help="Normalized set definition JSON")
+    parser.add_argument("definition", type=Path, help="New-set setup JSON")
     parser.add_argument("--recognizer-root", type=Path, default=ROOT)
     parser.add_argument("--frontend-root", type=Path)
     parser.add_argument("--apps-script-root", type=Path)
@@ -107,7 +144,6 @@ def parse_args(argv=None):
         help="Also require the built recognition library during validation.",
     )
     return parser.parse_args(argv)
-
 
 def main(argv=None) -> int:
     args = parse_args(argv)
@@ -124,7 +160,6 @@ def main(argv=None) -> int:
         print(f"FAIL: {error}", file=sys.stderr)
         return 1
     return 0 if ok else 1
-
 
 if __name__ == "__main__":
     raise SystemExit(main())
