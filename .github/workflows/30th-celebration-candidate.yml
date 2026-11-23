@@ -6,7 +6,7 @@ on:
       - candidate/30th-celebration-base
     paths:
       - "candidate_sources/30th_celebration_base/**"
-      - "tools/create_set.py"
+      - "tools/create_set.py"\n      - "tools/validate_set.py"
       - "schema_v1_inventory_sheet_plan.py"
       - ".github/workflows/30th-celebration-candidate.yml"
   workflow_dispatch:
