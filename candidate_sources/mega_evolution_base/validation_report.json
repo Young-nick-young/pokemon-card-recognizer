@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-11-23",
+  "setId": "mega-evolution",
+  "identityCount": 188,
+  "first": {
+    "cardId": "meg-001",
+    "name": "Bulbasaur",
+    "display": "001/132"
+  },
+  "last": {
+    "cardId": "meg-188",
+    "name": "Mega Lucario ex",
+    "display": "188/132"
+  },
+  "comboCounts": {
+    "normal+reverse-holo": 110,
+    "holo": 66,
+    "reverse-holo+holo": 12
+  },
+  "rarityCounts": {
+    "Common": 67,
+    "Double Rare": 10,
+    "Uncommon": 43,
+    "Rare": 12,
+    "Illustration Rare": 22,
+    "Ultra Rare": 22,
+    "Special Illustration Rare": 10,
+    "Mega Hyper Rare": 2
+  },
+  "sheetPlan": {
+    "startRow": 13,
+    "endRow": 200,
+    "rowCount": 188,
+    "range": "A1:Q200"
+  },
+  "errors": []
+}
