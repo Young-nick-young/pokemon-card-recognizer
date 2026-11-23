@@ -1,0 +1,45 @@
+{
+  "setId": "mega-evolution",
+  "sourceSnapshotDate": "2026-11-23",
+  "primaryDataset": {
+    "repository": "PokemonTCG/pokemon-tcg-data",
+    "path": "cards/en/me1.json",
+    "recordCount": 188,
+    "note": "Legacy compatibility dataset used for the normalized identity list; actively maintained source preference remains Scrydex."
+  },
+  "setFacts": {
+    "setNumber": "ME1",
+    "abbreviation": "MEG",
+    "printedTotal": 132,
+    "total": 188,
+    "releaseDate": "2025-09-26"
+  },
+  "baseInventoryScope": {
+    "include": "pack-distributed English Mega Evolution base-set printings",
+    "exclude": "later product/event/promotional reprints such as Cosmos Holo, stamped, Build & Battle non-holo, Prize Pack, League/event and other additional-card printings",
+    "rules": [
+      "Common and Uncommon: Normal + Reverse Holo",
+      "Rare: Holo + Reverse Holo",
+      "Double Rare and secret-rarity cards: Holo only"
+    ]
+  },
+  "validation": {
+    "identityCount": 188,
+    "inventoryVariantCounts": {
+      "normal+reverse-holo": 110,
+      "holo": 66,
+      "reverse-holo+holo": 12
+    },
+    "rarityCounts": {
+      "Common": 67,
+      "Double Rare": 10,
+      "Uncommon": 43,
+      "Rare": 12,
+      "Illustration Rare": 22,
+      "Ultra Rare": 22,
+      "Special Illustration Rare": 10,
+      "Mega Hyper Rare": 2
+    }
+  },
+  "productionImpact": "none"
+}
