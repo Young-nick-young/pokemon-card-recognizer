@@ -26,6 +26,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check out scanner candidate
+        if: github.ref == 'refs/heads/candidate/30th-celebration-base'
+        uses: actions/checkout@v4
+        with:
+          repository: Young-nick-young/pokemon-card-scanner
+          ref: candidate/30th-celebration-base
+          path: scanner
       - name: Python syntax check
         run: python -m py_compile tools/onboard_set.py tools/create_set.py tools/validate_set.py
       - name: Check new-set template is valid JSON
@@ -56,4 +63,36 @@ jobs:
           assert sum("reverse-holo" in x["inventoryVariants"] for x in meta) == 7
           assert sum("other" in x["inventoryVariants"] for x in meta) == 2
           print("PASS: 30th Celebration candidate structure")
+          PY
+
+      - name: Final lightweight integration readiness
+        if: github.ref == 'refs/heads/candidate/30th-celebration-base'
+        run: |
+          python tools/validate_set.py \
+            --set 30th-celebration \
+            --frontend-root scanner \
+            --apps-script-root generated/30th-celebration/apps_script \
+            --integration
+          python - <<'PY'
+          import json, sys
+          from pathlib import Path
+          sys.path.insert(0, "tools")
+          from onboard_set import write_readiness_report
+
+          test_result = json.loads(
+              Path("candidate_sources/30th_celebration_base/test_sheet_result.json").read_text()
+          )
+          status, path = write_readiness_report(
+              "30th-celebration",
+              True,
+              Path("scanner"),
+              Path("generated/30th-celebration/apps_script"),
+              test_result,
+              Path(".").resolve(),
+              Path("generated/30th-celebration"),
+          )
+          print("FINAL READINESS:", status)
+          print("REPORT:", path)
+          if status != "READY":
+              raise SystemExit("30th Celebration is not READY")
           PY
