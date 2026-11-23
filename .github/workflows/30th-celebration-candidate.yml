@@ -23,6 +23,9 @@ jobs:
       - name: Python syntax check
         run: python -m py_compile tools/create_set.py tools/validate_set.py schema_v1_inventory_sheet_plan.py
 
+      - name: Install recognition dependencies
+        run: pip install -r requirements.txt
+
       - name: Generate 30th Celebration candidate
         run: |
           python tools/create_set.py candidate_sources/30th_celebration_base/definition.json \
@@ -30,6 +33,15 @@ jobs:
 
       - name: Validate generated recognizer candidate
         run: python tools/validate_set.py --set 30th-celebration
+
+      - name: Build 30th Celebration recognition library
+        run: |
+          python schema_v1_library_builder.py \
+            --set-id 30th-celebration \
+            --package sets/30th_celebration \
+            --expected-records 161 \
+            --output sets/30th_celebration/card_library.pkl
+          python tools/validate_set.py --set 30th-celebration --require-library
 
       - name: Verify special collector numbers and variant authority
         run: |
