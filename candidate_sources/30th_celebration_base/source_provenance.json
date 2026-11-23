@@ -1,0 +1,38 @@
+{
+  "setId": "30th-celebration",
+  "scope": "Main 30th Celebration set only; Classic Collection excluded and will be treated separately.",
+  "source": {
+    "repository": "PokemonTCG/pokemon-tcg-data",
+    "commit": "90f27d0e14cefe48ccb2b8922a7a356b2fcf0072",
+    "file": "cards/en/me55.json",
+    "datasetId": "me55"
+  },
+  "identitySummary": {
+    "records": 161,
+    "numericCards": "1-158",
+    "letteredCards": [
+      "R",
+      "G",
+      "B"
+    ],
+    "classicCollectionIncluded": false
+  },
+  "inventoryVariantAuthority": {
+    "basePrinting": "holo",
+    "reverseHoloCollectorNumbers": [
+      "57",
+      "114",
+      "117",
+      "118",
+      "126",
+      "127",
+      "128"
+    ],
+    "otherCollectorNumbers": {
+      "63": "Mewtwo — special What's Your Favorite? stamped/cosmos printing",
+      "116": "Eevee — Cosmos Holo printing"
+    },
+    "note": "Explicit candidate mapping. Do not infer availability from rarity or Schema cards[].variants."
+  },
+  "productionTouched": false
+}
