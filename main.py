@@ -28,6 +28,11 @@ from sets.pitch_black.public_package import (
     build_public_package as build_pitch_black_public_package
 )
 
+from sets.set_30th_celebration import recognizer as set_30th_celebration
+from sets.set_30th_celebration.public_package import (
+    build_public_package as build_set_30th_celebration_public_package
+)
+
 
 # =========================================================
 # SCHEMA V1 SHADOW LOAD
@@ -88,7 +93,8 @@ RECOGNIZERS = {
     "ascended-heroes": ascended_heroes,
     "perfect-order": perfect_order,
     "chaos-rising": chaos_rising,
-    "pitch-black": pitch_black
+    "pitch-black": pitch_black,
+    "30th-celebration": set_30th_celebration
 }
 
 
@@ -115,7 +121,11 @@ SET_ALIASES = {
     "pitch_black": "pitch-black",
     "pbl": "pitch-black",
     "me5": "pitch-black",
-    "me05": "pitch-black"
+    "me05": "pitch-black",
+    "30th-celebration": "30th-celebration",
+    "30c": "30th-celebration",
+    "30th_celebration": "30th-celebration",
+    "me55": "30th-celebration"
 }
 
 
@@ -346,7 +356,10 @@ def root():
                 chaos_rising.get_status(),
 
             "pitch-black":
-                pitch_black.get_status()
+                pitch_black.get_status(),
+
+            "30th-celebration":
+                set_30th_celebration.get_status()
         }
     }
 
@@ -425,6 +438,15 @@ def pitch_black_public_package():
     except Exception as error:
         print("Pitch Black public package unavailable:", error)
         raise HTTPException(status_code=503, detail={"error": "Public set package unavailable", "set": "pitch-black"}) from error
+
+
+@app.get("/api/v1/sets/30th-celebration/package")
+def set_30th_celebration_public_package():
+    try:
+        return build_set_30th_celebration_public_package()
+    except Exception as error:
+        print("30th Celebration public package unavailable:", error)
+        raise HTTPException(status_code=503, detail={"error": "Public set package unavailable", "set": "30th-celebration"}) from error
 
 
 # =========================================================
