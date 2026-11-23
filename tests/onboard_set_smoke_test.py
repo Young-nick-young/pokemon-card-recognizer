@@ -56,6 +56,16 @@ class OnboardSetSmokeTest(unittest.TestCase):
             self.assertEqual(report["links"]["frontend"], "candidate-file-prepared-only")
             self.assertEqual(report["links"]["googleSheet"], "not-created-or-modified")
 
+            request = json.loads(
+                (out / "test_sheet_request.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(request["testSheetName"], "TEST_example_set")
+            self.assertFalse(request["productionWritesAllowed"])
+            self.assertEqual(
+                request["inventorySheetPlan"],
+                "sets/example_set/inventory_sheet_plan.json"
+            )
+
     def test_validation_failure_blocks_readiness(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
