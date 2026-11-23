@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate-candidate:
@@ -91,3 +91,17 @@ jobs:
           print("PASS: R/G/B collector numbers preserved")
           print("PASS: holo=161 reverse=7 other=2")
           PY
+
+      - name: Commit validated generated candidate
+        if: success()
+        run: |
+          rm -f sets/30th_celebration/card_library.pkl
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sets/30th_celebration schema_v1_builds.json main.py generated/30th-celebration
+          if git diff --cached --quiet; then
+            echo "No generated candidate changes to commit."
+          else
+            git commit -m "Generate validated 30th Celebration candidate"
+            git push
+          fi
