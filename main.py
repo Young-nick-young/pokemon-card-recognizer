@@ -33,6 +33,11 @@ from sets.set_30th_celebration.public_package import (
     build_public_package as build_set_30th_celebration_public_package
 )
 
+from sets.mega_evolution import recognizer as mega_evolution
+from sets.mega_evolution.public_package import (
+    build_public_package as build_mega_evolution_public_package
+)
+
 
 # =========================================================
 # SCHEMA V1 SHADOW LOAD
@@ -94,7 +99,8 @@ RECOGNIZERS = {
     "perfect-order": perfect_order,
     "chaos-rising": chaos_rising,
     "pitch-black": pitch_black,
-    "30th-celebration": set_30th_celebration
+    "30th-celebration": set_30th_celebration,
+    "mega-evolution": mega_evolution
 }
 
 
@@ -125,7 +131,13 @@ SET_ALIASES = {
     "30th-celebration": "30th-celebration",
     "30c": "30th-celebration",
     "30th_celebration": "30th-celebration",
-    "me55": "30th-celebration"
+    "me55": "30th-celebration",
+
+    "mega-evolution": "mega-evolution",
+    "mega_evolution": "mega-evolution",
+    "meg": "mega-evolution",
+    "me1": "mega-evolution",
+    "me01": "mega-evolution"
 }
 
 
@@ -359,7 +371,10 @@ def root():
                 pitch_black.get_status(),
 
             "30th-celebration":
-                set_30th_celebration.get_status()
+                set_30th_celebration.get_status(),
+
+            "mega-evolution":
+                mega_evolution.get_status()
         }
     }
 
@@ -447,6 +462,15 @@ def set_30th_celebration_public_package():
     except Exception as error:
         print("30th Celebration public package unavailable:", error)
         raise HTTPException(status_code=503, detail={"error": "Public set package unavailable", "set": "30th-celebration"}) from error
+
+
+@app.get("/api/v1/sets/mega-evolution/package")
+def mega_evolution_public_package():
+    try:
+        return build_mega_evolution_public_package()
+    except Exception as error:
+        print("Mega Evolution public package unavailable:", error)
+        raise HTTPException(status_code=503, detail={"error": "Public set package unavailable", "set": "mega-evolution"}) from error
 
 
 # =========================================================
