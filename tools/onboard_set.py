@@ -107,6 +107,33 @@ def write_linking_report(
     path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     return path
 
+def write_test_sheet_request(
+    definition: Path,
+    set_id: str,
+    recognizer_root: Path,
+    candidate_output_root: Path | None,
+) -> Path:
+    raw = load_definition(definition)
+    output_root = (
+        Path(candidate_output_root).resolve()
+        if candidate_output_root is not None
+        else recognizer_root / "generated" / set_id
+    )
+    output_root.mkdir(parents=True, exist_ok=True)
+    package_name = set_id.replace("-", "_").replace(".", "_")
+    request = {
+        "setId": set_id,
+        "spreadsheetId": raw["spreadsheet_id"],
+        "productionSheetName": raw.get("sheet_name") or raw["name"],
+        "testSheetName": "TEST_" + set_id.replace("-", "_"),
+        "inventorySheetPlan": "sets/" + package_name + "/inventory_sheet_plan.json",
+        "testHarness": "tools/google_sheets_test_harness_v2.gs",
+        "productionWritesAllowed": False,
+    }
+    path = output_root / "test_sheet_request.json"
+    path.write_text(json.dumps(request, indent=2) + "\n", encoding="utf-8")
+    return path
+
 def onboard(
     definition: Path,
     recognizer_root: Path = ROOT,
@@ -162,9 +189,16 @@ def onboard(
         apps_script_root,
         candidate_output_root,
     )
+    test_request_path = write_test_sheet_request(
+        definition,
+        set_id,
+        recognizer_root,
+        candidate_output_root,
+    )
 
     print()
     print("Linking report:", report_path)
+    print("Test Sheet request:", test_request_path)
     print("=" * 68)
     if ok:
         print("RESULT: CANDIDATE READY FOR REVIEW")
