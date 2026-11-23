@@ -7,7 +7,8 @@ on:
       - candidate/30th-celebration-base
     paths:
       - "tools/onboard_set.py"
-      - "tools/create_set.py"\n      - "tools/validate_set.py"
+      - "tools/create_set.py"
+      - "tools/validate_set.py"
       - "schema_v1_inventory_sheet_plan.py"
       - "tools/google_sheets_test_harness_v2.gs"
       - "tools/set_templates/new_set_definition.example.json"
