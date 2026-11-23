@@ -1,0 +1,64 @@
+name: 30th Celebration Public Package Fix Test
+
+on:
+  push:
+    branches:
+      - candidate/30th-celebration-base
+    paths:
+      - ".github/workflows/30th-public-package-fix-test.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out proposed production fix
+        uses: actions/checkout@v4
+        with:
+          ref: fix/30th-celebration-public-package
+
+      - name: Validate public package projection
+        run: |
+          python - <<'PY'
+          from sets.set_30th_celebration.public_package import build_public_package
+
+          package = build_public_package()
+          cards = package["cards"]
+
+          assert len(cards) == 161
+          assert cards[0]["cardId"] == "30c-001"
+          assert cards[0]["number"] == {"display": "001/128", "sortKey": 1}
+
+          assert cards[-3]["cardId"] == "30c-159"
+          assert cards[-3]["number"] == {"display": "R/128", "sortKey": 159}
+          assert cards[-2]["number"] == {"display": "G/128", "sortKey": 160}
+          assert cards[-1]["number"] == {"display": "B/128", "sortKey": 161}
+
+          counts = {
+              variant: sum(variant in card["variants"] for card in cards)
+              for variant in ("normal", "reverse-holo", "holo", "other")
+          }
+
+          assert counts == {
+              "normal": 0,
+              "reverse-holo": 7,
+              "holo": 161,
+              "other": 2,
+          }, counts
+
+          by_id = {card["cardId"]: card for card in cards}
+          assert by_id["30c-001"]["variants"] == ["holo"]
+          assert by_id["30c-057"]["variants"] == ["reverse-holo", "holo"]
+          assert by_id["30c-063"]["variants"] == ["holo", "other"]
+          assert by_id["30c-116"]["variants"] == ["holo", "other"]
+          assert by_id["30c-159"]["variants"] == ["holo"]
+          assert by_id["30c-160"]["variants"] == ["holo"]
+          assert by_id["30c-161"]["variants"] == ["holo"]
+
+          print("PASS: 161 public cards")
+          print("PASS: R/G/B sort keys 159/160/161")
+          print("PASS: explicit inventory variants", counts)
+          PY
