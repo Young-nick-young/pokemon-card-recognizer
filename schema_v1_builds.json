@@ -29,6 +29,12 @@
       "package": "sets/ascended_heroes",
       "expectedRecords": 295,
       "output": "sets/ascended_heroes/card_library.pkl"
+    },
+    {
+      "setId": "30th-celebration",
+      "package": "sets/set_30th_celebration",
+      "expectedRecords": 161,
+      "output": "sets/set_30th_celebration/card_library.pkl"
     }
   ]
 }

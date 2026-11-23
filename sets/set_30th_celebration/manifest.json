@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "manifestVersion": 1,
+  "setId": "30th-celebration",
+  "displayName": "30th Celebration",
+  "language": "en",
+  "market": "international",
+  "aliases": [
+    "30c",
+    "30th_celebration",
+    "me55"
+  ],
+  "externalIds": {
+    "displayCode": "30C",
+    "officialCode": "30C",
+    "pokemonTcgData": "me55"
+  },
+  "collections": [
+    {
+      "collectionId": "main",
+      "label": "Main Set"
+    }
+  ],
+  "numberingNamespaces": [
+    {
+      "namespaceId": "main",
+      "label": "Main and Secret Cards",
+      "denominator": "128"
+    }
+  ],
+  "variants": [
+    {
+      "variantId": "normal",
+      "label": "Normal",
+      "inventoryKey": "normal"
+    },
+    {
+      "variantId": "reverse-holo",
+      "label": "Reverse Holo",
+      "inventoryKey": "reverse"
+    },
+    {
+      "variantId": "holo",
+      "label": "Holo",
+      "inventoryKey": "holo"
+    },
+    {
+      "variantId": "other",
+      "label": "Other",
+      "inventoryKey": "other"
+    }
+  ],
+  "catalogue": {
+    "path": "cards.json",
+    "expectedRecords": 161
+  },
+  "inventory": {
+    "destinationKey": "30th-celebration-inventory",
+    "sheetName": "30th Celebration",
+    "startRow": 13,
+    "cardIdColumn": 17,
+    "quantityColumns": {
+      "normal": 6,
+      "reverse": 7,
+      "holo": 8,
+      "other": 9
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "setId": "30th-celebration",
+  "status": "READY",
+  "productionTouched": false,
+  "checks": {
+    "candidateValidation": "PASS",
+    "recognizerLink": "PASS",
+    "frontendLink": "PASS",
+    "appsScriptConfig": "PASS",
+    "testSheet": "PASS"
+  },
+  "warnings": [],
+  "blockingReasons": []
+}
