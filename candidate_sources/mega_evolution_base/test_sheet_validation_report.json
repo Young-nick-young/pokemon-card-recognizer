@@ -1,0 +1,51 @@
+{
+  "validationVersion": 1,
+  "checkedAt": "2026-11-23",
+  "setId": "mega-evolution",
+  "gate": "dedicated-test-sheet-readback",
+  "status": "BLOCKED_EXTERNAL_IMAGE_PERMISSION",
+  "testWorkbook": {
+    "title": "Mega Evolution Base — Inventory Test — 2026-11-23",
+    "tab": "Mega Evolution",
+    "range": "A1:Q200",
+    "productionImpact": "none"
+  },
+  "structuralReadback": {
+    "status": "PASS",
+    "plannedRows": 200,
+    "plannedColumns": 17,
+    "cellsCompared": 3400,
+    "mismatches": 0,
+    "inventoryRows": 188,
+    "frozenRowsExpected": 12,
+    "frozenRowsObserved": 12,
+    "firstInventoryRow": {
+      "row": 13,
+      "cardId": "MEG-001",
+      "name": "Bulbasaur"
+    },
+    "lastInventoryRow": {
+      "row": 200,
+      "cardId": "MEG-188",
+      "name": "Mega Lucario ex"
+    }
+  },
+  "formulaReadback": {
+    "status": "PASS",
+    "summaryFormulasPresent": true,
+    "rowTotalFormulasPresent": true,
+    "collectionValueFormulasPresent": true,
+    "calculatedInventoryTotalsAtEmptyState": 0,
+    "calculatedCollectionValueAtEmptyState": "BHD 0.000"
+  },
+  "imageFormulaCheck": {
+    "status": "BLOCKED",
+    "formulaPattern": "=IMAGE(\"https://images.scrydex.com/pokemon/me1-{number}/large\",4,90,65)",
+    "observedError": "#REF!",
+    "observedMessage": "Please use a desktop web browser to allow access to fetch data from external urls.",
+    "interpretation": "The committed IMAGE formulas are present and correct, but native Google Sheets has not yet been granted external-URL fetch permission for this new test workbook.",
+    "requiredNextCheck": "Open the dedicated test workbook in a desktop browser, allow external URL access when prompted, then re-read image cells and require successful rendering before accepting the test-Sheet gate."
+  },
+  "productionWrites": [],
+  "conclusion": "Do not promote or write to the production inventory Sheet until the image-permission check passes."
+}
