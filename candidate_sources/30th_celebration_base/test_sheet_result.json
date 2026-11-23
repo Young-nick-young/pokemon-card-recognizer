@@ -1,0 +1,33 @@
+{
+  "setId": "30th-celebration",
+  "status": "PASS",
+  "productionTouched": false,
+  "spreadsheetId": "1EsYzX-JqWqzksqaOBrvn6xu6RnIzWhqNJhcW2UQAKsE",
+  "testSheetName": "TEST_30th_celebration",
+  "testSheetId": 763087142,
+  "validatedRange": "A1:Q173",
+  "checks": {
+    "rows": 161,
+    "headers": "PASS",
+    "formulas": "PASS",
+    "collectorNumbers": "PASS",
+    "letteredCollectorNumbers": [
+      "R",
+      "G",
+      "B"
+    ],
+    "cardIds": "PASS",
+    "variantAvailability": {
+      "normal": 0,
+      "reverseHolo": 7,
+      "holo": 161,
+      "other": 2
+    },
+    "summaryBoxes": "PASS",
+    "frozenRows": 12,
+    "columnWidths": "PASS",
+    "rowHeights": "PASS"
+  },
+  "productionSheetName": "30th Celebration",
+  "productionSheetWritten": false
+}
