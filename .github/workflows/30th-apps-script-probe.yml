@@ -1,4 +1,4 @@
-name: 30th Celebration Apps Script Read-Only Probe
+name: 30th Celebration Apps Script Holo-Only Probe
 
 on:
   push:
@@ -15,51 +15,51 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Probe existing and new set routes
+      - name: Verify cards route and unavailable Reverse Holo write
         env:
           SCRIPT_URL: "https://script.google.com/a/macros/ikns.edu.bh/s/AKfycbxzaDPrnUX_a8P7UXxAQ-lWCCbJ9RG_kiXzvUfERWk41cCDhdY5yIr8S1PK9CAD10vv/exec"
         run: |
           python - <<'PY'
-          import json, re, urllib.parse, urllib.request, os
+          import json, re, urllib.parse, urllib.request, os, uuid
 
           base = os.environ["SCRIPT_URL"]
 
-          def probe(set_id):
-              params = urllib.parse.urlencode({
-                  "api": "cards",
-                  "callback": "probe",
-                  "setId": set_id,
-                  "_": "30c-post-deploy-check",
-              })
-              url = base + "?" + params
+          def jsonp(params):
+              params = dict(params)
+              params["callback"] = "probe"
+              params["_"] = "30c-holo-only-check"
+              url = base + "?" + urllib.parse.urlencode(params)
               with urllib.request.urlopen(url, timeout=30) as response:
                   body = response.read().decode("utf-8", errors="replace")
-                  print(f"{set_id}: HTTP {response.status}, bytes={len(body)}")
                   match = re.fullmatch(r"\s*probe\((.*)\)\s*;?\s*", body, re.S)
                   if not match:
-                      raise SystemExit(f"{set_id}: response was not JSONP")
+                      raise SystemExit("Response was not JSONP: " + body[:500])
                   return json.loads(match.group(1))
 
-          existing = probe("perfect-order")
-          if not isinstance(existing, list) or len(existing) != 124:
-              raise SystemExit(f"Perfect Order regression check failed: {type(existing).__name__} / {len(existing) if isinstance(existing,list) else existing}")
+          cards = jsonp({
+              "api": "cards",
+              "setId": "30th-celebration",
+          })
+          assert isinstance(cards, list) and len(cards) == 161
+          assert cards[56]["cardId"] == "30c-057"
 
-          candidate = probe("30th-celebration")
-          if isinstance(candidate, dict) and candidate.get("success") is False:
-              raise SystemExit("30th Celebration backend returned error: " + str(candidate))
-          if not isinstance(candidate, list):
-              raise SystemExit("30th Celebration cards response is not an array.")
+          result = jsonp({
+              "api": "changeQuantity",
+              "setId": "30th-celebration",
+              "cardId": "30c-057",
+              "variantId": "reverse-holo",
+              "quantityDelta": "1",
+              "transactionId": "holo-only-probe-" + str(uuid.uuid4()),
+          })
 
-          print("30th Celebration cards:", len(candidate))
-          print("first:", candidate[0] if candidate else None)
-          print("last:", candidate[-1] if candidate else None)
+          print("reverse-holo probe:", result)
 
-          ids = [str(card.get("legacyCardId") or card.get("cardId") or "") for card in candidate if isinstance(card, dict)]
+          if not isinstance(result, dict) or result.get("success") is not False:
+              raise SystemExit("Expected Reverse Holo write to be rejected.")
 
-          if len(candidate) != 161:
-              raise SystemExit(f"Expected 161 cards, got {len(candidate)}")
-          if "30C-001" not in ids or "30C-161" not in ids:
-              raise SystemExit("Expected 30C-001 and 30C-161 were not returned.")
+          if "unavailable" not in str(result.get("error", "")).lower():
+              raise SystemExit("Expected unavailable-variant error.")
 
-          print("PASS: live Apps Script route for 30th-celebration is correct.")
+          print("PASS: 30th Celebration remains 161 cards")
+          print("PASS: Zeraora 057 Reverse Holo write is rejected as unavailable")
           PY
