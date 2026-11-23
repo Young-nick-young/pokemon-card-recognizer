@@ -1,0 +1,72 @@
+name: 30th Celebration Candidate Validation
+
+on:
+  push:
+    branches:
+      - candidate/30th-celebration-base
+    paths:
+      - "candidate_sources/30th_celebration_base/**"
+      - "tools/create_set.py"
+      - "schema_v1_inventory_sheet_plan.py"
+      - ".github/workflows/30th-celebration-candidate.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Python syntax check
+        run: python -m py_compile tools/create_set.py tools/validate_set.py schema_v1_inventory_sheet_plan.py
+
+      - name: Generate 30th Celebration candidate
+        run: |
+          python tools/create_set.py candidate_sources/30th_celebration_base/definition.json \
+            --candidate-output-root generated/30th-celebration
+
+      - name: Validate generated recognizer candidate
+        run: python tools/validate_set.py --set 30th-celebration
+
+      - name: Verify special collector numbers and variant authority
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          cards = json.loads(Path("sets/30th_celebration/cards.json").read_text())["cards"]
+          meta = json.loads(Path("sets/30th_celebration/inventory_metadata.json").read_text())["cards"]
+          plan = json.loads(Path("sets/30th_celebration/inventory_sheet_plan.json").read_text())
+
+          assert len(cards) == 161
+          assert len(meta) == 161
+          assert len(plan["rows"]) == 161
+
+          assert cards[0]["cardId"] == "30c-001"
+          assert cards[0]["number"]["display"] == "001/128"
+          assert cards[-3]["number"]["display"] == "R/128"
+          assert cards[-2]["number"]["display"] == "G/128"
+          assert cards[-1]["number"]["display"] == "B/128"
+
+          assert plan["rows"][-3]["values"]["collectorNumber"] == "R"
+          assert plan["rows"][-2]["values"]["collectorNumber"] == "G"
+          assert plan["rows"][-1]["values"]["collectorNumber"] == "B"
+
+          by_id = {entry["cardId"]: entry for entry in meta}
+          reverse = [entry for entry in meta if "reverse-holo" in entry["inventoryVariants"]]
+          other = [entry for entry in meta if "other" in entry["inventoryVariants"]]
+          holo = [entry for entry in meta if "holo" in entry["inventoryVariants"]]
+
+          assert len(holo) == 161
+          assert len(reverse) == 7
+          assert len(other) == 2
+          assert by_id["30c-063"]["inventoryVariants"] == ["holo", "other"]
+          assert by_id["30c-116"]["inventoryVariants"] == ["holo", "other"]
+
+          print("PASS: 161 identities")
+          print("PASS: R/G/B collector numbers preserved")
+          print("PASS: holo=161 reverse=7 other=2")
+          PY
