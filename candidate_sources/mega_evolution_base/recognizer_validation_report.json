@@ -1,0 +1,51 @@
+{
+  "validationVersion": 1,
+  "checkedAt": "2026-11-23",
+  "setId": "mega-evolution",
+  "gate": "recognizer-library-and-runtime-candidate",
+  "status": "PASS",
+  "environment": {
+    "platform": "Render candidate services",
+    "branch": "candidate/mega-evolution-base",
+    "opencv": "4.8.1.78",
+    "numpy": "1.26.4"
+  },
+  "library": {
+    "cards": 188,
+    "descriptors": 94065,
+    "descriptorDtype": "float32",
+    "cardNumberDtype": "uint16",
+    "firstCard": 1,
+    "lastCard": 188,
+    "contiguousDescriptorRanges": true
+  },
+  "runtime": {
+    "status": "PASS",
+    "testedReferenceCards": [
+      1,
+      25,
+      50,
+      75,
+      100,
+      125,
+      150,
+      175,
+      188
+    ],
+    "expectedBestMatches": [
+      1,
+      25,
+      50,
+      75,
+      100,
+      125,
+      150,
+      175,
+      188
+    ],
+    "unloadReload": "PASS",
+    "buildEvent": "succeeded"
+  },
+  "productionImpact": "none",
+  "nextGate": "production recognizer registration and full route smoke validation"
+}
