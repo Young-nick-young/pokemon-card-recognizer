@@ -52,7 +52,7 @@ jobs:
             --candidate-output-root generated/30th-celebration
           python tools/validate_set.py --set 30th-celebration
           python -m py_compile sets/set_30th_celebration/runtime_metadata.py sets/set_30th_celebration/recognizer.py sets/set_30th_celebration/public_package.py main.py
-          node --check generated/30th-celebration/apps_script/set_30th_celebration_config.gs
+          node --check < generated/30th-celebration/apps_script/set_30th_celebration_config.gs
           node --check generated/30th-celebration/frontend/js/sets/30th-celebration.js
           python - <<'PY'
           import json
