@@ -1,0 +1,546 @@
+{
+  "schemaVersion": "1.0",
+  "setId": "30th-c",
+  "cards": [
+    {
+      "cardId": "30cc-001",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "001/030",
+        "sortKey": 1
+      },
+      "name": "Charizard",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-4/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-4",
+        "legacyInventoryCardId": "30CC-001"
+      }
+    },
+    {
+      "cardId": "30cc-002",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "002/030",
+        "sortKey": 2
+      },
+      "name": "Delcatty",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-5/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-5",
+        "legacyInventoryCardId": "30CC-002"
+      }
+    },
+    {
+      "cardId": "30cc-003",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "003/030",
+        "sortKey": 3
+      },
+      "name": "Metagross",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-11/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-11",
+        "legacyInventoryCardId": "30CC-003"
+      }
+    },
+    {
+      "cardId": "30cc-004",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "004/030",
+        "sortKey": 4
+      },
+      "name": "Genesect EX",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-11g/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-11g",
+        "legacyInventoryCardId": "30CC-004"
+      }
+    },
+    {
+      "cardId": "30cc-005",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "005/030",
+        "sortKey": 5
+      },
+      "name": "Misty",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-18/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-18",
+        "legacyInventoryCardId": "30CC-005"
+      }
+    },
+    {
+      "cardId": "30cc-006",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "006/030",
+        "sortKey": 6
+      },
+      "name": "Dark Tyranitar",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-19/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-19",
+        "legacyInventoryCardId": "30CC-006"
+      }
+    },
+    {
+      "cardId": "30cc-007",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "007/030",
+        "sortKey": 7
+      },
+      "name": "Sneasel",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-25/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-25",
+        "legacyInventoryCardId": "30CC-007"
+      }
+    },
+    {
+      "cardId": "30cc-008",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "008/030",
+        "sortKey": 8
+      },
+      "name": "Pikachu & Zekrom GX",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-33/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-33",
+        "legacyInventoryCardId": "30CC-008"
+      }
+    },
+    {
+      "cardId": "30cc-009",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "009/030",
+        "sortKey": 9
+      },
+      "name": "Greninja BREAK",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-41/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-41",
+        "legacyInventoryCardId": "30CC-009"
+      }
+    },
+    {
+      "cardId": "30cc-010",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "010/030",
+        "sortKey": 10
+      },
+      "name": "Uxie",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-43/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-43",
+        "legacyInventoryCardId": "30CC-010"
+      }
+    },
+    {
+      "cardId": "30cc-011",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "011/030",
+        "sortKey": 11
+      },
+      "name": "Crobat G",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-47/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-47",
+        "legacyInventoryCardId": "30CC-011"
+      }
+    },
+    {
+      "cardId": "30cc-012",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "012/030",
+        "sortKey": 12
+      },
+      "name": "Raikou",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-50/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-50",
+        "legacyInventoryCardId": "30CC-012"
+      }
+    },
+    {
+      "cardId": "30cc-013",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "013/030",
+        "sortKey": 13
+      },
+      "name": "Buzzwole GX",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-57/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-57",
+        "legacyInventoryCardId": "30CC-013"
+      }
+    },
+    {
+      "cardId": "30cc-014",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "014/030",
+        "sortKey": 14
+      },
+      "name": "Pikachu",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-58/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-58",
+        "legacyInventoryCardId": "30CC-014"
+      }
+    },
+    {
+      "cardId": "30cc-015",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "015/030",
+        "sortKey": 15
+      },
+      "name": "Erika's Jigglypuff",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-69/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-69",
+        "legacyInventoryCardId": "30CC-015"
+      }
+    },
+    {
+      "cardId": "30cc-016",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "016/030",
+        "sortKey": 16
+      },
+      "name": "Rayquaza EX",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-85/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-85",
+        "legacyInventoryCardId": "30CC-016"
+      }
+    },
+    {
+      "cardId": "30cc-017",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "017/030",
+        "sortKey": 17
+      },
+      "name": "Solgaleo GX",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-89/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-89",
+        "legacyInventoryCardId": "30CC-017"
+      }
+    },
+    {
+      "cardId": "30cc-018",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "018/030",
+        "sortKey": 18
+      },
+      "name": "Gengar",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-94/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-94",
+        "legacyInventoryCardId": "30CC-018"
+      }
+    },
+    {
+      "cardId": "30cc-019",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "019/030",
+        "sortKey": 19
+      },
+      "name": "Darkrai & Cresselia LEGEND",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-99/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-99",
+        "legacyInventoryCardId": "30CC-019"
+      }
+    },
+    {
+      "cardId": "30cc-020",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "020/030",
+        "sortKey": 20
+      },
+      "name": "Darkrai & Cresselia LEGEND",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-100/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-100",
+        "legacyInventoryCardId": "30CC-020"
+      }
+    },
+    {
+      "cardId": "30cc-021",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "021/030",
+        "sortKey": 21
+      },
+      "name": "N",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-101/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-101",
+        "legacyInventoryCardId": "30CC-021"
+      }
+    },
+    {
+      "cardId": "30cc-022",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "022/030",
+        "sortKey": 22
+      },
+      "name": "Palkia",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-106p/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-106p",
+        "legacyInventoryCardId": "30CC-022"
+      }
+    },
+    {
+      "cardId": "30cc-023",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "023/030",
+        "sortKey": 23
+      },
+      "name": "M Gardevoir EX",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-106m/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-106m",
+        "legacyInventoryCardId": "30CC-023"
+      }
+    },
+    {
+      "cardId": "30cc-024",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "024/030",
+        "sortKey": 24
+      },
+      "name": "Shining Celebi",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-106/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-106",
+        "legacyInventoryCardId": "30CC-024"
+      }
+    },
+    {
+      "cardId": "30cc-025",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "025/030",
+        "sortKey": 25
+      },
+      "name": "Scizor ex",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-108/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-108",
+        "legacyInventoryCardId": "30CC-025"
+      }
+    },
+    {
+      "cardId": "30cc-026",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "026/030",
+        "sortKey": 26
+      },
+      "name": "Mew VMAX",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-114/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-114",
+        "legacyInventoryCardId": "30CC-026"
+      }
+    },
+    {
+      "cardId": "30cc-027",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "027/030",
+        "sortKey": 27
+      },
+      "name": "Arceus VSTAR",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-123/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-123",
+        "legacyInventoryCardId": "30CC-027"
+      }
+    },
+    {
+      "cardId": "30cc-028",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "028/030",
+        "sortKey": 28
+      },
+      "name": "Zacian V",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-138/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-138",
+        "legacyInventoryCardId": "30CC-028"
+      }
+    },
+    {
+      "cardId": "30cc-029",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "029/030",
+        "sortKey": 29
+      },
+      "name": "Lugia",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-149/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-149",
+        "legacyInventoryCardId": "30CC-029"
+      }
+    },
+    {
+      "cardId": "30cc-030",
+      "collectionId": "main",
+      "number": {
+        "namespaceId": "main",
+        "display": "030/030",
+        "sortKey": 30
+      },
+      "name": "Magikarp",
+      "referenceImage": "https://images.scrydex.com/pokemon/me55c-203/large",
+      "variants": [
+        "holo"
+      ],
+      "externalIds": {
+        "pokemonTcgData": "me55c-203",
+        "legacyInventoryCardId": "30CC-030"
+      }
+    }
+  ]
+}
