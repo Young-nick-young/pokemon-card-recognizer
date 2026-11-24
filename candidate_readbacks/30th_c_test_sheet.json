@@ -1,0 +1,612 @@
+{
+  "snapshotVersion": 1,
+  "source": "Google Sheets independent read-back",
+  "spreadsheetId": "1EsYzX-JqWqzksqaOBrvn6xu6RnIzWhqNJhcW2UQAKsE",
+  "sheetName": "30th Classic Collection - TEST",
+  "sheetId": 1467969059,
+  "freezeRows": 12,
+  "logoRange": "A1:E10",
+  "headers": [
+    "Image",
+    "Card #",
+    "Card Name",
+    "Rarity",
+    "Card Type",
+    "Normal",
+    "Reverse Holo",
+    "Holo",
+    "Other",
+    "Total",
+    "Normal Price (BHD)",
+    "Reverse Price (BHD)",
+    "Holo Price (BHD)",
+    "Other Price (BHD)",
+    "Collection Value (BHD)",
+    "Storage Location",
+    "Card ID"
+  ],
+  "columnWidths": [
+    80,
+    108,
+    180,
+    110,
+    120,
+    120,
+    113,
+    118,
+    116,
+    100,
+    101,
+    99,
+    100,
+    100,
+    100,
+    100,
+    96
+  ],
+  "rowHeights": {
+    "topRows": {
+      "start": 1,
+      "end": 11,
+      "pixelSize": 21
+    },
+    "header": {
+      "row": 12,
+      "pixelSize": 42
+    },
+    "body": {
+      "start": 13,
+      "end": 42,
+      "pixelSize": 96
+    }
+  },
+  "summaryBoxes": [
+    {
+      "label": "Total Bulk Copies",
+      "labelRange": "F1:G2",
+      "valueRange": "F3:G3",
+      "formula": "=SUM(J13:J42)",
+      "numberFormat": "0"
+    },
+    {
+      "label": "Total Bulk Value",
+      "labelRange": "F6:G7",
+      "valueRange": "F8:G8",
+      "formula": "=SUM(O13:O42)",
+      "numberFormat": "\"BHD \"0.000"
+    },
+    {
+      "label": "Normal",
+      "labelRange": "I1:J2",
+      "valueRange": "I3:J3",
+      "formula": "=SUM(F13:F42)",
+      "numberFormat": "0"
+    },
+    {
+      "label": "Holo",
+      "labelRange": "L1:M2",
+      "valueRange": "L3:M3",
+      "formula": "=SUM(H13:H42)",
+      "numberFormat": "0"
+    },
+    {
+      "label": "Reverse Holo",
+      "labelRange": "O1:P2",
+      "valueRange": "O3:P3",
+      "formula": "=SUM(G13:G42)",
+      "numberFormat": "0"
+    }
+  ],
+  "rows": [
+    {
+      "row": 13,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 1,
+        "name": "Charizard",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-001"
+      }
+    },
+    {
+      "row": 14,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 2,
+        "name": "Delcatty",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-002"
+      }
+    },
+    {
+      "row": 15,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 3,
+        "name": "Metagross",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-003"
+      }
+    },
+    {
+      "row": 16,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 4,
+        "name": "Genesect EX",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-004"
+      }
+    },
+    {
+      "row": 17,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 5,
+        "name": "Misty",
+        "rarity": "Holo",
+        "cardType": "Trainer",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-005"
+      }
+    },
+    {
+      "row": 18,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 6,
+        "name": "Dark Tyranitar",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-006"
+      }
+    },
+    {
+      "row": 19,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 7,
+        "name": "Sneasel",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-007"
+      }
+    },
+    {
+      "row": 20,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 8,
+        "name": "Pikachu & Zekrom GX",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-008"
+      }
+    },
+    {
+      "row": 21,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 9,
+        "name": "Greninja BREAK",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-009"
+      }
+    },
+    {
+      "row": 22,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 10,
+        "name": "Uxie",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-010"
+      }
+    },
+    {
+      "row": 23,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 11,
+        "name": "Crobat G",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-011"
+      }
+    },
+    {
+      "row": 24,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 12,
+        "name": "Raikou",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-012"
+      }
+    },
+    {
+      "row": 25,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 13,
+        "name": "Buzzwole GX",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-013"
+      }
+    },
+    {
+      "row": 26,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 14,
+        "name": "Pikachu",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-014"
+      }
+    },
+    {
+      "row": 27,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 15,
+        "name": "Erika's Jigglypuff",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-015"
+      }
+    },
+    {
+      "row": 28,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 16,
+        "name": "Rayquaza EX",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-016"
+      }
+    },
+    {
+      "row": 29,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 17,
+        "name": "Solgaleo GX",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-017"
+      }
+    },
+    {
+      "row": 30,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 18,
+        "name": "Gengar",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-018"
+      }
+    },
+    {
+      "row": 31,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 19,
+        "name": "Darkrai & Cresselia LEGEND",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-019"
+      }
+    },
+    {
+      "row": 32,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 20,
+        "name": "Darkrai & Cresselia LEGEND",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-020"
+      }
+    },
+    {
+      "row": 33,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 21,
+        "name": "N",
+        "rarity": "Holo",
+        "cardType": "Trainer",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-021"
+      }
+    },
+    {
+      "row": 34,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 22,
+        "name": "Palkia",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-022"
+      }
+    },
+    {
+      "row": 35,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 23,
+        "name": "M Gardevoir EX",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-023"
+      }
+    },
+    {
+      "row": 36,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 24,
+        "name": "Shining Celebi",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-024"
+      }
+    },
+    {
+      "row": 37,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 25,
+        "name": "Scizor ex",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-025"
+      }
+    },
+    {
+      "row": 38,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 26,
+        "name": "Mew VMAX",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-026"
+      }
+    },
+    {
+      "row": 39,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 27,
+        "name": "Arceus VSTAR",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-027"
+      }
+    },
+    {
+      "row": 40,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 28,
+        "name": "Zacian V",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-028"
+      }
+    },
+    {
+      "row": 41,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 29,
+        "name": "Lugia",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-029"
+      }
+    },
+    {
+      "row": 42,
+      "inventoryVariants": [
+        "holo"
+      ],
+      "values": {
+        "collectorNumber": 30,
+        "name": "Magikarp",
+        "rarity": "Holo",
+        "cardType": "Pokemon",
+        "normalQty": null,
+        "reverseHoloQty": null,
+        "holoQty": 0,
+        "otherQty": null,
+        "compatibilityCardId": "30CC-030"
+      }
+    }
+  ]
+}
