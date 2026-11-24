@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "manifestVersion": 1,
+  "setId": "30th-c",
+  "displayName": "30th Classic Collection",
+  "language": "en",
+  "market": "international",
+  "aliases": [
+    "30th_c",
+    "30cc",
+    "me55c",
+    "30th-classic-collection"
+  ],
+  "externalIds": {
+    "displayCode": "30CC",
+    "officialCode": "30C",
+    "pokemonTcgData": "me55c"
+  },
+  "collections": [
+    {
+      "collectionId": "main",
+      "label": "Main Set"
+    }
+  ],
+  "numberingNamespaces": [
+    {
+      "namespaceId": "main",
+      "label": "Main and Secret Cards",
+      "denominator": "030"
+    }
+  ],
+  "variants": [
+    {
+      "variantId": "normal",
+      "label": "Normal",
+      "inventoryKey": "normal"
+    },
+    {
+      "variantId": "reverse-holo",
+      "label": "Reverse Holo",
+      "inventoryKey": "reverse"
+    },
+    {
+      "variantId": "holo",
+      "label": "Holo",
+      "inventoryKey": "holo"
+    },
+    {
+      "variantId": "other",
+      "label": "Other",
+      "inventoryKey": "other"
+    }
+  ],
+  "catalogue": {
+    "path": "cards.json",
+    "expectedRecords": 30
+  },
+  "inventory": {
+    "destinationKey": "30th-c-inventory",
+    "sheetName": "30th Classic Collection",
+    "startRow": 13,
+    "cardIdColumn": 17,
+    "quantityColumns": {
+      "normal": 6,
+      "reverse": 7,
+      "holo": 8,
+      "other": 9
+    }
+  }
+}
