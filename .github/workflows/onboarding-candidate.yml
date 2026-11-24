@@ -1,0 +1,36 @@
+name: Onboarding Candidate Validation
+
+on:
+  pull_request:
+    paths:
+      - "tools/onboard_set.py"
+      - "tools/NEW_SET_ONBOARDING.md"
+      - ".github/workflows/onboarding-candidate.yml"
+  workflow_dispatch:
+
+jobs:
+  perfect-order-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out candidate
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run onboarding regression
+        shell: bash
+        run: |
+          set +e
+          python tools/onboard_set.py --set perfect-order
+          code=$?
+          set -e
+
+          if [ "$code" -ne 3 ]; then
+            echo "Expected staging-pass/promotion-blocked exit code 3, got $code"
+            exit 1
+          fi
+
+          echo "Onboarding regression behaved as expected."
