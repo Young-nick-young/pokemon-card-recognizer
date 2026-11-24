@@ -47,6 +47,12 @@
       "package": "sets/phantasmal_flames",
       "expectedRecords": 130,
       "output": "sets/phantasmal_flames/card_library.pkl"
+    },
+    {
+      "setId": "30th-c",
+      "package": "sets/set_30th_c",
+      "expectedRecords": 30,
+      "output": "sets/set_30th_c/card_library.pkl"
     }
   ]
 }

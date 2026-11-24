@@ -21,7 +21,8 @@ class OnboardingError(RuntimeError):
 
 
 def python_name(set_id: str) -> str:
-    return set_id.replace("-", "_").replace(".", "_")
+    value = set_id.replace("-", "_").replace(".", "_")
+    return ("set_" + value) if value[:1].isdigit() else value
 
 
 def read_json(path: Path):

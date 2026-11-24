@@ -43,6 +43,11 @@ from sets.phantasmal_flames.public_package import (
     build_public_package as build_phantasmal_flames_public_package
 )
 
+from sets.set_30th_c import recognizer as set_30th_c
+from sets.set_30th_c.public_package import (
+    build_public_package as build_set_30th_c_public_package
+)
+
 
 # =========================================================
 # SCHEMA V1 SHADOW LOAD
@@ -106,7 +111,8 @@ RECOGNIZERS = {
     "pitch-black": pitch_black,
     "30th-celebration": set_30th_celebration,
     "mega-evolution": mega_evolution,
-    "phantasmal-flames": phantasmal_flames
+    "phantasmal-flames": phantasmal_flames,
+    "30th-c": set_30th_c
 }
 
 
@@ -149,7 +155,12 @@ SET_ALIASES = {
     "phantasmal_flames": "phantasmal-flames",
     "pfl": "phantasmal-flames",
     "me2": "phantasmal-flames",
-    "me02": "phantasmal-flames"
+    "me02": "phantasmal-flames",
+    "30th-c": "30th-c",
+    "30th_c": "30th-c",
+    "30cc": "30th-c",
+    "me55c": "30th-c",
+    "30th-classic-collection": "30th-c"
 }
 
 
@@ -389,7 +400,10 @@ def root():
                 mega_evolution.get_status(),
 
             "phantasmal-flames":
-                phantasmal_flames.get_status()
+                phantasmal_flames.get_status(),
+
+            "30th-c":
+                set_30th_c.get_status()
         }
     }
 
@@ -495,6 +509,15 @@ def phantasmal_flames_public_package():
     except Exception as error:
         print("Phantasmal Flames public package unavailable:", error)
         raise HTTPException(status_code=503, detail={"error": "Public set package unavailable", "set": "phantasmal-flames"}) from error
+
+
+@app.get("/api/v1/sets/30th-c/package")
+def set_30th_c_public_package():
+    try:
+        return build_set_30th_c_public_package()
+    except Exception as error:
+        print("30th Classic Collection public package unavailable:", error)
+        raise HTTPException(status_code=503, detail={"error": "Public set package unavailable", "set": "30th-c"}) from error
 
 
 # =========================================================
