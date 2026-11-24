@@ -16,7 +16,7 @@
     "30th-classic-collection"
   ],
   "sheet_name": "30th Classic Collection",
-  "canonical_card_prefix": "30th-c-",
+  "canonical_card_prefix": "30cc-",
   "legacy_card_prefix": "30CC-",
   "cards": [
     {"number":1,"name":"Charizard","reference_image":"https://images.scrydex.com/pokemon/me55c-4/large","external_id":"me55c-4","rarity":"Holo","card_type":"Pokemon","variants":["holo"],"inventory_variants":["holo"]},
