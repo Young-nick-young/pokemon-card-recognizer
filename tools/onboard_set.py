@@ -61,18 +61,10 @@ def build_one_library(recognizer_root: Path, set_id: str):
     if not isinstance(entries, list):
         raise OnboardingError("schema_v1_builds.json must contain a sets array.")
 
-    matches = [
-        entry
-        for entry in entries
-        if isinstance(entry, dict) and entry.get("setId") == set_id
-    ]
+    matches = [entry for entry in entries if isinstance(entry, dict) and entry.get("setId") == set_id]
     if len(matches) != 1:
         raise OnboardingError(
-            "Build registry must contain "
-            + repr(set_id)
-            + " exactly once; found "
-            + str(len(matches))
-            + "."
+            "Build registry must contain " + repr(set_id) + " exactly once; found " + str(len(matches)) + "."
         )
 
     entry = matches[0]
@@ -99,7 +91,7 @@ def build_one_library(recognizer_root: Path, set_id: str):
             sys.path.pop(0)
 
 
-def validate_candidate(
+def validate_set(
     recognizer_root: Path,
     set_id: str,
     frontend_root: Path | None,
@@ -124,18 +116,11 @@ def validate_candidate(
 
 
 def validate_sheet_snapshot(recognizer_root: Path, set_id: str, snapshot: Path):
-    plan_path = (
-        recognizer_root
-        / "sets"
-        / python_name(set_id)
-        / "inventory_sheet_plan.json"
-    )
+    plan_path = recognizer_root / "sets" / python_name(set_id) / "inventory_sheet_plan.json"
     if not plan_path.exists():
         raise OnboardingError("Inventory Sheet Plan v2 not found: " + str(plan_path))
     if not snapshot.exists():
-        raise OnboardingError(
-            "Google Sheet read-back snapshot not found: " + str(snapshot)
-        )
+        raise OnboardingError("Google Sheet read-back snapshot not found: " + str(snapshot))
 
     sys.path.insert(0, str(TOOLS))
     try:
@@ -154,7 +139,6 @@ def validate_sheet_snapshot(recognizer_root: Path, set_id: str, snapshot: Path):
         for error in errors:
             print("FAIL ", error)
         return False
-
     print("Google Sheet read-back: PASS")
     return True
 
@@ -182,15 +166,9 @@ def scaffold(
             sys.path.pop(0)
 
 
-def print_gate(
-    set_id: str,
-    manifest: dict,
-    library_required: bool,
-    sheet_checked: bool,
-):
+def print_gate(set_id: str, manifest: dict, library_required: bool, sheet_checked: bool, integration_checked: bool):
     expected = (manifest.get("catalogue") or {}).get("expectedRecords")
     display = manifest.get("displayName") or set_id
-
     print()
     print("=" * 64)
     print("POKÉMON SCANNER — NEW SET ONBOARDING v1")
@@ -198,58 +176,42 @@ def print_gate(
     print("Set:", display, "[" + set_id + "]")
     print("Cards:", expected)
     print("Schema/package validation: PASS")
-    print(
-        "Recognition library:",
-        "PASS / required" if library_required else "NOT BUILT / not requested",
-    )
-    print(
-        "Google Sheet read-back:",
-        "PASS" if sheet_checked else "NOT CHECKED / snapshot not supplied",
-    )
+    print("Recognition library:", "PASS / required" if library_required else "NOT BUILT / not requested")
+    print("Google Sheet read-back:", "PASS" if sheet_checked else "NOT CHECKED / snapshot not supplied")
+    missing = []
+    if not library_required:
+        missing.append("recognition library build/validation")
+    if not sheet_checked:
+        missing.append("Google Sheet read-back")
+    if not integration_checked:
+        missing.append("frontend + Apps Script integration validation")
+
     print()
-    print("PROMOTION GATE: PASS")
+    if missing:
+        print("STAGING STATUS: PASS")
+        print("PROMOTION GATE: BLOCKED")
+        for item in missing:
+            print("BLOCK ", item)
+    else:
+        print("PROMOTION GATE: PASS")
     print("PRODUCTION STATUS: NOT DEPLOYED")
-    print(
-        "No Render, Apps Script, production Sheet, or frontend production "
-        "deployment was performed."
-    )
+    print("No Render, Apps Script, production Sheet, or frontend production deployment was performed.")
+    return not missing
 
 
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(
-        description=(
-            "Run the Pokémon Scanner new-set onboarding pipeline and stop at "
-            "the production promotion gate."
-        )
+        description="Run the Pokémon Scanner new-set onboarding pipeline and stop at the production promotion gate."
     )
     source = parser.add_mutually_exclusive_group(required=True)
-    source.add_argument(
-        "--definition",
-        type=Path,
-        help="Normalized JSON definition for a new set candidate.",
-    )
-    source.add_argument(
-        "--set",
-        dest="set_id",
-        help="Existing Schema v1 set ID for regression validation.",
-    )
+    source.add_argument("--definition", type=Path, help="Normalized JSON definition for a new set candidate.")
+    source.add_argument("--set", dest="set_id", help="Existing Schema v1 set ID for regression validation.")
     parser.add_argument("--recognizer-root", type=Path, default=ROOT)
     parser.add_argument("--frontend-root", type=Path)
     parser.add_argument("--apps-script-root", type=Path)
     parser.add_argument("--candidate-output-root", type=Path)
-    parser.add_argument(
-        "--build-library",
-        action="store_true",
-        help="Build only this set's recognition library before validation.",
-    )
-    parser.add_argument(
-        "--sheet-snapshot",
-        type=Path,
-        help=(
-            "Optional Google Sheet read-back snapshot JSON to compare with "
-            "Inventory Sheet Plan v2."
-        ),
-    )
+    parser.add_argument("--build-library", action="store_true", help="Build only this set's recognition library before validation.")
+    parser.add_argument("--sheet-snapshot", type=Path, help="Optional Google Sheet read-back snapshot JSON to compare with Inventory Sheet Plan v2.")
     return parser.parse_args(argv)
 
 
@@ -257,21 +219,11 @@ def main(argv=None):
     args = parse_args(argv)
     recognizer_root = args.recognizer_root.resolve()
     frontend_root = args.frontend_root.resolve() if args.frontend_root else None
-    apps_script_root = (
-        args.apps_script_root.resolve() if args.apps_script_root else None
-    )
-    candidate_output_root = (
-        args.candidate_output_root.resolve()
-        if args.candidate_output_root
-        else None
-    )
+    apps_script_root = args.apps_script_root.resolve() if args.apps_script_root else None
+    candidate_output_root = args.candidate_output_root.resolve() if args.candidate_output_root else None
 
     if (frontend_root is None) != (apps_script_root is None):
-        print(
-            "FAIL: --frontend-root and --apps-script-root must be supplied "
-            "together for integration validation.",
-            file=sys.stderr,
-        )
+        print("FAIL: --frontend-root and --apps-script-root must be supplied together for integration validation.", file=sys.stderr)
         return 2
 
     try:
@@ -279,19 +231,10 @@ def main(argv=None):
             definition = args.definition.resolve()
             set_id = set_id_from_definition(definition)
             print("Stage 1/4 — Scaffold candidate")
-            scaffold(
-                definition,
-                recognizer_root,
-                frontend_root,
-                apps_script_root,
-                candidate_output_root,
-            )
+            scaffold(definition, recognizer_root, frontend_root, apps_script_root, candidate_output_root)
         else:
             set_id = str(args.set_id).strip().lower()
-            print(
-                "Stage 1/4 — Existing set regression mode "
-                "(no scaffold changes)"
-            )
+            print("Stage 1/4 — Existing set regression mode (no scaffold changes)")
 
         manifest = load_manifest(recognizer_root, set_id)
 
@@ -302,7 +245,7 @@ def main(argv=None):
             print("Stage 2/4 — Recognition-library build skipped")
 
         print("Stage 3/4 — Schema / inventory / integration validation")
-        if not validate_candidate(
+        if not validate_set(
             recognizer_root,
             set_id,
             frontend_root,
@@ -316,28 +259,22 @@ def main(argv=None):
         sheet_checked = False
         print("Stage 4/4 — Inventory Sheet read-back")
         if args.sheet_snapshot:
-            if not validate_sheet_snapshot(
-                recognizer_root,
-                set_id,
-                args.sheet_snapshot.resolve(),
-            ):
+            if not validate_sheet_snapshot(recognizer_root, set_id, args.sheet_snapshot.resolve()):
                 print("\nPROMOTION GATE: FAIL")
                 print("PRODUCTION STATUS: NOT DEPLOYED")
                 return 1
             sheet_checked = True
         else:
-            print(
-                "Google Sheet read-back skipped; provide --sheet-snapshot "
-                "when staging has been rendered."
-            )
+            print("Google Sheet read-back skipped; provide --sheet-snapshot when staging has been rendered.")
 
-        print_gate(
+        promotion_ready = print_gate(
             set_id,
             manifest,
             args.build_library,
             sheet_checked,
+            frontend_root is not None and apps_script_root is not None,
         )
-        return 0
+        return 0 if promotion_ready else 3
 
     except Exception as error:
         print("FAIL:", error, file=sys.stderr)
