@@ -31,7 +31,9 @@ def read_json(path,report,label):
 def valid_http_url(v):
     if not isinstance(v,str) or not v.strip(): return False
     p=urlparse(v); return p.scheme in ("http","https") and bool(p.netloc)
-def python_name(set_id):\n    value=set_id.replace("-","_").replace(".","_")\n    return ("set_" + value) if value[:1].isdigit() else value
+def python_name(set_id):
+    value=set_id.replace("-","_").replace(".","_")
+    return ("set_" + value) if value[:1].isdigit() else value
 def expected_prefixes(manifest):
     code=str((manifest.get("externalIds") or {}).get("displayCode") or "").strip(); return code.lower()+"-",code.upper()+"-"
 
