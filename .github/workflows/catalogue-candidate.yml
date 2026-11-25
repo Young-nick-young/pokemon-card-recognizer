@@ -1,0 +1,18 @@
+name: Catalogue candidate tests
+on:
+  push:
+    branches: [feature/catalogue-discovery-v2]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tools -p test_catalogue_discovery.py -v
+      - run: python -m py_compile tools/prepare_discovered_set.py
