@@ -1,0 +1,40 @@
+name: Catalogue candidate tests
+on:
+  push:
+    branches: [feature/catalogue-discovery-v2]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tools -p test_catalogue_discovery.py -v
+      - run: python tools/onboard_set.py --set perfect-order; test "$?" -eq 3
+        shell: bash {0}
+  live-catalogue:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python tools/validate_tcgdex_live.py
+  synthetic-recognition:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install opencv-python-headless==4.8.1.78 numpy==1.26.4
+      - run: python tools/benchmark_sift_threads.py
