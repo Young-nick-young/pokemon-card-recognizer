@@ -80,7 +80,7 @@ class SchemaV1RecognizerEngine:
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         keypoints, descriptors = self.sift.detectAndCompute(gray, None)
         if descriptors is not None:
-            descriptors = descriptors.astype(np.float32)
+            descriptors = descriptors.astype(np.float32, copy=False)
         return keypoints, descriptors
 
     def load_library(self):
@@ -282,6 +282,20 @@ class SchemaV1RecognizerEngine:
                 query_descriptors,
                 reference_descriptors,
             )
+            good_count = len(good_matches)
+            # A candidate whose theoretical maximum score cannot enter
+            # the top five cannot affect the public result or score gap.
+            # Strict inequality preserves ties and stable sorting.
+            if len(final_results) >= 5:
+                cutoff = sorted(
+                    (r["score"] for r in final_results), reverse=True
+                )[4]
+                max_score = (
+                    (6.0 * good_count + 220.0 if good_count >= self.MIN_GOOD_MATCHES else 0.0)
+                    + good_count * 0.25 + candidate["votes"] * 0.5
+                )
+                if round(max_score, 3) < cutoff:
+                    continue
             geometry = self.geometric_verification(
                 query_keypoints,
                 reference["keypoints"],
@@ -289,7 +303,6 @@ class SchemaV1RecognizerEngine:
             )
             inliers = geometry["inliers"]
             inlier_ratio = geometry["inlier_ratio"]
-            good_count = len(good_matches)
             card_metadata = self.get_runtime_card_metadata(number)
             score = (
                 inliers * 6.0
