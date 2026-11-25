@@ -8,10 +8,12 @@ from catalogue_discovery import discover, compare
 from tcgdex_discovery import retrieve
 from reconcile_catalogues import reconcile
 
-def run(set_name, expected, denominator, csv_path=None, tcgdex_id=None, language="en", catalogue=None):
+def run(set_name, expected, denominator, csv_path=None, tcgdex_id=None, language="en", catalogue=None, tcgdex_report=None):
     if expected < 1 or denominator < 1:
         raise ValueError("Positive expected count and denominator required")
-    if not csv_path and not tcgdex_id:
+    if tcgdex_id and tcgdex_report is not None:
+        raise ValueError("Choose a fresh retrieval or a saved TCGdex report, not both")
+    if not csv_path and not tcgdex_id and tcgdex_report is None:
         raise ValueError("At least one source required")
     if csv_path and language != "en":
         raise ValueError("CSV adapter currently supports English only")
@@ -20,8 +22,10 @@ def run(set_name, expected, denominator, csv_path=None, tcgdex_id=None, language
         cards=discover(csv_path,set_name,expected,denominator)
         counts=Counter(v for c in cards for v in c["standard_variants"])
         reports.append({"status":"REVIEW_REQUIRED","source":"user-supplied treatment CSV","set":set_name,"language":language,"card_count":len(cards),"printing_counts":dict(counts),"cards":cards})
-    if tcgdex_id:
-        report=retrieve(language,tcgdex_id,expected)
+    if tcgdex_id or tcgdex_report is not None:
+        report=retrieve(language,tcgdex_id,expected) if tcgdex_id else tcgdex_report
+        if report.get("source")!="TCGdex API v2" or report.get("language")!=language or report.get("card_count")!=expected or len(report.get("cards",[]))!=expected:
+            raise ValueError("Saved report source, language or count mismatch")
         if report["set"].strip().casefold()!=set_name.strip().casefold():
             raise ValueError("TCGdex set name mismatch")
         reports.append(report)
@@ -46,6 +50,7 @@ def main():
     p.add_argument("--denominator",type=int,required=True)
     p.add_argument("--csv",type=Path)
     p.add_argument("--tcgdex-id")
+    p.add_argument("--tcgdex-report",type=Path,help="Reuse previously saved TCGdex metadata instead of requesting it again")
     p.add_argument("--language",default="en")
     p.add_argument("--catalogue",type=Path)
     p.add_argument("--output",type=Path,required=True)
@@ -53,7 +58,8 @@ def main():
     if a.output.exists():
         p.error("Refusing to overwrite existing report")
     catalogue=json.loads(a.catalogue.read_text(encoding="utf-8")) if a.catalogue else None
-    report=run(a.set_name,a.expected,a.denominator,a.csv,a.tcgdex_id,a.language,catalogue)
+    saved=json.loads(a.tcgdex_report.read_text(encoding="utf-8")) if a.tcgdex_report else None
+    report=run(a.set_name,a.expected,a.denominator,a.csv,a.tcgdex_id,a.language,catalogue,saved)
     with a.output.open("x",encoding="utf-8") as f:
         json.dump(report,f,ensure_ascii=False,indent=2)
     print("Discovery evidence saved; review required. No deployment.")
