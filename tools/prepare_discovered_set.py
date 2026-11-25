@@ -4,6 +4,7 @@ import argparse
 import json
 from pathlib import Path
 from reconcile_catalogues import index
+from create_set import normalize_definition, build_schema_files
 
 def prepare(report, template, approvals):
     if report.get("language","en") != "en":
@@ -28,6 +29,11 @@ def prepare(report, template, approvals):
         if not set(c["standard_variants"])<=set(variants):
             raise ValueError(f"Discovered printing omitted for {n}")
         result["cards"].append({"number":n,"name":c["name"],"rarity":c["rarity"],"card_type":a["card_type"],"reference_image":a["reference_image"],"variants":variants,"inventory_variants":variants})
+    config = normalize_definition(result, Path("candidate.json"))
+    _, catalogue, inventory = build_schema_files(config)
+    for source, schema, row in zip(result["cards"], catalogue["cards"], inventory["cards"]):
+        if schema["variants"] != source["inventory_variants"] or row["inventoryVariants"] != source["inventory_variants"]:
+            raise ValueError("Existing scaffold overrides reviewed variants for " + str(source["number"]))
     return result
 
 def main():
