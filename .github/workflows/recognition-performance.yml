@@ -1,0 +1,18 @@
+name: Recognition performance candidate
+on:
+  push:
+    branches: [feature/recognition-performance-v1]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install opencv-python-headless==4.8.1.78 numpy==1.26.4
+      - run: python tools/benchmark_sift_parameters.py
