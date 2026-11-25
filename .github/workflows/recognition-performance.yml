@@ -11,8 +11,10 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - run: pip install opencv-python-headless==4.8.1.78 numpy==1.26.4
-      - run: python tools/benchmark_sift_parameters.py
+      - run: python tools/benchmark_lossless_recognition.py
