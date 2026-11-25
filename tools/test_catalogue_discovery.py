@@ -5,6 +5,8 @@ from pathlib import Path
 from catalogue_discovery import discover, compare
 from tcgdex_discovery import retrieve
 from reconcile_catalogues import reconcile
+from prepare_discovered_set import prepare
+from discover_set import run
 
 class DiscoveryTests(unittest.TestCase):
     def test_csv_and_duplicates(self):
@@ -32,6 +34,24 @@ class DiscoveryTests(unittest.TestCase):
         self.assertEqual(reconcile(report,other)["conflict_count"],1)
         with self.assertRaises(ValueError):
             retrieve("en","ex",2,get=get,pause=lambda _:None)
+
+    def test_full_onboarding_input(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/"cards.csv"
+            p.write_text("record_type,set,definition,name,collector_number,rarity,category,finish,patterns\ncard,Example,treatment,Pikachu,001/001,Common,Pokemon,normal,\n")
+            report=run("Example",1,1,csv_path=p)["reports"][0]
+            template={"name":"Example","set_id":"example","series":"Example","display_code":"EX","official_code":"EX","dataset_id":"ex","expected_cards":1,"denominator":1,"spreadsheet_id":"test-only","script_url":"https://example.invalid/test"}
+            approvals={"1":{"reviewed":True,"reference_image":"https://example.invalid/1.png","evidence":"synthetic fixture","card_type":"Pokemon","inventory_variants":["normal"]}}
+            candidate=prepare(report,template,approvals)
+            self.assertEqual(candidate["cards"][0]["variants"],["normal"])
+            self.assertEqual(candidate["cards"][0]["inventory_variants"],["normal"])
+            approvals["1"]["reviewed"]=False
+            with self.assertRaises(ValueError):
+                prepare(report,template,approvals)
+            approvals["1"]["reviewed"]=True
+            report["cards"][0]["name"]="Pikachu ex"
+            with self.assertRaises(ValueError):
+                prepare(report,template,approvals)
 
 if __name__=="__main__":
     unittest.main()
